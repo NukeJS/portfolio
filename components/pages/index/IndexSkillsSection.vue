@@ -68,7 +68,7 @@ export default {
       {
         image: "/images/skills/tailwindcss.svg",
         name: "Tailwind CSS",
-        description: "Tailwind CSS is a the CSS framework I use the most."
+        description: "Tailwind CSS is the CSS framework I use the most."
       },
       {
         image: "/images/skills/mongodb.svg",
