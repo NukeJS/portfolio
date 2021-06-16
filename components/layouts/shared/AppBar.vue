@@ -38,14 +38,14 @@
 export default {
   computed: {
     darkTheme() {
-      return this.$colorMode.preference == "dark";
+      return this.$colorMode.value == "dark";
     }
   },
 
   methods: {
     toggleDarkTheme() {
-      this.$colorMode.preference =
-        this.$colorMode.preference == "dark" ? "light" : "dark";
+      this.$colorMode.value =
+        this.$colorMode.value == "dark" ? "light" : "dark";
     }
   }
 };
