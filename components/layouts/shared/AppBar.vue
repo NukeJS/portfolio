@@ -2,7 +2,7 @@
   <rc-app-bar class="border-b bg-white dark:bg-gray-900 dark:border-gray-700">
     <rc-container class="flex items-center h-full">
       <nuxt-link to="/" class="dark:text-white text-lg font-bold select-none">
-        RonnieCodes.com
+        <img class="h-6" src="/images/logo.svg" />
       </nuxt-link>
 
       <rc-spacer />
