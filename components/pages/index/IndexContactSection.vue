@@ -12,13 +12,19 @@
       You can send me an e-mail at
       <a
         class="text-indigo-600 dark:text-indigo-400"
-        href="mailto:contact.ronniecodes@gmail.com"
-        >contact.ronniecodes@gmail.com</a
+        :href="`mailto:${email}`"
+        v-text="email"
+      >
+      </a
       >.
     </p>
   </section>
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    email: "contact.ronniecodes@gmail.com"
+  })
+};
 </script>
