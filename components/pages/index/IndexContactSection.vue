@@ -12,7 +12,7 @@
       You can send me an e-mail at
       <a
         class="text-indigo-600 dark:text-indigo-400"
-        href="mailto:contact@ronniecodes.com"
+        href="mailto:contact.ronniecodes@gmail.com"
         >contact.ronniecodes@gmail.com</a
       >.
     </p>
