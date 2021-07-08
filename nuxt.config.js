@@ -1,5 +1,5 @@
 export default {
-  ssr: false,
+  ssr: true,
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -43,6 +43,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxt/typescript-build',
+
     '@nuxt-hero-icons/solid/nuxt',
 
     '@nuxtjs/color-mode',
@@ -60,12 +62,20 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxt/content',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
   ],
 
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css'
+      }
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
