@@ -96,6 +96,9 @@ export default {
       name: 'RonnieCodes.com',
       short_name: 'RonnieCodes',
       theme_color: '#4f46e5',
+    },
+    meta: {
+      title: 'RonnieCodes'
     }
   },
 
