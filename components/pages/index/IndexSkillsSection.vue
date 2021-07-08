@@ -15,7 +15,7 @@
         class="flex items-start space-x-4 px-3 py-3 rounded-md border dark:border-gray-700"
       >
         <div class="w-14 h-14 flex-none flex items-center justify-center">
-          <img :src="skill.image" :alt="`${skill.name} Logo`" />
+          <nuxt-img :src="skill.image" :alt="`${skill.name} Logo`" />
         </div>
         <div class="flex-auto">
           <h3

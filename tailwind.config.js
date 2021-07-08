@@ -31,6 +31,9 @@ module.exports = {
         DEFAULT: {
           css: {
             color: theme('colors.gray.900'),
+            figcaption: {
+              color: theme('colors.gray.900'),
+            },
             a: {
               color: theme('colors.indigo.600'),
               '&:hover': {
@@ -57,6 +60,9 @@ module.exports = {
         dark: {
           css: {
             color: theme('colors.gray.400'),
+            figcaption: {
+              color: theme('colors.gray.400'),
+            },
             a: {
               color: theme('colors.indigo.400'),
               '&:hover': {
@@ -75,7 +81,7 @@ module.exports = {
             },
             blockquote: {
               borderLeftColor: theme('colors.gray.700'),
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.300'),
             },
             h1: {
               color: theme('colors.white'),

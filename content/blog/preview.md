@@ -1,6 +1,8 @@
 ---
 title: TailwindCSS Blog Testing
-description: This is a test article. This used purely used for testing. I'm just trying to get this description to be quite long.
+description: This is a test article. This used purely used for testing.
+thumbnail: /images/blog/thumbnails/tailwind.png
+draft: true
 ---
 
 # TailwindCSS Blog Testing

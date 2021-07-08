@@ -43,7 +43,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxt-hero-icons/solid/nuxt',
+    '@nuxt/image',
 
     '@nuxtjs/color-mode',
     // https://go.nuxtjs.dev/tailwindcss
@@ -55,7 +55,7 @@ export default {
   },
 
   tailwindcss: {
-    jit: true
+    mode: 'jit'
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
