@@ -43,8 +43,6 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxt/typescript-build',
-
     '@nuxt-hero-icons/solid/nuxt',
 
     '@nuxtjs/color-mode',
