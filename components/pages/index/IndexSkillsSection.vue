@@ -12,18 +12,18 @@
       <div
         v-for="(skill, skillIndex) in skills"
         :key="skillIndex"
-        class="flex items-start space-x-4 px-3 py-3 rounded-md border dark:border-gray-700"
+        class="flex items-start space-x-4 px-3 py-3 dark:border-gray-700 shadow-sm border rounded"
       >
         <div class="w-14 h-14 flex-none flex items-center justify-center">
           <nuxt-img :src="skill.image" :alt="`${skill.name} Logo`" />
         </div>
         <div class="flex-auto">
           <h3
-            class="text-gray-900 dark:text-gray-200 font-bold text-lg"
+            class="text-gray-900 dark:text-white font-bold text-lg"
             v-text="skill.name"
           ></h3>
           <p
-            class="text-gray-500 dark:text-gray-400 mt-1 leading-snug"
+            class="text-gray-500 dark:text-gray-400 mt-2 leading-snug"
             v-text="skill.description"
           ></p>
         </div>
