@@ -8,11 +8,14 @@
         nuxt
         class="dark:border-gray-700 dark:bg-gray-800 shadow-lg border rounded"
       >
-        <nuxt-img
-          v-if="post.thumbnail"
-          :src="post.thumbnail"
-          class="h-36 md:h-48 object-cover w-full"
-        />
+        <div class="aspect-w-16 aspect-h-9 border-b dark:border-gray-700">
+          <nuxt-img
+            v-if="post.thumbnail"
+            :src="post.thumbnail"
+            class="object-cover w-full"
+          />
+        </div>
+
         <div class="px-4 py-3">
           <h3 class="text-gray-900 dark:text-white font-bold text-lg">
             {{ post.title }}
@@ -43,6 +46,7 @@ export default {
     const posts = await $content("blog")
       .where({ draft: false })
       .only(["slug", "title", "thumbnail", "description"])
+      .sortBy("date", "desc")
       .fetch();
 
     return {

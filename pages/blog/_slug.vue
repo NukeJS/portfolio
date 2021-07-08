@@ -9,8 +9,27 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.page.title,
+      meta: [
+        {
+          hid: "description",
+          name: "desription",
+          content: this.page.description
+        },
+        {
+          hid: "image",
+          name: "image",
+          content: this.page.thumbnail
+        }
+      ]
+    };
+  },
+
   async asyncData({ $content, params, error }) {
     const page = await $content(`blog/${params.slug}`)
+      .where({ draft: false })
       .fetch()
       .catch(err => {
         error({
