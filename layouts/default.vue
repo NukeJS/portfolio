@@ -4,15 +4,18 @@
     <rc-main class="pt-16">
       <nuxt />
     </rc-main>
+    <Footer />
   </rc-app>
 </template>
 
 <script>
 import AppBar from "~/components/layouts/shared/AppBar.vue";
+import Footer from "~/components/layouts/shared/Footer.vue";
 
 export default {
   components: {
-    AppBar
+    AppBar,
+    Footer
   }
 };
 </script>

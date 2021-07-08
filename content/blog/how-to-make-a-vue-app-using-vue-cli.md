@@ -6,8 +6,6 @@ draft: false
 date: 'Thu Jul 08 2021 18:30:00 GMT+0200 (Central European Summer Time)'
 ---
 
-# How To Make a Vue Application using Vue CLI
-
 ##  Getting Started
 
 Before we start on creating the application, you will need a few things.

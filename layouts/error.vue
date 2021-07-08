@@ -37,11 +37,13 @@
         </section>
       </rc-container>
     </rc-main>
+    <Footer />
   </rc-app>
 </template>
 
 <script>
 import AppBar from "~/components/layouts/shared/AppBar.vue";
+import Footer from "~/components/layouts/shared/Footer.vue";
 
 export default {
   layout: "empty",
@@ -54,7 +56,8 @@ export default {
   },
 
   components: {
-    AppBar
+    AppBar,
+    Footer
   }
 };
 </script>

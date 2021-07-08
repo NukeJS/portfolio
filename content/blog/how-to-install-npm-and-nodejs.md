@@ -6,8 +6,6 @@ draft: false
 date: 'Thu Jul 08 2021 18:00:00 GMT+0200 (Central European Summer Time)'
 ---
 
-# How To Install Node.js & NPM
-
 ## Installing Node.js
 
 Go to the [Node.js installation page](https://nodejs.org/en/download/) and follow the instructions to download the LTS version.
