@@ -98,7 +98,8 @@ export default {
       theme_color: '#4f46e5',
     },
     meta: {
-      title: 'RonnieCodes'
+      title: 'RonnieCodes',
+      theme_color: '#4f46e5',
     }
   },
 
