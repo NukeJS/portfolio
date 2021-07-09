@@ -11,6 +11,33 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'I\'m a guy that is fond of creating full stack web apps.I\'m currently based in the Netherlands. I create modern and functional web apps.' },
       { name: 'keywords', content: 'Web Development, Full Stack, Ronnie, RonnieCodes, Web Developer, Node.js, Vue.js, Nuxt.js, Node.js Developer' },
+
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://ronniecodes.com'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          'I\'m a guy that is fond of creating full stack web apps.I\'m currently based in the Netherlands. I create modern and functional web apps.'
+      },
+
+      { name: 'twitter:site', content: '@TheCodingNuke' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: 'https://ronniecodes.com'
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content:
+          'I\'m a guy that is fond of creating full stack web apps.I\'m currently based in the Netherlands. I create modern and functional web apps.'
+      },
+
       { name: 'msapplication-TileColor', content: '#ffffff' },
       { name: 'msapplication-config', content: '/favicons/browserconfig.xml' },
       { name: 'theme-color', content: '#ffffff' }
