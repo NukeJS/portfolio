@@ -1,4 +1,6 @@
-<template> </template>
+<template>
+  <span v-if="false"></span>
+</template>
 
 <script>
 export default {
