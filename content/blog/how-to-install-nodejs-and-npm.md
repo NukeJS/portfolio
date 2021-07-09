@@ -22,7 +22,7 @@ node -v
 If you want to update NPM to the latest version, you can run this command:
 
 ```bash
-$ npm install -g npm@latest
+npm install -g npm@latest
 ```
 
 ---
