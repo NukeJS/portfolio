@@ -1,5 +1,6 @@
 <template>
   <rc-container>
+    <rc-seo title="Home" />
     <IndexHeroSection />
     <IndexSkillsSection />
     <IndexContactSection />
@@ -12,10 +13,6 @@ import IndexSkillsSection from "~/components/pages/index/IndexSkillsSection.vue"
 import IndexContactSection from "~/components/pages/index/IndexContactSection.vue";
 
 export default {
-  head: {
-    title: "Home"
-  },
-
   components: {
     IndexHeroSection,
     IndexSkillsSection,

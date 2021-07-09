@@ -1,5 +1,7 @@
 <template>
   <rc-container class="mt-4">
+    <rc-seo title="Blog" />
+
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <rc-card
         v-for="(post, index) in posts"
@@ -38,10 +40,6 @@
 
 <script>
 export default {
-  head: {
-    title: "Blog"
-  },
-
   async asyncData({ $content }) {
     const posts = await $content("blog")
       .where({ draft: false })
