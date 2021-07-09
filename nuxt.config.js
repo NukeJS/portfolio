@@ -107,6 +107,11 @@ export default {
       short_name: 'ronniecodes',
       theme_color: '#4f46e5',
     },
+    meta: {
+      name: 'ronniecodes.com',
+      author: 'Ronnie',
+      description: 'Ronnie\'s portfolio website.'
+    }
   },
 
   sitemap: {
