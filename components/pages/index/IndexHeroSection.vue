@@ -21,7 +21,7 @@
       <rc-btn
         href="https://github.com/CodingWithNuke"
         target="blank"
-        class="bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white px-6 py-3 rounded-md sm:rounded-full font-semibold text-xl leading-6 w-full sm:w-auto flex-none"
+        class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md sm:rounded-full font-semibold text-xl leading-6 w-full sm:w-auto flex-none"
         >My Projects</rc-btn
       >
     </div>
