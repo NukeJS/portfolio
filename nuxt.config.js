@@ -46,7 +46,6 @@ export default {
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicons/apple-touch-icon.png' },
       { rel: 'icon', type: 'image/png', href: '/favicons/favicon-32x32.png' },
       { rel: 'icon', type: 'image/png', href: '/favicons/favicon-16x16.png' },
-      { rel: 'manifest', href: '/favicons/site.webmanifest' },
       { rel: 'mask-icon', href: '/favicons/safari-pinned-tab.svg', color: '#6366f1' },
       { rel: 'shortcut icon', href: '/favicons/favicon.ico' },
 
@@ -105,7 +104,7 @@ export default {
       lang: 'en',
       name: 'ronniecodes.com',
       short_name: 'ronniecodes',
-      theme_color: '#4f46e5',
+      theme_color: '#6366f1',
     },
     meta: {
       name: 'ronniecodes.com',
