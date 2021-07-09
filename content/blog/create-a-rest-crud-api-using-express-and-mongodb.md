@@ -396,7 +396,7 @@ module.exports = app => {
 And put this in the `post.routes.js` file:
 
 ```js
-// src/routes/person.routes.js
+// src/routes/post.routes.js
 const { Router } = require('express');
 
 const router = Router();
