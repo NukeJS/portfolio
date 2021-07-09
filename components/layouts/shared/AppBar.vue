@@ -57,6 +57,7 @@
           href="https://github.com/CodingWithNuke/portfolio"
           target="blank"
           class="text-gray-500 dark:text-gray-300 dark:hover:text-gray-100 font-semibold"
+          aria-label="Github Repository"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
