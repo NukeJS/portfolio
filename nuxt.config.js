@@ -65,7 +65,14 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+
+    '@nuxtjs/sitemap',
   ],
+
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://ronniecodes.com',
+  },
 
   generate: {
     fallback: true,
@@ -93,14 +100,10 @@ export default {
   pwa: {
     manifest: {
       lang: 'en',
-      name: 'RonnieCodes.com',
-      short_name: 'RonnieCodes',
+      name: 'ronniecodes.com',
+      short_name: 'ronniecodes',
       theme_color: '#4f46e5',
     },
-    meta: {
-      title: 'RonnieCodes',
-      theme_color: '#4f46e5',
-    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
