@@ -13,7 +13,7 @@ Before we start on creating the application, you will need a few things.
 1.  Have NPM & Node.js installed (or you can use Yarn instead of NPM)
 2.  Have `@vue/cli` installed
 
-If you haven't installed NPM and Node.js yet, you can go through [this](/blog/how-to-install-npm-and-nodejs) blog post on how to.
+If you haven't installed NPM and Node.js yet, you can go through [this](/blog/how-to-install-nodejs-and-npm) blog post on how to.
 
 ### Installing `@vue/cli`
 
