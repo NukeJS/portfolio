@@ -72,41 +72,47 @@ export default {
   buildModules: [
     '@nuxt/image',
 
-    ['@nuxtjs/color-mode', {
-      classSuffix: ''
-    }],
+    '@nuxtjs/color-mode',
 
-    ['@nuxtjs/tailwindcss', {
-      mode: 'jit'
-    }],
+    '@nuxtjs/tailwindcss',
   ],
+
+  colorMode: {
+    classSuffix: ''
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    ['@nuxt/content', {
-      markdown: {
-        prism: {
-          theme: 'prism-themes/themes/prism-material-oceanic.css'
-        }
-      }
-    }],
+    '@nuxt/content',
 
-    ['@nuxtjs/axios'],
+    '@nuxtjs/axios',
 
-    ['@nuxtjs/pwa', {
-      manifest: {
-        lang: 'en',
-        name: 'ronniecodes.com',
-        short_name: 'ronniecodes',
-        theme_color: '#4f46e5',
-      },
-    }],
+    '@nuxtjs/pwa',
 
-    ['@nuxtjs/sitemap', {
-      path: '/sitemap.xml',
-      hostname: 'https://ronniecodes.com',
-    }],
+    '@nuxtjs/sitemap',
   ],
+
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css'
+      }
+    }
+  },
+
+  pwa: {
+    manifest: {
+      lang: 'en',
+      name: 'ronniecodes.com',
+      short_name: 'ronniecodes',
+      theme_color: '#4f46e5',
+    },
+  },
+
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://ronniecodes.com',
+  },
 
   generate: {
     fallback: true,
