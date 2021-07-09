@@ -44,7 +44,7 @@ export default {
     const posts = await $content("blog")
       .where({ draft: false })
       .only(["slug", "title", "thumbnail", "description"])
-      .sortBy("date", "desc")
+      .sortBy("date", "asc")
       .fetch();
 
     return {

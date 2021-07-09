@@ -1,5 +1,5 @@
 ---
-title: How To Install Node.js & NPM
+title: How to Install Node.js & NPM
 description: Learn how you can install Node.js and NPM.
 thumbnail: /images/blog/thumbnails/nodejs.png
 draft: false
