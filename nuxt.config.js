@@ -45,34 +45,41 @@ export default {
   buildModules: [
     '@nuxt/image',
 
-    '@nuxtjs/color-mode',
-    // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
+    ['@nuxtjs/color-mode', {
+      classSuffix: ''
+    }],
+
+    ['@nuxtjs/tailwindcss', {
+      mode: 'jit'
+    }],
   ],
-
-  colorMode: {
-    classSuffix: ''
-  },
-
-  tailwindcss: {
-    mode: 'jit'
-  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxt/content',
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
+    ['@nuxt/content', {
+      markdown: {
+        prism: {
+          theme: 'prism-themes/themes/prism-material-oceanic.css'
+        }
+      }
+    }],
 
-    '@nuxtjs/sitemap',
+    ['@nuxtjs/axios'],
+
+    ['@nuxtjs/pwa', {
+      manifest: {
+        lang: 'en',
+        name: 'ronniecodes.com',
+        short_name: 'ronniecodes',
+        theme_color: '#4f46e5',
+      },
+    }],
+
+    ['@nuxtjs/sitemap', {
+      path: '/sitemap.xml',
+      hostname: 'https://ronniecodes.com',
+    }],
   ],
-
-  sitemap: {
-    path: '/sitemap.xml',
-    hostname: 'https://ronniecodes.com',
-  },
 
   generate: {
     fallback: true,
@@ -83,27 +90,6 @@ export default {
 
       return files.map(file => file.path === '/index' ? '/' : file.path)
     }
-  },
-
-  content: {
-    markdown: {
-      prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css'
-      }
-    }
-  },
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
-
-  // PWA module configuration: https://go.nuxtjs.dev/pwa
-  pwa: {
-    manifest: {
-      lang: 'en',
-      name: 'ronniecodes.com',
-      short_name: 'ronniecodes',
-      theme_color: '#4f46e5',
-    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
