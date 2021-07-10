@@ -13,7 +13,7 @@ Before we start on creating the application, you will need a few things.
 1.  Have NPM & Node.js installed (or you can use Yarn instead of NPM)
 2.  Have `@vue/cli` installed
 
-If you haven't installed NPM and Node.js yet, you can go through [this](/blog/how-to-install-nodejs-and-npm) blog post on how to.
+If you haven't installed NPM and Node.js yet, you can go through [this](/blog/install-nodejs-and-npm) blog post on how to.
 
 ### Installing `@vue/cli`
 
@@ -99,7 +99,7 @@ I'll go over what each of these options mean.
 - **Babel** this adds babel to the project.
 - **TypeScript** this adds TypeScript support to the project.
 - **Progressive Web App (PWA) Support** makes it possible for you to make your web app a PWA.
-- **Router** this adds `vue-router` to the project (it will also create a `store` folder with needed files).
+- **Router** this adds `vue-router` to the project.
 - **Vuex** this adds `vuex` to the project, this is used for state management.
 - **CSS Pre-processors** this allows you to choose which CSS Pre-processor you want to use (SASS, LESS, etc...).
 - **Linter/Formatter** this allows you to choose which linter and/or formatter you want to use.
