@@ -17,9 +17,7 @@
 </template>
 
 <script>
-import { defineComponent, computed } from "@nuxtjs/composition-api";
-
-export default defineComponent({
+export default {
   name: "rc-btn",
 
   props: {
@@ -34,21 +32,20 @@ export default defineComponent({
     disabled: Boolean
   },
 
-  setup(props, { emit }) {
-    const classes = computed(() => ({
-      "inline-flex items-center justify-center focus:outline-none outline-none transition-all duration-200 ease-in-out": true
-    }));
-
-    function onClick(e) {
-      emit("click", e);
+  computed: {
+    classes() {
+      return {
+        "inline-flex items-center justify-center focus:outline-none outline-none transition-all duration-200 ease-in-out": true
+      };
     }
+  },
 
-    return {
-      classes,
-      onClick
-    };
+  methods: {
+    onClick(event) {
+      this.$emit("click", event);
+    }
   }
-});
+};
 </script>
 
 <style>

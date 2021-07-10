@@ -3,9 +3,7 @@
 </template>
 
 <script>
-import { defineComponent } from "@nuxtjs/composition-api";
-
-export default defineComponent({
+export default {
   props: {
     title: {
       type: String
@@ -91,7 +89,7 @@ export default defineComponent({
 
     return head;
   }
-});
+};
 </script>
 
 <style>
