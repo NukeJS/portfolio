@@ -1,6 +1,6 @@
 <template>
   <rc-container class="mt-4">
-    <rc-seo title="Blog" />
+    <rc-seo title="Blog" description="An overview of my blog posts." />
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <rc-card
