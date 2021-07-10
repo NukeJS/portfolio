@@ -1,7 +1,5 @@
 <template>
-  <rc-container class="mt-4">
-    <rc-seo title="Blog" />
-
+  <rc-container v-if="!$fetchState.pending && !$fetchState.error" class="mt-4">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <rc-card
         v-for="(post, index) in posts"
@@ -39,19 +37,45 @@
 </template>
 
 <script>
-export default {
-  async asyncData({ $content }) {
-    const posts = await $content("blog")
-      .where({ draft: false })
-      .only(["slug", "title", "thumbnail", "description"])
-      .sortBy("date", "asc")
-      .fetch();
+import {
+  defineComponent,
+  ref,
+  useContext,
+  useFetch,
+  useMeta
+} from "@nuxtjs/composition-api";
+
+import { mapMetaInfo } from "~/utils/helpers";
+
+export default defineComponent({
+  head: {},
+
+  setup() {
+    const { $content } = useContext();
+
+    const posts = ref([]);
+
+    useFetch(async () => {
+      posts.value = await $content("blog")
+        .where({ draft: false })
+        .only(["slug", "title", "thumbnail", "description"])
+        .sortBy("date", "asc")
+        .fetch();
+    });
+
+    useMeta(() => ({
+      ...mapMetaInfo({
+        title: "Blog",
+        description: "An overview of my blog posts",
+        path: "/"
+      })
+    }));
 
     return {
       posts
     };
   }
-};
+});
 </script>
 
 <style>

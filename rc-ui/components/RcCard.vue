@@ -13,7 +13,9 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from "@nuxtjs/composition-api";
+
+export default defineComponent({
   name: "rc-card",
 
   props: {
@@ -25,5 +27,5 @@ export default {
     activeClass: String,
     exactActiveClass: String
   }
-};
+});
 </script>

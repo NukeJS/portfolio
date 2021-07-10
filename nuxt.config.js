@@ -12,31 +12,12 @@ export default {
       { hid: 'description', name: 'description', content: 'I\'m a guy that is fond of creating full stack web apps.I\'m currently based in the Netherlands. I create modern and functional web apps.' },
       { name: 'keywords', content: 'Web Development, Full Stack, Ronnie, RonnieCodes, Web Developer, Node.js, Vue.js, Nuxt.js, Node.js Developer' },
 
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: 'https://ronniecodes.com'
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content:
-          'I\'m a guy that is fond of creating full stack web apps.I\'m currently based in the Netherlands. I create modern and functional web apps.'
-      },
-
-      { name: 'twitter:site', content: '@TheCodingNuke' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      {
-        hid: 'twitter:url',
-        name: 'twitter:url',
-        content: 'https://ronniecodes.com'
-      },
-      {
-        hid: 'twitter:description',
-        name: 'twitter:description',
-        content:
-          'I\'m a guy that is fond of creating full stack web apps.I\'m currently based in the Netherlands. I create modern and functional web apps.'
-      },
+      { property: 'og:site_name', content: 'Ronnie Codes' },
+      { property: 'twitter:card', content: 'summary_large_image' },
+      { property: 'twitter:handle', content: 'TheCodingNuke' },
+      { property: 'twitter:creator', content: 'TheCodingNuke' },
+      { name: 'author', content: 'Ronnie' },
+      { name: 'robots', content: 'index, follow' },
 
       { name: 'msapplication-TileColor', content: '#ffffff' },
       { name: 'msapplication-config', content: '/favicons/browserconfig.xml' },
@@ -69,6 +50,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/composition-api/module',
+
     '@nuxt/image',
 
     '@nuxtjs/color-mode',
@@ -119,6 +102,8 @@ export default {
   },
 
   generate: {
+    interval: 2000,
+
     fallback: true,
 
     async routes() {
