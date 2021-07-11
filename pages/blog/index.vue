@@ -67,8 +67,10 @@ export default {
 
   computed: {
     filteredArticles() {
-      return this.articles.filter(article =>
-        article.title.toLowerCase().includes(this.query.toLowerCase())
+      return this.articles.filter(
+        article =>
+          article.title.toLowerCase().includes(this.query.toLowerCase()) ||
+          article.description.toLowerCase().includes(this.query.toLowerCase())
       );
     }
   }
