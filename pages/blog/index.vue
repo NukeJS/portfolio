@@ -1,7 +1,5 @@
 <template>
   <rc-container class="mt-4">
-    <rc-seo title="Blog" description="An overview of my blog posts." />
-
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <rc-card
         v-for="(post, index) in posts"
@@ -39,7 +37,17 @@
 </template>
 
 <script>
+import { mapMetaInfo } from "~/utils/helpers";
+
 export default {
+  head() {
+    return mapMetaInfo({
+      title: "Blog",
+      description: "An overview of my blog posts.",
+      path: "/blog"
+    });
+  },
+
   async asyncData({ $content }) {
     const posts = await $content("blog")
       .where({ draft: false })
