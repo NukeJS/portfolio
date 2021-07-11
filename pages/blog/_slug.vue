@@ -5,11 +5,16 @@
 
       <nuxt-content :document="page" />
     </div>
+    <rc-container class="px-0">
+      <PrevNextPosts :prev="prev" :next="next" />
+    </rc-container>
   </article>
 </template>
 
 <script>
 import { mapMetaInfo } from "~/utils/helpers";
+
+import PrevNextPosts from "~/components/pages/blog/_slug/PrevNextPosts.vue";
 
 export default {
   head() {
@@ -21,19 +26,32 @@ export default {
     });
   },
 
+  components: {
+    PrevNextPosts
+  },
+
   async asyncData({ $content, params, error }) {
-    const page = await $content(`blog/${params.slug}`)
+    const page = await $content("articles", params.slug)
       .where({ draft: false })
       .fetch()
       .catch(err => {
         error({
           statusCode: 404,
-          message: `Blog post with slug '${params.slug}' not found.`
+          message: `Article with slug '${params.slug}' not found.`
         });
       });
 
+    const [prev, next] = await $content("articles")
+      .where({ draft: false })
+      .sortBy("date", "desc")
+      .surround(params.slug)
+      .only(["title", "slug"])
+      .fetch();
+
     return {
-      page
+      page,
+      prev,
+      next
     };
   }
 };
