@@ -44,13 +44,13 @@ export default {
   head() {
     return mapMetaInfo({
       title: "Blog",
-      description: "An overview of my blog posts.",
+      description: "An overview of my blog articles.",
       path: "/blog"
     });
   },
 
   async asyncData({ $content }) {
-    const articles = await $content("articles")
+    const articles = await $content("blog")
       .where({ draft: false })
       .only(["slug", "title", "thumbnail", "description"])
       .sortBy("createdAt", "desc")

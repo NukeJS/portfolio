@@ -31,7 +31,7 @@ export default {
   },
 
   async asyncData({ $content, params, error }) {
-    const page = await $content("articles", params.slug)
+    const page = await $content("blog", params.slug)
       .where({ draft: false })
       .fetch()
       .catch(err => {
@@ -41,7 +41,7 @@ export default {
         });
       });
 
-    const [prev, next] = await $content("articles")
+    const [prev, next] = await $content("blog")
       .where({ draft: false })
       .sortBy("createdAt")
       .surround(params.slug)
