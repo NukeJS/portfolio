@@ -6,15 +6,13 @@
       <nuxt-content :document="page" />
     </div>
     <rc-container class="px-0">
-      <PrevNextPosts :prev="prev" :next="next" />
+      <ArticlePrevNextPosts :prev="prev" :next="next" />
     </rc-container>
   </article>
 </template>
 
 <script>
 import { mapMetaInfo } from "~/utils/helpers";
-
-import PrevNextPosts from "~/components/pages/blog/_slug/PrevNextPosts.vue";
 
 export default {
   head() {
@@ -37,7 +35,7 @@ export default {
       .catch(err => {
         error({
           statusCode: 404,
-          message: `Article with slug '${params.slug}' not found.`
+          message: `This article could not be found`
         });
       });
 

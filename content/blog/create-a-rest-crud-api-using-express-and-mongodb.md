@@ -9,7 +9,7 @@ draft: false
 
 Before we begin writing any code, you will need a few things:
 
-- Have Node.js & NPM installed, you can go through [this](/blog/how-to-install-nodejs-and-npm) blog post to see how to.
+- Have Node.js & NPM installed, you can go through [this](/blog/install-nodejs-and-npm) blog post to see how to.
 
 Once you have everything installed, open a terminal in your projects folder and run the following commands:
 

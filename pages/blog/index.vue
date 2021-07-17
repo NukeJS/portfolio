@@ -1,13 +1,22 @@
 <template>
-  <rc-container class="mt-4">
-    <rc-input v-model="query" placeholder="Filter through blog posts..." />
+  <rc-container class="my-4">
+    <h2
+      class="sm:mt-2 md:mt-4 text-gray-900 dark:text-white text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-none"
+    >
+      My <span class="text-indigo-600 dark:text-indigo-500">Blog</span>.
+    </h2>
+    <rc-input
+      class="mt-6 sm:mt-10"
+      v-model="query"
+      placeholder="Filter through blog posts..."
+    />
     <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <rc-card
         v-for="(article, index) in filteredArticles"
         :key="index"
         :to="`/blog/${article.slug}`"
         nuxt
-        class="dark:border-gray-700 dark:bg-gray-800 shadow-lg border rounded"
+        class="dark:border-gray-700 dark:bg-gray-800 shadow-sm border rounded"
       >
         <div class="aspect-w-16 aspect-h-9 border-b dark:border-gray-700">
           <nuxt-img

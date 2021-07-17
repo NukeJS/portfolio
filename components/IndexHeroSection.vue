@@ -19,8 +19,8 @@
 
     <div class="flex space-y-4 sm:space-y-0">
       <rc-btn
-        href="https://github.com/CodingWithNuke"
-        target="blank"
+        nuxt
+        to="/projects"
         class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md sm:rounded-full font-semibold text-xl leading-6 w-full sm:w-auto flex-none"
         >My Projects</rc-btn
       >

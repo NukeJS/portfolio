@@ -55,7 +55,7 @@
 
         <a
           href="https://github.com/CodingWithNuke/portfolio"
-          target="blank"
+          target="_blank"
           class="text-gray-500 dark:text-gray-300 dark:hover:text-gray-100 font-semibold"
           aria-label="Github Repository"
         >

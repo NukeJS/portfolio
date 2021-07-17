@@ -1,21 +1,13 @@
 <template>
   <rc-app class="bg-white dark:bg-gray-900 font-open-sans">
-    <AppBar />
+    <TheAppBar />
     <rc-main class="pt-16">
       <nuxt />
     </rc-main>
-    <Footer />
+    <TheFooter />
   </rc-app>
 </template>
 
 <script>
-import AppBar from "~/components/layouts/shared/AppBar.vue";
-import Footer from "~/components/layouts/shared/Footer.vue";
-
-export default {
-  components: {
-    AppBar,
-    Footer
-  }
-};
+export default {};
 </script>

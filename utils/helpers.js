@@ -15,7 +15,7 @@ export function mapMetaInfo({ title, description, image, path }) {
         content: title,
       },
       {
-        property: 'twitter:title',
+        name: 'twitter:title',
         hid: 'twitter:title',
         content: title,
       },
@@ -30,7 +30,7 @@ export function mapMetaInfo({ title, description, image, path }) {
         content: description,
       },
       {
-        property: 'twitter:description',
+        name: 'twitter:description',
         hid: 'twitter:description',
         content: image,
       },
@@ -40,7 +40,7 @@ export function mapMetaInfo({ title, description, image, path }) {
         content: image,
       },
       {
-        property: 'twitter:image',
+        name: 'twitter:image',
         hid: 'twitter:image',
         content: image,
       },
@@ -50,7 +50,7 @@ export function mapMetaInfo({ title, description, image, path }) {
         content: url,
       },
       {
-        property: 'twitter:url',
+        name: 'twitter:url',
         hid: 'twitter:url',
         content: url,
       },

@@ -1,6 +1,6 @@
 <template>
   <rc-app class="bg-white dark:bg-gray-900 font-open-sans">
-    <AppBar />
+    <TheAppBar />
     <rc-main class="pt-16">
       <rc-container class="flex items-start justify-center sm:items-center">
         <section class="max-w-full py-6 sm:py-12 md:py-16 text-center">
@@ -37,14 +37,11 @@
         </section>
       </rc-container>
     </rc-main>
-    <Footer />
+    <TheFooter />
   </rc-app>
 </template>
 
 <script>
-import AppBar from "~/components/layouts/shared/AppBar.vue";
-import Footer from "~/components/layouts/shared/Footer.vue";
-
 export default {
   layout: "empty",
 
@@ -53,11 +50,6 @@ export default {
       type: Object,
       default: null
     }
-  },
-
-  components: {
-    AppBar,
-    Footer
   }
 };
 </script>
