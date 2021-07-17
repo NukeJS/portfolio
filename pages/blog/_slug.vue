@@ -24,10 +24,6 @@ export default {
     });
   },
 
-  components: {
-    PrevNextPosts
-  },
-
   async asyncData({ $content, params, error }) {
     const page = await $content("blog", params.slug)
       .where({ draft: false })
