@@ -32,7 +32,7 @@ export function mapMetaInfo({ title, description, image, path }) {
       {
         name: 'twitter:description',
         hid: 'twitter:description',
-        content: image,
+        content: description,
       },
       {
         property: 'og:image',
