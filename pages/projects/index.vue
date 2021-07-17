@@ -44,6 +44,13 @@
         </div>
       </rc-card>
     </div>
+
+    <p
+      class="text-xl font-bold text-gray-600 dark:text-gray-300"
+      v-if="!repositories.length"
+    >
+      Loading repositories...
+    </p>
   </rc-container>
 </template>
 
