@@ -48,7 +48,17 @@
 </template>
 
 <script>
+import { mapMetaInfo } from "~/utils/helpers";
+
 export default {
+  head() {
+    return mapMetaInfo({
+      title: "Projects",
+      description: "An overview of my projects listed on GitHub.",
+      path: "/projects"
+    });
+  },
+
   data: () => ({
     repositories: []
   }),
