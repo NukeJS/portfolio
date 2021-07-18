@@ -52,11 +52,10 @@
 
         <rc-btn
           class="text-gray-500 dark:text-gray-300 dark:hover:text-gray-100 font-semibold cursor-pointer"
-          @click="toggleDarkTheme"
-          :title="`Toggle ${darkTheme ? 'Dark' : 'Light'} Theme`"
+          @click="switchTheme"
         >
           <svg
-            v-if="!darkTheme"
+            v-if="theme == 'light'"
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
             viewBox="0 0 20 20"
@@ -69,7 +68,7 @@
             />
           </svg>
           <svg
-            v-else
+            v-else-if="theme == 'dark'"
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
             viewBox="0 0 20 20"
@@ -79,6 +78,7 @@
               d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
             />
           </svg>
+          <span v-else class="h-6 w-6">...</span>
         </rc-btn>
       </div>
     </rc-container>
@@ -92,15 +92,18 @@ export default {
   }),
 
   computed: {
-    darkTheme() {
-      return this.$colorMode.preference != "light";
+    theme() {
+      return this.$colorMode.value;
     }
   },
 
   methods: {
-    toggleDarkTheme() {
-      this.$colorMode.preference =
-        this.$colorMode.preference != "light" ? "light" : "dark";
+    switchTheme() {
+      if (this.theme == "light") {
+        this.$colorMode.preference = "dark";
+      } else if (this.theme == "dark") {
+        this.$colorMode.preference = "light";
+      }
     },
     showNavigationDrawer() {
       this.$store.dispatch("setNavigationDrawer", true);
