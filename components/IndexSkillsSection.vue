@@ -6,13 +6,11 @@
       My <span class="text-indigo-600 dark:text-indigo-500">Stack</span>.
     </h2>
 
-    <div
-      class="mt-6 sm:mt-10 grid md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-8"
-    >
+    <div class="mt-6 sm:mt-10 grid md:grid-cols-2 xl:grid-cols-3 gap-4">
       <div
         v-for="(skill, skillIndex) in skills"
         :key="skillIndex"
-        class="flex items-start space-x-4 px-3 py-3 dark:border-gray-700 shadow-sm border rounded"
+        class="flex items-start space-x-4 px-3 py-3 dark:border-gray-700 dark:bg-gray-800 shadow-sm border rounded"
       >
         <div class="w-14 h-14 flex-none flex items-center justify-center">
           <nuxt-img :src="skill.image" :alt="`${skill.name} Logo`" />
