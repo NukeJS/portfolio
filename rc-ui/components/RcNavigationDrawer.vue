@@ -64,6 +64,13 @@ export default {
       if (this.internalValue && !this._isDestroyed) {
         this.internalValue = false;
       }
+    },
+    onInternalValueChange(value) {
+      if (value) {
+        document.documentElement.style.overflowY = "hidden";
+      } else {
+        document.documentElement.style.overflowY = "auto";
+      }
     }
   },
 
@@ -76,7 +83,8 @@ export default {
   },
 
   watch: {
-    $route: "onRouteChange"
+    $route: "onRouteChange",
+    internalValue: "onInternalValueChange"
   }
 };
 </script>
