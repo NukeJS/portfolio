@@ -6,6 +6,7 @@
       My <span class="text-indigo-600 dark:text-indigo-500">Projects</span>.
     </h2>
     <div
+      v-if="!$fetchState.pending"
       class="mt-6 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
     >
       <rc-card
@@ -46,14 +47,14 @@
     </div>
 
     <p
-      class="text-xl font-bold text-gray-600 dark:text-gray-300"
+      class="mt-6 sm:mt-10 text-xl font-bold text-gray-600 dark:text-gray-300"
       v-if="$fetchState.pending"
     >
       Loading repositories...
     </p>
 
     <p
-      class="text-xl font-bold text-gray-600 dark:text-gray-300"
+      class="mt-6 sm:mt-10 text-xl font-bold text-gray-600 dark:text-gray-300"
       v-if="$fetchState.error"
     >
       An error occurred whilst trying to load my projects... Try again later.
