@@ -47,9 +47,16 @@
 
     <p
       class="text-xl font-bold text-gray-600 dark:text-gray-300"
-      v-if="!repositories.length"
+      v-if="$fetchState.pending"
     >
       Loading repositories...
+    </p>
+
+    <p
+      class="text-xl font-bold text-gray-600 dark:text-gray-300"
+      v-if="$fetchState.error"
+    >
+      An error occurred whilst trying to load my projects... Try again later.
     </p>
   </rc-container>
 </template>
