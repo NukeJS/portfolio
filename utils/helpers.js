@@ -1,5 +1,5 @@
 export function mapMetaInfo({ title, description, image, path }) {
-  const url = `https:/ronniecodes.com/${path}`;
+  const url = `https:/ronniecodes.com${path.startsWith('/') ? path : `/${path}`}`;
 
   const metaData = {
     title,
