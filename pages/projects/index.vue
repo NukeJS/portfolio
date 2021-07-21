@@ -93,7 +93,8 @@ export default {
         description: repository.description,
         language: repository.language,
         stars: repository.stargazers_count
-      }));
+      }))
+      .sort((a, b) => b.stars - a.stars);
   }
 };
 </script>
