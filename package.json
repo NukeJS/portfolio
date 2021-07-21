@@ -17,10 +17,7 @@
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
     "core-js": "^3.9.1",
-    "i": "^0.3.6",
-    "npm": "^7.19.1",
     "nuxt": "^2.15.3",
-    "nuxt-i18n": "^6.27.1",
     "prism-themes": "^1.7.0"
   },
   "devDependencies": {
