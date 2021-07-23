@@ -20,7 +20,7 @@
 
     <p
       class="mt-4 text-xl font-bold text-gray-700 dark:text-gray-300"
-      v-if="!filteredArticles.length"
+      v-if="!articles.length"
     >
       No articles to display.
     </p>
@@ -28,77 +28,46 @@
 </template>
 
 <script lang="ts">
-import {
-  defineComponent,
-  useContext,
-  useMeta,
-  useAsync,
-  computed,
-  ref
-} from "@nuxtjs/composition-api";
-
-import { mapMetaInfo } from "~/utils/helpers";
+import Vue from "vue";
 
 import { IContentDocument } from "@nuxt/content/types/content";
 
-export default defineComponent({
-  head: {},
+import { mapMetaInfo } from "~/utils/helpers";
 
-  // async asyncData({ $content }) {
-  //   const articles = await ;
-
-  //   return {
-  //     articles
-  //   };
-  // },
-
-  // data: () => ({
-  //   articles: [],
-  //   query: ""
-  // }),
-
-  // computed: {
-  //   filteredArticles() {
-  //     return this.articles.filter(
-  //       (article: any) =>
-  //         article.title.toLowerCase().includes(this.query.toLowerCase()) ||
-  //         article.description.toLowerCase().includes(this.query.toLowerCase())
-  //     );
-  //   }
-  // },
-
-  setup() {
-    const { $content } = useContext();
-    const query = ref<string>("");
-
-    const articles = useAsync(() =>
-      $content("blog")
-        .where({ draft: false })
-        .only(["slug", "title", "thumbnail", "description", "readingTime"])
-        .sortBy("createdAt", "desc")
-        .fetch()
-    );
-
-    const filteredArticles = computed(() => {
-      return articles.value?.filter(
-        (article: any) =>
-          article.title.toLowerCase().includes(query.value.toLowerCase()) ||
-          article.description.toLowerCase().includes(query.value.toLowerCase())
-      );
+export default Vue.extend({
+  head(): object {
+    return mapMetaInfo({
+      title: "Blog",
+      description: "An overview of my blog articles.",
+      path: "/blog"
     });
+  },
 
-    useMeta((): object =>
-      mapMetaInfo({
-        title: "Blog",
-        description: "An overview of my blog articles.",
-        path: "/blog"
-      })
-    );
+  async asyncData({ $content }) {
+    const articles = await $content("blog")
+      .where({ draft: false })
+      .only(["slug", "title", "thumbnail", "description", "readingTime"])
+      .sortBy("createdAt", "desc")
+      .fetch();
 
     return {
-      filteredArticles,
-      query
+      articles
     };
+  },
+
+  data: () => ({
+    query: "",
+    articles: [] as IContentDocument[]
+  }),
+
+  computed: {
+    filteredArticles() {
+      return this.articles.filter(
+        article =>
+          article.title.toLowerCase().includes(this.query.toLowerCase()) ||
+          article.description.toLowerCase().includes(this.query.toLowerCase())
+      );
+    }
   }
 });
 </script>
