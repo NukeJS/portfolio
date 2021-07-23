@@ -12,18 +12,20 @@
   </component>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue, { PropType } from "vue";
+
+export default Vue.extend({
   name: "rc-card",
 
   props: {
-    to: [String, Object],
-    nuxt: Boolean,
-    exact: Boolean,
-    href: [String, Object],
-    target: String,
-    activeClass: String,
-    exactActiveClass: String
+    to: [String, Object] as PropType<string | object>,
+    nuxt: Boolean as PropType<boolean>,
+    exact: Boolean as PropType<boolean>,
+    href: [String, Object] as PropType<string | object>,
+    target: String as PropType<string>,
+    activeClass: String as PropType<string>,
+    exactActiveClass: String as PropType<string>
   }
-};
+});
 </script>

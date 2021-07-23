@@ -39,20 +39,19 @@
   </rc-navigation-drawer>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from "vue";
+
+export default Vue.extend({
   computed: {
     navigationDrawer: {
-      get() {
+      get(): boolean {
         return this.$store.getters["navigationDrawer"];
       },
-      set(val) {
+      set(val: boolean) {
         this.$store.dispatch("setNavigationDrawer", val);
       }
     }
   }
-};
+});
 </script>
-
-<style>
-</style>

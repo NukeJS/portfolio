@@ -31,18 +31,17 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue, { PropType } from "vue";
+
+export default Vue.extend({
   props: {
     prev: {
-      type: Object
+      type: Object as PropType<object>
     },
     next: {
-      type: Object
+      type: Object as PropType<object>
     }
   }
-};
+});
 </script>
-
-<style>
-</style>

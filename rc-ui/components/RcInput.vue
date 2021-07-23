@@ -14,43 +14,42 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue, { PropType } from "vue";
+
+export default Vue.extend({
   name: "rc-input",
 
   props: {
     value: {
-      type: String
+      type: String as PropType<string>
     },
     label: {
-      type: String
+      type: String as PropType<string>
     },
     type: {
-      type: String,
+      type: String as PropType<string>,
       default: "text"
     },
     placeholder: {
-      type: String
+      type: String as PropType<string>
     }
   },
 
   data: () => ({
-    internalLazyValue: null
+    internalLazyValue: null as null | string
   }),
 
   computed: {
     internalValue: {
-      get() {
+      get(): null | string {
         return this.internalLazyValue;
       },
-      set(val) {
+      set(val: string) {
         this.internalLazyValue = val;
         this.$emit("input", val);
       }
     }
   }
-};
+});
 </script>
-
-<style>
-</style>

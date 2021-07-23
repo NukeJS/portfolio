@@ -16,24 +16,26 @@
   </component>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue, { PropType } from "vue";
+
+export default Vue.extend({
   name: "rc-btn",
 
   props: {
-    type: String,
-    to: [String, Object],
-    nuxt: Boolean,
-    exact: Boolean,
-    href: [String, Object],
-    target: String,
-    activeClass: String,
-    exactActiveClass: String,
-    disabled: Boolean
+    type: String as PropType<string>,
+    to: [String, Object] as PropType<string | object>,
+    nuxt: Boolean as PropType<boolean>,
+    exact: Boolean as PropType<boolean>,
+    href: [String, Object] as PropType<string | object>,
+    target: String as PropType<string>,
+    activeClass: String as PropType<string>,
+    exactActiveClass: String as PropType<string>,
+    disabled: Boolean as PropType<boolean>
   },
 
   computed: {
-    classes() {
+    classes(): Record<string, boolean> {
       return {
         "inline-flex items-center justify-center focus:outline-none outline-none transition duration-200 ease-in-out": true
       };
@@ -41,12 +43,9 @@ export default {
   },
 
   methods: {
-    onClick(event) {
+    onClick(event: Event) {
       this.$emit("click", event);
     }
   }
-};
+});
 </script>
-
-<style>
-</style>

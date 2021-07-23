@@ -6,12 +6,14 @@
   </header>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue, { PropType } from "vue";
+
+export default Vue.extend({
   name: "rc-app-bar",
 
   props: {
-    fixed: Boolean
+    fixed: Boolean as PropType<boolean>
   }
-};
+});
 </script>

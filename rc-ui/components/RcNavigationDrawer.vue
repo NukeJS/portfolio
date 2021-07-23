@@ -37,18 +37,20 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue, { PropType } from "vue";
+
+export default Vue.extend({
   props: {
-    value: Boolean
+    value: Boolean as PropType<boolean>
   },
 
   computed: {
     internalValue: {
-      get() {
+      get(): boolean {
         return this.value;
       },
-      set(val) {
+      set(val: boolean) {
         this.$emit("input", val);
       }
     }
@@ -61,11 +63,11 @@ export default {
       }
     },
     onRouteChange() {
-      if (this.internalValue && !this._isDestroyed) {
+      if (this.internalValue) {
         this.internalValue = false;
       }
     },
-    onInternalValueChange(value) {
+    onInternalValueChange(value: boolean) {
       if (value) {
         document.documentElement.style.overflowY = "hidden";
       } else {
@@ -86,8 +88,5 @@ export default {
     $route: "onRouteChange",
     internalValue: "onInternalValueChange"
   }
-};
+});
 </script>
-
-<style>
-</style>

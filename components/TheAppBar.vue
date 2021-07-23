@@ -93,14 +93,16 @@
   </rc-app-bar>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from "vue";
+
+export default Vue.extend({
   data: () => ({
     showNav: false
   }),
 
   computed: {
-    theme() {
+    theme(): string {
       return this.$colorMode.value;
     }
   },
@@ -117,5 +119,5 @@ export default {
       this.$store.dispatch("setNavigationDrawer", true);
     }
   }
-};
+});
 </script>

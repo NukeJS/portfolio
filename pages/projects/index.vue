@@ -62,11 +62,13 @@
   </rc-container>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
+
 import { mapMetaInfo } from "~/utils/helpers";
 
-export default {
-  head() {
+export default Vue.extend({
+  head(): object {
     return mapMetaInfo({
       title: "Projects",
       description: "An overview of my projects listed on GitHub.",
@@ -85,8 +87,8 @@ export default {
     );
 
     this.repositories = repositories
-      .filter(repo => !repo.fork && repo.description)
-      .map(repository => ({
+      .filter((repo: any) => !repo.fork && repo.description)
+      .map((repository: any) => ({
         id: repository.id,
         name: repository.name,
         url: repository.html_url,
@@ -94,7 +96,7 @@ export default {
         language: repository.language,
         stars: repository.stargazers_count
       }))
-      .sort((a, b) => b.stars - a.stars);
+      .sort((a: any, b: any) => b.stars - a.stars);
   }
-};
+});
 </script>

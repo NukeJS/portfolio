@@ -11,11 +11,15 @@
   </article>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
+
 import { mapMetaInfo } from "~/utils/helpers";
 
-export default {
-  head() {
+import { IContentDocument } from "@nuxt/content/types/content";
+
+export default Vue.extend({
+  head(): object {
     return mapMetaInfo({
       title: this.page.title,
       description: this.page.description,
@@ -35,18 +39,22 @@ export default {
         });
       });
 
-    const [prev, next] = await $content("blog")
+    const [prev, next] = (await $content("blog")
       .where({ draft: false })
       .sortBy("createdAt")
       .surround(params.slug)
       .only(["title", "slug"])
-      .fetch();
+      .fetch()) as IContentDocument[];
 
     return {
       page,
       prev,
       next
     };
-  }
-};
+  },
+
+  data: () => ({
+    page: {} as IContentDocument
+  })
+});
 </script>

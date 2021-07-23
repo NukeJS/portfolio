@@ -41,15 +41,17 @@
   </rc-app>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue, { PropType } from "vue";
+
+export default Vue.extend({
   layout: "empty",
 
   props: {
     error: {
-      type: Object,
+      type: Object as PropType<object>,
       default: null
     }
   }
-};
+});
 </script>
