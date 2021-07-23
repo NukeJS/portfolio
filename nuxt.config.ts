@@ -1,7 +1,7 @@
 import { NuxtConfig } from "@nuxt/types";
 
 const config: NuxtConfig = {
-  ssr: true,
+  ssr: false,
   target: "static",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -89,6 +89,8 @@ const config: NuxtConfig = {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    "@nuxtjs/composition-api/module",
+
     "@nuxt/typescript-build",
 
     "@nuxt/image",
@@ -131,6 +133,8 @@ const config: NuxtConfig = {
 
   generate: {
     fallback: true,
+
+    interval: 2000,
 
     async routes() {
       const { $content } = require("@nuxt/content");

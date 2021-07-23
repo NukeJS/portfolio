@@ -28,44 +28,77 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import {
+  defineComponent,
+  useContext,
+  useMeta,
+  useAsync,
+  computed,
+  ref
+} from "@nuxtjs/composition-api";
 
 import { mapMetaInfo } from "~/utils/helpers";
 
-export default Vue.extend({
-  head(): object {
-    return mapMetaInfo({
-      title: "Blog",
-      description: "An overview of my blog articles.",
-      path: "/blog"
-    });
-  },
+import { IContentDocument } from "@nuxt/content/types/content";
 
-  async asyncData({ $content }) {
-    const articles = await $content("blog")
-      .where({ draft: false })
-      .only(["slug", "title", "thumbnail", "description", "readingTime"])
-      .sortBy("createdAt", "desc")
-      .fetch();
+export default defineComponent({
+  head: {},
+
+  // async asyncData({ $content }) {
+  //   const articles = await ;
+
+  //   return {
+  //     articles
+  //   };
+  // },
+
+  // data: () => ({
+  //   articles: [],
+  //   query: ""
+  // }),
+
+  // computed: {
+  //   filteredArticles() {
+  //     return this.articles.filter(
+  //       (article: any) =>
+  //         article.title.toLowerCase().includes(this.query.toLowerCase()) ||
+  //         article.description.toLowerCase().includes(this.query.toLowerCase())
+  //     );
+  //   }
+  // },
+
+  setup() {
+    const { $content } = useContext();
+    const query = ref<string>("");
+
+    const articles = useAsync(() =>
+      $content("blog")
+        .where({ draft: false })
+        .only(["slug", "title", "thumbnail", "description", "readingTime"])
+        .sortBy("createdAt", "desc")
+        .fetch()
+    );
+
+    const filteredArticles = computed(() => {
+      articles.value?.filter(
+        (article: any) =>
+          article.title.toLowerCase().includes(query.value.toLowerCase()) ||
+          article.description.toLowerCase().includes(query.value.toLowerCase())
+      );
+    });
+
+    useMeta((): object =>
+      mapMetaInfo({
+        title: "Blog",
+        description: "An overview of my blog articles.",
+        path: "/blog"
+      })
+    );
 
     return {
-      articles
+      filteredArticles,
+      query
     };
-  },
-
-  data: () => ({
-    articles: [],
-    query: ""
-  }),
-
-  computed: {
-    filteredArticles() {
-      return this.articles.filter(
-        (article: any) =>
-          article.title.toLowerCase().includes(this.query.toLowerCase()) ||
-          article.description.toLowerCase().includes(this.query.toLowerCase())
-      );
-    }
   }
 });
 </script>
