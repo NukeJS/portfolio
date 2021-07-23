@@ -12,10 +12,9 @@
 import {
   defineComponent,
   useContext,
-  useStatic,
+  useAsync,
   Ref,
-  useMeta,
-  computed
+  useMeta
 } from "@nuxtjs/composition-api";
 
 import { mapMetaInfo } from "~/utils/helpers";
@@ -27,29 +26,25 @@ export default defineComponent({
 
   setup() {
     const { params, $content, error } = useContext();
-    const slug = computed(() => params.value.slug);
 
-    const article = useStatic(
-      slug =>
-        $content("blog", slug)
-          .where({ draft: false })
-          .fetch()
-          .catch(err => {
-            error({
-              statusCode: 404,
-              message: `This article could not be found`
-            });
-          }) as Promise<IContentDocument>,
-      slug,
-      "article"
-    );
+    const article = useAsync(() =>
+      $content("blog", params.value.slug)
+        .where({ draft: false })
+        .fetch()
+        .catch(err => {
+          error({
+            statusCode: 404,
+            message: `This article could not be found`
+          });
+        })
+    ) as Ref<IContentDocument>;
 
     useMeta((): object =>
       mapMetaInfo({
-        title: article.value?.title,
-        description: article.value?.description,
-        image: article.value?.thumbnail,
-        path: `/blog/${article.value?.slug}`
+        title: article.value.title,
+        description: article.value.description,
+        image: article.value.thumbnail,
+        path: `/blog/${article.value.slug}`
       })
     );
 

@@ -20,7 +20,7 @@
 
     <p
       class="mt-4 text-xl font-bold text-gray-700 dark:text-gray-300"
-      v-if="!articles.length"
+      v-if="!filteredArticles.length"
     >
       No articles to display.
     </p>
@@ -80,7 +80,7 @@ export default defineComponent({
     );
 
     const filteredArticles = computed(() => {
-      articles.value?.filter(
+      return articles.value?.filter(
         (article: any) =>
           article.title.toLowerCase().includes(query.value.toLowerCase()) ||
           article.description.toLowerCase().includes(query.value.toLowerCase())
