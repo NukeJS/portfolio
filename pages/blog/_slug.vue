@@ -5,12 +5,6 @@
 
       <nuxt-content :document="article" />
     </div>
-    <rc-container class="px-0">
-      <ArticlePrevNextPosts
-        :prev="prevNextArticle[0]"
-        :next="prevNextArticle[1]"
-      />
-    </rc-container>
   </article>
 </template>
 
@@ -18,9 +12,10 @@
 import {
   defineComponent,
   useContext,
-  useAsync,
+  useStatic,
   Ref,
-  useMeta
+  useMeta,
+  computed
 } from "@nuxtjs/composition-api";
 
 import { mapMetaInfo } from "~/utils/helpers";
@@ -30,56 +25,36 @@ import { IContentDocument } from "@nuxt/content/types/content";
 export default defineComponent({
   head: {},
 
-  // async asyncData({ $content, params, error }) {
-  //   const [prev, next] = (await ) as IContentDocument[];
-
-  //   return {
-  //     page,
-  //     prev,
-  //     next
-  //   };
-  // },
-
-  // data: () => ({
-  //   page: {} as IContentDocument
-  // }),
-
   setup() {
     const { params, $content, error } = useContext();
+    const slug = computed(() => params.value.slug);
 
-    const article = useAsync(() =>
-      $content("blog", params.value.slug)
-        .where({ draft: false })
-        .fetch()
-        .catch(err => {
-          error({
-            statusCode: 404,
-            message: `This article could not be found`
-          });
-        })
-    ) as Ref<IContentDocument>;
-
-    const prevNextArticle = useAsync(() =>
-      $content("blog")
-        .where({ draft: false })
-        .sortBy("createdAt")
-        .surround(params.value.slug)
-        .only(["title", "slug"])
-        .fetch()
+    const article = useStatic(
+      slug =>
+        $content("blog", slug)
+          .where({ draft: false })
+          .fetch()
+          .catch(err => {
+            error({
+              statusCode: 404,
+              message: `This article could not be found`
+            });
+          }) as Promise<IContentDocument>,
+      slug,
+      "article"
     );
 
     useMeta((): object =>
       mapMetaInfo({
-        title: article.value.title,
-        description: article.value.description,
-        image: article.value.thumbnail,
-        path: `/blog/${article.value.slug}`
+        title: article.value?.title,
+        description: article.value?.description,
+        image: article.value?.thumbnail,
+        path: `/blog/${article.value?.slug}`
       })
     );
 
     return {
-      article,
-      prevNextArticle
+      article
     };
   }
 });
