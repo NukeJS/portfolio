@@ -452,8 +452,8 @@ You can now test the routes using [Postman](https://www.postman.com/) or any oth
 
 ## Conclusion
 
-We've learned how to create a Node.js REST API using Express. We also know how to use connect to MongoDB and create/read/update/delete collections with Mongoose.
+We've learned how to create a Node.js REST API using Express. We also know how to use `mongoose` to connect to MongoDB.
 
 ## Source Code
 
-You can find the complete source code for this blog post on [GitHub](https://github.com/CodingWithNuke/express-mongodb-api)
+You can find the complete source code for this blog post on [GitHub](https://github.com/CodingWithNuke/express-mongodb-api).
