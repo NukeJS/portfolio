@@ -134,8 +134,6 @@ const config: NuxtConfig = {
   generate: {
     fallback: true,
 
-    interval: 2000,
-
     async routes() {
       const { $content } = require("@nuxt/content");
       const files = await $content({ deep: true })
