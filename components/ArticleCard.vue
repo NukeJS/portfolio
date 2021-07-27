@@ -5,7 +5,7 @@
     class="bg-white dark:border-gray-700 dark:bg-gray-800 shadow-sm border rounded flex flex-col overflow-hidden"
   >
     <div class="aspect-w-16 aspect-h-9 border-b dark:border-gray-700">
-      <img
+      <nuxt-img
         v-if="article.thumbnail"
         :src="article.thumbnail"
         class="object-cover w-full"
