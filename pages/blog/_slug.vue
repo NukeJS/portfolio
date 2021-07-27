@@ -3,6 +3,12 @@
     <div class="dark:prose-dark prose md:prose-lg lg:prose-xl mx-auto w-full">
       <h1>{{ page.title }}</h1>
 
+      <nuxt-img
+        v-if="page.thumbnail"
+        :src="page.thumbnail"
+        class="rounded-md md:rounded-xl object-cover w-full"
+      />
+
       <nuxt-content :document="page" />
     </div>
     <rc-container class="px-0">
@@ -45,7 +51,7 @@ export default Vue.extend({
 
     const [prev, next] = (await $content("blog")
       .where({ draft: false })
-      .sortBy("createdAt")
+      .sortBy("date")
       .surround(params.slug)
       .only(["title", "slug"])
       .fetch()) as IContentDocument[];

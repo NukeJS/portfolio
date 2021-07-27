@@ -47,7 +47,7 @@ export default Vue.extend({
     const articles = await $content("blog")
       .where({ draft: false })
       .only(["slug", "title", "thumbnail", "description", "readingTime"])
-      .sortBy("createdAt", "desc")
+      .sortBy("date", "desc")
       .fetch();
 
     return {
