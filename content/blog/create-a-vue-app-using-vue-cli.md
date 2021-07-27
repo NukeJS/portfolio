@@ -2,6 +2,7 @@
 title: How to Create a Vue Application using Vue CLI
 description: Learn how you can make a Vue application using Vue CLI.
 thumbnail: /images/blog/thumbnails/vue-cli.png
+date: '2021-07-02'
 draft: false
 ---
 
