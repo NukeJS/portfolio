@@ -29,6 +29,7 @@ export default Vue.extend({
     return mapMetaInfo({
       title: this.page.title,
       description: this.page.description,
+      keywords: this.page.keywords,
       image: this.page.thumbnail,
       path: `/blog/${this.page.slug}`
     });

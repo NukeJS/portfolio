@@ -1,14 +1,21 @@
 export function mapMetaInfo(meta: {
   title: string;
   description: string;
+  keywords?: string | string[];
   image?: string;
   path: string;
 }) {
-  const { title, description, image, path } = meta;
+  let { title, description, keywords, image, path } = meta;
 
   const url = `https:/ronniecodes.com${
     path.startsWith("/") ? path : `/${path}`
   }`;
+
+  if (keywords) {
+    if (Array.isArray(keywords)) {
+      keywords = keywords.join(", ");
+    }
+  }
 
   const metaData = {
     title,
@@ -16,6 +23,7 @@ export function mapMetaInfo(meta: {
     meta: [
       // Global
       { hid: "description", name: "description", content: description },
+      { hid: "keywords", name: "keywords", content: keywords },
 
       // Facebook
       { hid: "og:title", property: "og:title", content: title },

@@ -18,6 +18,7 @@ const config: NuxtConfig = {
           "I'm a guy that is fond of creating full stack web apps.I'm currently based in the Netherlands. I create modern and functional web apps."
       },
       {
+        hid: "keywords",
         name: "keywords",
         content:
           "Web Development, Full Stack, Ronnie, RonnieCodes, Web Developer, Node.js, Vue.js, Nuxt.js, Node.js Developer"
