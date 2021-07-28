@@ -25,7 +25,7 @@
       </rc-btn>
 
       <nuxt-link to="/" class="dark:text-white text-lg font-bold select-none">
-        <img class="h-6" src="/images/logo.svg" alt="RonnieCodes Logo" />
+        <nuxt-img class="h-6" src="/images/logo.svg" alt="RonnieCodes Logo" />
       </nuxt-link>
 
       <rc-spacer />

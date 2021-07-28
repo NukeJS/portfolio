@@ -2,7 +2,7 @@
 title: How to Create a Vue Application using Vue CLI
 description: Learn how you can make a Vue application using Vue CLI.
 keywords: Vue, Vue.js, Vue CLI, CLI, Node, Node.js, NPM, JavaScript, JS
-thumbnail: /images/blog/thumbnails/vue-cli.png
+thumbnail: blog/create-a-vue-app-using-vue-cli/thumbnail.png
 date: 2021-07-02
 draft: false
 ---

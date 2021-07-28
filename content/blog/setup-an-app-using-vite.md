@@ -2,7 +2,7 @@
 title: How to Setup an Application using Vite
 description: Learn how you can set up a React, Vue, Svelte, or vanilla JavaScript app using Vite.
 keywords: Vite, Vite.js, Vue, Vue.js, React, React.js, Svelte, JavaScript, JS, TypeScript, TS, Node, Node.js
-thumbnail: /images/blog/thumbnails/vite.png
+thumbnail: /blog/setup-an-app-using-vite/thumbnail.png
 date: 2021-07-27
 draft: false
 ---
@@ -36,6 +36,12 @@ pnpx create-vite
 ```
 
 It will then ask you what project should be called and which template you want to use.
+
+Now you want to move into the project's directory and run:
+
+```bash
+npm install # or `yarn` if using yarn
+```
 
 You can aslo directly specify the project name and the template you want to use via additional command line options. For example, to scaffold a Vite + React TypeScript project, run:
 

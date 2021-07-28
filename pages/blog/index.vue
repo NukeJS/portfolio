@@ -24,6 +24,13 @@
     >
       No articles to display.
     </p>
+
+    <p
+      class="mt-4 text-xl font-bold text-gray-700 dark:text-gray-300"
+      v-if="articles.length && !filteredArticles.length"
+    >
+      No articles found with search query "{{ query }}".
+    </p>
   </rc-container>
 </template>
 
