@@ -6,7 +6,7 @@
       <nuxt-img
         v-if="page.thumbnail"
         :src="page.thumbnail"
-        class="rounded-md md:rounded-xl object-cover w-full"
+        class="rounded-md md:rounded-xl object-cover w-full border dark:border-transparent shadow-md lg:shadow-xl"
       />
 
       <nuxt-content :document="page" />
