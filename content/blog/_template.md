@@ -1,7 +1,9 @@
 ---
 title: 
 description: 
-thumbnail: /images/blog/thumbnails/
+keywords: 
+thumbnail: /blog/slug/thumbnail.png
+date: 
 draft: true
 ---
 

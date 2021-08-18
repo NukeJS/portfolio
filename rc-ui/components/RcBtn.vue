@@ -37,7 +37,7 @@ export default Vue.extend({
   computed: {
     classes(): Record<string, boolean> {
       return {
-        "inline-flex items-center justify-center focus:outline-none outline-none transition duration-200 ease-in-out": true
+        "inline-flex items-center justify-center focus:outline-none outline-none transition duration-200 ease-in-out cursor-pointer": true
       };
     }
   },

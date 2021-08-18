@@ -3,6 +3,8 @@
     <div class="dark:prose-dark prose md:prose-lg lg:prose-xl mx-auto w-full">
       <h1>{{ page.title }}</h1>
 
+      <p>{{ page.description }}</p>
+
       <nuxt-img
         v-if="page.thumbnail"
         :src="page.thumbnail"
