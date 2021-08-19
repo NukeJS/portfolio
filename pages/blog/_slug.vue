@@ -13,9 +13,9 @@
 
       <nuxt-content :document="page" />
     </div>
-    <rc-container class="px-0">
+    <!-- <rc-container class="px-0">
       <ArticlePrevNextPosts :prev="prev" :next="next" />
-    </rc-container>
+    </rc-container> -->
   </article>
 </template>
 
@@ -52,17 +52,17 @@ export default Vue.extend({
         });
       });
 
-    const [prev, next] = (await $content("blog")
-      .where({ draft: false })
-      .sortBy("date")
-      .surround(params.slug)
-      .only(["title", "slug"])
-      .fetch()) as IContentDocument[];
+    // const [prev, next] = (await $content("blog")
+    //   .where({ draft: false })
+    //   .sortBy("date")
+    //   .surround(params.slug)
+    //   .only(["title", "slug"])
+    //   .fetch()) as IContentDocument[];
 
     return {
-      page,
-      prev,
-      next
+      page
+      // prev,
+      // next
     };
   }
 });

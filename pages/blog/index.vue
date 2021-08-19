@@ -8,7 +8,7 @@
     <rc-input
       class="mt-6 sm:mt-10"
       v-model="query"
-      placeholder="Filter through blog posts..."
+      placeholder="Search through blog posts..."
     />
     <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <ArticleCard

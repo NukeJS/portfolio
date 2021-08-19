@@ -21,7 +21,7 @@ npx degit solidjs/templates/js my-cool-app
 npx degit solidjs/templates/ts my-cool-app
 ```
 
-Next, navigate into the project directory and install the dependencies.
+Next, navigate into your project directory and install the dependencies.
 
 ```bash
 cd my-cool-app
@@ -34,13 +34,13 @@ Next, we need to install Tailwind CSS, PostCSS & Autoprefixer.
 npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 ```
 
-Next, generate the `tailwind.config.js` and `postcss.config.js` file.
+Next, generate your `tailwind.config.js` and `postcss.config.js` file.
 
 ```bash
 npx tailwindcss init -p
 ```
 
-Open the `tailwind.config.js` file and change the contents to the following:
+Open your `tailwind.config.js` file and change the contents to the following:
 
 ```js
 module.exports = {
