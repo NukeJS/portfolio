@@ -33,7 +33,8 @@ export default Vue.extend({
       description: this.page.description,
       keywords: this.page.keywords,
       image: this.page.thumbnail,
-      path: `/blog/${this.page.slug}`
+      path: `/blog/${this.page.slug}`,
+      type: "article"
     });
   },
 

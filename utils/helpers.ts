@@ -4,8 +4,9 @@ export function mapMetaInfo(meta: {
   keywords?: string | string[];
   image?: string;
   path: string;
+  type?: string;
 }) {
-  let { title, description, keywords, image, path } = meta;
+  let { title, description, keywords, image, path, type = "website" } = meta;
 
   const url = `https:/ronniecodes.com${
     path.startsWith("/") ? path : `/${path}`
@@ -32,7 +33,7 @@ export function mapMetaInfo(meta: {
         property: "og:description",
         content: description
       },
-      { hid: "og:type", property: "og:type", content: "website" },
+      { hid: "og:type", property: "og:type", content: type },
       { hid: "og:url", property: "og:url", content: url },
       { hid: "og:image", property: "og:image", content: image },
 
