@@ -21,7 +21,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'open-sans': ['Open Sans', 'sans-serif']
+        'poppins': ['Poppins', 'sans-serif']
       },
 
       colors: {

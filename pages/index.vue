@@ -149,7 +149,7 @@ export default Vue.extend({
         image: "/images/skills/nuxtjs.svg",
         name: "Nuxt.js",
         description:
-          "Nuxt.js is a Vue.js framework, it allows me to create server-side rendered or statically generated web applications. Which are better for SEO."
+          "Nuxt.js is a Vue.js framework, it allows me to create server-side rendered or statically generated web applications."
       },
       {
         image: "/images/skills/sass.svg",

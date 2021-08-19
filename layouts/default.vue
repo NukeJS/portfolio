@@ -1,5 +1,5 @@
 <template>
-  <rc-app class="bg-white dark:bg-gray-900 font-open-sans">
+  <rc-app class="bg-white dark:bg-gray-900 font-poppins">
     <TheAppBar />
 
     <TheNavigationDrawer />
