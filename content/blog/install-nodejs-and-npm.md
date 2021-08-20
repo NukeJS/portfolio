@@ -29,3 +29,5 @@ npm install -g npm@latest
 ---
 
 Want to learn more about how to install Node.js and NPM? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) post on NPMJS.
+
+---

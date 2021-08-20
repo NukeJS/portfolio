@@ -65,3 +65,5 @@ Next, we need to import Tailwind CSS' styles in our `index.css` file.
 ```
 
 Finally, check if your CSS file is being imported in your `src/index.js` (or `src/index.ts` when using TypeScript) file.
+
+---

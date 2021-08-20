@@ -20,7 +20,7 @@ export default Vue.extend({
       return {
         "max-w-screen-lg xl:max-w-screen-xl": !this.fluid,
         "px-4 sm:px-6 md:px-8": !this.padless,
-        "w-full mx-auto ": true
+        "w-full mx-auto": true
       };
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <rc-app-bar
     fixed
-    class="border-b bg-white dark:bg-gray-900 dark:border-gray-700"
+    class="border-b bg-white dark:bg-gray-900 dark:border-gray-700 shadow-lg"
   >
     <rc-container class="flex items-center h-full">
       <rc-btn

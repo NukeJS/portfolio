@@ -29,6 +29,18 @@
     >
       An error occurred whilst trying to load my projects... Try again later.
     </p>
+
+    <p
+      class="text-gray-500 dark:text-gray-300 text-lg font-medium mt-4 sm:mt-8"
+    >
+      Discover more projects on my
+      <a
+        class="text-indigo-600 dark:text-indigo-400"
+        href="https://github.com/CodingWithNuke"
+        target="_blank"
+        >GitHub</a
+      >.
+    </p>
   </rc-container>
 </template>
 
