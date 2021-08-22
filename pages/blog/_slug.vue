@@ -1,6 +1,6 @@
 <template>
   <article class="w-full px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-    <div class="dark:prose-dark prose md:prose-lg lg:prose-xl mx-auto w-full">
+    <div class="w-full mx-auto prose dark:prose-dark md:prose-lg lg:prose-xl">
       <h1>{{ page.title }}</h1>
 
       <p>{{ page.description }}</p>
@@ -8,12 +8,12 @@
       <nuxt-img
         v-if="page.thumbnail"
         :src="page.thumbnail"
-        class="rounded-md md:rounded-xl object-cover w-full border dark:border-transparent shadow-md lg:shadow-xl"
+        class="object-cover w-full border rounded-md shadow-md md:rounded-xl dark:border-transparent lg:shadow-xl"
       />
 
       <nuxt-content :document="page" />
     </div>
-    <rc-container fluid padless>
+    <rc-container>
       <ArticlePrevNextPosts :prev="prev" :next="next" />
     </rc-container>
   </article>
