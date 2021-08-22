@@ -1,16 +1,16 @@
 <template>
   <rc-app-bar
     fixed
-    class="border-b bg-white dark:bg-gray-900 dark:border-gray-700 shadow-lg"
+    class="bg-white border-b shadow-lg dark:bg-gray-900 dark:border-gray-700"
   >
     <rc-container class="flex items-center h-full">
       <rc-btn
         @click="showNavigationDrawer"
-        class="md:hidden mr-3 text-gray-500 dark:text-gray-300 dark:hover:text-gray-100 font-semibold cursor-pointer"
+        class="mr-3 font-semibold text-gray-500 cursor-pointer md:hidden dark:text-gray-300 dark:hover:text-gray-100"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
+          class="w-6 h-6"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -24,42 +24,47 @@
         </svg>
       </rc-btn>
 
-      <nuxt-link to="/" class="dark:text-white text-lg font-bold select-none">
+      <nuxt-link to="/" class="text-lg font-bold select-none dark:text-white">
         <nuxt-img class="h-6" src="/images/logo.svg" alt="RonnieCodes Logo" />
       </nuxt-link>
 
       <rc-spacer />
 
       <div class="flex items-center space-x-6 sm:space-x-10">
-        <div class="hidden md:flex items-center space-x-6 sm:space-x-10">
+        <div
+          class="items-center hidden space-x-6 font-medium text-gray-500 dark:text-gray-400 md:flex sm:space-x-10"
+        >
           <nuxt-link
             to="/"
-            class="text-gray-500 dark:text-gray-300 dark:hover:text-gray-100 font-semibold"
+            exact-active-class="text-gray-900 dark:text-white"
+            class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
           >
             Home
           </nuxt-link>
           <nuxt-link
             to="/blog"
-            class="text-gray-500 dark:text-gray-300 dark:hover:text-gray-100 font-semibold"
+            exact-active-class="text-gray-900 dark:text-white"
+            class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
           >
             Blog
           </nuxt-link>
           <nuxt-link
             to="/projects"
-            class="text-gray-500 dark:text-gray-300 dark:hover:text-gray-100 font-semibold"
+            exact-active-class="text-gray-900 dark:text-white"
+            class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
           >
             Projects
           </nuxt-link>
         </div>
 
         <rc-btn
-          class="text-gray-500 dark:text-gray-300 dark:hover:text-gray-100 font-semibold cursor-pointer"
+          class="font-semibold text-gray-500 cursor-pointer dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
           @click="switchTheme"
         >
           <svg
             v-if="theme == 'light'"
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
+            class="w-6 h-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -74,7 +79,7 @@
           <svg
             v-else-if="theme == 'dark'"
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
+            class="w-6 h-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -86,7 +91,7 @@
               d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
             />
           </svg>
-          <span v-else class="h-6 w-6">...</span>
+          <span v-else class="w-6 h-6">...</span>
         </rc-btn>
       </div>
     </rc-container>

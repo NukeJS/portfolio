@@ -1,15 +1,15 @@
 <template>
   <rc-navigation-drawer v-model="navigationDrawer">
     <div
-      class="h-full bg-white border-r dark:border-gray-700 dark:bg-gray-900 flex flex-col"
+      class="flex flex-col h-full bg-white border-r dark:border-gray-700 dark:bg-gray-900"
     >
       <rc-app-bar
-        class="border-b bg-white dark:bg-gray-900 dark:border-gray-700"
+        class="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
       >
-        <rc-container fluid padless class="px-4">
+        <rc-container fluid padless class="flex items-center px-4">
           <nuxt-link
             to="/"
-            class="dark:text-white text-lg font-bold select-none"
+            class="inline-block text-lg font-bold select-none dark:text-white"
           >
             <nuxt-img
               class="h-6"
@@ -19,25 +19,38 @@
           </nuxt-link>
         </rc-container>
       </rc-app-bar>
-      <div class="flex flex-col divide-y dark:divide-gray-700">
-        <nuxt-link
-          to="/"
-          class="text-gray-500 dark:text-gray-300 dark:hover:text-gray-100 font-semibold py-2 px-4"
+      <div>
+        <ul
+          class="p-4 space-y-4 font-medium text-gray-500 dark:divide-gray-700 dark:text-gray-400"
         >
-          Home
-        </nuxt-link>
-        <nuxt-link
-          to="/blog"
-          class="text-gray-500 dark:text-gray-300 dark:hover:text-gray-100 font-semibold py-2 px-4"
-        >
-          Blog
-        </nuxt-link>
-        <nuxt-link
-          to="/projects"
-          class="text-gray-500 dark:text-gray-300 dark:hover:text-gray-100 font-semibold py-2 px-4"
-        >
-          Projects
-        </nuxt-link>
+          <li>
+            <nuxt-link
+              to="/"
+              exact-active-class="text-gray-900 dark:text-white"
+              class="transition-colors duration-200 dark:hover:text-gray-100"
+            >
+              Home
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link
+              to="/blog"
+              exact-active-class="text-gray-900 dark:text-white"
+              class="transition-colors duration-200 dark:hover:text-gray-100"
+            >
+              Blog
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link
+              to="/projects"
+              exact-active-class="text-gray-900 dark:text-white"
+              class="transition-colors duration-200 dark:hover:text-gray-100"
+            >
+              Projects
+            </nuxt-link>
+          </li>
+        </ul>
       </div>
     </div>
   </rc-navigation-drawer>
