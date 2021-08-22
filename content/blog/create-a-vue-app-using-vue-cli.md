@@ -130,5 +130,3 @@ npm run serve
 This will open your Vue application on http://localhost:8080. If there's already something running on port `8080`, it will just increase the default port `8080` by 1.
 
 And that's how you can create a Vue application using Vue CLI.
-
----

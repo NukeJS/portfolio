@@ -75,5 +75,3 @@ Next, open the `./assets/css/tailwind.css` file that Nuxt.js generates for you b
 ```
 
 And we're finished! Now when you execute `npm run dev`, Tailwind CSS will be ready to be used in your project.
-
----

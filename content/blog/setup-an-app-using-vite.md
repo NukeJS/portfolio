@@ -72,5 +72,3 @@ Supported template presets inlude (at the moment of writing this article):
 - `svelte-ts`
 
 For more information about Vite, read through their [guide](https://vitejs.dev/guide).
-
----

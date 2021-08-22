@@ -40,5 +40,3 @@ It will ask you some questions: project name, Nuxt options, UI framework, TypeSc
 Once all questions have been answered, it will install all the required dependencies.
 
 You can now navigate to the project folder and start coding!
-
----

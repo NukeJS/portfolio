@@ -459,5 +459,3 @@ We've learned how to create a Node.js REST API using Express. We also know how t
 ## Source Code
 
 You can find the complete source code for this blog post on [GitHub](https://github.com/CodingWithNuke/express-mongodb-api).
-
----
