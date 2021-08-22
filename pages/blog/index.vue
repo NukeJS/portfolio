@@ -1,7 +1,7 @@
 <template>
   <rc-container class="my-4">
     <h2
-      class="sm:mt-2 md:mt-4 text-gray-900 dark:text-white text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-none"
+      class="text-3xl font-bold leading-none tracking-tight text-gray-900 sm:mt-2 md:mt-4 dark:text-white sm:text-4xl md:text-5xl"
     >
       My <span class="text-indigo-600 dark:text-indigo-500">Blog</span>.
     </h2>
@@ -10,7 +10,7 @@
       v-model="query"
       placeholder="Search through blog posts..."
     />
-    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-3">
       <ArticleCard
         v-for="(article, index) in filteredArticles"
         :key="index"

@@ -2,7 +2,7 @@
   <rc-container>
     <section class="max-w-full py-12 sm:py-16 md:py-20">
       <h1
-        class="text-gray-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight"
+        class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl"
       >
         Hi, I'm
         <span class="text-indigo-600 dark:text-indigo-500">Ronnie</span>. I'm a
@@ -12,7 +12,7 @@
       </h1>
 
       <p
-        class="max-w-2xl text-gray-500 dark:text-gray-300 text-lg mt-6 sm:mt-8 mb-8 sm:mb-10"
+        class="max-w-2xl mt-6 mb-8 text-lg text-gray-500 dark:text-gray-300 sm:mt-8 sm:mb-10"
       >
         I'm a guy that is fond of creating full-stack web apps. I'm currently
         based in the Netherlands. I create modern and functional web apps.
@@ -22,7 +22,7 @@
         <rc-btn
           nuxt
           to="/projects"
-          class="bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg px-6 py-3 rounded-md sm:rounded-full font-medium text-xl leading-6 w-full sm:w-auto flex-none"
+          class="flex-none w-full px-6 py-3 text-xl font-medium leading-6 text-white bg-indigo-600 rounded-md shadow-lg hover:bg-indigo-700 sm:rounded-full sm:w-auto"
           >My Projects</rc-btn
         >
       </div>
@@ -30,12 +30,12 @@
 
     <section class="max-w-full py-12 sm:py-16 md:py-20">
       <h2
-        class="text-gray-900 dark:text-white text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-none"
+        class="text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl"
       >
         My <span class="text-indigo-600 dark:text-indigo-500">Stack</span>.
       </h2>
 
-      <div class="mt-6 sm:mt-10 grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <div class="grid gap-4 mt-6 sm:mt-10 md:grid-cols-2 xl:grid-cols-3">
         <SkillCard
           v-for="(skill, index) in skills"
           :key="index"
@@ -46,7 +46,7 @@
 
     <section class="max-w-full py-12 sm:py-16 md:py-20">
       <h2
-        class="text-gray-900 dark:text-white text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-none"
+        class="text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl"
       >
         <span class="text-indigo-600 dark:text-indigo-500">Contact</span> Me.
       </h2>
@@ -56,11 +56,11 @@
           <rc-btn
             href="https://github.com/CodingWithNuke"
             target="_blank"
-            class="bg-indigo-600 hover:bg-indigo-700 shadow text-white rounded-full w-12 h-12 flex items-center justify-center"
+            class="flex items-center justify-center w-12 h-12 text-white bg-indigo-600 rounded-full shadow hover:bg-indigo-700"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-8 w-8"
+              class="w-8 h-8"
               viewBox="0 0 24 24"
               fill="currentColor"
             >
@@ -73,11 +73,11 @@
           </rc-btn>
           <rc-btn
             :href="`mailto:${email}`"
-            class="bg-indigo-600 hover:bg-indigo-700 shadow text-white rounded-full w-12 h-12 flex items-center justify-center"
+            class="flex items-center justify-center w-12 h-12 text-white bg-indigo-600 rounded-full shadow hover:bg-indigo-700"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-8 w-8"
+              class="w-8 h-8"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -93,7 +93,7 @@
         </div>
 
         <p
-          class="max-w-2xl text-gray-500 dark:text-gray-300 text-lg font-medium mt-4 sm:mt-8"
+          class="max-w-2xl mt-4 text-lg font-medium text-gray-500 dark:text-gray-300 sm:mt-8"
         >
           You can send me an e-mail at
           <a

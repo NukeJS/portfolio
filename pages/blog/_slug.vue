@@ -13,9 +13,6 @@
 
       <nuxt-content :document="page" />
     </div>
-    <rc-container>
-      <ArticlePrevNextPosts :prev="prev" :next="next" />
-    </rc-container>
   </article>
 </template>
 

@@ -1,13 +1,13 @@
 <template>
   <rc-container class="my-4">
     <h2
-      class="sm:mt-2 md:mt-4 text-gray-900 dark:text-white text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-none"
+      class="text-3xl font-bold leading-none tracking-tight text-gray-900 sm:mt-2 md:mt-4 dark:text-white sm:text-4xl md:text-5xl"
     >
       My <span class="text-indigo-600 dark:text-indigo-500">Projects</span>.
     </h2>
     <div
       v-if="!$fetchState.pending"
-      class="mt-6 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+      class="grid grid-cols-1 gap-4 mt-6 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3"
     >
       <ProjectCard
         v-for="repository in repositories"
@@ -17,21 +17,21 @@
     </div>
 
     <p
-      class="mt-6 sm:mt-10 text-xl font-bold text-gray-600 dark:text-gray-300"
+      class="mt-6 text-xl font-bold text-gray-600 sm:mt-10 dark:text-gray-300"
       v-if="$fetchState.pending"
     >
       Loading repositories...
     </p>
 
     <p
-      class="mt-6 sm:mt-10 text-xl font-bold text-gray-600 dark:text-gray-300"
+      class="mt-6 text-xl font-bold text-gray-600 sm:mt-10 dark:text-gray-300"
       v-if="$fetchState.error"
     >
       An error occurred whilst trying to load my projects... Try again later.
     </p>
 
     <p
-      class="text-gray-500 dark:text-gray-300 text-lg font-medium mt-4 sm:mt-8"
+      class="mt-4 text-lg font-medium text-gray-500 dark:text-gray-300 sm:mt-8"
     >
       Discover more projects on my
       <a

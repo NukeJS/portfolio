@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-auto max-w-full relative">
+  <main class="relative flex flex-auto max-w-full">
     <slot></slot>
   </main>
 </template>
