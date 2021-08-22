@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-full h-12">
+  <footer class="w-full">
     <div class="flex items-center h-full">
       <slot></slot>
     </div>
