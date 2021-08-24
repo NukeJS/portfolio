@@ -116,7 +116,9 @@ const config: NuxtConfig = {
     }
   },
 
-  axios: {},
+  axios: {
+    baseURL: "https://ronniecodes.com/api"
+  },
 
   pwa: {
     manifest: {

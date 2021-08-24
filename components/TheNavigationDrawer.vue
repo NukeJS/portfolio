@@ -19,7 +19,7 @@
           </nuxt-link>
         </rc-container>
       </rc-app-bar>
-      <div>
+      <div class="overflow-y-auto">
         <ul
           class="p-4 space-y-4 font-medium text-gray-500 dark:divide-gray-700 dark:text-gray-400"
         >

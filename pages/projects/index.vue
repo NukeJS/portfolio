@@ -9,18 +9,14 @@
       v-if="!$fetchState.pending"
       class="grid grid-cols-1 gap-4 mt-6 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3"
     >
-      <ProjectCard
-        v-for="repository in repositories"
-        :key="repository.id"
-        :project="repository"
-      />
+      <ProjectCard v-for="repo in repos" :key="repo.id" :project="repo" />
     </div>
 
     <p
       class="mt-6 text-xl font-bold text-gray-600 sm:mt-10 dark:text-gray-300"
       v-if="$fetchState.pending"
     >
-      Loading repositories...
+      Loading projects...
     </p>
 
     <p
@@ -59,26 +55,12 @@ export default Vue.extend({
   },
 
   data: () => ({
-    repositories: []
+    repos: []
   }),
 
   fetchOnServer: false,
   async fetch() {
-    const repositories = await this.$axios.$get(
-      "https://api.github.com/users/CodingWithNuke/repos"
-    );
-
-    this.repositories = repositories
-      .filter((repo: any) => !repo.fork && repo.description)
-      .map((repository: any) => ({
-        id: repository.id,
-        name: repository.name,
-        url: repository.html_url,
-        description: repository.description,
-        language: repository.language,
-        stars: repository.stargazers_count
-      }))
-      .sort((a: any, b: any) => b.stars - a.stars);
+    this.repos = await this.$axios.$get("/v1/projects");
   }
 });
 </script>
