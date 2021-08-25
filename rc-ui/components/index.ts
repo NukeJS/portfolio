@@ -8,3 +8,4 @@ export { default as RcInput } from "./RcInput.vue";
 export { default as RcMain } from "./RcMain.vue";
 export { default as RcNavigationDrawer } from "./RcNavigationDrawer.vue";
 export { default as RcSpacer } from "./RcSpacer.vue";
+export { default as RcTextarea } from "./RcTextarea.vue";

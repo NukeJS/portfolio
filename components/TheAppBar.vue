@@ -55,6 +55,13 @@
           >
             Projects
           </nuxt-link>
+          <nuxt-link
+            to="/contact"
+            exact-active-class="text-gray-900 dark:text-white"
+            class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
+          >
+            Contact
+          </nuxt-link>
         </div>
 
         <rc-btn

@@ -1,5 +1,5 @@
 <template>
-  <rc-container class="my-4">
+  <rc-container class="my-6 md:my-8">
     <h2
       class="text-3xl font-bold leading-none tracking-tight text-gray-900 sm:mt-2 md:mt-4 dark:text-white sm:text-4xl md:text-5xl"
     >

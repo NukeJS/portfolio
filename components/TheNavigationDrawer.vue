@@ -50,6 +50,15 @@
               Projects
             </nuxt-link>
           </li>
+          <li>
+            <nuxt-link
+              to="/contact"
+              exact-active-class="text-gray-900 dark:text-white"
+              class="transition-colors duration-200 dark:hover:text-gray-100"
+            >
+              Contact
+            </nuxt-link>
+          </li>
         </ul>
       </div>
     </div>

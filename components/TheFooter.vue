@@ -47,6 +47,14 @@
                 Projects
               </nuxt-link>
             </li>
+            <li>
+              <nuxt-link
+                to="/contact"
+                class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
+              >
+                Contact
+              </nuxt-link>
+            </li>
           </ul>
         </div>
         <div class="row-span-2 space-y-4">
