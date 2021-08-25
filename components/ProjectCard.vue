@@ -2,23 +2,23 @@
   <rc-card
     :href="project.url"
     target="_blank"
-    class="dark:border-gray-700 dark:bg-gray-800 shadow-sm border rounded px-4 py-3 flex flex-col"
+    class="flex flex-col px-4 py-3 border rounded shadow-sm dark:border-gray-700 dark:bg-gray-800"
   >
-    <h3 class="text-gray-900 dark:text-white font-bold text-lg">
+    <h3 class="text-lg font-bold text-gray-900 dark:text-white">
       {{ project.name }}
     </h3>
-    <p class="text-gray-500 dark:text-gray-400 mt-2 leading-snug flex-grow">
+    <p class="flex-grow mt-2 leading-snug text-gray-500 dark:text-gray-400">
       {{ project.description }}
     </p>
 
-    <div class="flex justify-between text-sm mt-3">
+    <div class="flex justify-between mt-3 text-sm">
       <p class="text-gray-500 dark:text-gray-400">
         {{ project.language }}
       </p>
       <span class="flex items-center text-gray-500 dark:text-gray-400">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-4 w-4 text-yellow-500 dark:text-yellow-400 mr-1"
+          class="w-4 h-4 mr-1 text-yellow-500 dark:text-yellow-400"
           viewBox="0 0 20 20"
           fill="currentColor"
         >
@@ -35,9 +35,18 @@
 <script lang="ts">
 import Vue, { PropType } from "vue";
 
+interface Project {
+  id: number;
+  name: string;
+  url: string;
+  description: string;
+  language: string;
+  stars: number;
+}
+
 export default Vue.extend({
   props: {
-    project: Object as PropType<object>
+    project: Object as PropType<Project>
   }
 });
 </script>

@@ -27,7 +27,7 @@ export default Vue.extend({
     to: [String, Object] as PropType<string | object>,
     nuxt: Boolean as PropType<boolean>,
     exact: Boolean as PropType<boolean>,
-    href: [String, Object] as PropType<string | object>,
+    href: String as PropType<string>,
     target: String as PropType<string>,
     activeClass: String as PropType<string>,
     exactActiveClass: String as PropType<string>,

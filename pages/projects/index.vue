@@ -45,6 +45,15 @@ import Vue from "vue";
 
 import { mapMetaInfo } from "~/utils/helpers";
 
+interface Project {
+  id: number;
+  name: string;
+  url: string;
+  description: string;
+  language: string;
+  stars: number;
+}
+
 export default Vue.extend({
   head(): object {
     return mapMetaInfo({
@@ -55,12 +64,12 @@ export default Vue.extend({
   },
 
   data: () => ({
-    repos: []
+    repos: [] as Project[]
   }),
 
-  fetchOnServer: false,
   async fetch() {
-    this.repos = await this.$axios.$get("/v1/projects");
-  }
+    this.repos = await this.$axios.$get<Project[]>("/v1/projects");
+  },
+  fetchOnServer: false
 });
 </script>

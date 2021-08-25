@@ -1,17 +1,17 @@
 <template>
   <rc-card
-    class="bg-white dark:border-gray-700 dark:bg-gray-800 flex items-start space-x-4 px-3 py-3  shadow-sm border rounded"
+    class="flex items-start px-3 py-3 space-x-4 bg-white border rounded shadow-sm dark:border-gray-700 dark:bg-gray-800"
   >
-    <div class="w-14 h-14 flex-none flex items-center justify-center">
+    <div class="flex items-center justify-center flex-none w-14 h-14">
       <nuxt-img :src="skill.image" :alt="`${skill.name} Logo`" />
     </div>
     <div class="flex-auto">
       <h3
-        class="text-gray-900 dark:text-white font-bold text-lg"
+        class="text-lg font-bold text-gray-900 dark:text-white"
         v-text="skill.name"
       ></h3>
       <p
-        class="text-gray-500 dark:text-gray-400 mt-2 leading-snug"
+        class="mt-2 leading-snug text-gray-500 dark:text-gray-400"
         v-text="skill.description"
       ></p>
     </div>
@@ -21,9 +21,15 @@
 <script lang="ts">
 import Vue, { PropType } from "vue";
 
+interface Skill {
+  image: string;
+  name: string;
+  description: string;
+}
+
 export default Vue.extend({
   props: {
-    skill: Object as PropType<object>
+    skill: Object as PropType<Skill>
   }
 });
 </script>
