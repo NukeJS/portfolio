@@ -8,6 +8,9 @@ const config: NuxtConfig = {
   head: {
     titleTemplate: "%s - RonnieCodes",
     title: "RonnieCodes",
+    htmlAttrs: {
+      lang: "en"
+    },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -117,7 +120,10 @@ const config: NuxtConfig = {
   },
 
   axios: {
-    baseURL: "https://ronniecodes.com/api"
+    baseURL:
+      process.env.NODE_ENV !== "production"
+        ? "http://localhost:7000"
+        : "https://ronniecodes.com/api"
   },
 
   pwa: {
