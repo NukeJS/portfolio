@@ -1,6 +1,8 @@
 <template>
   <article class="w-full px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-    <div class="w-full mx-auto prose dark:prose-dark md:prose-lg lg:prose-xl">
+    <div
+      class="w-full max-w-screen-md mx-auto prose dark:prose-dark md:prose-lg lg:prose-xl"
+    >
       <h1>{{ page.title }}</h1>
 
       <p>{{ page.description }}</p>
@@ -12,6 +14,9 @@
       />
 
       <nuxt-content :document="page" />
+    </div>
+    <div class="max-w-screen-md mx-auto mt-10">
+      <ArticlePrevNext :prev="prev" :next="next" />
     </div>
   </article>
 </template>
