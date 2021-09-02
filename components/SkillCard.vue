@@ -1,19 +1,19 @@
 <template>
   <rc-card
-    class="flex items-start px-3 py-3 space-x-4 bg-white border rounded shadow-sm dark:border-gray-700 dark:bg-gray-800"
+    class="flex items-center px-3 py-3 space-x-4 bg-white border rounded shadow-sm dark:border-gray-700 dark:bg-gray-800"
   >
     <div class="flex items-center justify-center flex-none w-14 h-14">
       <nuxt-img :src="skill.image" :alt="`${skill.name} Logo`" />
     </div>
+    <h3
+      class="text-lg font-bold text-gray-900 dark:text-white"
+      v-text="skill.name"
+    ></h3>
     <div class="flex-auto">
-      <h3
-        class="text-lg font-bold text-gray-900 dark:text-white"
-        v-text="skill.name"
-      ></h3>
-      <p
+      <!-- <p
         class="mt-2 leading-snug text-gray-500 dark:text-gray-400"
         v-text="skill.description"
-      ></p>
+      ></p> -->
     </div>
   </rc-card>
 </template>
@@ -24,7 +24,6 @@ import Vue, { PropType } from "vue";
 interface Skill {
   image: string;
   name: string;
-  description: string;
 }
 
 export default Vue.extend({

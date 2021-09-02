@@ -36,7 +36,7 @@
         My <span class="text-indigo-600 dark:text-indigo-500">Stack</span>.
       </h2>
 
-      <div class="grid gap-4 mt-6 sm:mt-10 md:grid-cols-2 xl:grid-cols-3">
+      <div class="grid gap-4 mt-6 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3">
         <SkillCard
           v-for="(skill, index) in skills"
           :key="index"
@@ -67,49 +67,39 @@ export default Vue.extend({
     skills: [
       {
         image: "/images/skills/javascript.svg",
-        name: "JavaScript",
-        description:
-          "JavaScript is the main programming language I use to create all my web applications with."
+        name: "JavaScript"
       },
       {
         image: "/images/skills/typescript.svg",
-        name: "TypeScript",
-        description:
-          "TypeScript is JavaScript but it adds static typing to the language."
+        name: "TypeScript"
       },
       {
         image: "/images/skills/vuejs.svg",
-        name: "Vue.js",
-        description:
-          "Vue.js is a JavaScript framework which allows me to easily create highly interactive web applications."
+        name: "Vue.js"
       },
       {
         image: "/images/skills/nuxtjs.svg",
-        name: "Nuxt.js",
-        description:
-          "Nuxt.js is a Vue.js framework, it allows me to create server-side rendered or statically generated web applications."
+        name: "Nuxt.js"
+      },
+      {
+        image: "/images/skills/reactjs.svg",
+        name: "React.js"
       },
       {
         image: "/images/skills/sass.svg",
-        name: "SASS/SCSS",
-        description: "SASS/SCSS lets me write CSS faster and with superpowers."
+        name: "SASS/SCSS"
       },
       {
         image: "/images/skills/tailwindcss.svg",
-        name: "Tailwind CSS",
-        description: "Tailwind CSS is the CSS framework I use the most."
+        name: "Tailwind CSS"
       },
       {
         image: "/images/skills/mongodb.svg",
-        name: "MongoDB",
-        description:
-          "MongoDB is the database program I use for most of my applications that require a back-end."
+        name: "MongoDB"
       },
       {
         image: "/images/skills/expressjs.svg",
-        name: "Express.js",
-        description:
-          "Express.js is a Node.js framework. It lets me create back-end applications with ease."
+        name: "Express.js"
       }
     ]
   })
