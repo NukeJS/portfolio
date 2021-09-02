@@ -7,7 +7,7 @@
     </h2>
 
     <div
-      v-if="!$fetchState.pending"
+      v-if="!$fetchState.pending && repos.length"
       class="grid grid-cols-1 gap-4 mt-6 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3"
     >
       <ProjectCard v-for="repo in repos" :key="repo.id" :project="repo" />
