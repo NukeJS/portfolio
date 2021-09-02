@@ -43,7 +43,7 @@ Now you want to move into the project's directory and run:
 npm install # or `yarn` if using yarn
 ```
 
-You can aslo directly specify the project name and the template you want to use via additional command line options. For example, to scaffold a Vite + React TypeScript project, run:
+You can also directly specify the project name and the template you want to use via additional command-line options. For example, to scaffold a Vite + React TypeScript project, run:
 
 ```bash
 # npm 6.x

@@ -1,6 +1,6 @@
 ---
 title: How to Setup a Nuxt.js Application using Create Nuxt App
-description: A quick guide on how to setup a Nuxt.js application using Create Nuxt App.
+description: A quick guide on how to set up a Nuxt.js application using Create Nuxt App.
 keywords: Nuxt, Nuxt.js, Vue, Vue.js, JavaScript, JS, Front-end, Create Nuxt App, Node, Node.js
 thumbnail: /blog/setup-a-nuxt-app-using-create-nuxt-app/thumbnail.png
 date: 2021-07-26

@@ -9,7 +9,7 @@ draft: false
 
 ## Getting Started
 
-First we need to generate a Solid project.
+First, we need to generate a Solid project.
 
 *You can skip this part if you already generated a project.*
 
@@ -34,7 +34,7 @@ Next, we need to install Tailwind CSS, PostCSS & Autoprefixer.
 npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 ```
 
-Next, generate your `tailwind.config.js` and `postcss.config.js` file.
+Next, generate your `tailwind.config.js` and `postcss.config.js` files.
 
 ```bash
 npx tailwindcss init -p

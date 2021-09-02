@@ -28,7 +28,7 @@ Create a `.env` file in the root folder. We will initialize the Node.js applicat
 npm init
 ```
 
-This will ask you a some questions:
+This will ask you some questions:
 
 ```
 package name: (api)
@@ -65,18 +65,18 @@ npm install express mongoose cors morgan dotenv
 npm install -D nodemon
 ```
 
-I'll go over what each of these packages do:
+I'll go over what each of these packages does:
 
 - `express`: Express is the library we're gonna use to easily make REST APIs within Node.js.
-- `mongoose`: Mongoose is a library which we're gonna use to connect with MongoDB.
+- `mongoose`: Mongoose is a library that we're gonna use to connect with MongoDB.
 - `cors`: Cors is a package that is needed for Cross-Origin Resource Sharing.
 - `morgan`: Morgan is a logger middleware for Express.
 - `dotenv`: Dotenv is used to create our own process environment variables.
 - `nodemon`: Nodemon is used to auto restart your Express API on change.
 
-Once installed, create a `src` folder in the root folder.
+Once installed, create an `src` folder in the root folder.
 
-### Setup a Express Web Server
+### Setup an Express Web Server
 
 In the `src` folder, create a new file called `index.js`:
 
@@ -106,7 +106,7 @@ What we've done so far is:
 
 ### Configure and Setup MongoDB & Mongoose
 
-In the `src` folder, we're gonna make a new folder called `database`. In this folder we will put the configuration to connect to our MongoDB database. Don't forget to create a new `.env` variable `MONGODB_URL` with your MongoDB connection URL:
+In the `src` folder, we're gonna make a new folder called `database`. In this folder, we will put the configuration to connect to our MongoDB database. Don't forget to create a new `.env` variable `MONGODB_URL` with your MongoDB connection URL:
 
 ```env
 PORT=5000
@@ -142,7 +142,7 @@ require('./database');
 
 Before we start writing the post model and controller, let's first write some basic error handling middlewares.
 
-Create a `middlewares` folder in the `src` folder. In there, create a `index.js`, `routeNotFound.js` and a `errorHandler.js` file.
+Create a `middlewares` folder in the `src` folder. In there, create an `index.js`, `routeNotFound.js`, and an `errorHandler.js` file.
 
 In the `index.js` file put the following:
 
@@ -191,7 +191,7 @@ app.use(errorHandler);
 
 ### Creating the Post Model
 
-Next, create a `models` folder in the `src` folder. In there, create a `index.js` and `Post.js` file.
+Next, create a `models` folder in the `src` folder. In there, create an `index.js` and `Post.js` file.
 
 In the `Post.js` file we're gonna put the following:
 
@@ -251,7 +251,7 @@ exports.delete = async (req, res, next) => {
 }
 ```
 
-Let's implement these function.
+Let's implement these functions.
 
 #### The `create` function
 

@@ -9,7 +9,7 @@ draft: false
 
 ## Getting Started
 
-First we need to generate a Nuxt.js project.
+First, we need to generate a Nuxt.js project.
 
 *You can skip this part if you already generated a project.*
 
@@ -19,7 +19,7 @@ npx create-nuxt-app my-cool-app
 
 Then follow the prompts...
 
-Next, navigate into the project directory and install `@nuxtjs/tailwindcss` as well as Tailwind and its peer-dependencies.
+Next, navigate into the project directory and install `@nuxtjs/tailwindcss` as well as Tailwind and its peer dependencies.
 
 ```bash
 cd my-cool-app

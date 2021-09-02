@@ -9,7 +9,7 @@ draft: false
 
 ##  Getting Started
 
-Before we start on creating the application, you will need a few things.
+Before we start creating the application, you will need a few things.
 
 1.  Have NPM & Node.js installed (or you can use Yarn instead of NPM)
 2.  Have `@vue/cli` installed
@@ -76,7 +76,7 @@ I prefer to pick the `Manually select features` option.
 
 ### Features
 
-Next it will ask you with features you want to add to your project:
+Next, it will ask you with features you want to add to your project:
 
 ```
 Vue CLI v4.5.13
@@ -94,18 +94,18 @@ Vue CLI v4.5.13
   ( ) E2E Testing
 ```
 
-I'll go over what each of these options mean.
+I'll go over what each of these options means.
 
 - **Choose Vue Version** basically means that you can decide which version of Vue you want to use. You can pick either **Vue 2** or **Vue 3**.
-- **Babel** this adds babel to the project.
-- **TypeScript** this adds TypeScript support to the project.
+- **Babel** adds babel to the project.
+- **TypeScript** adds TypeScript support to the project.
 - **Progressive Web App (PWA) Support** makes it possible for you to make your web app a PWA.
-- **Router** this adds `vue-router` to the project.
-- **Vuex** this adds `vuex` to the project, this is used for state management.
+- **Router** adds `vue-router` to the project.
+- **Vuex** adds `vuex` to the project, this is used for state management.
 - **CSS Pre-processors** this allows you to choose which CSS Pre-processor you want to use (SASS, LESS, etc...).
-- **Linter/Formatter** this allows you to choose which linter and/or formatter you want to use.
-- **Unit Testing** this adds Unit Testing to the project.
-- **E2E Testing** this adds E2E Testing to the project.
+- **Linter/Formatter** allows you to choose which linter and/or formatter you want to use.
+- **Unit Testing** adds Unit Testing to the project.
+- **E2E Testing** adds E2E Testing to the project.
 
 Most of the time I pick the following:
 
@@ -117,7 +117,7 @@ Most of the time I pick the following:
 - **CSS Pre-processors** > SASS/SCSS
 - **Linter/Formatter** > ESLint with error prevention only
 
-After you've picked the features that you'll want it will ask you questions about those features. Answer them as how you want them.
+After you've picked the features that you'll want it will ask you questions about those features. Answer them as to how you want them.
 
 The Vue CLI will now create your project...
 
