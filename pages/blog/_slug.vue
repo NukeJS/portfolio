@@ -48,7 +48,7 @@ export default Vue.extend({
     const page = await $content("blog", params.slug)
       .where({ draft: false })
       .fetch()
-      .catch(err => {
+      .catch(() => {
         error({
           statusCode: 404,
           message: `This article could not be found`
