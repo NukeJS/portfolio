@@ -5,16 +5,9 @@
     <div class="flex items-center justify-center flex-none w-14 h-14">
       <nuxt-img :src="skill.image" :alt="`${skill.name} Logo`" />
     </div>
-    <h3
-      class="text-lg font-bold text-gray-900 dark:text-white"
-      v-text="skill.name"
-    ></h3>
-    <div class="flex-auto">
-      <!-- <p
-        class="mt-2 leading-snug text-gray-500 dark:text-gray-400"
-        v-text="skill.description"
-      ></p> -->
-    </div>
+    <h3 class="text-lg font-bold text-gray-900 dark:text-white">
+      {{ skill.name }}
+    </h3>
   </rc-card>
 </template>
 
