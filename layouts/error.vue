@@ -3,28 +3,29 @@
     <TheAppBar />
     <rc-main class="pt-16">
       <rc-container class="flex items-start justify-center sm:items-center">
-        <section class="max-w-full py-6 sm:py-12 md:py-16 text-center">
+        <section class="max-w-full py-6 text-center sm:py-12 md:py-16">
           <h2
-            class="text-gray-900 dark:text-white text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-none"
+            class="text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl"
           >
             Error
             <span class="text-indigo-600 dark:text-indigo-500">
-              {{ error.statusCode }}</span
+              {{ error.statusCode }} </span
             >.
           </h2>
           <p
-            v-text="error.message"
-            class="text-gray-500 dark:text-gray-300 sm:text-lg font-semibold mt-6 mb-8"
-          ></p>
+            class="mt-6 mb-8 font-semibold text-gray-500 dark:text-gray-300 sm:text-lg"
+          >
+            {{ error.message }}
+          </p>
 
           <rc-btn
             nuxt
             to="/"
-            class="bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white px-5 py-3 rounded-md font-semibold text-lg leading-6 flex-none"
+            class="flex-none px-5 py-3 text-lg font-semibold leading-6 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 mr-3"
+              class="w-5 h-5 mr-3"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
