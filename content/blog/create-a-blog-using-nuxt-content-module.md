@@ -98,7 +98,7 @@ The `asyncData` uses the `$content` module function, since we passed `blog` as t
 
 In the HTML, we just loop over the posts data and display it nicely.
 
-If you now navigate to http://localhost:3000/blog, it shows you a lists of posts.
+If you now navigate to http://localhost:3000/blog, it shows you a list of posts.
 
 ## Displaying a Single Post
 
@@ -143,7 +143,7 @@ In the HTML, we use the custom `<nuxt-document/>` component to display the post 
 
 ## Useful Links
 
-Here are some useful links that can help you making an even better blog!
+Here are some useful links that can help you make an even better blog!
 
 - [Nuxt](https://nuxtjs.org/)
 - [Nuxt Content Module](https://content.nuxtjs.org/)
