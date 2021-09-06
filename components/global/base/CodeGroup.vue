@@ -53,6 +53,8 @@ export default {
         tab.elm.classList.remove("code-block--active");
       });
       this.tabs[i].elm.classList.add("code-block--active");
+
+      console.log(this.tabs);
     },
     updateTabs(i) {
       this.activeTabIndex = i;
