@@ -28,7 +28,7 @@
 export default {
   data: () => ({
     tabs: [],
-    activeTabIndex: 0
+    activeTabIndex: null
   }),
 
   watch: {
@@ -44,6 +44,7 @@ export default {
         label: slot.componentOptions.propsData.label,
         elm: slot.elm
       }));
+
     this.$nextTick(this.updateHighlighteUnderlinePosition);
   },
 
@@ -61,10 +62,10 @@ export default {
     updateHighlighteUnderlinePosition() {
       const activeTab = this.$refs.tabs[this.activeTabIndex];
 
-      console.log(this.activeTabIndex);
-      console.log(activeTab);
-
-      if (!activeTab) return;
+      if (!activeTab) {
+        this.activeTabIndex = 0;
+        this.updateHighlighteUnderlinePosition();
+      }
 
       const highlightUnderline = this.$refs["highlight-underline"];
       highlightUnderline.style.left = `${activeTab.offsetLeft}px`;
