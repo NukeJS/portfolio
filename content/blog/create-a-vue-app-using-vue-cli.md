@@ -20,6 +20,7 @@ If you haven't installed NPM and Node.js yet, you can go through [this](/blog/in
 
 The Vue CLI is used to create new Vue applications and to easily add plugins to your application.
 
+<client-only>
 <code-group>
   <code-block label="NPM" active>
   
@@ -36,6 +37,7 @@ The Vue CLI is used to create new Vue applications and to easily add plugins to 
 
   </code-block>
 </code-group>
+</client-only>
 
 After installation, you will have access to the `vue` command in your command line. You can verify that it is properly installed by running `vue`, which should show you a help message listing all available commands.
 
