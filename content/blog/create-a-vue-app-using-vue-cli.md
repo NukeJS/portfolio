@@ -48,6 +48,7 @@ vue --version
 
 To upgrade the global Vue CLI package, you can run this command:
 
+<client-only>
 <code-group>
   <code-block label="NPM" active>
   
@@ -64,6 +65,7 @@ To upgrade the global Vue CLI package, you can run this command:
 
   </code-block>
 </code-group>
+</client-only>
 
 You can read more about how to use the Vue CLI on their [website](https://cli.vuejs.org/guide/installation.html).
 

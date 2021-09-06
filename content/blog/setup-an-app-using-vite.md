@@ -53,6 +53,7 @@ It will then ask you what project should be called and which template you want t
 
 Now you want to move into the project's directory and run:
 
+<client-only>
 <code-group>
   <code-block label="NPM" active>
   
@@ -69,9 +70,11 @@ Now you want to move into the project's directory and run:
 
   </code-block>
 </code-group>
+</client-only>
 
 You can also directly specify the project name and the template you want to use via additional command-line options. For example, to scaffold a Vite + React TypeScript project, run:
 
+<client-only>
 <code-group>
   <code-block label="NPM 6.x" active>
   
@@ -95,6 +98,7 @@ You can also directly specify the project name and the template you want to use 
 
   </code-block>
 </code-group>
+</client-only>
 
 Supported template presets inlude (at the moment of writing this article):
 

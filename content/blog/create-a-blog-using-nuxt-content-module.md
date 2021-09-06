@@ -13,6 +13,7 @@ draft: false
 
 Open your terminal in your Nuxt project and install the `@nuxt/content` package:
 
+<client-only>
 <code-group>
   <code-block label="NPM" active>
 
@@ -29,6 +30,7 @@ Open your terminal in your Nuxt project and install the `@nuxt/content` package:
 
   </code-block>
 </code-group>
+</client-only>
 
 Now, open your project in your preferred editor of use.
 

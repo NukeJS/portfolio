@@ -23,6 +23,7 @@ Make sure you have npx installed (npx is shipped by default since npm v5.2.0) or
 
 Open your terminal of choice.
 
+<client-only>
 <code-group>
   <code-block label="NPM" active>
   
@@ -46,6 +47,7 @@ Open your terminal of choice.
 
   </code-block>
 </code-group>
+</client-only>
 
 It will ask you some questions: project name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc... To learn more about what all these options mean you can read the `README.md` of Create Nuxt App [here](https://github.com/nuxt/create-nuxt-app)
 
