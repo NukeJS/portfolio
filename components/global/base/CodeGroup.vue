@@ -50,9 +50,9 @@ export default {
   methods: {
     switchTab(i) {
       this.tabs.forEach(tab => {
-        tab.elm.style.display = "none";
+        tab.elm.classList.remove("code-block--active");
       });
-      this.tabs[i].elm.style.display = "block";
+      this.tabs[i].elm.classList.add("code-block--active");
     },
     updateTabs(i) {
       this.activeTabIndex = i;
@@ -60,6 +60,9 @@ export default {
     },
     updateHighlighteUnderlinePosition() {
       const activeTab = this.$refs.tabs[this.activeTabIndex];
+
+      console.log(this.activeTabIndex);
+      console.log(activeTab);
 
       if (!activeTab) return;
 
