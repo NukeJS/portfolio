@@ -23,8 +23,9 @@ Vite requires [Node.js](https://nodejs.org/en/) version `>=12.0.0`.
 
 Open your terminal of choice.
 
+<client-only>
 <code-group>
-  <code-block label="NPM">
+  <code-block label="NPM" active>
   
   ```bash
   npm init vite@latest
@@ -46,6 +47,7 @@ Open your terminal of choice.
 
   </code-block>
 </code-group>
+</client-only>
 
 It will then ask you what project should be called and which template you want to use.
 
