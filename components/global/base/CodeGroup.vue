@@ -56,6 +56,7 @@ export default {
       this.tabs[i].elm.classList.add("code-block--active");
     },
     updateTabs(i) {
+      console.log(i);
       this.activeTabIndex = i;
       this.updateHighlighteUnderlinePosition();
     },
