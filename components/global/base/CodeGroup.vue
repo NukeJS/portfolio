@@ -50,11 +50,9 @@ export default {
   methods: {
     switchTab(i) {
       this.tabs.forEach(tab => {
-        tab.elm.classList.remove("code-block--active");
+        tab.elm.classList.style.display = "none";
       });
-      this.tabs[i].elm.classList.add("code-block--active");
-
-      console.log(this.tabs);
+      this.tabs[i].elm.style.display = "block";
     },
     updateTabs(i) {
       this.activeTabIndex = i;
