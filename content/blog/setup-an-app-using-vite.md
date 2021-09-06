@@ -13,48 +13,86 @@ draft: false
 
 ## Getting Started
 
-> **Compatibility Note**: Vite requires [Node.js](https://nodejs.org/en/) version >=12.0.0.
+<alert>
+
+**Compatibility Note**
+
+Vite requires [Node.js](https://nodejs.org/en/) version `>=12.0.0`.
+
+</alert>
 
 Open your terminal of choice.
 
-Using NPM:
+<code-group>
+  <code-block label="NPM" active>
+  
+  ```bash
+  npm init vite@latest
+  ```
 
-```bash
-npm init vite@latest
-```
+  </code-block>
+  <code-block label="Yarn">
+  
+  ```bash
+  yarn create vite
+  ```
 
-Using Yarn:
+  </code-block>
+  <code-block label="PNPM">
+  
+  ```bash
+  pnpx create-vite
+  ```
 
-```bash
-yarn create vite
-```
-
-Using PNPM:
-
-```bash
-pnpx create-vite
-```
+  </code-block>
+</code-group>
 
 It will then ask you what project should be called and which template you want to use.
 
 Now you want to move into the project's directory and run:
 
-```bash
-npm install # or `yarn` if using yarn
-```
+<code-group>
+  <code-block label="NPM" active>
+  
+  ```bash
+  npm install
+  ```
+
+  </code-block>
+  <code-block label="Yarn">
+  
+  ```bash
+  yarn
+  ```
+
+  </code-block>
+</code-group>
 
 You can also directly specify the project name and the template you want to use via additional command-line options. For example, to scaffold a Vite + React TypeScript project, run:
 
-```bash
-# npm 6.x
-npm init vite@latest my-react-ts-app --template react-ts
+<code-group>
+  <code-block label="NPM 6.x" active>
+  
+  ```bash
+  npm init vite@latest my-react-ts-app --template react-ts
+  ```
 
-# npm 7+
-npm init vite@latest my-react-ts-app -- --template react-ts
+  </code-block>
+  <code-block label="NPM 7+">
+  
+  ```bash
+  npm init vite@latest my-react-ts-app -- --template react-ts
+  ```
 
-# yarn
-yarn create vite my-react-ts-app --template react-ts
-```
+  </code-block>
+  <code-block label="Yarn">
+  
+  ```bash
+  yarn create vite my-react-ts-app --template react-ts
+  ```
+
+  </code-block>
+</code-group>
 
 Supported template presets inlude (at the moment of writing this article):
 

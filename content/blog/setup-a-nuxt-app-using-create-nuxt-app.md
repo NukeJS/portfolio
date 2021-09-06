@@ -13,27 +13,39 @@ draft: false
 
 ## Getting Started
 
+<alert>
+
+**Note**
+
+Make sure you have npx installed (npx is shipped by default since npm v5.2.0) or npm v6.1 or yarn.
+
+</alert>
+
 Open your terminal of choice.
 
-> Make sure you have npx installed (npx is shipped by default since npm v5.2.0) or npm v6.1 or yarn.
+<code-group>
+  <code-block label="NPM" active>
+  
+  ```bash
+  npm init nuxt-app <project-name>
+  ```
 
-Using Yarn:
+  </code-block>
+  <code-block label="NPX">
+  
+  ```bash
+  npx create-nuxt-app <project-name>
+  ```
 
-```bash
-yarn create nuxt-app <project-name>
-```
+  </code-block>
+  <code-block label="Yarn">
+  
+  ```bash
+  yarn create nuxt-app <project-name>
+  ```
 
-Using NPX:
-
-```bash
-npx create-nuxt-app <project-name>
-```
-
-Using NPM:
-
-```bash
-npm init nuxt-app <project-name>
-```
+  </code-block>
+</code-group>
 
 It will ask you some questions: project name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc... To learn more about what all these options mean you can read the `README.md` of Create Nuxt App [here](https://github.com/nuxt/create-nuxt-app)
 

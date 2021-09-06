@@ -20,13 +20,22 @@ If you haven't installed NPM and Node.js yet, you can go through [this](/blog/in
 
 The Vue CLI is used to create new Vue applications and to easily add plugins to your application.
 
-```bash
-# Using NPM
-npm install -g @vue/cli
+<code-group>
+  <code-block label="NPM" active>
+  
+  ```bash
+  npm install -g @vue/cli
+  ```
 
-# Using Yarn
-yarn global add @vue/cli
-```
+  </code-block>
+  <code-block label="Yarn">
+  
+  ```bash
+  yarn global add @vue/cli
+  ```
+
+  </code-block>
+</code-group>
 
 After installation, you will have access to the `vue` command in your command line. You can verify that it is properly installed by running `vue`, which should show you a help message listing all available commands.
 
@@ -39,13 +48,22 @@ vue --version
 
 To upgrade the global Vue CLI package, you can run this command:
 
-```bash
-# Using NPM
-npm update -g @vue/cli
+<code-group>
+  <code-block label="NPM" active>
+  
+  ```bash
+  npm update -g @vue/cli
+  ```
 
-# Using Yarn
-yarn global upgrade --latest @vue/cli
-```
+  </code-block>
+  <code-block label="Yarn">
+  
+  ```bash
+  yarn global upgrade --latest @vue/cli
+  ```
+
+  </code-block>
+</code-group>
 
 You can read more about how to use the Vue CLI on their [website](https://cli.vuejs.org/guide/installation.html).
 
