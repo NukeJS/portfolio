@@ -2,7 +2,10 @@
   <div :class="`alert alert--${type} p-4 my-4 border-l-4`">
     <div class="flex items-start">
       <div class="flex-shrink-0">
-        <component :is="icon" class="w-6 h-6 mt-px alert__icon" />
+        <component
+          :is="icon"
+          class="w-6 h-6 mt-px md:mt-1 lg:mt-1.5 alert__icon"
+        />
       </div>
       <div class="flex-grow ml-2 overflow-auto alert__content">
         <slot />
