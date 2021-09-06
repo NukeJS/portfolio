@@ -1,13 +1,13 @@
 <template>
   <rc-app class="bg-white dark:bg-gray-900 font-poppins">
-    <TheAppBar />
+    <AppBar />
 
-    <TheNavigationDrawer />
+    <AppNavigationDrawer />
 
     <rc-main class="pt-16">
       <nuxt />
     </rc-main>
-    <TheFooter />
+    <AppFooter />
   </rc-app>
 </template>
 

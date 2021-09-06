@@ -13,12 +13,22 @@ draft: false
 
 Open your terminal in your Nuxt project and install the `@nuxt/content` package:
 
-```bash
-# Using NPM
-npm install @nuxt/content
-# Using Yarn
-yarn add @nuxt/content
-```
+<code-group>
+  <code-block label="NPM" active>
+
+  ```bash
+  npm install @nuxt/content
+  ```
+
+  </code-block>
+  <code-block label="Yarn">
+
+  ```bash
+  yarn add @nuxt/content
+  ```
+
+  </code-block>
+</code-group>
 
 Now, open your project in your preferred editor of use.
 

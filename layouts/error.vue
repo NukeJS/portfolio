@@ -1,6 +1,9 @@
 <template>
   <rc-app class="bg-white dark:bg-gray-900 font-poppins">
-    <TheAppBar />
+    <AppBar />
+
+    <AppNavigationDrawer />
+
     <rc-main class="pt-16">
       <rc-container class="flex items-start justify-center sm:items-center">
         <section class="max-w-full py-6 text-center sm:py-12 md:py-16">
@@ -38,7 +41,7 @@
         </section>
       </rc-container>
     </rc-main>
-    <TheFooter />
+    <AppFooter />
   </rc-app>
 </template>
 
