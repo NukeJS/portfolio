@@ -127,6 +127,7 @@ const config: NuxtConfig = {
   },
 
   pwa: {
+    workbox: false,
     manifest: {
       lang: "en",
       name: "ronniecodes.com",
