@@ -24,7 +24,7 @@ Vite requires [Node.js](https://nodejs.org/en/) version `>=12.0.0`.
 Open your terminal of choice.
 
 <code-group>
-  <code-block label="NPM">
+  <code-block label="NPM" active>
   
   ```bash
   npm init vite@latest

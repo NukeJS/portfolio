@@ -28,7 +28,7 @@
 export default {
   data: () => ({
     tabs: [],
-    activeTabIndex: null
+    activeTabIndex: 0
   }),
 
   watch: {
@@ -44,7 +44,6 @@ export default {
         label: slot.componentOptions.propsData.label,
         elm: slot.elm
       }));
-
     this.$nextTick(this.updateHighlighteUnderlinePosition);
   },
 
@@ -56,17 +55,13 @@ export default {
       this.tabs[i].elm.classList.add("code-block--active");
     },
     updateTabs(i) {
-      console.log(i);
       this.activeTabIndex = i;
       this.updateHighlighteUnderlinePosition();
     },
     updateHighlighteUnderlinePosition() {
       const activeTab = this.$refs.tabs[this.activeTabIndex];
 
-      if (!activeTab) {
-        this.activeTabIndex = 0;
-        this.updateHighlighteUnderlinePosition();
-      }
+      if (!activeTab) return;
 
       const highlightUnderline = this.$refs["highlight-underline"];
       highlightUnderline.style.left = `${activeTab.offsetLeft}px`;
