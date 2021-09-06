@@ -50,7 +50,7 @@ export default {
   methods: {
     switchTab(i) {
       this.tabs.forEach(tab => {
-        tab.elm.classList.style.display = "none";
+        tab.elm.style.display = "none";
       });
       this.tabs[i].elm.style.display = "block";
     },
