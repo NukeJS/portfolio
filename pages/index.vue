@@ -1,6 +1,6 @@
 <template>
   <rc-container>
-    <section class="max-w-full py-12 sm:py-16 md:py-20">
+    <section class="max-w-full py-12 text-center sm:py-16 md:py-20">
       <h1
         class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl"
       >
@@ -12,19 +12,28 @@
       </h1>
 
       <p
-        class="max-w-2xl mt-6 mb-8 text-lg text-gray-500 dark:text-gray-300 sm:mt-8 sm:mb-10"
+        class="max-w-2xl mx-auto mt-6 mb-8 text-lg text-gray-500 dark:text-gray-300 sm:mt-10 sm:mb-12"
       >
         I'm a guy that is fond of creating full-stack web apps. I'm currently
         based in the Netherlands. I create modern and functional web apps.
       </p>
 
-      <div class="flex space-y-4 sm:space-y-0">
+      <div
+        class="flex-col justify-center space-y-4 sm:space-x-4 sm:flex-row sm:space-y-0"
+      >
         <rc-btn
           nuxt
           to="/projects"
-          class="flex-none w-full px-6 py-3 text-xl font-medium leading-6 text-white bg-indigo-600 rounded-md shadow-lg hover:bg-indigo-700 sm:rounded-full sm:w-auto"
+          class="flex-none w-full px-6 py-3 text-xl font-medium leading-6 text-white bg-indigo-600 rounded-full shadow-lg hover:bg-indigo-700 sm:w-auto"
         >
           My Projects
+        </rc-btn>
+        <rc-btn
+          nuxt
+          to="/projects"
+          class="flex-none w-full px-6 py-3 text-xl font-medium leading-6 text-white bg-black rounded-full shadow-lg hover:bg-gray-600 dark:bg-white dark:text-black dark:hover:bg-gray-200 sm:w-auto"
+        >
+          My Blog
         </rc-btn>
       </div>
     </section>
