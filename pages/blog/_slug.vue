@@ -70,3 +70,28 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style lang="scss">
+html {
+  scroll-padding-top: 6rem;
+}
+
+.nuxt-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a {
+      @apply no-underline mr-2;
+    }
+  }
+
+  .icon.icon-link {
+    &::before {
+      content: "#";
+    }
+  }
+}
+</style>
