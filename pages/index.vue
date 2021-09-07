@@ -30,7 +30,7 @@
         </rc-btn>
         <rc-btn
           nuxt
-          to="/projects"
+          to="/blog"
           class="flex-none w-full px-6 py-3 text-xl font-medium leading-6 text-white bg-black rounded-full shadow-lg hover:bg-gray-600 dark:bg-white dark:text-black dark:hover:bg-gray-200 sm:w-auto"
         >
           My Blog
