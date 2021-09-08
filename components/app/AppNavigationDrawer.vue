@@ -6,7 +6,14 @@
       <rc-app-bar
         class="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
       >
-        <rc-container fluid padless class="flex items-center px-4">
+        <rc-container class="flex items-center h-full">
+          <rc-btn
+            @click="navigationDrawer = false"
+            class="mr-3 font-semibold text-gray-500 cursor-pointer md:hidden dark:text-gray-300 dark:hover:text-gray-100"
+          >
+            <IconX class="w-6 h-6" />
+          </rc-btn>
+
           <nuxt-link
             to="/"
             class="inline-block text-lg font-bold select-none dark:text-white"
@@ -20,9 +27,7 @@
         </rc-container>
       </rc-app-bar>
       <div class="overflow-y-auto">
-        <ul
-          class="p-4 space-y-4 font-medium text-gray-500 dark:divide-gray-700 dark:text-gray-400"
-        >
+        <ul class="p-4 space-y-4 font-medium text-gray-500 dark:text-gray-400">
           <li>
             <nuxt-link
               to="/"

@@ -31,7 +31,7 @@
         <rc-btn
           nuxt
           to="/blog"
-          class="flex-none w-full px-6 py-3 text-xl font-medium leading-6 text-white bg-black rounded-full shadow-lg hover:bg-gray-600 dark:bg-white dark:text-black dark:hover:bg-gray-200 sm:w-auto"
+          class="flex-none w-full px-6 py-3 text-xl font-medium leading-6 text-white bg-black rounded-full shadow-lg hover:bg-gray-600 dark:bg-white dark:text-black dark:hover:bg-gray-300 sm:w-auto"
         >
           My Blog
         </rc-btn>
@@ -46,18 +46,11 @@
       </h2>
 
       <div class="grid gap-4 mt-6 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3">
-        <rc-card
+        <SkillCard
           v-for="(skill, index) in skills"
           :key="index"
-          class="flex items-center px-3 py-3 space-x-4 bg-white border rounded shadow-sm dark:border-gray-700 dark:bg-gray-800"
-        >
-          <div class="flex items-center justify-center flex-none w-14 h-14">
-            <nuxt-img :src="skill.image" :alt="`${skill.name} Logo`" />
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 dark:text-white">
-            {{ skill.name }}
-          </h3>
-        </rc-card>
+          :skill="skill"
+        />
       </div>
     </section>
   </rc-container>
