@@ -8,7 +8,11 @@
     <rc-input
       class="mt-6 sm:mt-10"
       v-model="query"
-      placeholder="Search through blog posts..."
+      :placeholder="
+        `Search through ${articles.length} article${
+          articles.length === 1 ? '' : 's'
+        }`
+      "
     />
     <div class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-3">
       <ArticleCard
@@ -19,15 +23,15 @@
     </div>
 
     <p
-      class="mt-4 text-xl font-bold text-gray-700 dark:text-gray-300"
+      class="mt-4 text-xl font-semibold text-gray-700 dark:text-gray-300"
       v-if="!articles.length"
     >
       No articles to display.
     </p>
 
     <p
-      class="mt-4 text-xl font-bold text-gray-700 dark:text-gray-300"
-      v-if="articles.length && !filteredArticles.length"
+      class="mt-4 text-xl font-semibold text-gray-700 dark:text-gray-300"
+      v-if="articles.length && query && !filteredArticles.length"
     >
       No articles found with search query "{{ query }}".
     </p>
@@ -71,8 +75,8 @@ export default Vue.extend({
     filteredArticles() {
       return this.articles.filter(
         article =>
-          article.title.toLowerCase().includes(this.query.toLowerCase()) ||
-          article.description.toLowerCase().includes(this.query.toLowerCase())
+          article.title?.toLowerCase().includes(this.query.toLowerCase()) ||
+          article.description?.toLowerCase().includes(this.query.toLowerCase())
       );
     }
   }
