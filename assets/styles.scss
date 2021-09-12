@@ -1,3 +1,19 @@
-a {
-  @apply cursor-pointer;
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter-active {
+  animation: fade-in ease 0.15s;
+}
+
+.page-leave-active {
+  animation: fade-in reverse ease 0.15s;
 }
