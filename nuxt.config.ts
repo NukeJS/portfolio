@@ -104,6 +104,18 @@ const config: NuxtConfig = {
     "@nuxtjs/tailwindcss"
   ],
 
+  image: {
+    presets: {
+      blog: {
+        modifiers: {
+          format: "webp",
+          fit: "cover",
+          quality: 60
+        }
+      }
+    }
+  },
+
   colorMode: {
     classSuffix: ""
   },

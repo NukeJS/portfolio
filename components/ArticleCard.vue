@@ -9,7 +9,8 @@
         v-if="article.thumbnail"
         :src="article.thumbnail"
         class="object-cover w-full"
-      />
+        preset="blog"
+      ></nuxt-img>
     </div>
 
     <div class="flex flex-col flex-grow px-4 py-3">

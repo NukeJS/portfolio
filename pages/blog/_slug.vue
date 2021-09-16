@@ -10,8 +10,9 @@
       <nuxt-img
         v-if="page.thumbnail"
         :src="page.thumbnail"
+        preset="blog"
         class="object-cover w-full border rounded-md shadow-md md:rounded-xl dark:border-transparent lg:shadow-xl"
-      />
+      ></nuxt-img>
 
       <nuxt-content :document="page" />
     </div>
@@ -41,7 +42,9 @@ export default Vue.extend({
   },
 
   data: () => ({
-    page: {} as IContentDocument
+    page: {} as IContentDocument,
+    prev: {} as IContentDocument,
+    next: {} as IContentDocument
   }),
 
   async asyncData({ $content, params, error }) {
