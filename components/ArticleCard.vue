@@ -1,6 +1,6 @@
 <template>
   <rc-card
-    :to="`/blog/${article.slug}`"
+    :to="localePath(`/blog/${article.slug}`)"
     nuxt
     class="flex flex-col overflow-hidden bg-white border rounded shadow-sm group dark:border-gray-700 dark:bg-gray-800"
   >
