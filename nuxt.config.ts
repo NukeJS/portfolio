@@ -121,7 +121,13 @@ const config: NuxtConfig = {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxt/content", "@nuxtjs/axios", "@nuxtjs/pwa", "@nuxtjs/sitemap"],
+  modules: [
+    "@nuxt/content",
+    "@nuxtjs/axios",
+    "@nuxtjs/pwa",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/i18n"
+  ],
 
   content: {
     markdown: {
@@ -151,6 +157,26 @@ const config: NuxtConfig = {
   sitemap: {
     path: "/sitemap.xml",
     hostname: "https://ronniecodes.com"
+  },
+
+  i18n: {
+    defaultLocale: "en",
+    langDir: "~/locales/",
+    vueI18n: {
+      fallbackLocale: "en"
+    },
+    locales: [
+      {
+        code: "en",
+        iso: "en-US",
+        file: "en.ts"
+      },
+      {
+        code: "nl",
+        iso: "nl-NL",
+        file: "nl.ts"
+      }
+    ]
   },
 
   generate: {

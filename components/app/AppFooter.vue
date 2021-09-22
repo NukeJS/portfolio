@@ -7,7 +7,7 @@
     >
       <div>
         <nuxt-link
-          to="/"
+          :to="localePath('/')"
           class="inline-block text-lg font-bold select-none dark:text-white"
         >
           <nuxt-img class="h-6" src="/images/logo.svg" alt="RonnieCodes Logo" />
@@ -20,39 +20,39 @@
           <h4
             class="text-xs font-semibold tracking-wide text-gray-900 uppercase dark:text-white"
           >
-            Website Links
+            {{ $t("components.AppFooter.websiteLinks") }}
           </h4>
           <ul class="space-y-3 text-gray-500 dark:text-gray-400">
             <li>
               <nuxt-link
-                to="/"
+                :to="localePath('/')"
                 class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
               >
-                Home
+                {{ $t("components.AppFooter.home") }}
               </nuxt-link>
             </li>
             <li>
               <nuxt-link
-                to="/blog"
+                :to="localePath('/blog')"
                 class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
               >
-                Blog
+                {{ $t("components.AppFooter.blog") }}
               </nuxt-link>
             </li>
             <li>
               <nuxt-link
-                to="/projects"
+                :to="localePath('/projects')"
                 class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
               >
-                Projects
+                {{ $t("components.AppFooter.projects") }}
               </nuxt-link>
             </li>
             <li>
               <nuxt-link
-                to="/contact"
+                :to="localePath('/contact')"
                 class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
               >
-                Contact
+                {{ $t("components.AppFooter.contact") }}
               </nuxt-link>
             </li>
           </ul>
@@ -61,7 +61,7 @@
           <h4
             class="text-xs font-semibold tracking-wide text-gray-900 uppercase dark:text-white"
           >
-            Social Links
+            {{ $t("components.AppFooter.socialLinks") }}
           </h4>
           <ul class="space-y-3 text-gray-500 dark:text-gray-400">
             <li>

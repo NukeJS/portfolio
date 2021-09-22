@@ -30,38 +30,38 @@
         <ul class="p-4 space-y-4 font-medium text-gray-500 dark:text-gray-400">
           <li>
             <nuxt-link
-              to="/"
+              :to="localePath('/')"
               exact-active-class="text-gray-900 dark:text-white"
               class="transition-colors duration-200 dark:hover:text-gray-100"
             >
-              Home
+              {{ $t("components.AppNavigationDrawer.home") }}
             </nuxt-link>
           </li>
           <li>
             <nuxt-link
-              to="/blog"
+              :to="localePath('/blog')"
               exact-active-class="text-gray-900 dark:text-white"
               class="transition-colors duration-200 dark:hover:text-gray-100"
             >
-              Blog
+              {{ $t("components.AppNavigationDrawer.blog") }}
             </nuxt-link>
           </li>
           <li>
             <nuxt-link
-              to="/projects"
+              :to="localePath('/projects')"
               exact-active-class="text-gray-900 dark:text-white"
               class="transition-colors duration-200 dark:hover:text-gray-100"
             >
-              Projects
+              {{ $t("components.AppNavigationDrawer.projects") }}
             </nuxt-link>
           </li>
           <li>
             <nuxt-link
-              to="/contact"
+              :to="localePath('/contact')"
               exact-active-class="text-gray-900 dark:text-white"
               class="transition-colors duration-200 dark:hover:text-gray-100"
             >
-              Contact
+              {{ $t("components.AppNavigationDrawer.contact") }}
             </nuxt-link>
           </li>
         </ul>

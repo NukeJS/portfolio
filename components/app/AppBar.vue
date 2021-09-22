@@ -11,7 +11,10 @@
         <IconMenuAlt2 class="w-6 h-6" />
       </rc-btn>
 
-      <nuxt-link to="/" class="text-lg font-bold select-none dark:text-white">
+      <nuxt-link
+        :to="localePath('/')"
+        class="text-lg font-bold select-none dark:text-white"
+      >
         <nuxt-img class="h-6" src="/images/logo.svg" alt="RonnieCodes Logo" />
       </nuxt-link>
 
@@ -22,32 +25,32 @@
           class="items-center hidden space-x-6 font-medium text-gray-500 dark:text-gray-400 md:flex sm:space-x-10"
         >
           <nuxt-link
-            to="/"
+            :to="localePath('/')"
             exact-active-class="text-gray-900 dark:text-white"
             class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
           >
-            Home
+            {{ $t("components.AppBar.home") }}
           </nuxt-link>
           <nuxt-link
-            to="/blog"
+            :to="localePath('/blog')"
             exact-active-class="text-gray-900 dark:text-white"
             class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
           >
-            Blog
+            {{ $t("components.AppBar.blog") }}
           </nuxt-link>
           <nuxt-link
-            to="/projects"
+            :to="localePath('/projects')"
             exact-active-class="text-gray-900 dark:text-white"
             class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
           >
-            Projects
+            {{ $t("components.AppBar.projects") }}
           </nuxt-link>
           <nuxt-link
-            to="/contact"
+            :to="localePath('/contact')"
             exact-active-class="text-gray-900 dark:text-white"
             class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
           >
-            Contact
+            {{ $t("components.AppBar.contact") }}
           </nuxt-link>
         </div>
 

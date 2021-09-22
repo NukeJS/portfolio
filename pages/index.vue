@@ -3,19 +3,13 @@
     <section class="max-w-full py-12 text-center sm:py-16 md:py-20">
       <h1
         class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl"
-      >
-        Hi, I'm
-        <span class="text-indigo-600 dark:text-indigo-500">Ronnie</span>. I'm a
-        <span class="text-indigo-600 dark:text-indigo-500"
-          >Full Stack Web Developer</span
-        >.
-      </h1>
+        v-html="$t('pages.index.hero.title')"
+      />
 
       <p
         class="max-w-2xl mx-auto mt-6 mb-8 text-lg text-gray-500 dark:text-gray-300 sm:mt-10 sm:mb-12"
       >
-        I'm a guy that is fond of creating full-stack web apps. I'm currently
-        based in the Netherlands. I create modern and functional web apps.
+        {{ $t("pages.index.hero.description") }}
       </p>
 
       <div
@@ -23,17 +17,17 @@
       >
         <rc-btn
           nuxt
-          to="/projects"
+          :to="localePath('/projects')"
           class="flex-none w-full px-6 py-3 text-xl font-medium leading-6 text-white bg-indigo-600 rounded-full shadow-lg hover:bg-indigo-700 sm:w-auto"
         >
-          My Projects
+          {{ $t("pages.index.hero.buttons.projects") }}
         </rc-btn>
         <rc-btn
           nuxt
-          to="/blog"
+          :to="localePath('/blog')"
           class="flex-none w-full px-6 py-3 text-xl font-medium leading-6 text-white bg-black rounded-full shadow-lg hover:bg-gray-600 dark:bg-white dark:text-black dark:hover:bg-gray-300 sm:w-auto"
         >
-          My Blog
+          {{ $t("pages.index.hero.buttons.blog") }}
         </rc-btn>
       </div>
     </section>
@@ -41,9 +35,8 @@
     <section class="max-w-full py-12 sm:py-16 md:py-20">
       <h2
         class="text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl"
-      >
-        My <span class="text-indigo-600 dark:text-indigo-500">Stack</span>.
-      </h2>
+        v-html="$t('pages.index.stack.title')"
+      />
 
       <div class="grid gap-4 mt-6 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3">
         <SkillCard

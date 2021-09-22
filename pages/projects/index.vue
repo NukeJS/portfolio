@@ -2,9 +2,8 @@
   <rc-container class="my-6 md:my-8">
     <h2
       class="text-3xl font-bold leading-none tracking-tight text-gray-900 sm:mt-2 md:mt-4 dark:text-white sm:text-4xl md:text-5xl"
-    >
-      My <span class="text-indigo-600 dark:text-indigo-500">Projects</span>.
-    </h2>
+      v-html="$t('pages.projects.index.title')"
+    />
 
     <div
       v-if="!$fetchState.pending && repos.length"
@@ -29,15 +28,8 @@
 
     <p
       class="mt-4 text-lg font-medium text-gray-500 dark:text-gray-300 sm:mt-8"
-    >
-      Discover more projects on my
-      <a
-        class="text-indigo-600 dark:text-indigo-400"
-        href="https://github.com/CodingWithNuke"
-        target="_blank"
-        >GitHub</a
-      >.
-    </p>
+      v-html="$t('pages.projects.index.discoverMoreProjects')"
+    />
   </rc-container>
 </template>
 
@@ -49,6 +41,13 @@ import { Project } from "~/types";
 import { mapMetaInfo } from "~/utils/helpers";
 
 export default Vue.extend({
+  nuxtI18n: {
+    paths: {
+      en: "/projects",
+      nl: "/projecten"
+    }
+  },
+
   head(): object {
     return mapMetaInfo({
       title: "Projects",

@@ -2,16 +2,13 @@
   <rc-container class="my-6 md:my-8">
     <h2
       class="text-3xl font-bold leading-none tracking-tight text-gray-900 sm:mt-2 md:mt-4 dark:text-white sm:text-4xl md:text-5xl"
-    >
-      My <span class="text-indigo-600 dark:text-indigo-500">Blog</span>.
-    </h2>
+      v-html="$t('pages.blog.index.title')"
+    />
     <rc-input
       class="mt-6 sm:mt-10"
       v-model="query"
       :placeholder="
-        `Search through ${articles.length} article${
-          articles.length === 1 ? '' : 's'
-        }`
+        $t('pages.blog.index.searchbar.placeholder', { count: articles.length })
       "
     />
     <div class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -46,6 +43,13 @@ import { IContentDocument } from "@nuxt/content/types/content";
 import { mapMetaInfo } from "~/utils/helpers";
 
 export default Vue.extend({
+  nuxtI18n: {
+    paths: {
+      en: "/blog",
+      nl: "/blog"
+    }
+  },
+
   head(): object {
     return mapMetaInfo({
       title: "Blog",

@@ -20,7 +20,8 @@
       "@nuxt/content",
       "@nuxtjs/color-mode",
       "@nuxt/image",
-      "@nuxtjs/axios"
+      "@nuxtjs/axios",
+      "@nuxtjs/i18n"
     ]
   },
   "exclude": ["node_modules"]

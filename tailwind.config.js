@@ -9,10 +9,12 @@ module.exports = {
       "layouts/**/*.vue",
       "pages/**/*.vue",
       "plugins/**/*.js",
+      "locales/**/*.js",
       "nuxt.config.js",
       // UI Library
       "rc-ui/**/*.vue",
       // TypeScript
+      "locales/**/*.ts",
       "plugins/**/*.ts",
       "nuxt.config.ts"
     ]
