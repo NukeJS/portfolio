@@ -67,7 +67,7 @@ const pages = {
       title:
         "Neem <span class='text-indigo-600 dark:text-indigo-500'>Contact</span> Met Mij Op.",
       description:
-        "Houd je niet van contactformulieren? E-mail mij op <a class='text-indigo-600 dark:text-indigo-400' href='mailto:{email}'>{email}</a>.",
+        "Houd u niet van contactformulieren? E-mail mij op <a class='text-indigo-600 dark:text-indigo-400' href='mailto:{email}'>{email}</a>.",
       form: {
         inputs: {
           firstName: {
