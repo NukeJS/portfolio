@@ -52,6 +52,13 @@
           >
             {{ $t("components.AppBar.contact") }}
           </nuxt-link>
+          <nuxt-link
+            :to="switchLocalePath(nextLocale)"
+            class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
+            :title="`Switch to ${nextLocale == 'en' ? 'English' : 'Dutch'}`"
+          >
+            {{ nextLocale.toUpperCase() }}
+          </nuxt-link>
         </div>
 
         <rc-btn
@@ -78,6 +85,9 @@ export default Vue.extend({
   computed: {
     theme(): string {
       return this.$colorMode.value;
+    },
+    nextLocale(): string {
+      return this.$i18n.locale == "en" ? "nl" : "en";
     }
   },
 

@@ -34,7 +34,7 @@ const pages = {
       title:
         "Hallo, ik ben <span class='text-indigo-600 dark:text-indigo-500'>Ronnie</span>. Ik ben een <span class='text-indigo-600 dark:text-indigo-500'>Full-stack Webontwikkelaar</span>.",
       description:
-        "Ik ben iemand die dol is op het maken van full-stack web-apps. Ik woon momenteel in Nederland. Ik maak moderne en functionele web-apps.",
+        "Ik ben iemand die dol is op het maken van full-stack web-apps. Ik maak moderne en functionele web-apps.",
       buttons: {
         projects: "Mijn Projecten",
         blog: "Mijn Blog"

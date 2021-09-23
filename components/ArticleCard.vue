@@ -2,7 +2,7 @@
   <rc-card
     :to="localePath(`/blog/${article.slug}`)"
     nuxt
-    class="flex flex-col overflow-hidden bg-white border rounded shadow-sm group dark:border-gray-700 dark:bg-gray-800"
+    class="flex flex-col overflow-hidden bg-white border rounded shadow-sm cursor-pointer group dark:border-gray-700 dark:bg-gray-800"
   >
     <div class="border-b aspect-w-16 aspect-h-9 dark:border-gray-700">
       <nuxt-img

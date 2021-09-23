@@ -3,7 +3,7 @@
     <rc-card
       v-if="prev"
       nuxt
-      :to="`/blog/${prev.slug}`"
+      :to="localePath(`/blog/${prev.slug}`)"
       class="flex flex-col w-full px-3 py-2 border rounded group dark:border-gray-700 dark:bg-gray-800 md:max-w-sm"
     >
       <h6 class="text-xs font-bold text-gray-500 uppercase dark:text-gray-400">
@@ -18,7 +18,7 @@
     <rc-card
       v-if="next"
       nuxt
-      :to="`/blog/${next.slug}`"
+      :to="localePath(`/blog/${next.slug}`)"
       class="flex flex-col w-full px-3 py-2 border rounded group md:text-right dark:border-gray-700 dark:bg-gray-800 md:max-w-sm"
     >
       <h6 class="text-xs font-bold text-gray-500 uppercase dark:text-gray-400">

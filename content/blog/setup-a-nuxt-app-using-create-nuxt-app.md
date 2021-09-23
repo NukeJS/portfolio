@@ -9,7 +9,7 @@ draft: false
 
 ## Prerequisites
 
-- Have [Node.js](/blog/install-nodejs-and-npm) installed, I recommend you have the latest LTS version installed.
+- Have [Node.js](https://nodejs.org/en/) installed, I recommend you have the latest LTS version installed.
 
 ## Getting Started
 

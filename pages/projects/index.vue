@@ -23,7 +23,7 @@
       class="mt-6 text-xl font-bold text-gray-600 sm:mt-10 dark:text-gray-300"
       v-if="$fetchState.error"
     >
-      An error occurred whilst trying to load my projects... Try again later.
+      An error occurred while trying to load my projects... Try again later.
     </p>
 
     <p
