@@ -64,6 +64,15 @@
               {{ $t("components.AppNavigationDrawer.contact") }}
             </nuxt-link>
           </li>
+          <li>
+            <nuxt-link
+              :to="switchLocalePath(nextLocale)"
+              class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
+              :title="`Switch to ${nextLocale == 'en' ? 'English' : 'Dutch'}`"
+            >
+              {{ nextLocale.toUpperCase() }}
+            </nuxt-link>
+          </li>
         </ul>
       </div>
     </div>
@@ -82,6 +91,9 @@ export default Vue.extend({
       set(val: boolean) {
         this.$store.dispatch("setNavigationDrawer", val);
       }
+    },
+    nextLocale(): string {
+      return this.$i18n.locale == "en" ? "nl" : "en";
     }
   }
 });
