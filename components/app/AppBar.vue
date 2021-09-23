@@ -52,6 +52,11 @@
           >
             {{ $t("components.AppBar.contact") }}
           </nuxt-link>
+        </div>
+
+        <div
+          class="flex items-center space-x-4 font-medium text-gray-500 dark:text-gray-400 sm:space-x-6"
+        >
           <nuxt-link
             :to="switchLocalePath(nextLocale)"
             class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
@@ -59,16 +64,16 @@
           >
             {{ nextLocale.toUpperCase() }}
           </nuxt-link>
-        </div>
 
-        <rc-btn
-          class="font-semibold text-gray-500 cursor-pointer dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
-          @click="switchTheme"
-        >
-          <IconSun v-if="theme === 'light'" class="w-6 h-6" />
-          <IconMoon v-else-if="theme === 'dark'" class="w-6 h-6" />
-          <span v-else class="w-6 h-6">...</span>
-        </rc-btn>
+          <rc-btn
+            class="font-semibold text-gray-500 cursor-pointer dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+            @click="switchTheme"
+          >
+            <IconSun v-if="theme === 'light'" class="w-6 h-6" />
+            <IconMoon v-else-if="theme === 'dark'" class="w-6 h-6" />
+            <span v-else class="w-6 h-6">...</span>
+          </rc-btn>
+        </div>
       </div>
     </rc-container>
   </rc-app-bar>
