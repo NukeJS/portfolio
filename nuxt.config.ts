@@ -162,6 +162,11 @@ const config: NuxtConfig = {
   i18n: {
     defaultLocale: "en",
     langDir: "~/locales/",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root" // recommended
+    },
     vueI18n: {
       fallbackLocale: "en"
     },
