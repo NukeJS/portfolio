@@ -9,6 +9,7 @@
       v-model="internalValue"
       :placeholder="placeholder"
       :required="required"
+      :disabled="disabled"
       rows="3"
       class="block w-full px-3 py-2 bg-gray-100 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 dark:bg-gray-700 sm:text-sm dark:border-gray-600 dark:text-white dark:placeholder-gray-300"
     />
@@ -22,10 +23,21 @@ export default Vue.extend({
   name: "rc-textarea",
 
   props: {
-    value: String as PropType<string>,
-    label: String as PropType<string>,
-    placeholder: String as PropType<string>,
-    required: Boolean as PropType<boolean>
+    value: {
+      type: String
+    },
+    label: {
+      type: String
+    },
+    placeholder: {
+      type: String
+    },
+    required: {
+      type: Boolean
+    },
+    disabled: {
+      type: Boolean
+    }
   },
 
   data: () => ({

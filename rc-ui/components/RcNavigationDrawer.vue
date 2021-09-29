@@ -42,7 +42,9 @@ import Vue, { PropType } from "vue";
 
 export default Vue.extend({
   props: {
-    value: Boolean as PropType<boolean>
+    value: {
+      type: Boolean
+    }
   },
 
   computed: {

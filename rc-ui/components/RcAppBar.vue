@@ -13,7 +13,9 @@ export default Vue.extend({
   name: "rc-app-bar",
 
   props: {
-    fixed: Boolean as PropType<boolean>
+    fixed: {
+      type: Boolean
+    }
   }
 });
 </script>

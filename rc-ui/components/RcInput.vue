@@ -10,6 +10,7 @@
       v-model="internalValue"
       :placeholder="placeholder"
       :required="required"
+      :disabled="disabled"
       class="block w-full px-3 py-2 bg-gray-100 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 dark:bg-gray-700 sm:text-sm dark:border-gray-600 dark:text-white dark:placeholder-gray-300"
     />
   </div>
@@ -22,14 +23,25 @@ export default Vue.extend({
   name: "rc-input",
 
   props: {
-    value: String as PropType<string>,
-    label: String as PropType<string>,
+    value: {
+      type: String
+    },
+    label: {
+      type: String
+    },
     type: {
-      type: String as PropType<string>,
+      type: String,
       default: "text"
     },
-    placeholder: String as PropType<string>,
-    required: Boolean as PropType<boolean>
+    placeholder: {
+      type: String
+    },
+    required: {
+      type: Boolean
+    },
+    disabled: {
+      type: Boolean
+    }
   },
 
   data: () => ({

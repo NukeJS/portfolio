@@ -19,13 +19,27 @@ export default Vue.extend({
   name: "rc-card",
 
   props: {
-    to: [String, Object] as PropType<string | object>,
-    nuxt: Boolean as PropType<boolean>,
-    exact: Boolean as PropType<boolean>,
-    href: String as PropType<string>,
-    target: String as PropType<string>,
-    activeClass: String as PropType<string>,
-    exactActiveClass: String as PropType<string>
+    to: {
+      type: [String, Object]
+    },
+    nuxt: {
+      type: Boolean
+    },
+    exact: {
+      type: Boolean
+    },
+    href: {
+      type: String
+    },
+    target: {
+      type: String
+    },
+    activeClass: {
+      type: String
+    },
+    exactActiveClass: {
+      type: String
+    }
   }
 });
 </script>

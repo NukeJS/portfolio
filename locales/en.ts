@@ -2,7 +2,8 @@ const common = {
   home: "Home",
   blog: "Blog",
   projects: "Projects",
-  contact: "Contact"
+  contact: "Contact",
+  loading: "Loading"
 };
 
 const components = {

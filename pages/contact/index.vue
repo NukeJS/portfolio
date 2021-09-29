@@ -15,18 +15,21 @@
         v-model="form.firstName"
         :label="$t('pages.contact.index.form.inputs.firstName.label')"
         required
+        :disabled="form.loading"
         class="col-span-6 sm:col-span-3"
       />
       <rc-input
         v-model="form.lastName"
         :label="$t('pages.contact.index.form.inputs.lastName.label')"
         required
+        :disabled="form.loading"
         class="col-span-6 sm:col-span-3"
       />
       <rc-input
         v-model="form.email"
         :label="$t('pages.contact.index.form.inputs.email.label')"
         required
+        :disabled="form.loading"
         type="email"
         class="col-span-6"
       />
@@ -34,20 +37,27 @@
         v-model="form.subject"
         :label="$t('pages.contact.index.form.inputs.subject.label')"
         required
+        :disabled="form.loading"
         class="col-span-6"
       />
       <rc-textarea
         v-model="form.message"
         :label="$t('pages.contact.index.form.inputs.message.label')"
         required
+        :disabled="form.loading"
         class="col-span-6"
       />
       <div class="col-span-6 text-right">
         <rc-btn
           type="submit"
+          :disabled="form.loading"
           class="px-4 py-2 ml-auto font-medium leading-6 text-white bg-indigo-600 rounded-md shadow-md hover:bg-indigo-700"
         >
-          {{ $t("pages.contact.index.form.submit.label") }}
+          {{
+            form.loading
+              ? $t("common.loading")
+              : $t("pages.contact.index.form.submit.label")
+          }}
         </rc-btn>
       </div>
     </form>
@@ -82,7 +92,8 @@ export default Vue.extend({
       lastName: "",
       email: "",
       subject: "",
-      message: ""
+      message: "",
+      loading: false
     }
   }),
 
@@ -90,13 +101,19 @@ export default Vue.extend({
     async onSubmit() {
       const { firstName, lastName, email, subject, message } = this.form;
 
-      this.$axios.$post("/v1/mail", {
-        firstName,
-        lastName,
-        email,
-        subject,
-        message
-      });
+      try {
+        this.form.loading = true;
+
+        this.$axios.$post("/v1/mail", {
+          firstName,
+          lastName,
+          email,
+          subject,
+          message
+        });
+      } finally {
+        this.form.loading = false;
+      }
     }
   }
 });

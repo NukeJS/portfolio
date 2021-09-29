@@ -11,8 +11,12 @@ export default Vue.extend({
   name: "rc-container",
 
   props: {
-    fluid: Boolean as PropType<boolean>,
-    padless: Boolean as PropType<boolean>
+    fluid: {
+      type: Boolean
+    },
+    padless: {
+      type: Boolean
+    }
   },
 
   computed: {
