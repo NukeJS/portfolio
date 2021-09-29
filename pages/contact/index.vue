@@ -76,7 +76,7 @@ export default Vue.extend({
   },
 
   data: () => ({
-    email: "contact.ronniecodes@gmail.com",
+    email: "info@ronniecodes.com",
     form: {
       firstName: "",
       lastName: "",
