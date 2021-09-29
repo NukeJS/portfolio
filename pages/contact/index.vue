@@ -90,15 +90,13 @@ export default Vue.extend({
     async onSubmit() {
       const { firstName, lastName, email, subject, message } = this.form;
 
-      this.$axios.$post(
-        "https://formsubmit.co/ajax/contact.ronniecodes@gmail.com",
-        {
-          name: `${firstName} ${lastName}`,
-          email,
-          _subject: subject,
-          message
-        }
-      );
+      this.$axios.$post("/v1/mail", {
+        firstName,
+        lastName,
+        email,
+        subject,
+        message
+      });
     }
   }
 });
