@@ -125,8 +125,8 @@ const config: NuxtConfig = {
     "@nuxt/content",
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
-    "@nuxtjs/sitemap",
-    "@nuxtjs/i18n"
+    "@nuxtjs/i18n",
+    "@nuxtjs/sitemap"
   ],
 
   content: {
@@ -154,11 +154,6 @@ const config: NuxtConfig = {
     }
   },
 
-  sitemap: {
-    path: "/sitemap.xml",
-    hostname: "https://ronniecodes.com"
-  },
-
   i18n: {
     defaultLocale: "en",
     langDir: "~/locales/",
@@ -182,6 +177,14 @@ const config: NuxtConfig = {
         file: "nl.ts"
       }
     ]
+  },
+
+  sitemap: {
+    path: "/sitemap.xml",
+    hostname: "https://ronniecodes.com",
+    i18n: {
+      locales: ["en", "nl"]
+    }
   },
 
   generate: {
