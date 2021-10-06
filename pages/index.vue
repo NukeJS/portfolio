@@ -102,6 +102,10 @@ export default Vue.extend({
       {
         image: "/images/skills/expressjs.svg",
         name: "Express.js"
+      },
+      {
+        image: "/images/skills/laravel.svg",
+        name: "Laravel"
       }
     ]
   })
