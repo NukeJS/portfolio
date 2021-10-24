@@ -1,0 +1,10 @@
+{
+  "title": "RonnieCodes",
+  "url": "https://ronniecodes.com",
+  "description": "Full-stack Web Developer based in the Netherlands that builds modern and functional web applications.",
+  "keywords": "development, full stack, ronnie, ronniecodes, web developer, nodejs, vuejs, nuxtjs, developer",
+  "twitter": {
+    "site": "@TheCodingNuke",
+    "card": "summary_large_image"
+  }
+}

@@ -1,113 +1,49 @@
 <template>
-  <rc-container>
-    <section class="max-w-full py-12 text-center sm:py-16 md:py-20">
+  <RcContainer>
+    <section
+      class="flex flex-col items-center w-full py-20 text-center  md:py-32 lg:py-44"
+    >
       <h1
-        class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl"
-        v-html="$t('pages.index.hero.title')"
-      />
-
+        class="text-4xl font-bold tracking-tight text-white  sm:text-5xl md:text-6xl"
+      >
+        Hi, I'm <span class="text-indigo-500">Ronnie</span>.
+        <br />
+        A <span class="text-indigo-500">Full-stack Developer</span>.
+      </h1>
       <p
-        class="max-w-2xl mx-auto mt-6 mb-8 text-lg text-gray-500 dark:text-gray-300 sm:mt-10 sm:mb-12"
+        class="max-w-xl mt-6 text-lg font-medium text-gray-200  md:max-w-2xl md:text-xl lg:text-2xl sm:mt-10"
       >
-        {{ $t("pages.index.hero.description") }}
+        I'm currently based in the Netherlands, creating modern and functional
+        web applications.
       </p>
-
-      <div
-        class="flex-col justify-center space-y-4 sm:space-x-4 sm:flex-row sm:space-y-0"
-      >
-        <rc-btn
-          nuxt
-          :to="localePath('/projects')"
-          class="flex-none w-full px-6 py-3 text-xl font-medium leading-6 text-white bg-indigo-600 rounded-full shadow-lg hover:bg-indigo-700 sm:w-auto"
+      <div class="mt-8 space-x-4 sm:mt-12">
+        <nuxt-link
+          to="/blog"
+          class="px-5 py-3 text-lg font-medium text-white bg-indigo-500 border border-transparent rounded-md outline-none  sm:text-xl ring-offset-2 ring-offset-gray-900 focus:ring ring-indigo-500"
         >
-          {{ $t("pages.index.hero.buttons.projects") }}
-        </rc-btn>
-        <rc-btn
-          nuxt
-          :to="localePath('/blog')"
-          class="flex-none w-full px-6 py-3 text-xl font-medium leading-6 text-white bg-black rounded-full shadow-lg hover:bg-gray-600 dark:bg-white dark:text-black dark:hover:bg-gray-300 sm:w-auto"
+          My Projects
+        </nuxt-link>
+        <nuxt-link
+          to="/blog"
+          class="px-5 py-3 text-lg font-medium text-white bg-indigo-500 border border-transparent rounded-md outline-none  sm:text-xl ring-offset-2 ring-offset-gray-900 focus:ring ring-indigo-500"
         >
-          {{ $t("pages.index.hero.buttons.blog") }}
-        </rc-btn>
+          My Blog
+        </nuxt-link>
       </div>
     </section>
-
-    <section class="max-w-full py-12 sm:py-16 md:py-20">
-      <h2
-        class="text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl"
-        v-html="$t('pages.index.stack.title')"
-      />
-
-      <div class="grid gap-4 mt-6 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3">
-        <SkillCard
-          v-for="(skill, index) in skills"
-          :key="index"
-          :skill="skill"
-        />
-      </div>
+    <section class="w-full py-12 md:py-20">
+      <h2 class="text-4xl font-medium tracking-tight text-white md:text-5xl">
+        My Stack.
+      </h2>
+      <p class="max-w-2xl mt-2 text-gray-300 md:text-lg sm:mt-4">
+        Here are some projects I've created over the years.
+      </p>
     </section>
-  </rc-container>
+  </RcContainer>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
-import { mapMetaInfo } from "~/utils/helpers";
-
-export default Vue.extend({
-  head(): object {
-    return mapMetaInfo({
-      title: "Home",
-      description:
-        "I'm a guy that is fond of creating full stack web apps. I'm currently based in the Netherlands. I create modern and functional web apps.",
-      path: "/"
-    });
-  },
-
-  data: () => ({
-    email: "contact.ronniecodes@gmail.com",
-    skills: [
-      {
-        image: "/images/skills/javascript.svg",
-        name: "JavaScript"
-      },
-      {
-        image: "/images/skills/typescript.svg",
-        name: "TypeScript"
-      },
-      {
-        image: "/images/skills/vuejs.svg",
-        name: "Vue.js"
-      },
-      {
-        image: "/images/skills/nuxtjs.svg",
-        name: "Nuxt.js"
-      },
-      {
-        image: "/images/skills/reactjs.svg",
-        name: "React.js"
-      },
-      {
-        image: "/images/skills/sass.svg",
-        name: "SASS/SCSS"
-      },
-      {
-        image: "/images/skills/tailwindcss.svg",
-        name: "Tailwind CSS"
-      },
-      {
-        image: "/images/skills/mongodb.svg",
-        name: "MongoDB"
-      },
-      {
-        image: "/images/skills/expressjs.svg",
-        name: "Express.js"
-      },
-      {
-        image: "/images/skills/laravel.svg",
-        name: "Laravel"
-      }
-    ]
-  })
-});
+export default Vue.extend({})
 </script>
