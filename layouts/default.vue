@@ -1,5 +1,5 @@
 <template>
-  <RcApp class="text-gray-300 bg-gray-900 font-dm-sans">
+  <RcApp class="text-gray-300 bg-gray-900">
     <AppBar />
 
     <RcMain class="pt-16">
