@@ -9,6 +9,3 @@ export default Vue.extend({
   name: 'RcSpacer',
 })
 </script>
-
-<style scoped>
-</style>

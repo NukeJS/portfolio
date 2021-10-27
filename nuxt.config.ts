@@ -48,6 +48,10 @@ export default {
     ],
   },
 
+  loading: {
+    color: '#6366f1',
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/global.scss'],
 
@@ -86,10 +90,16 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/i18n',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL:
+      process.env.NODE_ENV !== 'production'
+        ? 'http://localhost:7000'
+        : 'https://api.ronniecodes.com',
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -109,6 +119,19 @@ export default {
         theme: 'prism-themes/themes/prism-material-oceanic.css',
       },
     },
+  },
+
+  i18n: {
+    baseUrl: meta.url,
+    vueI18n: {
+      fallbackLocale: 'en',
+    },
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.ts' },
+      { code: 'nl', iso: 'nl-NL', file: 'nl.ts' },
+    ],
+    defaultLocale: 'en',
+    langDir: '~/locales/',
   },
 
   generate: {

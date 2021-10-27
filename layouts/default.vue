@@ -5,11 +5,21 @@
     <RcMain class="pt-16">
       <Nuxt />
     </RcMain>
+
+    <AppFooter />
   </RcApp>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  head() {
+    return {
+      htmlAttrs: {
+        lang: this.$i18n.locale,
+      },
+    }
+  },
+})
 </script>

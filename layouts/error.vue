@@ -4,28 +4,33 @@
 
     <RcMain class="pt-16">
       <RcContainer>
-        <section class="w-full py-12 md:py-20">
+        <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
           <h1
-            class="text-4xl font-bold tracking-tight text-white  sm:text-5xl md:text-6xl"
+            class="text-4xl font-semibold tracking-tight text-white md:text-5xl"
           >
             Error
             <span class="text-indigo-500">{{ error.statusCode || 500 }}</span
             >.
           </h1>
-          <p class="max-w-2xl mt-2 text-gray-300 md:text-lg sm:mt-4">
-            {{ error.message || "An error has occurred" }}
+          <p class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
+            {{ error.message || 'An unexpected error has occurred.' }}
           </p>
+          <div class="mt-8 sm:mt-12">
+            <RcBtn nuxt :to="localePath('/')" color="indigo">Go Home</RcBtn>
+          </div>
         </section>
       </RcContainer>
     </RcMain>
+
+    <AppFooter />
   </RcApp>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
-  layout: "empty",
+  layout: 'empty',
 
   props: {
     error: {
@@ -33,8 +38,13 @@ export default Vue.extend({
       default: null,
     },
   },
-});
-</script>
 
-<style scoped>
-</style>
+  head() {
+    return {
+      htmlAttrs: {
+        lang: this.$i18n.locale,
+      },
+    }
+  },
+})
+</script>

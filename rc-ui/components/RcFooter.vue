@@ -1,13 +1,13 @@
 <template>
-  <main class="relative flex flex-auto max-w-full">
+  <footer class="w-full">
     <slot />
-  </main>
+  </footer>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'RcMain',
+  name: 'RcFooter',
 })
 </script>
