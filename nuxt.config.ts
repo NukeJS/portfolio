@@ -122,7 +122,6 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
-    workbox: false,
     manifest: {
       lang: 'en',
       name: 'ronniecodes.com',
