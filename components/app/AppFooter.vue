@@ -4,7 +4,7 @@
       class="flex flex-col items-center justify-between space-y-4  sm:flex-row sm:space-y-0"
     >
       <div>
-        <p>
+        <p class="text-center sm:text-left">
           &copy; {{ new Date().getFullYear() }} RonnieCodes.
           {{ $t('components.app.AppFooter.copyright') }}
         </p>
