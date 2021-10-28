@@ -1,32 +1,31 @@
 <template>
-  <div :class="classes">
-    <slot></slot>
+  <div
+    :class="[
+      'w-full mx-auto px-4',
+      {
+        'max-w-screen-lg xl:max-w-screen-xl': !fluid,
+        'px-4 sm:px-6 md:px-8': padding,
+      },
+    ]"
+  >
+    <slot />
   </div>
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
-  name: "rc-container",
+  name: 'RcContainer',
 
   props: {
     fluid: {
-      type: Boolean
+      type: Boolean,
     },
-    padless: {
-      type: Boolean
-    }
+    padding: {
+      type: Boolean,
+      default: true,
+    },
   },
-
-  computed: {
-    classes(): Record<string, boolean> {
-      return {
-        "max-w-screen-lg xl:max-w-screen-xl": !this.fluid,
-        "px-4 sm:px-6 md:px-8": !this.padless,
-        "w-full mx-auto": true
-      };
-    }
-  }
-});
+})
 </script>

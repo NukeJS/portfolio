@@ -9,20 +9,20 @@
     "sourceMap": true,
     "strict": true,
     "noEmit": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
     "types": [
-      "@types/node",
       "@nuxt/types",
-      "@nuxt/content",
-      "@nuxtjs/color-mode",
-      "@nuxt/image",
       "@nuxtjs/axios",
-      "@nuxtjs/i18n"
+      "@nuxt/content",
+      "@nuxtjs/i18n",
+      "@types/node"
     ]
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", ".nuxt", "dist"]
 }

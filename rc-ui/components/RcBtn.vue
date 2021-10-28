@@ -1,69 +1,66 @@
 <template>
   <component
-    :type="type"
     :is="nuxt ? 'NuxtLink' : to ? 'RouterLink' : href ? 'a' : 'button'"
+    :type="type"
     :to="to"
     :exact="(to || nuxt) && exact"
     :href="href"
     :target="target"
-    :class="classes"
     :active-class="(to || nuxt) && activeClass"
     :exact-active-class="(to || nuxt) && exactActiveClass"
     :disabled="disabled"
-    v-on="{ click: onClick }"
+    :class="[
+      'text-lg font-medium border border-transparent rounded-md outline-none  sm:text-xl ring-offset-2 ring-offset-gray-900 focus:ring',
+      { 'px-5 py-3': padding },
+      { 'bg-indigo-500 ring-indigo-500 text-white': color === 'indigo' },
+    ]"
   >
-    <slot></slot>
+    <slot />
   </component>
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
-  name: "rc-btn",
-
   props: {
     type: {
-      type: String
+      type: String,
+      default: 'button',
     },
     to: {
-      type: [String, Object]
+      type: [String, Object],
     },
     nuxt: {
-      type: Boolean
+      type: Boolean,
     },
     exact: {
-      type: Boolean
+      type: Boolean,
     },
     href: {
-      type: String
+      type: String,
     },
     target: {
-      type: String
+      type: String,
     },
     activeClass: {
-      type: String
+      type: String,
     },
     exactActiveClass: {
-      type: String
+      type: String,
     },
     disabled: {
-      type: Boolean
-    }
+      type: Boolean,
+    },
+    color: {
+      type: String,
+      default: 'indigo',
+      validator: (value: string) => ['indigo'].includes(value),
+    },
+    padding: {
+      type: Boolean,
+      default: true,
+    },
   },
-
-  computed: {
-    classes(): Record<string, boolean> {
-      return {
-        "inline-flex items-center justify-center focus:outline-none outline-none transition duration-200 ease-in-out cursor-pointer": true
-      };
-    }
-  },
-
-  methods: {
-    onClick(event: Event) {
-      this.$emit("click", event);
-    }
-  }
-});
+})
 </script>

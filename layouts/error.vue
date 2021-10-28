@@ -1,61 +1,52 @@
 <template>
-  <rc-app class="bg-white dark:bg-gray-900 font-poppins">
+  <RcApp class="text-gray-300 bg-gray-900">
     <AppBar />
 
     <AppNavigationDrawer />
 
-    <rc-main class="pt-16">
-      <rc-container class="flex items-start justify-center sm:items-center">
-        <section class="max-w-full py-6 text-center sm:py-12 md:py-16">
-          <h2
-            class="text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl"
+    <RcMain class="pt-16">
+      <RcContainer>
+        <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
+          <h1
+            class="text-4xl font-semibold tracking-tight text-white md:text-5xl"
           >
             Error
-            <span class="text-indigo-600 dark:text-indigo-500">
-              {{ error.statusCode }} </span
+            <span class="text-indigo-500">{{ error.statusCode || 500 }}</span
             >.
-          </h2>
-          <p
-            class="mt-6 mb-8 font-semibold text-gray-500 dark:text-gray-300 sm:text-lg"
-          >
-            {{ error.message }}
+          </h1>
+          <p class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
+            {{ error.message || 'An unexpected error has occurred.' }}
           </p>
-
-          <rc-btn
-            nuxt
-            to="/"
-            class="flex-none px-5 py-3 text-lg font-semibold leading-6 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-5 h-5 mr-3"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
-              />
-            </svg>
-            Go Home
-          </rc-btn>
+          <div class="mt-8 sm:mt-12">
+            <RcBtn nuxt :to="localePath('/')" color="indigo">Go Home</RcBtn>
+          </div>
         </section>
-      </rc-container>
-    </rc-main>
+      </RcContainer>
+    </RcMain>
+
     <AppFooter />
-  </rc-app>
+  </RcApp>
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
-  layout: "empty",
+  layout: 'empty',
 
   props: {
     error: {
-      type: Object as PropType<object>,
-      default: null
+      type: Object,
+      default: null,
+    },
+  },
+
+  head() {
+    return {
+      htmlAttrs: {
+        lang: this.$i18n.locale,
+      },
     }
-  }
-});
+  },
+})
 </script>

@@ -1,113 +1,135 @@
 <template>
-  <rc-container>
-    <section class="max-w-full py-12 text-center sm:py-16 md:py-20">
+  <RcContainer>
+    <section
+      class="flex flex-col items-center justify-center w-full pt-12 pb-32 text-center  sm:pt-20 sm:pb-36 md:pt-32 md:pb-40 lg:pt-36"
+    >
       <h1
-        class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl"
-        v-html="$t('pages.index.hero.title')"
+        v-html="$t('pages.index.content.hero.title')"
+        class="text-4xl font-bold tracking-tight text-white  sm:text-5xl md:text-6xl"
       />
-
       <p
-        class="max-w-2xl mx-auto mt-6 mb-8 text-lg text-gray-500 dark:text-gray-300 sm:mt-10 sm:mb-12"
-      >
-        {{ $t("pages.index.hero.description") }}
-      </p>
+        v-html="$t('pages.index.content.hero.subtitle')"
+        class="max-w-xl mt-6 text-lg text-gray-200  md:max-w-2xl md:text-xl lg:text-2xl sm:mt-10"
+      />
+      <div class="mt-8 space-x-4 sm:mt-12">
+        <RcBtn nuxt :to="localePath('/projects')" color="indigo">
+          {{ $t('pages.index.content.hero.projects') }}
+        </RcBtn>
+        <RcBtn nuxt :to="localePath('/blog')" color="indigo">
+          {{ $t('pages.index.content.hero.blog') }}
+        </RcBtn>
+      </div>
+    </section>
+    <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
+      <h2
+        v-html="$t('pages.index.content.stack.title')"
+        class="text-4xl font-semibold tracking-tight text-white md:text-5xl"
+      />
+      <p
+        v-html="$t('pages.index.content.stack.subtitle')"
+        class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5"
+      />
 
       <div
-        class="flex-col justify-center space-y-4 sm:space-x-4 sm:flex-row sm:space-y-0"
+        class="grid grid-cols-2 gap-3 mt-6  sm:mt-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7"
       >
-        <rc-btn
-          nuxt
-          :to="localePath('/projects')"
-          class="flex-none w-full px-6 py-3 text-xl font-medium leading-6 text-white bg-indigo-600 rounded-full shadow-lg hover:bg-indigo-700 sm:w-auto"
+        <div
+          v-for="(technology, idx) in stack"
+          :key="idx"
+          class="flex flex-col items-center p-3 bg-gray-800 rounded-md shadow-lg "
         >
-          {{ $t("pages.index.hero.buttons.projects") }}
-        </rc-btn>
-        <rc-btn
-          nuxt
-          :to="localePath('/blog')"
-          class="flex-none w-full px-6 py-3 text-xl font-medium leading-6 text-white bg-black rounded-full shadow-lg hover:bg-gray-600 dark:bg-white dark:text-black dark:hover:bg-gray-300 sm:w-auto"
-        >
-          {{ $t("pages.index.hero.buttons.blog") }}
-        </rc-btn>
+          <NuxtImg
+            class="w-16 h-16"
+            :src="`/images/technologies/${technology.image}`"
+            :alt="`${technology.name} Logo`"
+          />
+          <p class="mt-2 text-lg font-semibold text-white">
+            {{ technology.name }}
+          </p>
+        </div>
       </div>
     </section>
-
-    <section class="max-w-full py-12 sm:py-16 md:py-20">
-      <h2
-        class="text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl"
-        v-html="$t('pages.index.stack.title')"
-      />
-
-      <div class="grid gap-4 mt-6 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3">
-        <SkillCard
-          v-for="(skill, index) in skills"
-          :key="index"
-          :skill="skill"
-        />
-      </div>
-    </section>
-  </rc-container>
+  </RcContainer>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
-import { mapMetaInfo } from "~/utils/helpers";
+import { meta } from '~/utils/meta'
 
 export default Vue.extend({
-  head(): object {
-    return mapMetaInfo({
-      title: "Home",
-      description:
-        "I'm a guy that is fond of creating full stack web apps. I'm currently based in the Netherlands. I create modern and functional web apps.",
-      path: "/"
-    });
-  },
-
   data: () => ({
-    email: "contact.ronniecodes@gmail.com",
-    skills: [
+    stack: [
       {
-        image: "/images/skills/javascript.svg",
-        name: "JavaScript"
+        image: 'javascript.svg',
+        name: 'JavaScript',
       },
       {
-        image: "/images/skills/typescript.svg",
-        name: "TypeScript"
+        image: 'typescript.svg',
+        name: 'TypeScript',
       },
       {
-        image: "/images/skills/vuejs.svg",
-        name: "Vue.js"
+        image: 'node.svg',
+        name: 'Node.js',
       },
       {
-        image: "/images/skills/nuxtjs.svg",
-        name: "Nuxt.js"
+        image: 'vue.svg',
+        name: 'Vue.js',
       },
       {
-        image: "/images/skills/reactjs.svg",
-        name: "React.js"
+        image: 'nuxt.svg',
+        name: 'Nuxt.js',
       },
       {
-        image: "/images/skills/sass.svg",
-        name: "SASS/SCSS"
+        image: 'sass.svg',
+        name: 'SASS/SCSS',
       },
       {
-        image: "/images/skills/tailwindcss.svg",
-        name: "Tailwind CSS"
+        image: 'tailwind.svg',
+        name: 'Tailwind CSS',
       },
       {
-        image: "/images/skills/mongodb.svg",
-        name: "MongoDB"
+        image: 'express.svg',
+        name: 'Express.js',
       },
       {
-        image: "/images/skills/expressjs.svg",
-        name: "Express.js"
+        image: 'vsc.svg',
+        name: 'VS Code',
       },
       {
-        image: "/images/skills/laravel.svg",
-        name: "Laravel"
-      }
-    ]
-  })
-});
+        image: 'git.svg',
+        name: 'Git',
+      },
+      {
+        image: 'mongodb.svg',
+        name: 'MongoDB',
+      },
+      {
+        image: 'react.svg',
+        name: 'React.js',
+      },
+      {
+        image: 'laravel.svg',
+        name: 'Laravel',
+      },
+      {
+        image: 'mysql.svg',
+        name: 'MySQL',
+      },
+      {
+        image: 'php.svg',
+        name: 'PHP',
+      },
+    ],
+  }),
+
+  head() {
+    return meta({
+      title: this.$t('pages.index.meta.title') as string,
+      description: this.$t('pages.index.meta.description') as string,
+      locale: this.$i18n.locale,
+      defaultLocale: this.$i18n.defaultLocale,
+    })
+  },
+})
 </script>

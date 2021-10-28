@@ -1,68 +1,89 @@
 <template>
-  <rc-container class="my-6 md:my-8">
-    <h2
-      class="text-3xl font-bold leading-none tracking-tight text-gray-900 sm:mt-2 md:mt-4 dark:text-white sm:text-4xl md:text-5xl"
-      v-html="$t('pages.projects.index.title')"
-    />
+  <RcContainer>
+    <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
+      <h1
+        v-html="$t('pages.projects.content.title')"
+        class="text-4xl font-semibold tracking-tight text-white md:text-5xl"
+      />
+      <p
+        v-html="$t('pages.projects.content.subtitle')"
+        class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5"
+      />
+      <div
+        v-if="projects && projects.length"
+        class="grid grid-cols-1 gap-4 mt-6  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:mt-8"
+      >
+        <a
+          v-for="(project, idx) in projects"
+          :key="idx"
+          :href="project.url"
+          target="_blank"
+          class="flex flex-col px-4 py-3 overflow-hidden bg-gray-800 rounded-md shadow-lg  sm:transition-transform sm:duration-300 sm:ease-in-out group sm:hover:-translate-y-1"
+        >
+          <h3
+            class="text-lg font-semibold leading-tight text-white  group-hover:underline"
+          >
+            {{ project.name }}
+          </h3>
+          <p class="flex-grow mt-2 leading-snug">
+            {{ project.description }}
+          </p>
+          <div class="flex justify-between mt-3 text-sm">
+            <p>
+              {{ project.language }}
+            </p>
+            <span v-if="project.stars" class="flex items-center">
+              <IconStar class="w-4 h-4 mr-1 text-yellow-400" />
+              {{ project.stars }}
+            </span>
+          </div>
+        </a>
+      </div>
 
-    <div
-      v-if="!$fetchState.pending && repos.length"
-      class="grid grid-cols-1 gap-4 mt-6 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3"
-    >
-      <ProjectCard v-for="repo in repos" :key="repo.id" :project="repo" />
-    </div>
-
-    <p
-      class="mt-6 text-xl font-bold text-gray-600 sm:mt-10 dark:text-gray-300"
-      v-if="$fetchState.pending"
-    >
-      Loading projects...
-    </p>
-
-    <p
-      class="mt-6 text-xl font-bold text-gray-600 sm:mt-10 dark:text-gray-300"
-      v-if="$fetchState.error"
-    >
-      An error occurred while trying to load my projects... Try again later.
-    </p>
-
-    <p
-      class="mt-4 text-lg font-medium text-gray-500 dark:text-gray-300 sm:mt-8"
-      v-html="$t('pages.projects.index.discoverMoreProjects')"
-    />
-  </rc-container>
+      <p
+        v-else
+        v-html="$t('pages.projects.content.fetching')"
+        class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5"
+      />
+    </section>
+  </RcContainer>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
-import { Project } from "~/types";
+import { mapGetters } from 'vuex'
 
-import { mapMetaInfo } from "~/utils/helpers";
+import { meta } from '~/utils/meta'
 
 export default Vue.extend({
-  nuxtI18n: {
-    paths: {
-      en: "/projects",
-      nl: "/projecten"
+  async fetch() {
+    try {
+      await this.$store.dispatch('fetchProjects')
+    } catch (error) {
+      this.$nuxt.error({
+        statusCode: 500,
+        message: 'An error occurred while trying to load my projects.',
+      })
     }
   },
+  fetchOnServer: false,
 
-  head(): object {
-    return mapMetaInfo({
-      title: "Projects",
-      description: "An overview of my projects listed on GitHub.",
-      path: "/projects"
-    });
+  head() {
+    return meta({
+      title: this.$t('pages.projects.meta.title') as string,
+      description: this.$t('pages.projects.meta.description') as string,
+      path: '/projects',
+      locale: this.$i18n.locale,
+      defaultLocale: this.$i18n.defaultLocale,
+    })
   },
 
-  data: () => ({
-    repos: [] as Project[]
-  }),
-
-  async fetch() {
-    this.repos = await this.$axios.$get<Project[]>("/v1/projects");
+  computed: {
+    ...mapGetters(['projects']),
   },
-  fetchOnServer: false
-});
+})
 </script>
+
+<style scoped>
+</style>

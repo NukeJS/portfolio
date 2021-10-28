@@ -1,112 +1,72 @@
 <template>
-  <rc-app-bar
+  <RcAppBar
     fixed
-    class="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
+    class="bg-gray-900 bg-opacity-75 border-b border-gray-800  backdrop-filter backdrop-blur"
   >
-    <rc-container class="flex items-center h-full">
-      <rc-btn
-        @click="showNavigationDrawer"
-        class="mr-3 font-semibold text-gray-500 cursor-pointer md:hidden dark:text-gray-300 dark:hover:text-gray-100"
-      >
-        <IconMenuAlt2 class="w-6 h-6" />
-      </rc-btn>
-
-      <nuxt-link
-        :to="localePath('/')"
-        class="text-lg font-bold select-none dark:text-white"
-      >
-        <nuxt-img class="h-6" src="/images/logo.svg" alt="RonnieCodes Logo" />
-      </nuxt-link>
-
-      <rc-spacer />
-
-      <div class="flex items-center space-x-6 sm:space-x-10">
-        <div
-          class="items-center hidden space-x-6 font-medium text-gray-500 dark:text-gray-400 md:flex sm:space-x-10"
+    <RcContainer class="flex items-center w-full h-full">
+      <div class="flex items-center flex-1 space-x-3">
+        <button
+          @click="showNavigationDrawer"
+          class="transition-colors duration-200 lg:hidden hover:text-gray-400"
         >
-          <nuxt-link
-            :to="localePath('/')"
-            exact-active-class="text-gray-900 dark:text-white"
-            class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
-          >
-            {{ $t("components.AppBar.home") }}
-          </nuxt-link>
-          <nuxt-link
-            :to="localePath('/blog')"
-            exact-active-class="text-gray-900 dark:text-white"
-            class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
-          >
-            {{ $t("components.AppBar.blog") }}
-          </nuxt-link>
-          <nuxt-link
-            :to="localePath('/projects')"
-            exact-active-class="text-gray-900 dark:text-white"
-            class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
-          >
-            {{ $t("components.AppBar.projects") }}
-          </nuxt-link>
-          <nuxt-link
-            :to="localePath('/contact')"
-            exact-active-class="text-gray-900 dark:text-white"
-            class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
-          >
-            {{ $t("components.AppBar.contact") }}
-          </nuxt-link>
-        </div>
+          <IconMenu class="w-6 h-6" />
+        </button>
 
-        <div
-          class="flex items-center space-x-4 font-medium text-gray-500 dark:text-gray-400 sm:space-x-6"
-        >
-          <nuxt-link
-            :to="switchLocalePath(nextLocale)"
-            class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
-            :title="`Switch to ${nextLocale == 'en' ? 'English' : 'Dutch'}`"
-          >
-            {{ nextLocale.toUpperCase() }}
-          </nuxt-link>
-
-          <rc-btn
-            class="font-semibold text-gray-500 cursor-pointer dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
-            @click="switchTheme"
-          >
-            <IconSun v-if="theme === 'light'" class="w-6 h-6" />
-            <IconMoon v-else-if="theme === 'dark'" class="w-6 h-6" />
-            <span v-else class="w-6 h-6">...</span>
-          </rc-btn>
-        </div>
+        <NuxtLink :to="localePath('/')">
+          <NuxtImg src="/images/logo.svg" alt="RonnieCodes Logo" class="h-6" />
+        </NuxtLink>
       </div>
-    </rc-container>
-  </rc-app-bar>
+      <div
+        class="items-center justify-center hidden h-full space-x-10 font-bold  lg:flex"
+      >
+        <NuxtLink
+          :to="localePath('/')"
+          exact-active-class="text-indigo-500 hover:!text-indigo-500 before:!block"
+          class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400 before:w-6 before:h-1 before:rounded-full before:absolute before:bg-indigo-500 before:left-1/2 before:-translate-x-1/2 before:transform before:bottom-3 before:hidden"
+        >
+          {{ $t('components.app.AppBar.home') }}
+        </NuxtLink>
+        <NuxtLink
+          :to="localePath('/projects')"
+          exact-active-class="text-indigo-500 hover:!text-indigo-500 before:!block"
+          class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400 before:w-6 before:h-1 before:rounded-full before:absolute before:bg-indigo-500 before:left-1/2 before:-translate-x-1/2 before:transform before:bottom-3 before:hidden"
+        >
+          {{ $t('components.app.AppBar.projects') }}
+        </NuxtLink>
+        <NuxtLink
+          :to="localePath('/blog')"
+          exact-active-class="text-indigo-500 hover:!text-indigo-500 before:!block"
+          class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400 before:w-6 before:h-1 before:rounded-full before:absolute before:bg-indigo-500 before:left-1/2 before:-translate-x-1/2 before:transform before:bottom-3 before:hidden"
+        >
+          {{ $t('components.app.AppBar.blog') }}
+        </NuxtLink>
+      </div>
+      <div class="items-center justify-end flex-1 hidden font-bold lg:flex">
+        <NuxtLink
+          :to="switchLocalePath(locale === 'en' ? 'nl' : 'en')"
+          class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400"
+        >
+          <IconTranslate class="w-6 h-6" /> {{ locale === 'en' ? 'NL' : 'EN' }}
+        </NuxtLink>
+      </div>
+    </RcContainer>
+  </RcAppBar>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
-  data: () => ({
-    showNav: false
-  }),
-
   computed: {
-    theme(): string {
-      return this.$colorMode.value;
+    locale() {
+      return this.$i18n.locale
     },
-    nextLocale(): string {
-      return this.$i18n.locale == "en" ? "nl" : "en";
-    }
   },
 
   methods: {
-    switchTheme() {
-      if (this.theme == "light") {
-        this.$colorMode.preference = "dark";
-      } else if (this.theme == "dark") {
-        this.$colorMode.preference = "light";
-      }
-    },
     showNavigationDrawer() {
-      this.$store.dispatch("setNavigationDrawer", true);
-    }
-  }
-});
+      this.$store.dispatch('setNavigationDrawer', true)
+    },
+  },
+})
 </script>

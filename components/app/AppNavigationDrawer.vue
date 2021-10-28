@@ -1,88 +1,93 @@
 <template>
-  <rc-navigation-drawer v-model="navigationDrawer">
-    <div
-      class="flex flex-col h-full bg-white border-r dark:border-gray-700 dark:bg-gray-900"
-    >
-      <rc-app-bar
-        class="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
-      >
-        <rc-container class="flex items-center h-full">
-          <rc-btn
-            @click="navigationDrawer = false"
-            class="mr-3 font-semibold text-gray-500 cursor-pointer md:hidden dark:text-gray-300 dark:hover:text-gray-100"
-          >
-            <IconX class="w-6 h-6" />
-          </rc-btn>
+  <RcNavigationDrawer v-model="navigationDrawer">
+    <div class="flex flex-col h-full bg-gray-900 border-r border-gray-800">
+      <RcAppBar class="h-16 border-b border-gray-800">
+        <RcContainer class="flex items-center w-full h-full">
+          <div class="flex items-center flex-1 space-x-3">
+            <button
+              @click="hideNavigationDrawer"
+              class="transition-colors duration-200  lg:hidden hover:text-gray-400"
+            >
+              <IconX class="w-6 h-6" />
+            </button>
 
-          <nuxt-link
-            to="/"
-            class="inline-block text-lg font-bold select-none dark:text-white"
-          >
-            <nuxt-img
-              class="h-6"
-              src="/images/logo.svg"
-              alt="RonnieCodes Logo"
-            />
-          </nuxt-link>
-        </rc-container>
-      </rc-app-bar>
-      <div class="overflow-y-auto">
-        <ul class="p-4 space-y-4 font-medium text-gray-500 dark:text-gray-400">
+            <NuxtLink :to="localePath('/')">
+              <NuxtImg
+                src="/images/logo.svg"
+                alt="RonnieCodes Logo"
+                class="h-6"
+              />
+            </NuxtLink>
+          </div>
+          <div class="flex items-center justify-end flex-1 font-bold">
+            <NuxtLink
+              :to="switchLocalePath(locale === 'en' ? 'nl' : 'en')"
+              class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400"
+            >
+              <IconTranslate class="w-6 h-6" />
+              {{ locale === 'en' ? 'NL' : 'EN' }}
+            </NuxtLink>
+          </div>
+        </RcContainer>
+      </RcAppBar>
+      <div>
+        <ul class="p-4 space-y-4 font-bold">
           <li>
-            <nuxt-link
+            <NuxtLink
               :to="localePath('/')"
-              exact-active-class="text-gray-900 dark:text-white"
-              class="transition-colors duration-200 dark:hover:text-gray-100"
+              exact-active-class="text-indigo-500 hover:!text-indigo-500 before:!block"
+              class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400 before:w-1 before:h-6 before:rounded-full before:absolute before:bg-indigo-500 before:-left-2 before:top-1/2 before:-translate-y-1/2 before:transform before:bottom-3 before:hidden"
             >
-              {{ $t("components.AppNavigationDrawer.home") }}
-            </nuxt-link>
+              {{ $t('components.app.AppBar.home') }}
+            </NuxtLink>
           </li>
           <li>
-            <nuxt-link
-              :to="localePath('/blog')"
-              exact-active-class="text-gray-900 dark:text-white"
-              class="transition-colors duration-200 dark:hover:text-gray-100"
-            >
-              {{ $t("components.AppNavigationDrawer.blog") }}
-            </nuxt-link>
-          </li>
-          <li>
-            <nuxt-link
+            <NuxtLink
               :to="localePath('/projects')"
-              exact-active-class="text-gray-900 dark:text-white"
-              class="transition-colors duration-200 dark:hover:text-gray-100"
+              exact-active-class="text-indigo-500 hover:!text-indigo-500 before:!block"
+              class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400 before:w-1 before:h-6 before:rounded-full before:absolute before:bg-indigo-500 before:-left-2 before:top-1/2 before:-translate-y-1/2 before:transform before:bottom-3 before:hidden"
             >
-              {{ $t("components.AppNavigationDrawer.projects") }}
-            </nuxt-link>
+              {{ $t('components.app.AppBar.projects') }}
+            </NuxtLink>
           </li>
           <li>
-            <nuxt-link
-              :to="localePath('/contact')"
-              exact-active-class="text-gray-900 dark:text-white"
-              class="transition-colors duration-200 dark:hover:text-gray-100"
+            <NuxtLink
+              :to="localePath('/blog')"
+              exact-active-class="text-indigo-500 hover:!text-indigo-500 before:!block"
+              class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400 before:w-1 before:h-6 before:rounded-full before:absolute before:bg-indigo-500 before:-left-2 before:top-1/2 before:-translate-y-1/2 before:transform before:bottom-3 before:hidden"
             >
-              {{ $t("components.AppNavigationDrawer.contact") }}
-            </nuxt-link>
+              {{ $t('components.app.AppBar.blog') }}
+            </NuxtLink>
           </li>
         </ul>
       </div>
     </div>
-  </rc-navigation-drawer>
+  </RcNavigationDrawer>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
   computed: {
     navigationDrawer: {
       get(): boolean {
-        return this.$store.getters["navigationDrawer"];
+        return this.$store.getters['navigationDrawer']
       },
-      set(val: boolean) {
-        this.$store.dispatch("setNavigationDrawer", val);
-      }
-    }
-  }
-});
+      set(value: boolean) {
+        this.$store.dispatch('setNavigationDrawer', value)
+      },
+    },
+
+    locale() {
+      return this.$i18n.locale
+    },
+  },
+
+  methods: {
+    hideNavigationDrawer() {
+      this.$store.dispatch('setNavigationDrawer', false)
+    },
+  },
+})
 </script>

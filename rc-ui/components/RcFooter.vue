@@ -1,15 +1,13 @@
 <template>
   <footer class="w-full">
-    <div class="flex items-center h-full">
-      <slot></slot>
-    </div>
+    <slot />
   </footer>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
-  name: "rc-footer"
-});
+  name: 'RcFooter',
+})
 </script>

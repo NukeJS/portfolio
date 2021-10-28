@@ -1,96 +1,46 @@
 <template>
-  <rc-footer
-    class="py-8 bg-white border-t dark:bg-gray-900 dark:border-gray-700"
-  >
-    <rc-container
-      class="flex flex-col space-y-6 md:space-y-0 md:space-x-8 md:flex-row"
+  <RcFooter class="py-4 border-t border-gray-800">
+    <RcContainer
+      class="flex flex-col items-center justify-between space-y-4  sm:flex-row sm:space-y-0"
     >
       <div>
-        <nuxt-link
-          :to="localePath('/')"
-          class="inline-block text-lg font-bold select-none dark:text-white"
+        <p>
+          &copy; {{ new Date().getFullYear() }} RonnieCodes.
+          {{ $t('components.app.AppFooter.copyright') }}
+        </p>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a
+          href="https://github.com/CodingWithNuke"
+          target="_blank"
+          class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400"
         >
-          <nuxt-img class="h-6" src="/images/logo.svg" alt="RonnieCodes Logo" />
-        </nuxt-link>
+          <IconGithub class="w-6 h-6" />
+        </a>
+        <a
+          href="https://twitter.com/TheCodingNuke"
+          target="_blank"
+          class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400"
+        >
+          <IconTwitter class="w-6 h-6" />
+        </a>
+        <a
+          href="mailto:info@ronniecodes.com"
+          target="_blank"
+          class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400"
+        >
+          <IconAt class="w-6 h-6" />
+        </a>
       </div>
-      <div
-        class="grid flex-grow text-sm font-medium sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-6"
-      >
-        <div class="row-span-2 space-y-4">
-          <h4
-            class="text-xs font-semibold tracking-wide text-gray-900 uppercase dark:text-white"
-          >
-            {{ $t("components.AppFooter.websiteLinks") }}
-          </h4>
-          <ul class="space-y-3 text-gray-500 dark:text-gray-400">
-            <li>
-              <nuxt-link
-                :to="localePath('/')"
-                class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
-              >
-                {{ $t("components.AppFooter.home") }}
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link
-                :to="localePath('/blog')"
-                class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
-              >
-                {{ $t("components.AppFooter.blog") }}
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link
-                :to="localePath('/projects')"
-                class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
-              >
-                {{ $t("components.AppFooter.projects") }}
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link
-                :to="localePath('/contact')"
-                class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
-              >
-                {{ $t("components.AppFooter.contact") }}
-              </nuxt-link>
-            </li>
-          </ul>
-        </div>
-        <div class="row-span-2 space-y-4">
-          <h4
-            class="text-xs font-semibold tracking-wide text-gray-900 uppercase dark:text-white"
-          >
-            {{ $t("components.AppFooter.socialLinks") }}
-          </h4>
-          <ul class="space-y-3 text-gray-500 dark:text-gray-400">
-            <li>
-              <a
-                class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
-                href="https://github.com/CodingWithNuke"
-                target="_blank"
-              >
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a
-                class="transition-colors duration-200 hover:text-gray-900 dark:hover:text-white"
-                href="https://twitter.com/TheCodingNuke"
-                target="_blank"
-              >
-                Twitter
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </rc-container>
-  </rc-footer>
+    </RcContainer>
+  </RcFooter>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
-export default Vue.extend({});
+export default Vue.extend({})
 </script>
+
+<style scoped>
+</style>

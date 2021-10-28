@@ -12,7 +12,7 @@
         <div
           @click="internalValue = false"
           v-show="internalValue"
-          class="absolute inset-0 transition-opacity bg-black pointer-events-auto bg-opacity-60"
+          class="absolute inset-0 transition-opacity bg-black pointer-events-auto  bg-opacity-60"
         ></div>
       </transition>
 
@@ -38,57 +38,55 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
   props: {
     value: {
-      type: Boolean
-    }
+      type: Boolean,
+    },
   },
 
   computed: {
     internalValue: {
       get(): boolean {
-        return this.value;
+        return this.value
       },
-      set(val: boolean) {
-        this.$emit("input", val);
-      }
-    }
+      set(value: boolean) {
+        this.$emit('input', value)
+      },
+    },
   },
 
   methods: {
     windowResizeListener() {
-      if (window.innerWidth >= 768 && this.internalValue) {
-        this.internalValue = false;
+      if (window.innerWidth >= 1024 && this.internalValue) {
+        this.internalValue = false
       }
     },
-    onRouteChange() {
-      if (this.internalValue) {
-        this.internalValue = false;
-      }
-    },
-    onInternalValueChange(value: boolean) {
-      if (value) {
-        document.documentElement.style.overflowY = "hidden";
-      } else {
-        document.documentElement.style.overflowY = "auto";
-      }
-    }
   },
 
   mounted() {
-    window.addEventListener("resize", this.windowResizeListener);
+    window.addEventListener('resize', this.windowResizeListener)
   },
 
   beforeDestroy() {
-    window.removeEventListener("resize", this.windowResizeListener);
+    window.removeEventListener('resize', this.windowResizeListener)
   },
 
   watch: {
-    $route: "onRouteChange",
-    internalValue: "onInternalValueChange"
-  }
-});
+    $route() {
+      if (this.internalValue) {
+        this.internalValue = false
+      }
+    },
+    internalValue(value: boolean) {
+      if (value) {
+        document.documentElement.style.overflowY = 'hidden'
+      } else {
+        document.documentElement.style.overflowY = 'auto'
+      }
+    },
+  },
+})
 </script>

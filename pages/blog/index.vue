@@ -1,91 +1,78 @@
 <template>
-  <rc-container class="my-6 md:my-8">
-    <h2
-      class="text-3xl font-bold leading-none tracking-tight text-gray-900 sm:mt-2 md:mt-4 dark:text-white sm:text-4xl md:text-5xl"
-      v-html="$t('pages.blog.index.title')"
-    />
-    <rc-input
-      class="mt-6 sm:mt-10"
-      v-model="query"
-      :placeholder="
-        $t('pages.blog.index.searchbar.placeholder', { count: articles.length })
-      "
-    />
-    <div class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-3">
-      <ArticleCard
-        v-for="(article, index) in filteredArticles"
-        :key="index"
-        :article="article"
+  <RcContainer>
+    <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
+      <h1
+        v-html="$t('pages.blog.content.title')"
+        class="text-4xl font-semibold tracking-tight text-white md:text-5xl"
       />
-    </div>
-
-    <p
-      class="mt-4 text-xl font-semibold text-gray-700 dark:text-gray-300"
-      v-if="!articles.length"
-    >
-      No articles to display.
-    </p>
-
-    <p
-      class="mt-4 text-xl font-semibold text-gray-700 dark:text-gray-300"
-      v-if="articles.length && query && !filteredArticles.length"
-    >
-      No articles found with search query "{{ query }}".
-    </p>
-  </rc-container>
+      <p
+        v-html="$t('pages.blog.content.subtitle')"
+        class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5"
+      />
+      <div
+        class="grid grid-cols-1 gap-4 mt-6  sm:grid-cols-2 lg:grid-cols-3 sm:mt-8"
+      >
+        <NuxtLink
+          v-for="(article, idx) in articles"
+          :key="idx"
+          :to="localePath(`/blog/${article.slug}`)"
+          class="flex flex-col overflow-hidden bg-gray-800 rounded-md shadow-lg  sm:transition-transform sm:duration-300 sm:ease-in-out group sm:hover:-translate-y-1"
+        >
+          <div class="aspect-w-16 aspect-h-9">
+            <NuxtImg
+              :src="article.thumbnail"
+              preset="blog"
+              class="object-cover w-full"
+            />
+          </div>
+          <div class="flex flex-col flex-grow px-4 py-3">
+            <h3
+              class="text-lg font-semibold leading-tight text-white  group-hover:underline"
+            >
+              {{ article.title }}
+            </h3>
+            <p class="mt-2 text-gray-400">
+              {{ article.description }}
+            </p>
+          </div>
+        </NuxtLink>
+      </div>
+    </section>
+  </RcContainer>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
-import { IContentDocument } from "@nuxt/content/types/content";
+import { IContentDocument } from '@nuxt/content/types/content'
 
-import { mapMetaInfo } from "~/utils/helpers";
+import { meta } from '~/utils/meta'
 
 export default Vue.extend({
-  nuxtI18n: {
-    paths: {
-      en: "/blog",
-      nl: "/blog"
-    }
-  },
-
-  head(): object {
-    return mapMetaInfo({
-      title: "Blog",
-      description: "An overview of my blog articles.",
-      path: "/blog"
-    });
-  },
-
   async asyncData({ $content }) {
-    const articles = await $content("blog")
+    const articles = await $content('blog')
       .where({ draft: false })
-      .only(["slug", "title", "thumbnail", "description", "readingTime"])
-      .sortBy("date", "desc")
-      .fetch();
+      .only(['slug', 'title', 'thumbnail', 'description'])
+      .sortBy('date', 'desc')
+      .fetch()
 
     return {
-      articles
-    };
+      articles,
+    }
   },
 
   data: () => ({
-    query: "",
-    articles: [] as IContentDocument[]
+    articles: null as IContentDocument[] | null,
   }),
 
-  computed: {
-    filteredArticles() {
-      return this.articles.filter(
-        article =>
-          article.title?.toLowerCase().includes(this.query.toLowerCase()) ||
-          article.description?.toLowerCase().includes(this.query.toLowerCase())
-      );
-    }
-  }
-});
+  head() {
+    return meta({
+      title: this.$t('pages.blog.meta.title') as string,
+      description: this.$t('pages.blog.meta.description') as string,
+      path: '/blog',
+      locale: this.$i18n.locale,
+      defaultLocale: this.$i18n.defaultLocale,
+    })
+  },
+})
 </script>
-
-<style>
-</style>

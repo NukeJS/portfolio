@@ -11,24 +11,12 @@ draft: false
 
 First, install `prism-themes`.
 
-<client-only>
-<code-group>
-  <code-block label="NPM" active>
-
-  ```bash
-  npm install prism-themes
-  ```
-
-  </code-block>
-  <code-block label="Yarn">
-
-  ```bash
-  yarn add prism-themes
-  ```
-
-  </code-block>
-</code-group>
-</client-only>
+```bash
+# Using NPM
+npm install prism-themes
+# Using Yarn
+yarn add prism-themes
+```
 
 Next, edit the `content.markdown.prism.theme` property in `nuxt.config.js` to the desired theme, for example:
 

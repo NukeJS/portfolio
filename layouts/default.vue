@@ -1,18 +1,27 @@
 <template>
-  <rc-app class="bg-white dark:bg-gray-900 font-poppins">
+  <RcApp class="text-gray-300 bg-gray-900">
     <AppBar />
 
     <AppNavigationDrawer />
 
-    <rc-main class="pt-16">
-      <nuxt />
-    </rc-main>
+    <RcMain class="pt-16">
+      <Nuxt />
+    </RcMain>
+
     <AppFooter />
-  </rc-app>
+  </RcApp>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
-export default Vue.extend({});
+export default Vue.extend({
+  head() {
+    return {
+      htmlAttrs: {
+        lang: this.$i18n.locale,
+      },
+    }
+  },
+})
 </script>
