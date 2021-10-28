@@ -22,12 +22,12 @@ const pages = {
     meta: {
       title: 'Home',
       description:
-        'Full-stack Developer die moderne en functionele webapplicaties bouwt.',
+        'Een full-stack ontwikkelaar die moderne en functionele webapplicaties bouwt.',
     },
     content: {
       hero: {
         title:
-          'Hey, ik ben <span class="text-indigo-500">Ronnie</span>. <br/> Een <span class="text-indigo-500">Full-stack ontwikkelaar</span>.',
+          'Hey, ik ben <span class="text-indigo-500">Ronnie</span>. <br/> Een <span class="text-indigo-500">Full-stack Ontwikkelaar</span>.',
         subtitle: 'Ik maak moderne en functionele webapplicaties.',
         projects: 'Mijn Projecten',
         blog: 'Mijn Blog',
