@@ -16,7 +16,7 @@
           v-for="(article, idx) in articles"
           :key="idx"
           :to="localePath(`/blog/${article.slug}`)"
-          class="flex flex-col overflow-hidden bg-gray-800 rounded-md shadow-lg  group"
+          class="flex flex-col overflow-hidden bg-gray-800 rounded-md shadow-lg  sm:transition-transform sm:duration-300 sm:ease-in-out group sm:hover:-translate-y-1"
         >
           <div class="aspect-w-16 aspect-h-9">
             <NuxtImg

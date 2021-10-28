@@ -20,7 +20,7 @@
         <NuxtLink
           v-if="previousArticle"
           :to="localePath(`/blog/${previousArticle.slug}`)"
-          class="flex flex-col w-full px-4 py-3 bg-gray-800 rounded-md shadow-lg  md:max-w-sm group"
+          class="flex flex-col w-full px-4 py-3 bg-gray-800 rounded-md shadow-lg  md:max-w-sm group sm:transition-transform sm:duration-300 sm:ease-in-out sm:hover:-translate-y-1"
         >
           <h6 class="text-xs font-bold text-gray-400 uppercase">
             Previous Article
@@ -33,7 +33,7 @@
         <NuxtLink
           v-if="nextArticle"
           :to="localePath(`/blog/${nextArticle.slug}`)"
-          class="flex flex-col w-full px-4 py-3 bg-gray-800 rounded-md shadow-lg  md:max-w-sm group md:text-right"
+          class="flex flex-col w-full px-4 py-3 bg-gray-800 rounded-md shadow-lg  md:max-w-sm group md:text-right sm:transition-transform sm:duration-300 sm:ease-in-out sm:hover:-translate-y-1"
         >
           <h6 class="text-xs font-bold text-gray-400 uppercase">
             Next Article

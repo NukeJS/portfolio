@@ -2,6 +2,8 @@
   <RcApp class="text-gray-300 bg-gray-900">
     <AppBar />
 
+    <AppNavigationDrawer />
+
     <RcMain class="pt-16">
       <Nuxt />
     </RcMain>

@@ -46,7 +46,7 @@ const pages = {
       description: "A collection of public GitHub repositories I've created.",
     },
     content: {
-      title: 'My <span class="text-indigo-500">Projects</span>',
+      title: 'My <span class="text-indigo-500">Projects</span>.',
       subtitle: "A collection of public GitHub repositories I've created.",
       fetching: 'Fetching my projects...',
     },

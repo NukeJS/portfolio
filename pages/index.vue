@@ -69,12 +69,16 @@ export default Vue.extend({
         name: 'TypeScript',
       },
       {
+        image: 'node.svg',
+        name: 'Node.js',
+      },
+      {
         image: 'vue.svg',
-        name: 'Vue',
+        name: 'Vue.js',
       },
       {
         image: 'nuxt.svg',
-        name: 'Nuxt',
+        name: 'Nuxt.js',
       },
       {
         image: 'sass.svg',
@@ -86,19 +90,7 @@ export default Vue.extend({
       },
       {
         image: 'express.svg',
-        name: 'Express',
-      },
-      {
-        image: 'mongodb.svg',
-        name: 'MongoDB',
-      },
-      {
-        image: 'react.svg',
-        name: 'React',
-      },
-      {
-        image: 'laravel.svg',
-        name: 'Laravel',
+        name: 'Express.js',
       },
       {
         image: 'vsc.svg',
@@ -107,6 +99,26 @@ export default Vue.extend({
       {
         image: 'git.svg',
         name: 'Git',
+      },
+      {
+        image: 'mongodb.svg',
+        name: 'MongoDB',
+      },
+      {
+        image: 'react.svg',
+        name: 'React.js',
+      },
+      {
+        image: 'laravel.svg',
+        name: 'Laravel',
+      },
+      {
+        image: 'mysql.svg',
+        name: 'MySQL',
+      },
+      {
+        image: 'php.svg',
+        name: 'PHP',
       },
     ],
   }),

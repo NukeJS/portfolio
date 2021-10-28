@@ -2,6 +2,8 @@
   <RcApp class="text-gray-300 bg-gray-900">
     <AppBar />
 
+    <AppNavigationDrawer />
+
     <RcMain class="pt-16">
       <RcContainer>
         <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">

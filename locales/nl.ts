@@ -45,7 +45,7 @@ const pages = {
         'Een verzameling openbare GitHub-repositories die ik heb gemaakt.',
     },
     content: {
-      title: 'Mijn <span class="text-indigo-500">Projecten</span>',
+      title: 'Mijn <span class="text-indigo-500">Projecten</span>.',
       subtitle:
         'Een verzameling openbare GitHub-repositories die ik heb gemaakt.',
       fetching: 'Mijn projecten ophalen...',
