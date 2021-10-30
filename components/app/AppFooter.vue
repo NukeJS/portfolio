@@ -13,6 +13,7 @@
         <a
           href="https://github.com/CodingWithNuke"
           target="_blank"
+          aria-label="GitHub"
           class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400"
         >
           <IconGithub class="w-6 h-6" />
@@ -20,6 +21,7 @@
         <a
           href="https://twitter.com/TheCodingNuke"
           target="_blank"
+          aria-label="Twitter"
           class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400"
         >
           <IconTwitter class="w-6 h-6" />
@@ -27,6 +29,7 @@
         <a
           href="mailto:info@ronniecodes.com"
           target="_blank"
+          aria-label="E-mail"
           class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400"
         >
           <IconAt class="w-6 h-6" />

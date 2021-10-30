@@ -8,6 +8,7 @@
       <h1>{{ article.title }}</h1>
       <p>{{ article.description }}</p>
       <NuxtImg
+        v-if="article.thumbnail"
         :src="article.thumbnail"
         preset="blog"
         class="object-cover w-full rounded-md shadow-lg"
@@ -105,5 +106,37 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped>
+<style lang="scss">
+html {
+  scroll-padding-top: 6rem;
+}
+.nuxt-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a {
+      @apply no-underline mr-2;
+    }
+  }
+  .icon.icon-link {
+    &::before {
+      content: '#';
+    }
+  }
+
+  img {
+    @apply rounded-md shadow-lg;
+  }
+
+  .nuxt-content-highlight {
+    @apply relative selection:bg-indigo-100 selection:bg-opacity-10;
+
+    & > .filename {
+      @apply absolute right-0 top-0 text-gray-100 z-10 font-mono text-sm tracking-tight leading-none mr-4 mt-3 select-none;
+    }
+  }
+}
 </style>
