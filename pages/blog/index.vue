@@ -22,7 +22,7 @@
             <span
               class="absolute z-10 px-2 py-1 text-sm text-gray-100 bg-gray-900 border border-gray-800 rounded-md shadow  right-1 top-1"
             >
-              {{ article.readingTime.text }}
+              {{ Math.ceil(article.readingTime.minutes) }} min
             </span>
             <div class="aspect-w-16 aspect-h-9">
               <NuxtImg
