@@ -2,7 +2,7 @@
 title: Create an Express API in your Nuxt 2 Application
 description: Learn how you can create an Express API in your Nuxt 2 application.
 keywords: Express, Express.js, Nuxt, Nuxt.js, Nuxt 2, Nuxt.js 2, API, REST, Node, Node.js
-thumbnail: blog/create-an-express-api-in-your-nuxt-2-app/thumbnail.png
+thumbnail: /blog/create-an-express-api-in-your-nuxt-2-app/thumbnail.png
 date: 2021-10-30
 draft: false
 ---
