@@ -135,7 +135,7 @@ html {
     @apply relative selection:bg-indigo-100 selection:bg-opacity-10;
 
     & > .filename {
-      @apply absolute right-0 top-0 text-gray-100 z-10 font-mono text-sm tracking-tight leading-none mr-4 mt-3 select-none;
+      @apply absolute right-1 top-1 text-gray-100 z-10 font-mono text-sm tracking-tight leading-none select-none;
     }
   }
 }
