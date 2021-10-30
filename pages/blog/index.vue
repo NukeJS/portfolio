@@ -18,12 +18,19 @@
           :to="localePath(`/blog/${article.slug}`)"
           class="flex flex-col overflow-hidden bg-gray-800 rounded-md shadow-lg  sm:transition-transform sm:duration-300 sm:ease-in-out group sm:hover:-translate-y-1"
         >
-          <div class="aspect-w-16 aspect-h-9" v-if="article.thumbnail">
-            <NuxtImg
-              :src="article.thumbnail"
-              preset="blog"
-              class="object-cover w-full"
-            />
+          <div class="relative" v-if="article.thumbnail">
+            <span
+              class="absolute z-10 px-2 py-1 text-sm text-gray-100 bg-gray-900 border border-gray-800 rounded-md shadow  right-1 top-1"
+            >
+              {{ article.readingTime.text }}
+            </span>
+            <div class="aspect-w-16 aspect-h-9">
+              <NuxtImg
+                :src="article.thumbnail"
+                preset="blog"
+                class="object-cover w-full"
+              />
+            </div>
           </div>
           <div class="flex flex-col flex-grow px-4 py-3">
             <h3
@@ -52,7 +59,7 @@ export default Vue.extend({
   async asyncData({ $content }) {
     const articles = await $content('blog')
       .where({ draft: false })
-      .only(['slug', 'title', 'thumbnail', 'description'])
+      .only(['slug', 'title', 'thumbnail', 'description', 'readingTime'])
       .sortBy('date', 'desc')
       .fetch()
 
