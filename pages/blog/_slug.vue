@@ -57,6 +57,21 @@ import { IContentDocument } from '@nuxt/content/types/content'
 import { meta } from '~/utils/meta'
 
 export default Vue.extend({
+  head() {
+    const { title, description, keywords, thumbnail, slug } = this.article
+
+    return meta({
+      title,
+      description,
+      keywords,
+      image: thumbnail,
+      path: `/blog/${slug}`,
+      type: 'article',
+      locale: this.$i18n.locale,
+      defaultLocale: this.$i18n.defaultLocale,
+    })
+  },
+
   async asyncData({ $content, params, error }) {
     const article = await $content('blog', params.slug)
       .where({ draft: false })
@@ -88,21 +103,6 @@ export default Vue.extend({
     previousArticle: null as IContentDocument | null,
     nextArticle: null as IContentDocument | null,
   }),
-
-  head() {
-    const { title, description, keywords, thumbnail, slug } = this.article
-
-    return meta({
-      title,
-      description,
-      keywords,
-      image: thumbnail,
-      path: `/blog/${slug}`,
-      type: 'article',
-      locale: this.$i18n.locale,
-      defaultLocale: this.$i18n.defaultLocale,
-    })
-  },
 })
 </script>
 

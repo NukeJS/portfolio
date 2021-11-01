@@ -57,6 +57,16 @@ import { mapGetters } from 'vuex'
 import { meta } from '~/utils/meta'
 
 export default Vue.extend({
+  head() {
+    return meta({
+      title: this.$t('pages.projects.meta.title') as string,
+      description: this.$t('pages.projects.meta.description') as string,
+      path: '/projects',
+      locale: this.$i18n.locale,
+      defaultLocale: this.$i18n.defaultLocale,
+    })
+  },
+
   async fetch() {
     try {
       await this.$store.dispatch('fetchProjects')
@@ -68,16 +78,6 @@ export default Vue.extend({
     }
   },
   fetchOnServer: false,
-
-  head() {
-    return meta({
-      title: this.$t('pages.projects.meta.title') as string,
-      description: this.$t('pages.projects.meta.description') as string,
-      path: '/projects',
-      locale: this.$i18n.locale,
-      defaultLocale: this.$i18n.defaultLocale,
-    })
-  },
 
   computed: {
     ...mapGetters(['projects']),

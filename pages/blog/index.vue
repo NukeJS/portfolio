@@ -20,7 +20,7 @@
         >
           <div class="relative" v-if="article.thumbnail">
             <span
-              class="absolute z-10 px-2 py-1 text-sm text-gray-100 bg-gray-900 border border-gray-800 rounded-md shadow  right-1 top-1"
+              class="absolute z-10 flex items-center px-2 py-1 text-sm leading-none text-gray-100 bg-gray-900 border border-gray-800 rounded-md shadow  right-2 top-2"
             >
               {{ Math.ceil(article.readingTime.minutes) }} min
             </span>
@@ -38,9 +38,15 @@
             >
               {{ article.title }}
             </h3>
-            <p class="mt-2 text-gray-400">
+            <p class="mt-2 mb-3">
               {{ article.description }}
             </p>
+            <div class="flex items-center mt-auto text-sm text-gray-400">
+              <IconCalendar class="w-4 h-4" />
+              <time class="ml-1" :datetime="article.date">{{
+                article.formattedDate
+              }}</time>
+            </div>
           </div>
         </NuxtLink>
       </div>
@@ -56,10 +62,28 @@ import { IContentDocument } from '@nuxt/content/types/content'
 import { meta } from '~/utils/meta'
 
 export default Vue.extend({
+  head() {
+    return meta({
+      title: this.$t('pages.blog.meta.title') as string,
+      description: this.$t('pages.blog.meta.description') as string,
+      path: '/blog',
+      locale: this.$i18n.locale,
+      defaultLocale: this.$i18n.defaultLocale,
+    })
+  },
+
   async asyncData({ $content }) {
     const articles = await $content('blog')
       .where({ draft: false })
-      .only(['slug', 'title', 'thumbnail', 'description', 'readingTime'])
+      .only([
+        'slug',
+        'title',
+        'thumbnail',
+        'description',
+        'date',
+        'readingTime',
+        'formattedDate',
+      ])
       .sortBy('date', 'desc')
       .fetch()
 
@@ -71,15 +95,5 @@ export default Vue.extend({
   data: () => ({
     articles: null as IContentDocument[] | null,
   }),
-
-  head() {
-    return meta({
-      title: this.$t('pages.blog.meta.title') as string,
-      description: this.$t('pages.blog.meta.description') as string,
-      path: '/blog',
-      locale: this.$i18n.locale,
-      defaultLocale: this.$i18n.defaultLocale,
-    })
-  },
 })
 </script>

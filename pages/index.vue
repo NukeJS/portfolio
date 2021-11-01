@@ -58,6 +58,15 @@ import Vue from 'vue'
 import { meta } from '~/utils/meta'
 
 export default Vue.extend({
+  head() {
+    return meta({
+      title: this.$t('pages.index.meta.title') as string,
+      description: this.$t('pages.index.meta.description') as string,
+      locale: this.$i18n.locale,
+      defaultLocale: this.$i18n.defaultLocale,
+    })
+  },
+
   data: () => ({
     stack: [
       {
@@ -130,14 +139,5 @@ export default Vue.extend({
       },
     ],
   }),
-
-  head() {
-    return meta({
-      title: this.$t('pages.index.meta.title') as string,
-      description: this.$t('pages.index.meta.description') as string,
-      locale: this.$i18n.locale,
-      defaultLocale: this.$i18n.defaultLocale,
-    })
-  },
 })
 </script>

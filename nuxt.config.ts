@@ -1,5 +1,7 @@
 import { NuxtConfig } from '@nuxt/types'
 
+import { format } from 'date-fns'
+
 import meta from './meta.json'
 
 export default {
@@ -170,6 +172,7 @@ export default {
         const readingTime = require('reading-time')(document.text)
 
         document.readingTime = readingTime
+        document.formattedDate = format(document.date, 'PPP')
       }
     },
   },
