@@ -20,7 +20,7 @@
       <div class="flex flex-col justify-between gap-3 md:flex-row">
         <NuxtLink
           v-if="previousArticle"
-          :to="localePath(`/blog/${previousArticle.slug}`)"
+          :to="`/blog/${previousArticle.slug}`"
           class="flex flex-col w-full px-4 py-3 bg-gray-800 rounded-md shadow-lg  md:max-w-sm group sm:transition-transform sm:duration-300 sm:ease-in-out sm:hover:-translate-y-1"
         >
           <h6 class="text-xs font-bold text-gray-400 uppercase">
@@ -33,7 +33,7 @@
         <div v-else class="-mt-3"></div>
         <NuxtLink
           v-if="nextArticle"
-          :to="localePath(`/blog/${nextArticle.slug}`)"
+          :to="`/blog/${nextArticle.slug}`"
           class="flex flex-col w-full px-4 py-3 bg-gray-800 rounded-md shadow-lg  md:max-w-sm group md:text-right sm:transition-transform sm:duration-300 sm:ease-in-out sm:hover:-translate-y-1"
         >
           <h6 class="text-xs font-bold text-gray-400 uppercase">
