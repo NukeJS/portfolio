@@ -41,7 +41,7 @@
           {{ $t('components.app.AppBar.blog') }}
         </NuxtLink>
       </div>
-      <div class="items-center justify-end flex-1 hidden font-bold lg:flex">
+      <div class="flex items-center justify-end flex-1 font-bold">
         <NuxtLink
           :to="switchLocalePath(locale === 'en' ? 'nl' : 'en')"
           class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400"
