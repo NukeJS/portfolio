@@ -100,6 +100,7 @@ export default {
     '@nuxt/content',
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
+    'nuxt-protected-mailto',
   ],
 
   axios: {

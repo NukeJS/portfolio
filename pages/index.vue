@@ -61,6 +61,14 @@ export default Vue.extend({
   data: () => ({
     stack: [
       {
+        image: 'html.svg',
+        name: 'HTML',
+      },
+      {
+        image: 'css.svg',
+        name: 'CSS',
+      },
+      {
         image: 'javascript.svg',
         name: 'JavaScript',
       },

@@ -26,14 +26,13 @@
         >
           <IconTwitter class="w-6 h-6" />
         </a>
-        <a
-          href="mailto:info@ronniecodes.com"
-          target="_blank"
+        <Mailto
+          mail="info@ronniecodes.com"
           aria-label="E-mail"
           class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400"
         >
           <IconAt class="w-6 h-6" />
-        </a>
+        </Mailto>
       </div>
     </RcContainer>
   </RcFooter>
