@@ -43,6 +43,7 @@ export default Vue.extend({
 
   head() {
     return {
+      title: `Error ${this.error.statusCode || 500}`,
       htmlAttrs: {
         lang: this.$i18n.locale,
       },

@@ -2,7 +2,7 @@
   <RcNavigationDrawer v-model="navigationDrawer">
     <div class="flex flex-col h-full bg-gray-900 border-r border-gray-800">
       <RcAppBar class="h-16 border-b border-gray-800">
-        <RcContainer class="flex items-center w-full h-full">
+        <RcContainer :padding="false" class="flex items-center w-full h-full">
           <div class="flex items-center flex-1 space-x-3">
             <button
               @click="hideNavigationDrawer"
