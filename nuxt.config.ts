@@ -100,7 +100,6 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxt/content',
-    '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
     'nuxt-protected-mailto',
   ],
@@ -129,25 +128,9 @@ export default {
     },
   },
 
-  i18n: {
-    baseUrl: meta.url,
-    vueI18n: {
-      fallbackLocale: 'en',
-    },
-    locales: [
-      { code: 'en', iso: 'en-US', file: 'en.ts' },
-      { code: 'nl', iso: 'nl-NL', file: 'nl.ts' },
-    ],
-    defaultLocale: 'en',
-    langDir: '~/locales/',
-  },
-
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://ronniecodes.com',
-    i18n: {
-      locales: ['en', 'nl'],
-    },
   },
 
   generate: {

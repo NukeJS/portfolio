@@ -5,8 +5,8 @@
     >
       <div>
         <p class="text-center sm:text-left">
-          &copy; {{ new Date().getFullYear() }} RonnieCodes.
-          {{ $t('components.app.AppFooter.copyright') }}
+          &copy; {{ new Date().getFullYear() }} RonnieCodes. All rights
+          reserved.
         </p>
       </div>
       <div class="flex items-center space-x-4">

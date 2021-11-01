@@ -18,7 +18,7 @@
             {{ error.message || 'An unexpected error has occurred.' }}
           </p>
           <div class="mt-8 sm:mt-12">
-            <RcBtn nuxt :to="localePath('/')" color="indigo">Go Home</RcBtn>
+            <RcBtn nuxt to="/" color="indigo">Go Home</RcBtn>
           </div>
         </section>
       </RcContainer>
@@ -44,9 +44,6 @@ export default Vue.extend({
   head() {
     return {
       title: `Error ${this.error.statusCode || 500}`,
-      htmlAttrs: {
-        lang: this.$i18n.locale,
-      },
     }
   },
 })

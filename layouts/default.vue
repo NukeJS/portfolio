@@ -15,13 +15,5 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({
-  head() {
-    return {
-      htmlAttrs: {
-        lang: this.$i18n.locale,
-      },
-    }
-  },
-})
+export default Vue.extend({})
 </script>

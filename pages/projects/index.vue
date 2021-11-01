@@ -1,14 +1,12 @@
 <template>
   <RcContainer>
     <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
-      <h1
-        v-html="$t('pages.projects.content.title')"
-        class="text-4xl font-semibold tracking-tight text-white md:text-5xl"
-      />
-      <p
-        v-html="$t('pages.projects.content.subtitle')"
-        class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5"
-      />
+      <h1 class="text-4xl font-semibold tracking-tight text-white md:text-5xl">
+        My <span class="text-indigo-500">Projects</span>.
+      </h1>
+      <p class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
+        A collection of public GitHub repositories I've created.
+      </p>
       <div
         v-if="projects && projects.length"
         class="grid grid-cols-1 gap-4 mt-6  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:mt-8"
@@ -40,11 +38,9 @@
         </a>
       </div>
 
-      <p
-        v-else
-        v-html="$t('pages.projects.content.fetching')"
-        class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5"
-      />
+      <p v-else class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
+        Fetching my projects...
+      </p>
     </section>
   </RcContainer>
 </template>
@@ -59,11 +55,9 @@ import { meta } from '~/utils/meta'
 export default Vue.extend({
   head() {
     return meta({
-      title: this.$t('pages.projects.meta.title') as string,
-      description: this.$t('pages.projects.meta.description') as string,
+      title: 'Projects',
+      description: "A collection of public GitHub repositories I've created.",
       path: '/projects',
-      locale: this.$i18n.locale,
-      defaultLocale: this.$i18n.defaultLocale,
     })
   },
 

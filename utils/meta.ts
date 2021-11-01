@@ -9,8 +9,6 @@ export function meta(meta: {
   image?: string
   path?: string
   type?: string
-  locale?: string
-  defaultLocale?: string
 }): Partial<MetaInfo> {
   let {
     title,
@@ -19,13 +17,9 @@ export function meta(meta: {
     image,
     path = '/',
     type = 'website',
-    locale,
-    defaultLocale,
   } = meta
 
-  const url = `${metaURL}${locale === defaultLocale ? '' : `/${locale}`}${
-    path === '/' ? '' : path
-  }`
+  const url = `${metaURL}${path === '/' ? '' : path}`
 
   if (keywords && Array.isArray(keywords)) {
     keywords = keywords.join(', ')

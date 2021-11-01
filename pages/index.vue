@@ -4,32 +4,30 @@
       class="flex flex-col items-center justify-center w-full pt-12 pb-32 text-center  sm:pt-20 sm:pb-36 md:pt-32 md:pb-40 lg:pt-36"
     >
       <h1
-        v-html="$t('pages.index.content.hero.title')"
         class="text-4xl font-bold tracking-tight text-white  sm:text-5xl md:text-6xl"
-      />
+      >
+        Hey, I'm <span class="text-indigo-500">Ronnie</span>.
+        <br />
+        A <span class="text-indigo-500">Full-stack Developer</span>.
+      </h1>
       <p
-        v-html="$t('pages.index.content.hero.subtitle')"
         class="max-w-xl mt-6 text-lg text-gray-200  md:max-w-2xl md:text-xl lg:text-2xl sm:mt-10"
-      />
+      >
+        I'm currently based in the Netherlands, creating modern and functional
+        web applications.
+      </p>
       <div class="mt-8 space-x-4 sm:mt-12">
-        <RcBtn nuxt :to="localePath('/projects')" color="indigo">
-          {{ $t('pages.index.content.hero.projects') }}
-        </RcBtn>
-        <RcBtn nuxt :to="localePath('/blog')" color="indigo">
-          {{ $t('pages.index.content.hero.blog') }}
-        </RcBtn>
+        <RcBtn nuxt to="/projects" color="indigo"> My Projects </RcBtn>
+        <RcBtn nuxt to="/blog" color="indigo"> My Blog </RcBtn>
       </div>
     </section>
     <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
-      <h2
-        v-html="$t('pages.index.content.stack.title')"
-        class="text-4xl font-semibold tracking-tight text-white md:text-5xl"
-      />
-      <p
-        v-html="$t('pages.index.content.stack.subtitle')"
-        class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5"
-      />
-
+      <h2 class="text-4xl font-semibold tracking-tight text-white md:text-5xl">
+        My <span class="text-indigo-500">Stack</span>.
+      </h2>
+      <p class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
+        Technologies that I understand and use.
+      </p>
       <div
         class="grid grid-cols-2 gap-3 mt-6  sm:mt-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7"
       >
@@ -57,13 +55,13 @@ import Vue from 'vue'
 
 import { meta } from '~/utils/meta'
 
+import { description } from '~/meta.json'
+
 export default Vue.extend({
   head() {
     return meta({
-      title: this.$t('pages.index.meta.title') as string,
-      description: this.$t('pages.index.meta.description') as string,
-      locale: this.$i18n.locale,
-      defaultLocale: this.$i18n.defaultLocale,
+      title: 'Home',
+      description,
     })
   },
 

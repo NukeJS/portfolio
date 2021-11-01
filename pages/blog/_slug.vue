@@ -67,8 +67,6 @@ export default Vue.extend({
       image: thumbnail,
       path: `/blog/${slug}`,
       type: 'article',
-      locale: this.$i18n.locale,
-      defaultLocale: this.$i18n.defaultLocale,
     })
   },
 
