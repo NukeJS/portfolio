@@ -17,8 +17,8 @@
         web applications.
       </p>
       <div class="mt-8 space-x-4 sm:mt-12">
-        <RcBtn nuxt to="/projects" color="indigo"> My Projects </RcBtn>
-        <RcBtn nuxt to="/blog" color="indigo"> My Blog </RcBtn>
+        <RcBtn nuxt to="/projects/" color="indigo"> My Projects </RcBtn>
+        <RcBtn nuxt to="/blog/" color="indigo"> My Blog </RcBtn>
       </div>
     </section>
     <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">

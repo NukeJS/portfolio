@@ -12,7 +12,7 @@
     :class="[
       'text-lg font-medium border border-transparent rounded-md outline-none  sm:text-xl ring-offset-2 ring-offset-gray-900 focus:ring',
       { 'px-5 py-3': padding },
-      { 'bg-indigo-500 ring-indigo-500 text-white': color === 'indigo' },
+      { 'bg-indigo-600 ring-indigo-600 text-white': color === 'indigo' },
     ]"
   >
     <slot />
