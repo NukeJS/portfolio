@@ -16,6 +16,7 @@
           :key="idx"
           :href="project.url"
           target="_blank"
+          rel="noopener"
           class="flex flex-col px-4 py-3 overflow-hidden bg-gray-800 rounded-md shadow-lg  sm:transition-transform sm:duration-300 sm:ease-in-out group sm:hover:-translate-y-1"
         >
           <h3
@@ -40,6 +41,17 @@
 
       <p v-else class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
         Fetching my projects...
+      </p>
+
+      <p class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
+        You can discover more of my projects on my
+        <a
+          href="https://github.com/CodingWithNuke"
+          target="_blank"
+          rel="noopener"
+          class="text-indigo-400 underline hover:text-indigo-300"
+          >GitHub page</a
+        >.
       </p>
     </section>
   </RcContainer>
@@ -79,5 +91,4 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
