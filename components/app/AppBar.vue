@@ -10,6 +10,7 @@
           class="transition-colors duration-200 lg:hidden hover:text-gray-400"
         >
           <IconMenu class="w-6 h-6" />
+          <span class="sr-only">Menu</span>
         </button>
 
         <NuxtLink to="/">
