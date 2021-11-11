@@ -2,8 +2,17 @@
   <article
     class="w-full px-4 py-6 mx-auto sm:px-6 lg:px-8 sm:py-10 md:py-16 lg:py-20"
   >
+    <div class="w-full max-w-screen-md mx-auto">
+      <NuxtLink
+        to="/blog/"
+        class="inline-flex items-center font-bold transition-colors duration-200  hover:text-gray-400 md:text-lg"
+      >
+        <IconArrowNarrowLeft class="w-6 h-6 mr-1 md:h-7 md:w-7" /> Back
+      </NuxtLink>
+    </div>
+
     <div
-      class="max-w-screen-md mx-auto prose prose-dark md:prose-lg lg:prose-xl"
+      class="max-w-screen-md mx-auto mt-4 prose  prose-dark md:prose-lg lg:prose-xl sm:mt-6 md:mt-8 lg:mt-10"
     >
       <h1>{{ article.title }}</h1>
       <p>{{ article.description }}</p>

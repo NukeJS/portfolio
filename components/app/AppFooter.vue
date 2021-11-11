@@ -14,6 +14,7 @@
           href="https://github.com/CodingWithNuke"
           target="_blank"
           aria-label="GitHub"
+          rel="noopener"
           class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400"
         >
           <IconGithub class="w-6 h-6" />
@@ -22,6 +23,7 @@
           href="https://twitter.com/TheCodingNuke"
           target="_blank"
           aria-label="Twitter"
+          rel="noopener"
           class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400"
         >
           <IconTwitter class="w-6 h-6" />

@@ -13,7 +13,7 @@
         <NuxtLink
           v-for="(article, idx) in articles"
           :key="idx"
-          :to="`/blog/${article.slug}`"
+          :to="`/blog/${article.slug}/`"
           class="flex flex-col overflow-hidden bg-gray-800 rounded-md shadow-lg  sm:transition-transform sm:duration-300 sm:ease-in-out group sm:hover:-translate-y-1"
         >
           <div class="relative" v-if="article.thumbnail">

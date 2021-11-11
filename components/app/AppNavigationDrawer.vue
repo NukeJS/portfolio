@@ -36,7 +36,7 @@
           </li>
           <li>
             <NuxtLink
-              to="/projects"
+              to="/projects/"
               exact-active-class="text-indigo-500 hover:!text-indigo-500 before:!block"
               class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400 before:w-1 before:h-6 before:rounded-full before:absolute before:bg-indigo-500 before:-left-2 before:top-1/2 before:-translate-y-1/2 before:transform before:bottom-3 before:hidden"
             >
@@ -45,7 +45,7 @@
           </li>
           <li>
             <NuxtLink
-              to="/blog"
+              to="/blog/"
               exact-active-class="text-indigo-500 hover:!text-indigo-500 before:!block"
               class="relative inline-flex items-center h-full transition-colors duration-200  hover:text-gray-400 before:w-1 before:h-6 before:rounded-full before:absolute before:bg-indigo-500 before:-left-2 before:top-1/2 before:-translate-y-1/2 before:transform before:bottom-3 before:hidden"
             >
