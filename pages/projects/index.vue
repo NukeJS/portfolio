@@ -43,7 +43,10 @@
         Fetching my projects...
       </p>
 
-      <p class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
+      <p
+        v-if="projects && projects.length"
+        class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5"
+      >
         You can discover more of my projects on my
         <a
           href="https://github.com/CodingWithNuke"
