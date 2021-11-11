@@ -55,16 +55,6 @@ export default {
         href: '/favicon-16x16.png',
       },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#6366f1' },
-
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap',
-      },
     ],
   },
 
@@ -82,6 +72,7 @@ export default {
     '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
+    'nuxt-webpack-optimisations'
   ],
 
   image: {
@@ -102,6 +93,8 @@ export default {
     '@nuxt/content',
     '@nuxtjs/sitemap',
     'nuxt-protected-mailto',
+    '@nuxtjs/robots',
+    '@nuxtjs/google-fonts'
   ],
 
   axios: {
@@ -131,6 +124,14 @@ export default {
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://ronniecodes.com',
+  },
+
+  googleFonts: {
+    display: 'swap',
+    families: {
+      Poppins: [500, 600, 700, 800, 900],
+      'DM+Sans': [400, 500, 700]
+    }
   },
 
   generate: {
