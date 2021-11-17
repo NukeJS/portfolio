@@ -2,6 +2,7 @@
 title: How to Install Node.js & NPM
 description: A quick guide on how to install Node.js and NPM.
 keywords: Node.js, Node, NPM, JavaScript, JS
+labels: Node
 thumbnail: /blog/install-nodejs-and-npm/thumbnail.png
 date: 2021-07-01
 draft: false

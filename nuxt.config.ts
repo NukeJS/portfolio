@@ -72,7 +72,7 @@ export default {
     '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
-    'nuxt-webpack-optimisations'
+    'nuxt-webpack-optimisations',
   ],
 
   image: {
@@ -94,7 +94,7 @@ export default {
     '@nuxtjs/sitemap',
     'nuxt-protected-mailto',
     '@nuxtjs/robots',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
   ],
 
   axios: {
@@ -130,8 +130,8 @@ export default {
     display: 'swap',
     families: {
       Poppins: [500, 600, 700, 800, 900],
-      'DM+Sans': [400, 500, 700]
-    }
+      'DM+Sans': [400, 500, 700],
+    },
   },
 
   generate: {
@@ -153,10 +153,11 @@ export default {
   hooks: {
     'content:file:beforeInsert': (document) => {
       if (document.extension == '.md') {
-        const readingTime = require('reading-time')(document.text)
-
-        document.readingTime = readingTime
+        document.readingTime = require('reading-time')(document.text)
         document.formattedDate = format(document.date, 'PPP')
+        document.labels = document.labels
+          .split(', ')
+          .sort((a: string, b: string) => a.localeCompare(b))
       }
     },
   },

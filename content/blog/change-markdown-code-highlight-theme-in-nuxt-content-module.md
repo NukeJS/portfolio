@@ -2,6 +2,7 @@
 title: Change Markdown Code Highlight Theme in Nuxt Content Module
 description: A quick guide on how to change your code highlighting theme in the Nuxt content module.
 keywords: Blog, Nuxt, Content, Module, @nuxt/content, How To, Prism, Prism Themes, Themes, Highlight.js
+labels: Nuxt
 thumbnail: /blog/change-markdown-code-highlight-theme-in-nuxt-content-module/thumbnail.png
 date: 2021-09-06
 draft: false

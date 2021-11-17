@@ -24,35 +24,6 @@ module.exports = {
       },
 
       typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            color: theme('colors.gray.700'),
-            figcaption: {
-              color: theme('colors.gray.900'),
-            },
-            a: {
-              color: theme('colors.indigo.600'),
-              '&:hover': {
-                color: theme('colors.indigo.700'),
-              },
-              '*': {
-                color: theme('colors.indigo.600'),
-              },
-              code: { color: theme('colors.indigo.600') },
-            },
-            'strong > a, a > strong': {
-              color: theme('colors.indigo.600'),
-            },
-            code: {
-              padding: '3px 5px',
-              borderRadius: 5,
-              background: theme('colors.gray.100'),
-            },
-            mark: {
-              background: theme('colors.pink.100'),
-            },
-          },
-        },
         dark: {
           css: {
             color: theme('colors.gray.400'),

@@ -9,9 +9,14 @@
     :active-class="(to || nuxt) && activeClass"
     :exact-active-class="(to || nuxt) && exactActiveClass"
     :disabled="disabled"
+    v-on="{ click }"
     :class="[
-      'text-lg font-medium border border-transparent rounded-md outline-none  sm:text-xl ring-offset-2 ring-offset-gray-900 focus:ring',
-      { 'px-5 py-3': padding },
+      'text-lg font-medium border rounded-md outline-none  sm:text-xl transition-colors duration-200',
+      {
+        'px-5 py-3': padding,
+        'border-transparent': !border,
+        'ring-offset-2 focus:ring ring-offset-gray-900': ring,
+      },
       { 'bg-indigo-600 ring-indigo-600 text-white': color === 'indigo' },
     ]"
   >
@@ -54,12 +59,24 @@ export default Vue.extend({
     },
     color: {
       type: String,
-      default: 'indigo',
       validator: (value: string) => ['indigo'].includes(value),
     },
     padding: {
       type: Boolean,
       default: true,
+    },
+    border: {
+      type: Boolean,
+    },
+    ring: {
+      type: Boolean,
+      default: true,
+    },
+  },
+
+  methods: {
+    click() {
+      this.$emit('click')
     },
   },
 })

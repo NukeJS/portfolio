@@ -2,6 +2,7 @@
 title: How to Install Tailwind CSS in Nuxt 2
 description: A quick guide on how to install Tailwind CSS in your Nuxt 2 project.
 keywords: Tailwind, Nuxt, Nuxt.js, JavaScript, How To, Nuxt 2
+labels: Nuxt, Tailwind
 thumbnail: /blog/install-tailwind-css-in-nuxt-2/thumbnail.png
 date: 2021-08-19
 draft: false

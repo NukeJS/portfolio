@@ -2,6 +2,7 @@
 title: Add Vue Plugins to your Nuxt 2 Application
 description: A quick guide on how to add Vue plugins to your Nuxt 2 application.
 keywords: Vue, Vue plugins, Nuxt, plugin, Nuxt plugins
+labels: Nuxt, Vue
 thumbnail: /blog/add-vue-plugins-to-your-nuxt-2-app/thumbnail.png
 date: 2021-09-13
 draft: false

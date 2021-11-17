@@ -125,12 +125,13 @@ html {
   h5,
   h6 {
     a {
-      @apply no-underline mr-2;
+      @apply no-underline mr-2 lg:mr-0 relative;
     }
   }
   .icon.icon-link {
     &::before {
       content: '#';
+      @apply lg:absolute -left-10;
     }
   }
 

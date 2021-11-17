@@ -2,6 +2,7 @@
 title: How to Install Tailwind CSS in SolidJS
 description: A quick guide on how to install Tailwind CSS in your SolidJS project.
 keywords: Tailwind, Solid, Solid.js, solid-js, Vite, Vite.js, JavaScript, How To
+labels: Solid, Tailwind
 thumbnail: /blog/install-tailwind-css-in-solid-js/thumbnail.png
 date: 2021-08-18
 draft: false

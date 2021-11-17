@@ -2,6 +2,7 @@
 title: Create a Blog using Nuxt Content Module
 description: A guide on how you can create your own blog in Nuxt.js using the Nuxt Content module.
 keywords: Blog, Nuxt, Content, Module, @nuxt/content, How To
+labels: Nuxt
 thumbnail: /blog/create-a-blog-using-nuxt-content-module/thumbnail.png
 date: 2021-09-02
 draft: false

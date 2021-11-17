@@ -2,6 +2,7 @@
 title: How to Create a REST CRUD API using Express & MongoDB
 description: Learn how you can create a REST CRUD API by making use of Express and MongoDB.
 keywords: REST, Express, Epress.js, Node, Node.js, MongoDB, API, CRUD, JavaScript, JS
+labels: Node
 thumbnail: /blog/create-a-rest-crud-api-using-express-and-mongodb/thumbnail.png
 date: 2021-07-07
 draft: false

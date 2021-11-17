@@ -17,11 +17,6 @@
           class="flex flex-col overflow-hidden bg-gray-800 rounded-md shadow-lg  sm:transition-transform sm:duration-300 sm:ease-in-out group sm:hover:-translate-y-1"
         >
           <div class="relative" v-if="article.thumbnail">
-            <span
-              class="absolute z-10 flex items-center px-2 py-1 text-sm leading-none text-gray-100 bg-gray-900 border border-gray-800 rounded-md shadow  right-2 top-2"
-            >
-              {{ Math.ceil(article.readingTime.minutes) }} min
-            </span>
             <div class="aspect-w-16 aspect-h-9">
               <NuxtImg
                 :src="article.thumbnail"
@@ -39,11 +34,21 @@
             <p class="mt-2 mb-3">
               {{ article.description }}
             </p>
-            <div class="flex items-center mt-auto text-sm text-gray-400">
-              <IconCalendar class="w-4 h-4" />
-              <time class="ml-1" :datetime="article.date">
-                {{ article.formattedDate }}
-              </time>
+            <div
+              class="flex items-center justify-between mt-auto text-sm text-gray-400 "
+            >
+              <div class="flex items-center">
+                <IconClock class="w-4 h-4" />
+                <p class="ml-1">
+                  {{ Math.ceil(article.readingTime.minutes) }} min
+                </p>
+              </div>
+              <div class="flex items-center">
+                <IconCalendar class="w-4 h-4" />
+                <time class="ml-1" :datetime="article.date">
+                  {{ article.formattedDate }}
+                </time>
+              </div>
             </div>
           </div>
         </NuxtLink>
@@ -79,6 +84,7 @@ export default Vue.extend({
         'date',
         'readingTime',
         'formattedDate',
+        'labels',
       ])
       .sortBy('date', 'desc')
       .fetch()
