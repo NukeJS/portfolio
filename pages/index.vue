@@ -39,12 +39,16 @@
       </div>
     </section>
     <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
-      <h2 class="text-4xl font-semibold tracking-tight text-white md:text-5xl">
-        My <span class="text-indigo-500">Education</span>.
-      </h2>
-      <p class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
-        All the educations I've done.
-      </p>
+      <div>
+        <h2
+          class="text-4xl font-semibold tracking-tight text-white md:text-5xl"
+        >
+          My <span class="text-indigo-500">Education</span>.
+        </h2>
+        <p class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
+          All the educations I've done.
+        </p>
+      </div>
       <div class="grid gap-3 mt-6 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
         <EducationCard
           v-for="(education, idx) in educations"
