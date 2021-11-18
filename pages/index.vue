@@ -17,8 +17,8 @@
         web applications.
       </p>
       <div class="mt-8 space-x-4 sm:mt-12">
-        <RcBtn nuxt to="/projects/" color="indigo"> My Projects </RcBtn>
-        <RcBtn nuxt to="/blog/" color="indigo"> My Blog </RcBtn>
+        <RcBtn nuxt to="/projects/" color="indigo">My Projects</RcBtn>
+        <RcBtn nuxt to="/blog/" color="indigo">My Blog</RcBtn>
       </div>
     </section>
     <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
@@ -31,20 +31,11 @@
       <div
         class="grid grid-cols-2 gap-3 mt-6  sm:mt-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7"
       >
-        <div
+        <TechnologyCard
           v-for="(technology, idx) in stack"
           :key="idx"
-          class="flex flex-col items-center p-3 bg-gray-800 rounded-md shadow-lg "
-        >
-          <NuxtImg
-            class="w-16 h-16"
-            :src="`/images/technologies/${technology.image}`"
-            :alt="`${technology.name} Logo`"
-          />
-          <p class="mt-2 text-lg font-semibold text-white">
-            {{ technology.name }}
-          </p>
-        </div>
+          :technology="technology"
+        />
       </div>
     </section>
     <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
@@ -55,48 +46,12 @@
         All the educations I've done.
       </p>
       <div class="grid gap-3 mt-6 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
-        <div
-          class="flex flex-col p-3 space-y-2 bg-gray-800 rounded-md shadow-lg"
-        >
-          <h3 class="text-lg font-semibold text-white">
-            Collaborator IT Management
-          </h3>
-          <div class="space-y-1 text-sm text-gray-400">
-            <div class="flex items-center">
-              <IconAcademicCap class="w-4 h-4" />
-              <p class="ml-1">Alfa-college</p>
-            </div>
-            <div class="flex items-center">
-              <IconLocationMarker class="w-4 h-4" />
-              <p class="ml-1">Groningen, The Netherlands</p>
-            </div>
-            <div class="flex items-center">
-              <IconCalendar class="w-4 h-4" />
-              <p class="ml-1">2018 - 2019</p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex flex-col p-3 space-y-2 bg-gray-800 rounded-md shadow-lg"
-        >
-          <h3 class="text-lg font-semibold text-white">
-            Application & Media Developer
-          </h3>
-          <div class="space-y-1 text-sm text-gray-400">
-            <div class="flex items-center">
-              <IconAcademicCap class="w-4 h-4" />
-              <p class="ml-1">Alfa-college</p>
-            </div>
-            <div class="flex items-center">
-              <IconLocationMarker class="w-4 h-4" />
-              <p class="ml-1">Groningen, The Netherlands</p>
-            </div>
-            <div class="flex items-center">
-              <IconCalendar class="w-4 h-4" />
-              <p class="ml-1">2019 - present</p>
-            </div>
-          </div>
-        </div>
+        <EducationCard
+          v-for="(education, idx) in educations"
+          :key="idx"
+          :education="education"
+          :class="{ 'opacity-30': idx === educations.length - 1 }"
+        />
       </div>
     </section>
     <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
@@ -107,32 +62,12 @@
         All the places I've worked at.
       </p>
       <div class="grid gap-3 mt-6 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
-        <div
-          class="flex flex-col p-3 space-y-2 bg-gray-800 rounded-md shadow-lg"
-        >
-          <div class="space-y-1">
-            <h6 class="text-xs font-bold text-indigo-400 uppercase">
-              Internship
-            </h6>
-            <h3 class="text-lg font-semibold text-white">
-              Front-end Developer
-            </h3>
-          </div>
-          <div class="space-y-1 text-sm text-gray-400">
-            <div class="flex items-center">
-              <IconOfficeBuilding class="w-4 h-4" />
-              <p class="ml-1">Plaatsbelang</p>
-            </div>
-            <div class="flex items-center">
-              <IconLocationMarker class="w-4 h-4" />
-              <p class="ml-1">Scheemda, The Netherlands</p>
-            </div>
-            <div class="flex items-center">
-              <IconCalendar class="w-4 h-4" />
-              <p class="ml-1">sep. 2020 - feb. 2021</p>
-            </div>
-          </div>
-        </div>
+        <JobCard
+          v-for="(job, idx) in jobs"
+          :key="idx"
+          :job="job"
+          :class="{ 'opacity-30': idx === jobs.length - 1 }"
+        />
       </div>
     </section>
   </RcContainer>
@@ -222,6 +157,42 @@ export default Vue.extend({
       {
         image: 'php.svg',
         name: 'PHP',
+      },
+    ],
+    educations: [
+      {
+        name: 'Collaborator IT Management',
+        institution: 'Alfa-college',
+        place: 'Groningen, The Netherlands',
+        timespan: '2018 - 2019',
+      },
+      {
+        name: 'Application & Media Developer',
+        institution: 'Alfa-college',
+        place: 'Groningen, The Netherlands',
+        timespan: '2019 - present',
+      },
+      {
+        name: 'More to come',
+        institution: 'Who knows where?',
+        place: 'Earth',
+        timespan: 'The future',
+      },
+    ],
+    jobs: [
+      {
+        type: 'internship',
+        title: 'Front-end Developer',
+        company: 'Plaatsbelang',
+        place: 'Scheemda, The Netherlands',
+        timespan: 'Sep. 2020 - Feb. 2021',
+      },
+      {
+        type: 'Full-time? I hope so...',
+        title: 'More to come',
+        company: 'FAANG?',
+        place: 'Earth',
+        timespan: 'The future',
       },
     ],
   }),

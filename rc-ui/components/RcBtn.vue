@@ -16,6 +16,7 @@
         'px-5 py-3': padding,
         'border-transparent': !border,
         'ring-offset-2 focus:ring ring-offset-gray-900': ring,
+        'cursor-pointer': !disabled,
       },
       { 'bg-indigo-600 ring-indigo-600 text-white': color === 'indigo' },
     ]"
