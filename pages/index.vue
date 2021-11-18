@@ -50,7 +50,7 @@
           v-for="(education, idx) in educations"
           :key="idx"
           :education="education"
-          :class="{ 'opacity-30': idx === educations.length - 1 }"
+          :class="{ 'opacity-30 shadow-none': idx === educations.length - 1 }"
         />
       </div>
     </section>
@@ -66,7 +66,7 @@
           v-for="(job, idx) in jobs"
           :key="idx"
           :job="job"
-          :class="{ 'opacity-30': idx === jobs.length - 1 }"
+          :class="{ 'opacity-30 shadow-none': idx === jobs.length - 1 }"
         />
       </div>
     </section>
