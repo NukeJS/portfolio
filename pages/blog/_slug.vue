@@ -74,7 +74,7 @@ export default Vue.extend({
       description,
       keywords,
       image: thumbnail,
-      path: `/blog/${slug}`,
+      path: `/blog/${slug}/`,
       type: 'article',
     })
   },

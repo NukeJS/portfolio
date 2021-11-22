@@ -5,8 +5,9 @@
         My <span class="text-indigo-500">Projects</span>.
       </h1>
       <p class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
-        A collection of public GitHub repositories I've created.
+        A collection of projects I've created.
       </p>
+
       <div
         v-if="projects && projects.length"
         class="grid grid-cols-1 gap-4 mt-6  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:mt-8"
@@ -39,8 +40,7 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import { mapGetters } from 'vuex'
-
+import projects from '~/data/projects.json'
 import { meta } from '~/utils/meta'
 
 export default Vue.extend({
@@ -48,26 +48,12 @@ export default Vue.extend({
     return meta({
       title: 'Projects',
       description: "A collection of public GitHub repositories I've created.",
-      path: '/projects',
+      path: '/projects/',
     })
   },
 
-  async fetch() {
-    try {
-      await this.$store.dispatch('fetchProjects')
-    } catch (error) {
-      this.$nuxt.error({
-        statusCode: 500,
-        message: 'An error occurred while trying to load my projects.',
-      })
-    }
-  },
-  fetchOnServer: false,
-
-  computed: {
-    ...mapGetters(['projects']),
-  },
+  data: () => ({
+    projects,
+  }),
 })
 </script>
-
-<style scoped></style>

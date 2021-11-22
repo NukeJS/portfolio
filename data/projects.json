@@ -1,0 +1,76 @@
+[
+  {
+    "name": "portfolio",
+    "displayName": "Portfolio",
+    "description": "My personal portfolio, built using Nuxt.js & Tailwind CSS",
+    "technologies": [
+      { "image": "nuxt.svg", "name": "Nuxt.js" },
+      { "image": "tailwindcss.svg", "name": "Tailwind CSS" }
+    ],
+    "github_slug": "portfolio",
+    "external_url": "https://ronniecodes.com"
+  },
+  {
+    "name": "url-shortener",
+    "displayName": "URL Shortener",
+    "description": "A web app that I can use to shorten URLs.",
+    "technologies": [{ "image": "nuxt.svg", "name": "Nuxt.js" }],
+    "github_slug": "url-shortener",
+    "external_url": "https://ronnie.link"
+  },
+  {
+    "name": "todo-lists",
+    "displayName": "Todo Lists",
+    "description": "Todo lists that are built using a variety of JavaScript frameworks/libraries.",
+    "technologies": [
+      { "image": "javascript.svg", "name": "JavaScript" },
+      { "image": "typescript.svg", "name": "TypeScript" },
+      { "image": "vue.svg", "name": "Vue.js" },
+      { "image": "react.svg", "name": "React.js" },
+      { "image": "svelte.svg", "name": "Svelte" },
+      { "image": "angular.svg", "name": "Angular" },
+      { "image": "bootstrap.svg", "name": "Bootstrap" }
+    ],
+    "github_slug": "todo-lists",
+    "external_url": null
+  },
+  {
+    "name": "basic-nodejs-auth-api",
+    "displayName": "Basic Node.js Auth API",
+    "description": "A basic Node.js authentication REST API to use for testing.",
+    "technologies": [
+      { "image": "node.svg", "name": "Node.js" },
+      { "image": "express.svg", "name": "Express.js" }
+    ],
+    "github_slug": "basic-nodejs-auth-api",
+    "external_url": null
+  },
+  {
+    "name": "express-mongodb-api",
+    "displayName": "Express.js & MongoDB API",
+    "description": "REST CRUD API using Express.js and MongoDB.",
+    "technologies": [
+      { "image": "node.svg", "name": "Node.js" },
+      { "image": "express.svg", "name": "Express.js" },
+      { "image": "mongodb.svg", "name": "MongoDB" }
+    ],
+    "github_slug": "express-mongodb-api",
+    "external_url": null
+  },
+  {
+    "name": "nuxt-content-example",
+    "displayName": "Nuxt.js Content Example",
+    "description": "An example for a Nuxt.js blog using the Nuxt Content module.",
+    "technologies": [{ "image": "nuxt.svg", "name": "Nuxt.js" }],
+    "github_slug": "nuxt-content-example",
+    "external_url": null
+  },
+  {
+    "name": "agma-io.js",
+    "displayName": null,
+    "description": "A simple, easy to use promise-based module for interacting with some Agma.io APIs.",
+    "technologies": [{ "image": "typescript.svg", "name": "TypeScript" }],
+    "github_slug": "agma-io.js",
+    "external_url": null
+  }
+]

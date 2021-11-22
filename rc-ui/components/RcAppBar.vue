@@ -1,9 +1,9 @@
 <template>
-  <div :class="['top-0 z-50 w-full h-16', { fixed: fixed }]">
+  <nav :class="['top-0 z-50 w-full h-16', { fixed: fixed }]">
     <div class="flex items-center h-full">
       <slot />
     </div>
-  </div>
+  </nav>
 </template>
 
 <script lang="ts">

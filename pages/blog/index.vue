@@ -7,6 +7,7 @@
       <p class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
         A collection of articles I've written.
       </p>
+
       <div
         class="grid grid-cols-1 gap-4 mt-6  sm:grid-cols-2 lg:grid-cols-3 sm:mt-8"
       >
@@ -32,7 +33,7 @@ export default Vue.extend({
     return meta({
       title: 'Blog',
       description: "A collection of articles I've written.",
-      path: '/blog',
+      path: '/blog/',
     })
   },
 
