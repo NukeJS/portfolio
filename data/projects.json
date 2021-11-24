@@ -4,6 +4,7 @@
     "displayName": "Portfolio",
     "description": "My personal portfolio, built using Nuxt.js & Tailwind CSS",
     "technologies": [
+      { "image": "vsc.svg", "name": "Visual Studio Code" },
       { "image": "nuxt.svg", "name": "Nuxt.js" },
       { "image": "tailwindcss.svg", "name": "Tailwind CSS" }
     ],
@@ -14,7 +15,10 @@
     "name": "url-shortener",
     "displayName": "URL Shortener",
     "description": "A web app that I can use to shorten URLs.",
-    "technologies": [{ "image": "nuxt.svg", "name": "Nuxt.js" }],
+    "technologies": [
+      { "image": "vsc.svg", "name": "Visual Studio Code" },
+      { "image": "nuxt.svg", "name": "Nuxt.js" }
+    ],
     "github_slug": "url-shortener",
     "external_url": "https://ronnie.link"
   },
@@ -23,6 +27,7 @@
     "displayName": "Todo Lists",
     "description": "Todo lists that are built using a variety of JavaScript frameworks/libraries.",
     "technologies": [
+      { "image": "vsc.svg", "name": "Visual Studio Code" },
       { "image": "javascript.svg", "name": "JavaScript" },
       { "image": "typescript.svg", "name": "TypeScript" },
       { "image": "vue.svg", "name": "Vue.js" },
@@ -39,6 +44,7 @@
     "displayName": "Basic Node.js Auth API",
     "description": "A basic Node.js authentication REST API to use for testing.",
     "technologies": [
+      { "image": "vsc.svg", "name": "Visual Studio Code" },
       { "image": "node.svg", "name": "Node.js" },
       { "image": "express.svg", "name": "Express.js" }
     ],
@@ -50,6 +56,7 @@
     "displayName": "Express.js & MongoDB API",
     "description": "REST CRUD API using Express.js and MongoDB.",
     "technologies": [
+      { "image": "vsc.svg", "name": "Visual Studio Code" },
       { "image": "node.svg", "name": "Node.js" },
       { "image": "express.svg", "name": "Express.js" },
       { "image": "mongodb.svg", "name": "MongoDB" }
@@ -69,7 +76,10 @@
     "name": "agma-io-js",
     "displayName": "agma-io.js",
     "description": "A simple, easy to use promise-based module for interacting with some Agma.io APIs.",
-    "technologies": [{ "image": "typescript.svg", "name": "TypeScript" }],
+    "technologies": [
+      { "image": "vsc.svg", "name": "Visual Studio Code" },
+      { "image": "typescript.svg", "name": "TypeScript" }
+    ],
     "github_slug": "agma-io.js",
     "external_url": null
   }
