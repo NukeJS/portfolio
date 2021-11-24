@@ -66,8 +66,8 @@
     "external_url": null
   },
   {
-    "name": "agma-io.js",
-    "displayName": null,
+    "name": "agma-io-js",
+    "displayName": "agma-io.js",
     "description": "A simple, easy to use promise-based module for interacting with some Agma.io APIs.",
     "technologies": [{ "image": "typescript.svg", "name": "TypeScript" }],
     "github_slug": "agma-io.js",
