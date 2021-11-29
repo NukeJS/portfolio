@@ -8,6 +8,7 @@
       @click="scrollToTop"
       :padding="false"
       :ring="false"
+      border
       rounded
       :class="{
         'fixed z-10 p-1 bg-gray-800 border border-gray-700 shadow-lg bottom-4 right-4 hover:bg-gray-700 transition-all': true,
