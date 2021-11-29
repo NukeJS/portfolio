@@ -11,14 +11,19 @@
     :disabled="disabled"
     v-on="{ click }"
     :class="[
-      'text-lg font-medium border rounded-md outline-none  sm:text-xl transition-colors duration-200',
+      'text-lg font-medium border outline-none  sm:text-xl transition-colors duration-200',
       {
         'px-5 py-3': padding,
         'border-transparent': !border,
         'ring-offset-2 focus:ring ring-offset-gray-900': ring,
         'cursor-pointer': !disabled,
+        'rounded-md': !rounded,
+        'rounded-full': rounded,
       },
-      { 'bg-indigo-600 ring-indigo-600 text-white': color === 'indigo' },
+      {
+        'bg-indigo-600 ring-indigo-600 text-white hover:bg-indigo-500':
+          color === 'indigo',
+      },
     ]"
   >
     <slot />
@@ -72,6 +77,9 @@ export default Vue.extend({
     ring: {
       type: Boolean,
       default: true,
+    },
+    rounded: {
+      type: Boolean,
     },
   },
 

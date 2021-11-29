@@ -8,7 +8,16 @@
         {{ project.description }}
       </p>
       <div
-        class="flex items-center max-w-2xl mt-3 space-x-4  md:text-lg sm:mt-4 md:mt-5"
+        class="
+          flex
+          items-center
+          max-w-2xl
+          mt-3
+          space-x-4
+          md:text-lg
+          sm:mt-4
+          md:mt-5
+        "
       >
         <a
           v-if="project.github_slug"
@@ -16,7 +25,13 @@
           target="_blank"
           rel="noopener"
           aria-label="Open GitHub repository"
-          class="inline-flex items-center transition-colors duration-200  hover:text-gray-400"
+          class="
+            inline-flex
+            items-center
+            transition-colors
+            duration-200
+            hover:text-gray-400
+          "
         >
           <IconGithub class="w-6 h-6" />
         </a>
@@ -28,14 +43,28 @@
           :aria-label="`Open ${
             project.displayName || project.name
           } in external page`"
-          class="inline-flex items-center transition-colors duration-200  hover:text-gray-400"
+          class="
+            inline-flex
+            items-center
+            transition-colors
+            duration-200
+            hover:text-gray-400
+          "
         >
           <IconExternalLink class="w-6 h-6" />
         </a>
       </div>
 
       <h3
-        class="mt-6 text-2xl font-semibold tracking-tight text-white  sm:mt-8 md:text-3xl"
+        class="
+          mt-6
+          text-2xl
+          font-semibold
+          tracking-tight
+          text-white
+          sm:mt-8
+          md:text-3xl
+        "
       >
         <span class="text-indigo-500">Technologies</span> Used.
       </h3>
@@ -63,8 +92,15 @@ import projects from '~/data/projects.json'
 import { meta } from '~/utils/meta'
 
 export default Vue.extend({
-  async asyncData({ params }) {
+  async asyncData({ params, error }) {
     const project = projects.find((item) => item.name === params.slug)
+
+    if (!project) {
+      error({
+        statusCode: 404,
+        message: 'This project could not be found',
+      })
+    }
 
     return {
       project,

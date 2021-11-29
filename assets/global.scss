@@ -11,7 +11,7 @@ h6 {
   @apply font-poppins;
 }
 
-@keyframes fade-in {
+@keyframes scale-fade {
   from {
     opacity: 0;
     transform: scale(0.95);
@@ -24,9 +24,9 @@ h6 {
 }
 
 .page-enter-active {
-  animation: fade-in ease 0.15s;
+  animation: scale-fade ease 0.15s;
 }
 
 .page-leave-active {
-  animation: fade-in reverse ease 0.15s;
+  animation: scale-fade reverse ease 0.15s;
 }
