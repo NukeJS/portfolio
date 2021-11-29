@@ -57,6 +57,7 @@ export default Vue.extend({
   },
 
   mounted() {
+    this.onScroll()
     document.addEventListener('scroll', this.onScroll)
   },
   beforeDestroy() {
