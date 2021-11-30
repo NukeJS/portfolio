@@ -84,7 +84,7 @@ export default Vue.extend({
       if (value) {
         document.documentElement.style.overflowY = 'hidden'
       } else {
-        document.documentElement.style.overflowY = 'auto'
+        document.documentElement.style.overflowY = ''
       }
     },
   },
