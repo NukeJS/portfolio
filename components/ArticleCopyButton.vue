@@ -29,8 +29,6 @@ export default Vue.extend({
   }),
 
   mounted() {
-    console.log(this.$refs.copyBtn)
-
     //@ts-ignore
     const copy = new Clipboard(this.$refs.copyBtn.$el, {
       target(trigger) {
