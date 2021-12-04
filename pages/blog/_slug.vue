@@ -63,6 +63,8 @@ import Vue from 'vue'
 
 import { IContentDocument } from '@nuxt/content/types/content'
 
+import ArticleCopyButtonVue from '~/components/ArticleCopyButton.vue'
+
 import { meta } from '~/utils/meta'
 
 export default Vue.extend({
@@ -110,6 +112,20 @@ export default Vue.extend({
     previousArticle: null as IContentDocument | null,
     nextArticle: null as IContentDocument | null,
   }),
+
+  mounted() {
+    setTimeout(() => {
+      const blocks = Array.from(
+        document.getElementsByClassName('nuxt-content-highlight')
+      )
+
+      for (const block of blocks) {
+        const CopyButton = Vue.extend(ArticleCopyButtonVue)
+        const component = new CopyButton().$mount()
+        block.appendChild(component.$el)
+      }
+    }, 100)
+  },
 })
 </script>
 
@@ -146,10 +162,19 @@ html {
       & > .filename {
         @apply opacity-25;
       }
+      & > .copy {
+        @apply opacity-100;
+      }
+    }
+
+    & > .copy {
+      @screen sm {
+        @apply opacity-0;
+      }
     }
 
     & > .filename {
-      @apply absolute right-2 top-2 text-gray-300 z-10 font-mono text-sm tracking-tight leading-none select-none px-2 py-1 bg-gray-800 rounded-md border border-gray-700 transition-opacity;
+      @apply absolute right-2 top-2 text-gray-300 z-10 font-mono text-sm tracking-tight leading-none select-none px-2 py-1 bg-gray-800 rounded-md border border-gray-700 transition-opacity shadow-md;
     }
   }
 }
