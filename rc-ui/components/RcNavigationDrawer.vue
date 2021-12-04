@@ -12,7 +12,7 @@
         <div
           @click="internalValue = false"
           v-show="internalValue"
-          class="absolute inset-0 transition-opacity bg-black pointer-events-auto  bg-opacity-60"
+          class="absolute inset-0 transition-opacity bg-black pointer-events-auto bg-opacity-60"
         ></div>
       </transition>
 

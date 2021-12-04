@@ -14,7 +14,7 @@ Create a folder called `api` in your project's root directory.
 
 Install Express:
 
-```bash
+```bash [terminal]
 # Using NPM
 npm install express
 # Using Yarn
@@ -48,7 +48,7 @@ Notice that on line 12 we export the Express application. This is needed so Nuxt
 
 Open your `nuxt.config.js` and add the following entry to the `serverMiddleware` property:
 
-```js
+```js [nuxt.config.js]
 export default {
   // ...
   serverMiddleware: [

@@ -14,7 +14,7 @@ First, we need to generate a Nuxt.js project.
 
 *You can skip this part if you already generated a project.*
 
-```bash
+```bash [terminal]
 npx create-nuxt-app my-cool-app
 ```
 
@@ -22,15 +22,14 @@ Then follow the prompts...
 
 Next, navigate into the project directory and install `@nuxtjs/tailwindcss` as well as Tailwind and its peer dependencies.
 
-```bash
+```bash [terminal]
 cd my-cool-app
 npm install -D @nuxtjs/tailwindcss tailwindcss@latest postcss@latest autoprefixer@latest
 ```
 
 Add the `@nuxtjs/tailwindcss` module to the `buildModules` option of your `nuxt.config.js` file:
 
-```js
-// nuxt.config.js
+```js [nuxt.config.js]
 export default {
   // ...
   buildModules: ['@nuxtjs/tailwindcss']
@@ -40,13 +39,13 @@ export default {
 
 Next, generate your `tailwind.config.js`.
 
-```bash
+```bash [terminal]
 npx tailwindcss init
 ```
 
 Open the `tailwind.config.js` file and change the contents to the following:
 
-```js
+```js [tailwind.config.js]
 module.exports = {
   purge: [
      './components/**/*.{vue,js}',
@@ -68,8 +67,7 @@ module.exports = {
 
 Next, open the `./assets/css/tailwind.css` file that Nuxt.js generates for you by default and replace the contents to the following:
 
-```css
-/* ./assets/css/tailwind.css */
+```css [assets/css/tailwind.css]
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -19,7 +19,7 @@ Before we start creating the application, you will need a few things.
 
 The Vue CLI is used to create new Vue applications and to easily add plugins to your application.
 
-```bash
+```bash [terminal]
 # Using NPM
 npm install -g @vue/cli
 # Using Yarn
@@ -29,7 +29,7 @@ yarn global add @vue/cli
 After installation, you will have access to the `vue` command in your command line. You can verify that it is properly installed by running `vue`, which should show you a help message listing all available commands.
 
 You can check that you have the right version installed by running this command:
-```bash
+```bash [terminal]
 vue --version
 ```
 
@@ -37,7 +37,7 @@ vue --version
 
 To upgrade the global Vue CLI package, you can run this command:
 
-```bash
+```bash [terminal]
 # Using NPM
 npm update -g @vue/cli
 # Using Yarn
@@ -50,14 +50,14 @@ You can read more about how to use the Vue CLI on their [website](https://cli.vu
 
 We will start by running the following command:
 
-```bash
+```bash [terminal]
 vue create my-vue-app
 ```
 
 ### Preset
 
 It will now prompt you with a few questions:
-```
+``` [terminal]
 Vue CLI v4.5.13
 ? Please pick a preset: (Use arrow keys)
 > Default ([Vue 2] babel, eslint)
@@ -75,7 +75,7 @@ I prefer to pick the `Manually select features` option.
 
 Next, it will ask you with features you want to add to your project:
 
-```
+``` [terminal]
 Vue CLI v4.5.13
 ? Please pick a preset: Manually select features
 ? Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection)
@@ -119,7 +119,7 @@ After you've picked the features that you'll want it will ask you questions abou
 The Vue CLI will now create your project...
 
 Once created, use these commands:
-```bash
+```bash [terminal]
 cd my-vue-app
 npm run serve
 ```

@@ -12,7 +12,7 @@ draft: false
 
 First, install `prism-themes`.
 
-```bash
+```bash [terminal]
 # Using NPM
 npm install prism-themes
 # Using Yarn
@@ -21,7 +21,7 @@ yarn add prism-themes
 
 Next, edit the `content.markdown.prism.theme` property in `nuxt.config.js` to the desired theme, for example:
 
-```js
+```js [nuxt.config.js]
 export default {
   // ...
   markdown: {

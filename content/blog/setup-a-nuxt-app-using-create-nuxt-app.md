@@ -24,7 +24,7 @@ Make sure you have npx installed (npx is shipped by default since npm v5.2.0) or
 
 Open your terminal of choice.
 
-```bash
+```bash [terminal]
 # Using NPM
 npm init nuxt-app <project-name>
 # Using NPX

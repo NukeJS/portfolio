@@ -5,14 +5,14 @@
     <div class="w-full max-w-screen-md mx-auto">
       <NuxtLink
         to="/blog/"
-        class="inline-flex items-center font-bold transition-colors duration-200  hover:text-gray-400 md:text-lg"
+        class="inline-flex items-center font-bold transition-colors duration-200 hover:text-gray-400 md:text-lg"
       >
         <IconArrowNarrowLeft class="w-6 h-6 mr-1 md:h-7 md:w-7" /> Back
       </NuxtLink>
     </div>
 
     <div
-      class="max-w-screen-md mx-auto mt-4 prose  prose-dark md:prose-lg lg:prose-xl sm:mt-6 md:mt-8 lg:mt-10"
+      class="max-w-screen-md mx-auto mt-4 prose prose-dark md:prose-lg lg:prose-xl sm:mt-6 md:mt-8 lg:mt-10"
     >
       <h1>{{ article.title }}</h1>
       <p>{{ article.description }}</p>
@@ -30,7 +30,7 @@
         <NuxtLink
           v-if="previousArticle"
           :to="`/blog/${previousArticle.slug}`"
-          class="flex flex-col w-full px-4 py-3 bg-gray-800 rounded-md shadow-lg  md:max-w-sm group sm:transition-transform sm:duration-300 sm:ease-in-out sm:hover:-translate-y-1"
+          class="flex flex-col w-full px-4 py-3 bg-gray-800 rounded-md shadow-lg md:max-w-sm group sm:transition-transform sm:duration-300 sm:ease-in-out sm:hover:-translate-y-1"
         >
           <h6 class="text-xs font-bold text-gray-400 uppercase">
             Previous Article
@@ -43,7 +43,7 @@
         <NuxtLink
           v-if="nextArticle"
           :to="`/blog/${nextArticle.slug}`"
-          class="flex flex-col w-full px-4 py-3 bg-gray-800 rounded-md shadow-lg  md:max-w-sm group md:text-right sm:transition-transform sm:duration-300 sm:ease-in-out sm:hover:-translate-y-1"
+          class="flex flex-col w-full px-4 py-3 bg-gray-800 rounded-md shadow-lg md:max-w-sm group md:text-right sm:transition-transform sm:duration-300 sm:ease-in-out sm:hover:-translate-y-1"
         >
           <h6 class="text-xs font-bold text-gray-400 uppercase">
             Next Article
@@ -142,8 +142,14 @@ html {
   .nuxt-content-highlight {
     @apply relative selection:bg-indigo-100 selection:bg-opacity-10;
 
+    &:hover {
+      & > .filename {
+        @apply opacity-25;
+      }
+    }
+
     & > .filename {
-      @apply absolute right-2 top-2 text-gray-100 z-10 font-mono text-sm tracking-tight leading-none select-none;
+      @apply absolute right-2 top-2 text-gray-300 z-10 font-mono text-sm tracking-tight leading-none select-none px-2 py-1 bg-gray-800 rounded-md border border-gray-700 transition-opacity;
     }
   }
 }

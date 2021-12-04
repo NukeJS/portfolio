@@ -14,7 +14,7 @@ draft: false
 
 Open your terminal in your Nuxt project and install the `@nuxt/content` package:
 
-```bash
+```bash [terminal]
 # Using NPM
 npm install @nuxt/content
 # Using Yarn
@@ -25,7 +25,7 @@ Now, open your project in your preferred editor of use.
 
 Open the `nuxt.config.js` file and add `@nuxt/content` to the modules array.
 
-```js
+```js [nuxt.config.js]
 export default {
   // ...
   modules: [
@@ -45,7 +45,7 @@ Create a markdown file inside of the `content/blog` folder, for example `first-p
 
 Inside of `first-post.md` put the following:
 
-```md
+```md  [content/blog/first-post.md]
 ---
 title: First Blog Post Made using the Nuxt Content Module
 description: This is my very first blog post that makes use of the Nuxt Content module.
@@ -62,7 +62,7 @@ Create a `blog` folder inside of your `pages` folder, and inside of that folder 
 
 Open the `index.vue` file that's inside of the `pages/blog` folder and put the following inside of it:
 
-```vue
+```vue [pages/blog/index.vue]
 <template>
   <div>
     <h1>My Blog Posts</h1>
@@ -105,7 +105,7 @@ If you now navigate to http://localhost:3000/blog, it shows you a list of posts.
 
 Open the `pages/blog/_slug.vue` file and put the following inside of it:
 
-```vue
+```vue [pages/blog/_slug.vue]
 <template>
   <article>
     <h1>{{ post.title }}</h1>

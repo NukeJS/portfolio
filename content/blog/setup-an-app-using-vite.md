@@ -24,7 +24,7 @@ Vite requires [Node.js](https://nodejs.org/en/) version `>=12.0.0`.
 
 Open your terminal of choice.
 
-```bash
+```bash [terminal]
 # Using NPM
 npm init vite@latest
 # Using PNPM
@@ -37,7 +37,7 @@ It will then ask you what project should be called and which template you want t
 
 Now you want to move into the project's directory and run:
 
-```bash
+```bash [terminal]
 # Using NPM
 npm install
 # Using Yarn
@@ -46,7 +46,7 @@ yarn
 
 You can also directly specify the project name and the template you want to use via additional command-line options. For example, to scaffold a Vite + React TypeScript project, run:
 
-```bash
+```bash [terminal]
 # Using NPM v6.x
 npm init vite@latest my-react-ts-app --template react-ts
 # Using NPM v7+

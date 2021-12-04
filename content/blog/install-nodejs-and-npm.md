@@ -14,7 +14,7 @@ Go to the [Node.js installation page](https://nodejs.org/en/download/) and follo
 
 Once the installation is complete you can check if they're both installed by running these commands:
 
-```bash
+```bash [terminal]
 npm -v
 node -v
 ```
@@ -23,7 +23,7 @@ node -v
 
 If you want to update NPM to the latest version, you can run this command:
 
-```bash
+```bash [terminal]
 npm install -g npm@latest
 ```
 

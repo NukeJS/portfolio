@@ -12,7 +12,7 @@ draft: false
 
 For this guide I will be using the [Vue Tooltip Plugin](https://github.com/Akryum/v-tooltip).
 
-```bash
+```bash [terminal]
 # Using NPM
 npm install v-tooltip
 # Using Yarn
@@ -23,9 +23,7 @@ yarn add v-tooltip
 
 To use Vue plugins in Nuxt, we need to create a Nuxt plugin. We can do this by creating a new file in the `~/plugins` folder. Let's create a file named `v-tooltip.js` where we Import Vue register the plugin:
 
-```js
-// ~/plugins/v-tooltip.js
-
+```js [plugins/v-tooltip.js]
 import Vue from "vue";
 import VTooltip from "v-tooltip";
 
@@ -36,9 +34,7 @@ Vue.use(VTooltip);
 
 To register the plugin we simply add the file path to the `plugins` array in our `nuxt.config.js` file.
 
-```js
-// ~/nuxt.config.js
-
+```js [nuxt.config.js]
 export default {
   // ...
   plugins: [
