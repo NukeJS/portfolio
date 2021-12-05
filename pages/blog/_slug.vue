@@ -1,18 +1,16 @@
 <template>
   <article
-    class="w-full px-4 py-6 mx-auto sm:px-6 lg:px-8 sm:py-10 md:py-16 lg:py-20"
+    class="max-w-screen-md px-4 py-6 mx-auto sm:px-6 lg:px-8 sm:py-10 md:py-16 lg:py-20"
   >
-    <div class="w-full max-w-screen-md mx-auto">
-      <NuxtLink
-        to="/blog/"
-        class="inline-flex items-center font-bold transition-colors duration-200 hover:text-gray-400 md:text-lg"
-      >
-        <IconArrowNarrowLeft class="w-6 h-6 mr-1 md:h-7 md:w-7" /> Back
-      </NuxtLink>
-    </div>
+    <NuxtLink
+      to="/blog/"
+      class="inline-flex items-center font-bold transition-colors duration-200 hover:text-gray-400 md:text-lg"
+    >
+      <IconArrowNarrowLeft class="w-6 h-6 mr-1 md:h-7 md:w-7" /> Back
+    </NuxtLink>
 
     <div
-      class="max-w-screen-md mx-auto mt-4 prose prose-dark md:prose-lg lg:prose-xl sm:mt-6 md:mt-8 lg:mt-10"
+      class="mx-auto mt-4 prose max-w-none prose-dark md:prose-lg lg:prose-xl sm:mt-6 md:mt-8 lg:mt-10"
     >
       <h1>{{ article.title }}</h1>
       <p>{{ article.description }}</p>
@@ -24,13 +22,16 @@
       />
 
       <NuxtContent :document="article" />
+
+      <hr />
     </div>
-    <div class="w-full max-w-screen-md mx-auto mt-10">
+
+    <div class="mt-10">
       <div class="flex flex-col justify-between gap-3 md:flex-row">
         <NuxtLink
           v-if="previousArticle"
           :to="`/blog/${previousArticle.slug}`"
-          class="flex flex-col w-full px-4 py-3 bg-gray-800 rounded-md shadow-lg md:max-w-sm group sm:transition-transform sm:duration-300 sm:ease-in-out sm:hover:-translate-y-1"
+          class="flex flex-col w-full py-3 space-y-1 md:w-1/2 group"
         >
           <h6 class="text-xs font-bold text-gray-400 uppercase">
             Previous Article
@@ -43,7 +44,7 @@
         <NuxtLink
           v-if="nextArticle"
           :to="`/blog/${nextArticle.slug}`"
-          class="flex flex-col w-full px-4 py-3 bg-gray-800 rounded-md shadow-lg md:max-w-sm group md:text-right sm:transition-transform sm:duration-300 sm:ease-in-out sm:hover:-translate-y-1"
+          class="flex flex-col w-full py-3 space-y-1 md:w-1/2 group md:text-right"
         >
           <h6 class="text-xs font-bold text-gray-400 uppercase">
             Next Article
