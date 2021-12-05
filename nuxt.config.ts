@@ -73,6 +73,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
     'nuxt-webpack-optimisations',
+    '@nuxtjs/google-analytics',
   ],
 
   image: {
@@ -85,6 +86,10 @@ export default {
         },
       },
     },
+  },
+
+  googleAnalytics: {
+    id: 'G-TC3VTCYTZ6',
   },
 
   modules: [
