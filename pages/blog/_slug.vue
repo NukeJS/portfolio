@@ -1,62 +1,64 @@
 <template>
-  <article
-    class="max-w-screen-md px-4 py-6 mx-auto sm:px-6 lg:px-8 sm:py-10 md:py-16 lg:py-20"
-  >
-    <NuxtLink
-      to="/blog/"
-      class="inline-flex items-center font-bold transition-colors duration-200 hover:text-gray-400 md:text-lg"
+  <div class="w-full">
+    <article
+      class="max-w-screen-md px-4 py-6 mx-auto sm:px-6 lg:px-8 sm:py-10 md:py-16 lg:py-20"
     >
-      <IconArrowNarrowLeft class="w-6 h-6 mr-1 md:h-7 md:w-7" /> Back
-    </NuxtLink>
+      <NuxtLink
+        to="/blog/"
+        class="inline-flex items-center font-bold transition-colors duration-200 hover:text-gray-400 md:text-lg"
+      >
+        <IconArrowNarrowLeft class="w-6 h-6 mr-1 md:h-7 md:w-7" /> Back
+      </NuxtLink>
 
-    <div
-      class="mx-auto mt-4 prose max-w-none prose-dark md:prose-lg lg:prose-xl sm:mt-6 md:mt-8 lg:mt-10"
-    >
-      <h1>{{ article.title }}</h1>
-      <p>{{ article.description }}</p>
-      <NuxtImg
-        v-if="article.thumbnail"
-        :src="article.thumbnail"
-        preset="blog"
-        class="object-cover w-full rounded-md shadow-lg"
-      />
+      <div
+        class="mx-auto mt-4 prose max-w-none prose-dark md:prose-lg lg:prose-xl sm:mt-6 md:mt-8 lg:mt-10"
+      >
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.description }}</p>
+        <NuxtImg
+          v-if="article.thumbnail"
+          :src="article.thumbnail"
+          preset="blog"
+          class="object-cover w-full rounded-md shadow-lg"
+        />
 
-      <NuxtContent :document="article" />
+        <NuxtContent :document="article" />
 
-      <hr />
-    </div>
-
-    <div class="mt-10">
-      <div class="flex flex-col justify-between gap-3 md:flex-row">
-        <NuxtLink
-          v-if="previousArticle"
-          :to="`/blog/${previousArticle.slug}`"
-          class="flex flex-col w-full py-3 space-y-1 md:w-1/2 group"
-        >
-          <h6 class="text-xs font-bold text-gray-400 uppercase">
-            Previous Article
-          </h6>
-          <h4 class="font-semibold text-white group-hover:underline">
-            {{ previousArticle.title }}
-          </h4>
-        </NuxtLink>
-        <div v-else class="-mt-3"></div>
-        <NuxtLink
-          v-if="nextArticle"
-          :to="`/blog/${nextArticle.slug}`"
-          class="flex flex-col w-full py-3 space-y-1 md:w-1/2 group md:text-right"
-        >
-          <h6 class="text-xs font-bold text-gray-400 uppercase">
-            Next Article
-          </h6>
-          <h4 class="font-semibold text-white group-hover:underline">
-            {{ nextArticle.title }}
-          </h4>
-        </NuxtLink>
-        <div v-else></div>
+        <hr />
       </div>
-    </div>
-  </article>
+
+      <div class="mt-10">
+        <div class="flex flex-col justify-between gap-3 md:flex-row">
+          <NuxtLink
+            v-if="previousArticle"
+            :to="`/blog/${previousArticle.slug}`"
+            class="flex flex-col w-full py-3 space-y-1 md:w-1/2 group"
+          >
+            <h6 class="text-xs font-bold text-gray-400 uppercase">
+              Previous Article
+            </h6>
+            <h4 class="font-semibold text-white group-hover:underline">
+              {{ previousArticle.title }}
+            </h4>
+          </NuxtLink>
+          <div v-else class="-mt-3"></div>
+          <NuxtLink
+            v-if="nextArticle"
+            :to="`/blog/${nextArticle.slug}`"
+            class="flex flex-col w-full py-3 space-y-1 md:w-1/2 group md:text-right"
+          >
+            <h6 class="text-xs font-bold text-gray-400 uppercase">
+              Next Article
+            </h6>
+            <h4 class="font-semibold text-white group-hover:underline">
+              {{ nextArticle.title }}
+            </h4>
+          </NuxtLink>
+          <div v-else></div>
+        </div>
+      </div>
+    </article>
+  </div>
 </template>
 
 <script lang="ts">
