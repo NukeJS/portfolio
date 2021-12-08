@@ -1,42 +1,17 @@
 <template>
   <RcContainer>
     <header
-      class="
-        flex flex-col
-        items-center
-        justify-center
-        w-full
-        pt-12
-        pb-32
-        text-center
-        sm:pt-20 sm:pb-36
-        md:pt-32 md:pb-40
-        lg:pt-36
-      "
+      class="flex flex-col items-center justify-center w-full pt-12 pb-32 text-center sm:pt-20 sm:pb-36 md:pt-32 md:pb-40 lg:pt-36"
     >
       <h1
-        class="
-          text-4xl
-          font-bold
-          tracking-tight
-          text-white
-          sm:text-5xl
-          md:text-6xl
-        "
+        class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl"
       >
         Hey, I'm <span class="text-indigo-500">Ronnie</span>.
         <br />
         A <span class="text-indigo-500">Full-stack Developer</span>.
       </h1>
       <p
-        class="
-          max-w-xl
-          mt-6
-          text-lg text-gray-200
-          md:max-w-2xl md:text-xl
-          lg:text-2xl
-          sm:mt-10
-        "
+        class="max-w-xl mt-6 text-lg text-gray-200 md:max-w-2xl md:text-xl lg:text-2xl sm:mt-10"
       >
         I'm currently based in the Netherlands, creating modern and functional
         web applications.
@@ -58,15 +33,7 @@
         </p>
       </div>
       <div
-        class="
-          grid grid-cols-2
-          gap-3
-          mt-6
-          sm:mt-8 sm:grid-cols-3
-          md:grid-cols-4
-          lg:grid-cols-6
-          xl:grid-cols-7
-        "
+        class="grid grid-cols-2 gap-3 mt-6 sm:mt-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7"
       >
         <TechnologyCard
           v-for="(technology, idx) in stack"
@@ -230,7 +197,7 @@ export default Vue.extend({
       {
         type: 'internship',
         title: 'Front-end Developer',
-        company: 'Plaatsbelang',
+        company: 'Prophyta',
         place: 'Scheemda, The Netherlands',
         timespan: 'Sep. 2020 - Feb. 2021',
       },
