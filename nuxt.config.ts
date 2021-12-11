@@ -62,18 +62,17 @@ export default {
     color: '#6366f1',
   },
 
-  css: ['~/assets/global.scss'],
+  css: ['~/assets/css/global.scss'],
 
-  plugins: ['~/plugins/rc-ui'],
+  plugins: ['~/plugins/rc-ui.ts', '~/plugins/google-analytics.client.ts'],
 
   components: true,
 
   buildModules: [
     '@nuxt/typescript-build',
-    '@nuxtjs/tailwindcss',
     '@nuxt/image',
     'nuxt-webpack-optimisations',
-    '@nuxtjs/google-analytics',
+    '@nuxtjs/tailwindcss',
   ],
 
   image: {
@@ -86,10 +85,6 @@ export default {
         },
       },
     },
-  },
-
-  googleAnalytics: {
-    id: 'G-TC3VTCYTZ6',
   },
 
   modules: [
