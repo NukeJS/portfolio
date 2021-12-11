@@ -64,7 +64,7 @@ export default {
 
   css: ['~/assets/css/global.scss'],
 
-  plugins: ['~/plugins/rc-ui.ts'],
+  plugins: ['~/plugins/rc-ui.ts', '~/plugins/google-analytics.client.ts'],
 
   components: true,
 
@@ -73,7 +73,6 @@ export default {
     '@nuxt/image',
     'nuxt-webpack-optimisations',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-analytics',
   ],
 
   image: {
@@ -86,10 +85,6 @@ export default {
         },
       },
     },
-  },
-
-  googleAnalytics: {
-    id: 'UA-167439765-3',
   },
 
   modules: [
