@@ -149,7 +149,7 @@ html {
   }
 
   .nuxt-content-highlight {
-    @apply relative selection:bg-indigo-100 selection:bg-opacity-10 shadow-xl;
+    @apply relative selection:bg-indigo-100 selection:bg-opacity-10 shadow-lg;
 
     &:hover {
       & > .filename {
