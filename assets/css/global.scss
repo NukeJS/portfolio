@@ -14,19 +14,17 @@ h6 {
 @keyframes scale-fade {
   from {
     opacity: 0;
-    transform: scale(0.95);
   }
 
   to {
     opacity: 1;
-    transform: scale(1);
   }
 }
 
 .page-enter-active {
-  animation: scale-fade ease 0.15s;
+  animation: scale-fade ease-in-out 0.2s;
 }
 
 .page-leave-active {
-  animation: scale-fade reverse ease 0.15s;
+  animation: scale-fade reverse ease-in-out 0.2s;
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col p-3 space-y-2 bg-gray-800 rounded-md shadow-lg">
     <div class="space-y-1">
-      <h6 class="text-xs font-bold text-indigo-400 uppercase">
+      <h6 class="text-xs font-bold tracking-widest text-indigo-400 uppercase">
         {{ job.type }}
       </h6>
       <h3 class="text-lg font-semibold text-white">{{ job.title }}</h3>

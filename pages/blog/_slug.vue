@@ -28,15 +28,18 @@
       </div>
 
       <div class="mt-10">
-        <div class="flex flex-col justify-between gap-3 md:flex-row">
+        <div class="flex flex-col-reverse justify-between gap-3 md:flex-row">
           <NuxtLink
             v-if="previousArticle"
             :to="`/blog/${previousArticle.slug}`"
             class="flex flex-col w-full py-3 space-y-1 md:w-1/2 group"
           >
-            <h6 class="text-xs font-bold text-gray-400 uppercase">
-              Previous Article
-            </h6>
+            <div class="flex items-center text-gray-400">
+              <IconArrowNarrowLeft class="hidden w-5 h-5 mr-1 md:block" />
+              <h6 class="text-xs font-bold tracking-widest uppercase">
+                Previous Article
+              </h6>
+            </div>
             <h4 class="font-semibold text-white group-hover:underline">
               {{ previousArticle.title }}
             </h4>
@@ -47,9 +50,12 @@
             :to="`/blog/${nextArticle.slug}`"
             class="flex flex-col w-full py-3 space-y-1 md:w-1/2 group md:text-right"
           >
-            <h6 class="text-xs font-bold text-gray-400 uppercase">
-              Next Article
-            </h6>
+            <div class="flex items-center text-gray-400 md:justify-end">
+              <h6 class="text-xs font-bold tracking-widest uppercase">
+                Next Article
+              </h6>
+              <IconArrowNarrowRight class="hidden w-5 h-5 ml-1 md:block" />
+            </div>
             <h4 class="font-semibold text-white group-hover:underline">
               {{ nextArticle.title }}
             </h4>

@@ -1,10 +1,10 @@
 <template>
   <NuxtLink
     :to="`/projects/${project.name}/`"
-    class="flex flex-col px-4 py-3 overflow-hidden bg-gray-800 rounded-md shadow-lg  sm:transition-transform sm:duration-300 sm:ease-in-out group sm:hover:-translate-y-1"
+    class="flex flex-col px-4 py-3 overflow-hidden bg-gray-800 rounded-md shadow-lg sm:transition-transform sm:duration-300 sm:ease-in-out group sm:hover:-translate-y-1"
   >
     <h3
-      class="text-lg font-semibold leading-tight text-white  group-hover:underline"
+      class="text-lg font-semibold leading-tight text-white group-hover:underline"
     >
       {{ project.displayName || project.name }}
     </h3>
