@@ -84,7 +84,7 @@
       { "image": "vsc.svg", "name": "Visual Studio Code" },
       { "image": "php.svg", "name": "PHP" }
     ],
-    "github_slug": "nuxt-content-example",
+    "github_slug": "vanilla-php-login-system",
     "external_url": null
   },
   {
