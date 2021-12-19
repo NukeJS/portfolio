@@ -17,7 +17,8 @@
     "description": "A web app that I can use to shorten URLs.",
     "technologies": [
       { "image": "vsc.svg", "name": "Visual Studio Code" },
-      { "image": "nuxt.svg", "name": "Nuxt.js" }
+      { "image": "nuxt.svg", "name": "Nuxt.js" },
+      { "image": "express.svg", "name": "Express.js" }
     ],
     "github_slug": "url-shortener",
     "external_url": "https://ronnie.link"
@@ -71,6 +72,17 @@
     "technologies": [
       { "image": "vsc.svg", "name": "Visual Studio Code" },
       { "image": "nuxt.svg", "name": "Nuxt.js" }
+    ],
+    "github_slug": "nuxt-content-example",
+    "external_url": null
+  },
+  {
+    "name": "vanilla-php-login-system",
+    "displayName": "Vanilla PHP Login System",
+    "description": "A login and registration system made using vanilla PHP.",
+    "technologies": [
+      { "image": "vsc.svg", "name": "Visual Studio Code" },
+      { "image": "php.svg", "name": "PHP" }
     ],
     "github_slug": "nuxt-content-example",
     "external_url": null
