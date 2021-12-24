@@ -12,6 +12,18 @@
     "external_url": "https://ronniecodes.com"
   },
   {
+    "name": "v-scroll-progression",
+    "displayName": "v-scroll-progression",
+    "description": "Scroll progress indicator component for Vue 2.",
+    "technologies": [
+      { "image": "vsc.svg", "name": "Visual Studio Code" },
+      { "image": "vue.svg", "name": "Vue.js" },
+      { "image": "css.svg", "name": "CSS" }
+    ],
+    "github_slug": "v-scroll-progression",
+    "external_url": "https://ronniecodes.com"
+  },
+  {
     "name": "url-shortener",
     "displayName": "URL Shortener",
     "description": "A web app that I can use to shorten URLs.",
