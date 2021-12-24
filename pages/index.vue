@@ -1,7 +1,7 @@
 <template>
   <RcContainer>
     <header
-      class="flex flex-col items-center justify-center w-full pt-12 pb-32 text-center sm:pt-20 sm:pb-36 md:pt-32 md:pb-40 lg:pt-36"
+      class="flex flex-col items-center justify-center w-full py-12 text-center sm:py-20 md:py-32 lg:py-36"
     >
       <h1
         class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl"
@@ -16,11 +16,39 @@
         I'm currently based in the Netherlands, creating modern and functional
         web applications.
       </p>
-      <div class="flex mt-8 space-x-4 sm:mt-12">
-        <RcBtn nuxt to="/projects/" color="indigo">My Projects</RcBtn>
+      <!-- <div class="flex mt-8 space-x-4 sm:mt-12">
         <RcBtn nuxt to="/blog/" color="indigo">My Blog</RcBtn>
-      </div>
+      </div> -->
     </header>
+    <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
+      <div>
+        <h2
+          class="text-4xl font-semibold tracking-tight text-white md:text-5xl"
+        >
+          My <span class="text-indigo-500">Projects</span>.
+        </h2>
+        <p class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
+          A collection of projects I've created.
+        </p>
+      </div>
+      <div class="grid gap-4 mt-6 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
+        <ProjectCard
+          v-for="(project, idx) in projects"
+          :key="idx"
+          :project="project"
+        />
+      </div>
+      <p class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
+        You can discover more of my projects on my
+        <a
+          href="https://github.com/CodingWithNuke"
+          target="_blank"
+          rel="noopener"
+          class="text-indigo-400 underline hover:text-indigo-300"
+          >GitHub page</a
+        >.
+      </p>
+    </section>
     <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
       <div>
         <h2
@@ -33,10 +61,10 @@
         </p>
       </div>
       <div
-        class="grid grid-cols-2 gap-3 mt-6 sm:mt-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7"
+        class="grid grid-cols-2 gap-4 mt-6 sm:mt-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7"
       >
         <TechnologyCard
-          v-for="(technology, idx) in stack"
+          v-for="(technology, idx) in technologies"
           :key="idx"
           :technology="technology"
         />
@@ -53,7 +81,7 @@
           All the educations I've done.
         </p>
       </div>
-      <div class="grid gap-3 mt-6 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-4 mt-6 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
         <EducationCard
           v-for="(education, idx) in educations"
           :key="idx"
@@ -73,7 +101,7 @@
           All the places I've worked at.
         </p>
       </div>
-      <div class="grid gap-3 mt-6 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-4 mt-6 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
         <JobCard
           v-for="(job, idx) in jobs"
           :key="idx"
@@ -88,6 +116,11 @@
 <script lang="ts">
 import Vue from 'vue'
 
+import projects from '~/data/projects.json'
+import educations from '~/data/educations.json'
+import jobs from '~/data/jobs.json'
+import technologies from '~/data/technologies.json'
+
 import { meta } from '~/utils/meta'
 
 import { title, description } from '~/meta.json'
@@ -101,114 +134,10 @@ export default Vue.extend({
   },
 
   data: () => ({
-    stack: [
-      {
-        image: 'html.svg',
-        name: 'HTML',
-      },
-      {
-        image: 'css.svg',
-        name: 'CSS',
-      },
-      {
-        image: 'javascript.svg',
-        name: 'JavaScript',
-      },
-      {
-        image: 'typescript.svg',
-        name: 'TypeScript',
-      },
-      {
-        image: 'node.svg',
-        name: 'Node.js',
-      },
-      {
-        image: 'vue.svg',
-        name: 'Vue.js',
-      },
-      {
-        image: 'nuxt.svg',
-        name: 'Nuxt.js',
-      },
-      {
-        image: 'sass.svg',
-        name: 'SASS/SCSS',
-      },
-      {
-        image: 'tailwindcss.svg',
-        name: 'Tailwind CSS',
-      },
-      {
-        image: 'express.svg',
-        name: 'Express.js',
-      },
-      {
-        image: 'vsc.svg',
-        name: 'VS Code',
-      },
-      {
-        image: 'git.svg',
-        name: 'Git',
-      },
-      {
-        image: 'mongodb.svg',
-        name: 'MongoDB',
-      },
-      {
-        image: 'react.svg',
-        name: 'React.js',
-      },
-      {
-        image: 'laravel.svg',
-        name: 'Laravel',
-      },
-      {
-        image: 'mysql.svg',
-        name: 'MySQL',
-      },
-      {
-        image: 'php.svg',
-        name: 'PHP',
-      },
-    ],
-    educations: [
-      {
-        name: 'Collaborator IT Management',
-        info: 'MBO, Level 3',
-        institution: 'Alfa-college',
-        place: 'Groningen, The Netherlands',
-        timespan: '2018 - 2019',
-      },
-      {
-        name: 'Application & Media Developer',
-        info: 'MBO, Level 4',
-        institution: 'Alfa-college',
-        place: 'Groningen, The Netherlands',
-        timespan: '2019 - present',
-      },
-      {
-        name: 'More to come',
-        institution: 'Who knows where?',
-        place: 'Earth',
-        timespan: 'The future',
-      },
-    ],
-    jobs: [
-      {
-        type: 'internship',
-        title: 'Front-end Developer',
-        company: 'Prophyta',
-        place: 'Scheemda, The Netherlands',
-        timespan: 'Sep. 2020 - Feb. 2021',
-      },
-      {
-        type: 'Full-time? I hope so...',
-        title: 'More to come',
-        company: 'FAANG?',
-        place: 'Earth',
-        timespan: 'The future',
-      },
-    ],
+    projects,
+    educations,
+    jobs,
+    technologies,
   }),
 })
 </script>

@@ -8,13 +8,13 @@
         <NuxtImg
           :src="article.thumbnail"
           preset="blog"
-          class="object-cover w-full rounded-md"
+          class="object-cover w-full rounded"
         />
       </div>
     </div>
     <div class="flex flex-col flex-grow px-1 py-3">
       <h3
-        class="text-lg font-semibold leading-tight text-white  group-hover:underline"
+        class="text-lg font-semibold leading-tight text-white group-hover:underline"
       >
         {{ article.title }}
       </h3>

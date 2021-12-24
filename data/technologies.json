@@ -1,0 +1,70 @@
+[
+  {
+    "image": "html.svg",
+    "name": "HTML"
+  },
+  {
+    "image": "css.svg",
+    "name": "CSS"
+  },
+  {
+    "image": "javascript.svg",
+    "name": "JavaScript"
+  },
+  {
+    "image": "typescript.svg",
+    "name": "TypeScript"
+  },
+  {
+    "image": "node.svg",
+    "name": "Node.js"
+  },
+  {
+    "image": "vue.svg",
+    "name": "Vue.js"
+  },
+  {
+    "image": "nuxt.svg",
+    "name": "Nuxt.js"
+  },
+  {
+    "image": "sass.svg",
+    "name": "SASS/SCSS"
+  },
+  {
+    "image": "tailwindcss.svg",
+    "name": "Tailwind CSS"
+  },
+  {
+    "image": "express.svg",
+    "name": "Express.js"
+  },
+  {
+    "image": "vsc.svg",
+    "name": "VS Code"
+  },
+  {
+    "image": "git.svg",
+    "name": "Git"
+  },
+  {
+    "image": "mongodb.svg",
+    "name": "MongoDB"
+  },
+  {
+    "image": "react.svg",
+    "name": "React.js"
+  },
+  {
+    "image": "laravel.svg",
+    "name": "Laravel"
+  },
+  {
+    "image": "mysql.svg",
+    "name": "MySQL"
+  },
+  {
+    "image": "php.svg",
+    "name": "PHP"
+  }
+]

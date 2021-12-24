@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col p-3 space-y-2 bg-gray-800 rounded-md shadow-lg">
+  <div class="flex flex-col p-3 space-y-2 bg-gray-800 rounded">
     <div class="space-y-1">
       <h6 class="text-xs font-bold tracking-widest text-indigo-400 uppercase">
         {{ job.type }}
