@@ -1,11 +1,13 @@
 <template>
-  <div class="flex flex-col items-center p-3 bg-gray-800 rounded">
+  <div
+    class="flex flex-col items-center px-3 pt-6 pb-4 bg-white rounded shadow-md"
+  >
     <NuxtImg
       class="w-16 h-16"
       :src="`/images/technologies/${technology.image}`"
       :alt="`${technology.name} Logo`"
     />
-    <p class="mt-2 text-lg font-semibold text-white">
+    <p class="mt-3 text-lg font-semibold text-gray-800">
       {{ technology.name }}
     </p>
   </div>

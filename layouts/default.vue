@@ -1,5 +1,5 @@
 <template>
-  <RcApp class="text-gray-300 bg-gray-900">
+  <RcApp class="bg-gray-50">
     <AppBar />
 
     <AppNavigationDrawer />
@@ -10,10 +10,11 @@
       :ring="false"
       border
       rounded
+      aria-label="Scroll to top"
       :class="{
-        'fixed z-20 p-1 bg-gray-800 border border-gray-700 shadow-lg bottom-4 right-4 hover:bg-gray-700 transition-all': true,
-        'translate-y-10 opacity-0': !showScrollButton,
-        'translate-y-0 opacity-100': showScrollButton,
+        'fixed z-20 p-1 bg-gray-800 border border-gray-600 shadow-lg bottom-4 right-4 hover:bg-gray-700 transition-all text-gray-200': true,
+        'translate-y-10 opacity-0 invisible': !showScrollButton,
+        'translate-y-0 opacity-100 visible': showScrollButton,
       }"
     >
       <IconChevronUp class="w-7 h-7" />

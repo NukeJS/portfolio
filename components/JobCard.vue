@@ -1,22 +1,20 @@
 <template>
-  <div class="flex flex-col p-3 space-y-2 bg-gray-800 rounded">
-    <div class="space-y-1">
-      <h6 class="text-xs font-bold tracking-widest text-indigo-400 uppercase">
-        {{ job.type }}
-      </h6>
-      <h3 class="text-lg font-semibold text-white">{{ job.title }}</h3>
-    </div>
-    <div class="space-y-1 text-sm text-gray-400">
+  <div class="flex flex-col p-3 bg-white rounded shadow-md">
+    <span class="text-xs font-bold tracking-widest text-indigo-600 uppercase">
+      {{ job.type }}
+    </span>
+    <h3 class="mt-2 text-lg font-semibold text-gray-800">{{ job.title }}</h3>
+    <div class="mt-3 space-y-1 text-sm text-gray-500">
       <div class="flex items-center">
-        <IconOfficeBuilding class="w-4 h-4" />
+        <IconOfficeBuilding class="w-4 h-4 text-indigo-600" />
         <p class="ml-1">{{ job.company }}</p>
       </div>
       <div class="flex items-center">
-        <IconLocationMarker class="w-4 h-4" />
+        <IconLocationMarker class="w-4 h-4 text-indigo-600" />
         <p class="ml-1">{{ job.place }}</p>
       </div>
       <div class="flex items-center">
-        <IconCalendar class="w-4 h-4" />
+        <IconCalendar class="w-4 h-4 text-indigo-600" />
         <p class="ml-1">{{ job.timespan }}</p>
       </div>
     </div>

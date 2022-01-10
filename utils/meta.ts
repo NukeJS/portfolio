@@ -3,7 +3,7 @@ import { MetaInfo } from 'vue-meta'
 import { url as metaURL } from '~/meta.json'
 
 export function meta(meta: {
-  title: string
+  title?: string
   description?: string
   keywords?: string | string[]
   image?: string
@@ -20,6 +20,8 @@ export function meta(meta: {
   } = meta
 
   const url = `${metaURL}${path === '/' ? '' : path}`
+
+  title = title ? `${title} - RonnieCodes` : 'RonnieCodes'
 
   if (keywords && Array.isArray(keywords)) {
     keywords = keywords.join(', ')

@@ -1,12 +1,29 @@
 <template>
-  <RcFooter class="py-4 border-t border-gray-800">
+  <RcFooter class="py-8 text-gray-200 bg-gray-800">
     <RcContainer
-      class="flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0"
+      class="flex flex-col items-center justify-between space-y-8 sm:flex-row sm:space-y-0"
     >
-      <div>
-        <p class="text-center sm:text-left">
-          &copy; {{ new Date().getFullYear() }} RonnieCodes. All rights
-          reserved.
+      <div class="flex flex-col justify-center">
+        <p>&copy; {{ new Date().getFullYear() }} &mdash; RonnieCodes</p>
+        <p class="mt-1 text-sm text-center text-gray-400 sm:text-left">
+          Made with
+          <a
+            href="https://nuxtjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-indigo-300 underline hover:text-indigo-200"
+          >
+            Nuxt.js</a
+          >
+          and
+          <a
+            href="https://tailwindcss.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-indigo-300 underline hover:text-indigo-200"
+          >
+            Tailwind CSS</a
+          >.
         </p>
       </div>
       <div class="flex items-center space-x-4">

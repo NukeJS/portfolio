@@ -5,13 +5,13 @@
     >
       <NuxtLink
         to="/blog/"
-        class="inline-flex items-center font-bold transition-colors duration-200 hover:text-gray-400 md:text-lg"
+        class="inline-flex items-center font-bold text-gray-800 transition-colors duration-200 hover:text-gray-500 md:text-lg"
       >
         <IconArrowNarrowLeft class="w-6 h-6 mr-1 md:h-7 md:w-7" /> Back
       </NuxtLink>
 
       <div
-        class="mx-auto mt-4 prose max-w-none prose-dark md:prose-lg lg:prose-xl sm:mt-6 md:mt-8 lg:mt-10"
+        class="mx-auto mt-4 prose max-w-none md:prose-lg lg:prose-xl sm:mt-6 md:mt-8 lg:mt-10"
       >
         <h1>{{ article.title }}</h1>
         <p>{{ article.description }}</p>
@@ -19,7 +19,7 @@
           v-if="article.thumbnail"
           :src="article.thumbnail"
           preset="blog"
-          class="object-cover w-full rounded-md shadow-lg"
+          class="object-cover w-full border rounded-lg shadow-lg"
         />
 
         <NuxtContent :document="article" />
@@ -28,35 +28,35 @@
       </div>
 
       <div class="mt-10">
-        <div class="flex flex-col-reverse justify-between gap-3 md:flex-row">
+        <div class="flex flex-col-reverse justify-between gap-4 md:flex-row">
           <NuxtLink
             v-if="previousArticle"
             :to="`/blog/${previousArticle.slug}`"
             class="flex flex-col w-full py-3 space-y-1 md:w-1/2 group"
           >
-            <div class="flex items-center text-gray-400">
+            <div class="flex items-center text-gray-500">
               <IconArrowNarrowLeft class="hidden w-5 h-5 mr-1 md:block" />
               <h6 class="text-xs font-bold tracking-widest uppercase">
                 Previous Article
               </h6>
             </div>
-            <h4 class="font-semibold text-white group-hover:underline">
+            <h4 class="font-semibold text-gray-800 group-hover:underline">
               {{ previousArticle.title }}
             </h4>
           </NuxtLink>
-          <div v-else class="-mt-3"></div>
+          <div v-else></div>
           <NuxtLink
             v-if="nextArticle"
             :to="`/blog/${nextArticle.slug}`"
             class="flex flex-col w-full py-3 space-y-1 md:w-1/2 group md:text-right"
           >
-            <div class="flex items-center text-gray-400 md:justify-end">
+            <div class="flex items-center text-gray-500 md:justify-end">
               <h6 class="text-xs font-bold tracking-widest uppercase">
                 Next Article
               </h6>
               <IconArrowNarrowRight class="hidden w-5 h-5 ml-1 md:block" />
             </div>
-            <h4 class="font-semibold text-white group-hover:underline">
+            <h4 class="font-semibold text-gray-800 group-hover:underline">
               {{ nextArticle.title }}
             </h4>
           </NuxtLink>

@@ -22,20 +22,20 @@ module.exports = {
       },
 
       colors: {
-        gray: colors.gray,
+        gray: colors.blueGray,
       },
 
       typography: (theme) => ({
-        dark: {
+        DEFAULT: {
           css: {
-            color: theme('colors.gray.400'),
+            color: theme('colors.gray.600'),
             figcaption: {
-              color: theme('colors.gray.400'),
+              color: theme('colors.gray.600'),
             },
             a: {
-              color: theme('colors.indigo.400'),
+              color: theme('colors.indigo.600'),
               '&:hover': {
-                color: theme('colors.indigo.300'),
+                color: theme('colors.indigo.400'),
               },
               code: { color: theme('colors.indigo.400') },
               '*': {
@@ -50,32 +50,29 @@ module.exports = {
             },
             blockquote: {
               borderLeftColor: theme('colors.gray.700'),
-              color: theme('colors.gray.300'),
+              color: theme('colors.gray.400'),
             },
-            h1: {
-              color: theme('colors.white'),
-            },
-            'h2,h3,h4': {
-              color: theme('colors.gray.100'),
+            'h1,h2,h3,h4': {
+              color: theme('colors.gray.800'),
             },
             code: {
               padding: '3px 5px',
               borderRadius: 5,
-              color: theme('colors.white'),
+              color: theme('colors.gray.200'),
               background: theme('colors.gray.800'),
             },
             'pre > code': {
               background: 'none',
               padding: 0,
             },
-            hr: { borderColor: theme('colors.gray.700') },
-            strong: { color: theme('colors.white') },
+            hr: { borderColor: theme('colors.gray.200') },
+            strong: { color: theme('colors.gray.800') },
             thead: {
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.700'),
             },
             tbody: {
               tr: {
-                borderBottomColor: theme('colors.gray.700'),
+                borderBottomColor: theme('colors.gray.200'),
               },
             },
             mark: {

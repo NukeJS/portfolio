@@ -11,18 +11,22 @@
     :disabled="disabled"
     v-on="{ click }"
     :class="[
-      'text-lg font-medium border outline-none  sm:text-xl transition-colors duration-200',
+      'text-lg font-medium border outline-none sm:text-xl transition-all duration-200',
       {
         'px-5 py-3': padding,
         'border-transparent': !border,
-        'ring-offset-2 focus:ring ring-offset-gray-900': ring,
+        'focus:ring': ring,
         'cursor-pointer': !disabled,
-        'rounded-md': !rounded,
+        'rounded-lg': !rounded,
         'rounded-full': rounded,
       },
       {
         'bg-indigo-600 ring-indigo-600 text-white hover:bg-indigo-500':
           color === 'indigo',
+        'bg-pink-600 ring-pink-600 text-white hover:bg-pink-500':
+          color === 'pink',
+        'bg-white ring-gray-400 text-gray-800 hover:bg-gray-300':
+          color === 'white',
       },
     ]"
   >
@@ -65,7 +69,7 @@ export default Vue.extend({
     },
     color: {
       type: String,
-      validator: (value: string) => ['indigo'].includes(value),
+      validator: (value: string) => ['indigo', 'pink', 'white'].includes(value),
     },
     padding: {
       type: Boolean,

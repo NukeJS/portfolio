@@ -1,5 +1,5 @@
 html {
-  @apply font-dm-sans overflow-y-scroll;
+  @apply font-dm-sans;
 }
 
 h1,
@@ -11,7 +11,7 @@ h6 {
   @apply font-poppins;
 }
 
-@keyframes scale-fade {
+/* @keyframes scale-fade {
   from {
     opacity: 0;
   }
@@ -27,4 +27,4 @@ h6 {
 
 .page-leave-active {
   animation: scale-fade reverse ease-in-out 0.2s;
-}
+} */

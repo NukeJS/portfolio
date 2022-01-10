@@ -9,7 +9,6 @@ export default {
   target: 'static',
 
   head: {
-    titleTemplate: '%s - RonnieCodes',
     title: meta.title,
     htmlAttrs: {
       lang: 'en',

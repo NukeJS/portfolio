@@ -1,24 +1,29 @@
 <template>
-  <RcContainer>
-    <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
-      <h1 class="text-4xl font-semibold tracking-tight text-white md:text-5xl">
-        My <span class="text-indigo-500">Blog</span>.
-      </h1>
-      <p class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
-        A collection of articles I've written.
-      </p>
-
-      <div
-        class="grid grid-cols-1 gap-4 mt-6  sm:grid-cols-2 lg:grid-cols-3 sm:mt-8"
-      >
-        <ArticleCard
-          v-for="(article, idx) in articles"
-          :key="idx"
-          :article="article"
-        />
-      </div>
+  <div class="w-full">
+    <section>
+      <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
+        <div class="flex flex-col items-center">
+          <h2
+            class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
+          >
+            My Blog.
+          </h2>
+          <p class="max-w-2xl mt-2 text-gray-500 md:text-lg sm:mt-3 md:mt-4">
+            A collection of articles I've written.
+          </p>
+        </div>
+        <div
+          class="grid gap-6 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          <ArticleCard
+            v-for="(article, idx) in articles"
+            :key="idx"
+            :article="article"
+          />
+        </div>
+      </RcContainer>
     </section>
-  </RcContainer>
+  </div>
 </template>
 
 <script lang="ts">

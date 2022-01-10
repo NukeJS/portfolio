@@ -1,19 +1,26 @@
 <template>
-  <RcContainer>
-    <section class="w-full py-6 sm:py-10 md:py-16 lg:py-20">
-      <h1 class="text-4xl font-semibold tracking-tight text-white md:text-5xl">
-        Error
-        <span class="text-indigo-500">{{ error.statusCode || 500 }}</span
-        >.
-      </h1>
-      <p class="max-w-2xl mt-3 text-gray-300 md:text-lg sm:mt-4 md:mt-5">
-        {{ error.message || 'An unexpected error has occurred.' }}
-      </p>
-      <div class="mt-8 sm:mt-12">
-        <RcBtn nuxt to="/" color="indigo">Go Home</RcBtn>
-      </div>
+  <div class="w-full">
+    <section>
+      <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
+        <div class="flex flex-col items-center">
+          <h1
+            class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
+          >
+            Error
+            {{ error.statusCode || 500 }}.
+          </h1>
+          <p class="max-w-2xl mt-2 text-gray-600 md:text-lg sm:mt-3 md:mt-4">
+            {{ error.message || 'An unexpected error has occurred' }}.
+          </p>
+          <div class="mt-6 sm:mt-10">
+            <RcBtn nuxt to="/" color="indigo" ring class="shadow-lg">
+              Go Home
+            </RcBtn>
+          </div>
+        </div>
+      </RcContainer>
     </section>
-  </RcContainer>
+  </div>
 </template>
 
 <script lang="ts">

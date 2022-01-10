@@ -1,12 +1,12 @@
 <template>
   <RcNavigationDrawer v-model="navigationDrawer">
-    <div class="flex flex-col h-full bg-gray-900 border-r border-gray-800">
-      <RcAppBar class="h-16 border-b border-gray-800">
+    <div class="flex flex-col h-full bg-white">
+      <RcAppBar class="h-16 bg-gray-800">
         <RcContainer :padding="false" class="flex items-center w-full h-full">
           <div class="flex items-center flex-1 space-x-3">
             <button
               @click="hideNavigationDrawer"
-              class="transition-colors duration-200 lg:hidden hover:text-gray-400"
+              class="text-gray-300 transition-colors duration-200 lg:hidden hover:text-gray-400"
             >
               <IconX class="w-6 h-6" />
             </button>
