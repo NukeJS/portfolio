@@ -161,7 +161,7 @@
       <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
         <div class="flex flex-col items-center">
           <h2
-            class="text-4xl font-semibold tracking-tight text-gray-50 md:text-5xl"
+            class="text-4xl font-semibold tracking-tight text-center text-gray-50 md:text-5xl"
           >
             My Working Experience.
           </h2>

@@ -3,9 +3,9 @@
     <RcContainer
       class="flex flex-col items-center justify-between space-y-8 sm:flex-row sm:space-y-0"
     >
-      <div class="flex flex-col justify-center">
+      <div class="flex flex-col justify-center text-center sm:text-left">
         <p>&copy; {{ new Date().getFullYear() }} &mdash; RonnieCodes</p>
-        <p class="mt-1 text-sm text-center text-gray-400 sm:text-left">
+        <p class="mt-1 text-sm text-gray-400">
           Made with
           <a
             href="https://nuxtjs.org"
