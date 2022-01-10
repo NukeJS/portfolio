@@ -24,21 +24,30 @@
         </RcContainer>
       </RcAppBar>
       <div>
-        <ul class="p-4 space-y-4 font-bold">
+        <ul class="p-4 space-y-4 font-bold text-gray-600">
           <li>
             <NuxtLink
               to="/"
               exact-active-class="text-indigo-500 hover:!text-indigo-500"
-              class="relative inline-flex items-center h-full transition-colors duration-200 hover:text-gray-400"
+              class="relative inline-flex items-center h-full transition-colors duration-200 hover:text-gray-500"
             >
               Home
             </NuxtLink>
           </li>
           <li>
             <NuxtLink
+              to="/projects/"
+              exact-active-class="text-indigo-500 hover:!text-indigo-500"
+              class="relative inline-flex items-center h-full transition-colors duration-200 hover:text-gray-500"
+            >
+              Projects
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink
               to="/blog/"
               exact-active-class="text-indigo-500 hover:!text-indigo-500"
-              class="relative inline-flex items-center h-full transition-colors duration-200 hover:text-gray-400"
+              class="relative inline-flex items-center h-full transition-colors duration-200 hover:text-gray-500"
             >
               Blog
             </NuxtLink>
