@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <section class="even:bg-gray-600">
+    <section class="even:bg-indigo-600">
       <RcContainer
         :padding="false"
         class="flex flex-col items-center w-full py-20 text-center sm:py-28 md:py-36 lg:py-48"
@@ -40,7 +40,7 @@
         </div>
       </RcContainer>
     </section>
-    <section class="even:bg-gray-600">
+    <section class="even:bg-indigo-600">
       <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
         <div class="flex flex-col items-center">
           <h2
@@ -48,13 +48,13 @@
           >
             About Me.
           </h2>
-          <p class="max-w-2xl mt-2 text-gray-300 md:text-lg sm:mt-3 md:mt-4">
+          <p class="max-w-2xl mt-2 text-gray-200 md:text-lg sm:mt-3 md:mt-4">
             Let me introduce myself to you.
           </p>
         </div>
 
         <div
-          class="grid gap-6 mt-10 text-gray-200 md:text-lg sm:mt-12 md:mt-16 sm:grid-cols-2 md:grid-cols-3"
+          class="grid gap-6 mt-10 text-lg text-gray-100 md:text-xl sm:mt-12 md:mt-16 sm:grid-cols-2 md:grid-cols-3"
         >
           <div>
             <p class="leading-relaxed">
@@ -75,14 +75,14 @@
                 href="https://vuejs.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-indigo-200 underline hover:text-indigo-100"
+                class="text-white underline hover:text-gray-200"
                 >Vue.js</a
               >. It was also at this point in time where I got my first look at
               <a
                 href="https://tailwindcss.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-indigo-300 underline hover:text-indigo-200"
+                class="text-white underline hover:text-gray-200"
                 >Tailwind CSS</a
               >
               &
@@ -90,7 +90,7 @@
                 href="https://nuxtjs.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-indigo-300 underline hover:text-indigo-200"
+                class="text-white underline hover:text-gray-200"
                 >Nuxt.js</a
               >.
             </p>
@@ -102,7 +102,7 @@
                 href="https://tailwindcss.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-indigo-300 underline hover:text-indigo-200"
+                class="text-white underline hover:text-gray-200"
                 >Node.js</a
               >
               a try... (I also picked up some
@@ -110,7 +110,7 @@
                 href="https://typescriptlang.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-indigo-300 underline hover:text-indigo-200"
+                class="text-white underline hover:text-gray-200"
                 >TypeScript</a
               >
               along the way...) After building many APIs using
@@ -118,7 +118,7 @@
                 href="https://expressjs.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-indigo-300 underline hover:text-indigo-200"
+                class="text-white underline hover:text-gray-200"
                 >Express.js</a
               >
               I moved onto learning
@@ -126,7 +126,7 @@
                 href="https://laravel.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-indigo-300 underline hover:text-indigo-200"
+                class="text-white underline hover:text-gray-200"
                 >Laravel</a
               >.
             </p>
@@ -134,9 +134,9 @@
         </div>
       </RcContainer>
     </section>
-    <section class="even:bg-gray-600">
+    <section class="even:bg-indigo-600">
       <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center text-center">
           <h2
             class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
           >
@@ -157,15 +157,15 @@
         </div>
       </RcContainer>
     </section>
-    <section class="even:bg-gray-600">
+    <section class="even:bg-indigo-600">
       <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center text-center">
           <h2
-            class="text-4xl font-semibold tracking-tight text-center text-gray-50 md:text-5xl"
+            class="text-4xl font-semibold tracking-tight text-gray-50 md:text-5xl"
           >
             My Working Experience.
           </h2>
-          <p class="max-w-2xl mt-2 text-gray-300 md:text-lg sm:mt-3 md:mt-4">
+          <p class="max-w-2xl mt-2 text-gray-200 md:text-lg sm:mt-3 md:mt-4">
             All the places I've worked at.
           </p>
         </div>
@@ -176,9 +176,9 @@
         </div>
       </RcContainer>
     </section>
-    <section class="even:bg-gray-600">
+    <section class="even:bg-indigo-600">
       <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center text-center">
           <h2
             class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
           >
