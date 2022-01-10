@@ -1,6 +1,6 @@
 <template>
   <RcNavigationDrawer v-model="navigationDrawer">
-    <div class="flex flex-col h-full bg-white">
+    <div class="flex flex-col h-full bg-gray-50">
       <RcAppBar class="h-16 bg-gray-800">
         <RcContainer :padding="false" class="flex items-center w-full h-full">
           <div class="flex items-center flex-1 space-x-3">
