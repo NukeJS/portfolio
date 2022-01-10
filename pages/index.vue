@@ -49,7 +49,7 @@
             About Me.
           </h2>
           <p class="max-w-2xl mt-2 text-gray-200 md:text-lg sm:mt-3 md:mt-4">
-            Let me introduce myself to you.
+            Let me introduce myself.
           </p>
         </div>
 
