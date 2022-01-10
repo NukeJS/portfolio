@@ -1,21 +1,19 @@
 <template>
   <NuxtLink
     :to="`/blog/${article.slug}/`"
-    class="flex flex-col transition duration-200 transform group"
+    class="flex flex-col p-4 transition duration-200 transform bg-white shadow-md rounded-xl hover:shadow-lg hover:-translate-y-1"
   >
     <div class="relative" v-if="article.thumbnail">
       <div class="aspect-w-16 aspect-h-9">
         <NuxtImg
           :src="article.thumbnail"
           preset="blog"
-          class="object-cover w-full transition duration-200 transform border rounded shadow-md group-hover:-translate-y-1 group-hover:shadow-lg"
+          class="object-cover w-full rounded-xl"
         />
       </div>
     </div>
-    <div class="flex flex-col flex-grow px-1 py-3">
-      <h3
-        class="text-lg font-semibold leading-tight text-gray-800 group-hover:underline"
-      >
+    <div class="flex flex-col flex-grow mt-4">
+      <h3 class="text-lg font-semibold leading-tight text-gray-800">
         {{ article.title }}
       </h3>
       <time class="mt-1 text-sm text-indigo-600" :datetime="article.date">

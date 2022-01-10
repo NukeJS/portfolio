@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col p-3 bg-white rounded shadow-md">
+  <div class="flex flex-col p-4 bg-white shadow-md rounded-xl">
     <h3 class="text-lg font-semibold text-gray-800">{{ education.name }}</h3>
     <div class="mt-3 space-y-1 text-sm text-gray-500">
       <div v-if="education.info" class="flex items-center">

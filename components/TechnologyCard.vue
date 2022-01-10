@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col items-center px-3 pt-6 pb-4 bg-white rounded shadow-md"
+    class="flex flex-col items-center px-3 pt-6 pb-4 bg-white shadow-md rounded-xl"
   >
     <NuxtImg
       class="w-16 h-16"
