@@ -37,9 +37,9 @@
           >
             <div class="flex items-center text-gray-500">
               <IconArrowNarrowLeft class="hidden w-5 h-5 mr-1 md:block" />
-              <h6 class="text-xs font-bold tracking-widest uppercase">
+              <span class="text-xs font-bold tracking-widest uppercase">
                 Previous Article
-              </h6>
+              </span>
             </div>
             <h4 class="font-semibold text-gray-800 group-hover:underline">
               {{ previousArticle.title }}
@@ -52,9 +52,9 @@
             class="flex flex-col w-full py-3 space-y-1 md:w-1/2 group md:text-right"
           >
             <div class="flex items-center text-gray-500 md:justify-end">
-              <h6 class="text-xs font-bold tracking-widest uppercase">
+              <span class="text-xs font-bold tracking-widest uppercase">
                 Next Article
-              </h6>
+              </span>
               <IconArrowNarrowRight class="hidden w-5 h-5 ml-1 md:block" />
             </div>
             <h4 class="font-semibold text-gray-800 group-hover:underline">
