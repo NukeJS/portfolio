@@ -9,6 +9,7 @@
           :src="article.thumbnail"
           preset="blog"
           class="object-cover w-full rounded-xl"
+          alt="Article thumbnail image"
         />
       </div>
     </div>

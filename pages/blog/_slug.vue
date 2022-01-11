@@ -20,6 +20,7 @@
           :src="article.thumbnail"
           preset="blog"
           class="object-cover w-full border rounded-lg shadow-lg"
+          alt="Article thumbnail image"
         />
 
         <NuxtContent :document="article" />
