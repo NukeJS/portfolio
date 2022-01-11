@@ -41,9 +41,9 @@
                 Previous Article
               </span>
             </div>
-            <h4 class="font-semibold text-gray-800 group-hover:underline">
+            <p class="font-semibold text-gray-800 group-hover:underline">
               {{ previousArticle.title }}
-            </h4>
+            </p>
           </NuxtLink>
           <div v-else></div>
           <NuxtLink
@@ -57,9 +57,9 @@
               </span>
               <IconArrowNarrowRight class="hidden w-5 h-5 ml-1 md:block" />
             </div>
-            <h4 class="font-semibold text-gray-800 group-hover:underline">
+            <p class="font-semibold text-gray-800 group-hover:underline">
               {{ nextArticle.title }}
-            </h4>
+            </p>
           </NuxtLink>
           <div v-else></div>
         </div>
