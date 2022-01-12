@@ -224,9 +224,9 @@
             <Mailto mail="info@ronniecodes.com">
               <RcBtn
                 color="indigo"
-                class="shadow-md whitespace-nowrap hover:shadow-lg translate hover:-translate-y-1"
+                class="inline-flex items-center shadow-md whitespace-nowrap hover:shadow-lg translate hover:-translate-y-1"
               >
-                Contact Me
+                <IconMail class="w-6 h-6 mr-3" /> <span>Contact Me</span>
               </RcBtn>
             </Mailto>
           </div>

@@ -4,20 +4,20 @@
       {{ job.type }}
     </span>
     <h3 class="mt-2 text-lg font-semibold text-gray-800">{{ job.title }}</h3>
-    <div class="mt-3 space-y-1 text-sm text-gray-500">
-      <div class="flex items-center">
+    <ul class="mt-3 space-y-1 text-sm text-gray-500">
+      <li class="flex items-center">
         <IconOfficeBuilding class="w-4 h-4 text-indigo-600" />
         <p class="ml-1">{{ job.company }}</p>
-      </div>
-      <div class="flex items-center">
+      </li>
+      <li class="flex items-center">
         <IconLocationMarker class="w-4 h-4 text-indigo-600" />
         <p class="ml-1">{{ job.place }}</p>
-      </div>
-      <div class="flex items-center">
+      </li>
+      <li class="flex items-center">
         <IconCalendar class="w-4 h-4 text-indigo-600" />
         <p class="ml-1">{{ job.timespan }}</p>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </template>
 
