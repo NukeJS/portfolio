@@ -14,13 +14,13 @@
       </div>
     </div>
     <div class="flex flex-col flex-grow mt-4">
-      <h3 class="text-lg font-semibold leading-tight text-gray-800">
+      <h3 class="text-lg font-semibold leading-tight text-gray-800 md:text-xl">
         {{ article.title }}
       </h3>
       <time class="mt-1 text-sm text-indigo-600" :datetime="article.date">
         {{ article.formattedDate }}
       </time>
-      <p class="mt-2 text-gray-500">
+      <p class="mt-3 text-gray-500 md:text-lg">
         {{ article.description }}
       </p>
     </div>
