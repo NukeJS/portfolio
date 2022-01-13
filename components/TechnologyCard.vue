@@ -7,7 +7,7 @@
       :src="`/images/technologies/${technology.image}`"
       :alt="`${technology.name} Logo`"
     />
-    <p class="mt-3 text-lg font-semibold text-gray-800">
+    <p class="mt-3 text-lg font-semibold text-gray-800 md:text-xl">
       {{ technology.name }}
     </p>
   </div>

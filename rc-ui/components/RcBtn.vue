@@ -13,7 +13,7 @@
     :class="[
       'text-lg font-medium border outline-none sm:text-xl transition-all duration-200',
       {
-        'px-5 py-3': padding,
+        'px-6 py-4': padding,
         'border-transparent': !border,
         'focus:ring': ring,
         'cursor-pointer': !disabled,

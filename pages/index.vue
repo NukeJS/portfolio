@@ -189,7 +189,7 @@
           </p>
         </div>
         <div
-          class="grid grid-cols-2 gap-6 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7"
+          class="grid grid-cols-2 gap-6 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
         >
           <TechnologyCard
             v-for="(technology, idx) in technologies"
@@ -226,7 +226,7 @@
                 color="indigo"
                 class="inline-flex items-center shadow-md whitespace-nowrap hover:shadow-lg translate hover:-translate-y-1"
               >
-                <IconMail class="w-6 h-6 mr-3" /> <span>Contact Me</span>
+                <IconMail class="w-6 h-6 mr-2" /> <span>Contact Me</span>
               </RcBtn>
             </Mailto>
           </div>
