@@ -7,8 +7,12 @@
     "description": "My personal portfolio website.",
     "technologies": [
       { "image": "vsc.svg", "name": "VS Code" },
+      { "image": "javascript.svg", "name": "JavaScript" },
+      { "image": "typescript.svg", "name": "TypeScript" },
       { "image": "nuxt.svg", "name": "Nuxt.js" },
-      { "image": "tailwindcss.svg", "name": "Tailwind CSS" }
+      { "image": "vue.svg", "name": "Vue.js" },
+      { "image": "tailwindcss.svg", "name": "Tailwind CSS" },
+      { "image": "git.svg", "name": "Git" }
     ],
     "github_slug": "portfolio",
     "external_url": "https://ronniecodes.com"
@@ -21,7 +25,9 @@
     "description": "Easy-to-use promise-based module to interact with Agma.io APIs.",
     "technologies": [
       { "image": "vsc.svg", "name": "VS Code" },
-      { "image": "typescript.svg", "name": "TypeScript" }
+      { "image": "javascript.svg", "name": "JavaScript" },
+      { "image": "typescript.svg", "name": "TypeScript" },
+      { "image": "git.svg", "name": "Git" }
     ],
     "github_slug": "agma-io.js",
     "external_url": null
