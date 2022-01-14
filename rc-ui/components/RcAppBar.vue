@@ -8,6 +8,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import {
+  CreateElement,
+  VueConstructor,
+  Component,
+  AsyncComponent,
+  ComponentOptions,
+} from 'vue'
 
 export default Vue.extend({
   name: 'RcAppBar',

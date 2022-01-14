@@ -202,7 +202,7 @@
     <section class="mt-40 bg-gray-600 sm:mt-36 md:mt-20 lg:mt-28">
       <RcContainer :padding="false" class="py-10 sm:py-14 md:py-20 lg:py-28">
         <div
-          class="flex flex-col px-6 py-8 -mt-40 bg-white shadow-md lg:px-3 2xl:px-10 lg:-mx-3 2xl:-mx-10 lg:flex-row lg:items-center rounded-xl"
+          class="flex flex-col px-6 py-8 -mt-40 bg-white shadow-md lg:flex-row lg:items-center rounded-xl"
         >
           <div>
             <h2
@@ -239,7 +239,6 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import projects from '~/data/projects.json'
 import educations from '~/data/educations.json'
 import jobs from '~/data/jobs.json'
 import technologies from '~/data/technologies.json'
@@ -257,7 +256,6 @@ export default Vue.extend({
   },
 
   data: () => ({
-    projects,
     educations,
     jobs,
     technologies,

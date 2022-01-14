@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col p-4 bg-white shadow-md rounded-xl">
+  <div class="p-4 bg-white shadow-md rounded-xl">
     <h3 class="text-lg font-semibold text-gray-800 md:text-xl">
       {{ education.name }}
     </h3>

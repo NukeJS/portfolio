@@ -19,7 +19,7 @@
           v-if="article.thumbnail"
           :src="article.thumbnail"
           preset="blog"
-          class="object-cover w-full border rounded-lg shadow-lg"
+          class="object-cover w-full border shadow-lg rounded-xl"
           alt="Article thumbnail image"
         />
 

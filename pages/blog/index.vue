@@ -2,7 +2,7 @@
   <div class="w-full">
     <section>
       <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center text-center">
           <h2
             class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
           >

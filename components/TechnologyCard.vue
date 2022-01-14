@@ -1,9 +1,7 @@
 <template>
-  <div
-    class="flex flex-col items-center px-3 pt-6 pb-4 bg-white shadow-md rounded-xl"
-  >
+  <div class="px-3 pt-6 pb-4 text-center bg-white shadow-md rounded-xl">
     <NuxtImg
-      class="w-16 h-16"
+      class="w-16 h-16 mx-auto"
       :src="`/images/technologies/${technology.image}`"
       :alt="`${technology.name} Logo`"
     />
