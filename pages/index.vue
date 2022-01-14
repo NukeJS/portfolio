@@ -232,7 +232,7 @@
             <Mailto mail="info@ronniecodes.com">
               <RcBtn
                 color="indigo"
-                class="inline-flex items-center shadow-md whitespace-nowrap hover:shadow-lg translate hover:-translate-y-1"
+                class="shadow-md whitespace-nowrap hover:shadow-lg translate hover:-translate-y-1"
               >
                 <IconMail class="w-6 h-6 mr-2" /> <span>Contact Me</span>
               </RcBtn>

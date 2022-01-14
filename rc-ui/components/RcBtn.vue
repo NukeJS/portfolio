@@ -11,7 +11,7 @@
     :disabled="disabled"
     v-on="{ click }"
     :class="[
-      'text-lg font-medium border outline-none sm:text-xl transition-all duration-200',
+      'text-lg font-medium border outline-none sm:text-xl transition-all duration-200 inline-flex items-center',
       {
         'px-6 py-4': padding,
         'border-transparent': !border,
@@ -27,6 +27,8 @@
           color === 'pink',
         'bg-white ring-gray-400 text-gray-800 hover:bg-gray-300':
           color === 'white',
+        'bg-gray-900 ring-gray-600 text-gray-50 hover:bg-gray-800':
+          color === 'black',
       },
     ]"
   >
@@ -69,7 +71,8 @@ export default Vue.extend({
     },
     color: {
       type: String,
-      validator: (value: string) => ['indigo', 'pink', 'white'].includes(value),
+      validator: (value: string) =>
+        ['indigo', 'pink', 'white', 'black'].includes(value),
     },
     padding: {
       type: Boolean,

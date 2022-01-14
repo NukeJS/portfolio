@@ -13,6 +13,17 @@
           >
             {{ project.description }}
           </p>
+          <div class="flex justify-center mt-6 sm:mt-8">
+            <RcBtn
+              color="black"
+              :href="`https://github.com/CodingWithNuke/${project.github_slug}/`"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="shadow-md hover:shadow-lg translate hover:-translate-y-1"
+            >
+              <IconGithub class="w-6 h-6 mr-2" /> <span>GitHub</span>
+            </RcBtn>
+          </div>
         </div>
         <div class="mt-10 sm:mt-12 md:mt-16">
           <div class="aspect-w-16 aspect-h-9">
