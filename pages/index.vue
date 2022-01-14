@@ -3,7 +3,7 @@
     <section class="even:bg-indigo-600">
       <RcContainer
         :padding="false"
-        class="flex flex-col items-center w-full py-20 text-center sm:py-28 md:py-36 lg:py-48"
+        class="w-full py-20 text-center sm:py-28 md:py-36 lg:py-48"
       >
         <h1
           class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl md:text-6xl"
@@ -13,7 +13,7 @@
           A <span class="text-indigo-600">Full-stack</span> Developer.
         </h1>
         <p
-          class="max-w-xl mt-6 text-lg text-gray-500 md:max-w-2xl md:text-xl lg:text-2xl sm:mt-10"
+          class="max-w-xl mx-auto mt-6 text-lg text-gray-500 md:max-w-2xl md:text-xl lg:text-2xl sm:mt-10"
         >
           I'm currently based in the Netherlands, creating modern and functional
           web applications.
@@ -42,13 +42,15 @@
     </section>
     <section class="even:bg-indigo-600">
       <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="flex flex-col items-center">
+        <div class="text-center">
           <h2
             class="text-4xl font-semibold tracking-tight text-gray-50 md:text-5xl"
           >
             About Me.
           </h2>
-          <p class="max-w-2xl mt-2 text-gray-200 md:text-lg sm:mt-3 md:mt-4">
+          <p
+            class="max-w-2xl mx-auto mt-2 text-gray-200 md:text-lg sm:mt-3 md:mt-4"
+          >
             Let me introduce myself.
           </p>
         </div>
@@ -136,13 +138,15 @@
     </section>
     <section class="even:bg-indigo-600">
       <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="flex flex-col items-center text-center">
+        <div class="text-center">
           <h2
             class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
           >
             My Education.
           </h2>
-          <p class="max-w-2xl mt-2 text-gray-500 md:text-lg sm:mt-3 md:mt-4">
+          <p
+            class="max-w-2xl mx-auto mt-2 text-gray-500 md:text-lg sm:mt-3 md:mt-4"
+          >
             All the educations I've done.
           </p>
         </div>
@@ -159,13 +163,15 @@
     </section>
     <section class="even:bg-indigo-600">
       <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="flex flex-col items-center text-center">
+        <div class="text-center">
           <h2
             class="text-4xl font-semibold tracking-tight text-gray-50 md:text-5xl"
           >
             My Working Experience.
           </h2>
-          <p class="max-w-2xl mt-2 text-gray-200 md:text-lg sm:mt-3 md:mt-4">
+          <p
+            class="max-w-2xl mx-auto mt-2 text-gray-200 md:text-lg sm:mt-3 md:mt-4"
+          >
             All the places I've worked at.
           </p>
         </div>
@@ -178,13 +184,15 @@
     </section>
     <section class="even:bg-indigo-600">
       <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="flex flex-col items-center text-center">
+        <div class="text-center">
           <h2
             class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
           >
             My Stack.
           </h2>
-          <p class="max-w-2xl mt-2 text-gray-500 md:text-lg sm:mt-3 md:mt-4">
+          <p
+            class="max-w-2xl mx-auto mt-2 text-gray-500 md:text-lg sm:mt-3 md:mt-4"
+          >
             Technologies that I understand and use.
           </p>
         </div>
