@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col p-4 bg-white shadow-md rounded-xl">
     <span
-      class="font-bold tracking-widest text-indigo-600 uppercase text-xs: md:text-sm"
+      class="font-bold tracking-widest text-indigo-600 uppercase text-xs md:text-sm"
     >
       {{ job.type }}
     </span>
