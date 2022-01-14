@@ -28,13 +28,15 @@
     </section>
     <section class="even:bg-indigo-600">
       <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="flex flex-col items-center">
+        <div class="text-center">
           <h2
             class="text-4xl font-semibold tracking-tight text-gray-50 md:text-5xl"
           >
             Tech Stack.
           </h2>
-          <p class="max-w-2xl mt-2 text-gray-200 md:text-lg sm:mt-3 md:mt-4">
+          <p
+            class="max-w-2xl mx-auto mt-2 text-gray-200 md:text-lg sm:mt-3 md:mt-4"
+          >
             Technologies that I used to build this project.
           </p>
         </div>
