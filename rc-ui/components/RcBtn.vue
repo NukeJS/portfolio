@@ -4,7 +4,7 @@
     :type="type"
     :to="to"
     :exact="(to || nuxt) && exact"
-    :href="href"
+    :href="to || href"
     :target="target"
     :active-class="(to || nuxt) && activeClass"
     :exact-active-class="(to || nuxt) && exactActiveClass"
