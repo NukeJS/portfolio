@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    :to="`/projects/${project.slug}`"
+    :to="`/projects/${project.slug}/`"
     class="p-4 transition duration-200 ease-in-out bg-white shadow-md rounded-xl hover:shadow-lg hover:-translate-y-1"
   >
     <div class="aspect-w-16 aspect-h-9">
