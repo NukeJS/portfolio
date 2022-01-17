@@ -226,7 +226,7 @@
             </p>
           </div>
           <div class="mt-8 lg:ml-auto lg:mt-0">
-            <Mailto mail="info@ronniecodes.com">
+            <Mailto tabindex="-1" mail="info@ronniecodes.com">
               <RcBtn
                 color="indigo"
                 class="shadow-md whitespace-nowrap hover:shadow-lg translate hover:-translate-y-1"

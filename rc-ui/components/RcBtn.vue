@@ -21,13 +21,13 @@
         'rounded-full': rounded,
       },
       {
-        'bg-indigo-600 ring-indigo-600 text-white hover:bg-indigo-500':
+        'bg-indigo-600 ring-indigo-700 text-white hover:bg-indigo-500':
           color === 'indigo',
-        'bg-pink-600 ring-pink-600 text-white hover:bg-pink-500':
+        'bg-pink-600 ring-pink-700 text-white hover:bg-pink-500':
           color === 'pink',
-        'bg-white ring-gray-400 text-gray-800 hover:bg-gray-300':
+        'bg-white ring-gray-500 text-gray-800 hover:bg-gray-300':
           color === 'white',
-        'bg-gray-900 ring-gray-600 text-gray-50 hover:bg-gray-800':
+        'bg-gray-900 ring-gray-700 text-gray-50 hover:bg-gray-800':
           color === 'black',
       },
     ]"
