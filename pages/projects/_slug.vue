@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <section>
-      <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
+      <RcContainer class="py-14 sm:py-20 md:py-28 lg:py-32">
         <div class="text-center">
           <h2
             class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
@@ -38,7 +38,7 @@
       </RcContainer>
     </section>
     <section class="even:bg-indigo-600">
-      <RcContainer :padding="false" class="py-14 sm:py-20 md:py-28 lg:py-32">
+      <RcContainer class="py-14 sm:py-20 md:py-28 lg:py-32">
         <div class="text-center">
           <h2
             class="text-4xl font-semibold tracking-tight text-gray-50 md:text-5xl"

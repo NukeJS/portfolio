@@ -4,7 +4,6 @@
       'w-full mx-auto px-4',
       {
         'max-w-screen-lg xl:max-w-screen-xl': !fluid,
-        'px-4 sm:px-6 md:px-8': padding,
       },
     ]"
   >
@@ -21,10 +20,6 @@ export default Vue.extend({
   props: {
     fluid: {
       type: Boolean,
-    },
-    padding: {
-      type: Boolean,
-      default: true,
     },
   },
 })
