@@ -28,7 +28,7 @@
       </div>
       <div class="flex items-center space-x-4">
         <a
-          href="https://github.com/CodingWithNuke"
+          href="https://github.com/NukeJS"
           target="_blank"
           aria-label="GitHub"
           rel="noopener noreferrer"
@@ -37,7 +37,7 @@
           <IconGithub class="w-6 h-6" />
         </a>
         <a
-          href="https://twitter.com/TheCodingNuke"
+          href="https://twitter.com/nuke_js"
           target="_blank"
           aria-label="Twitter"
           rel="noopener noreferrer"

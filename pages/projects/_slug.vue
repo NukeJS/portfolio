@@ -16,7 +16,7 @@
           <div class="flex justify-center mt-6 sm:mt-8">
             <RcBtn
               color="black"
-              :href="`https://github.com/CodingWithNuke/${project.github_slug}/`"
+              :href="`https://github.com/NukeJS/${project.github_slug}/`"
               target="_blank"
               rel="noopener noreferrer"
               class="shadow-md hover:shadow-lg translate hover:-translate-y-1"
