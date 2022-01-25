@@ -23,6 +23,7 @@ module.exports = {
 
       colors: {
         gray: colors.blueGray,
+        orange: colors.orange,
       },
 
       typography: (theme) => ({
