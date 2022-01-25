@@ -33,7 +33,7 @@
 import Vue from 'vue'
 
 import projects from '~/data/projects.json'
-import { Project } from '~/components/ProjectCard.vue'
+import { Project } from '~/components/molecules/ProjectCard.vue'
 
 import { meta } from '~/utils/meta'
 

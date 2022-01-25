@@ -65,7 +65,12 @@ export default {
 
   plugins: ['~/plugins/rc-ui.ts', '~/plugins/google-analytics.client.ts'],
 
-  components: true,
+  components: [
+    '~/components',
+    '~/components/atoms',
+    '~/components/molecules',
+    '~/components/organisms',
+  ],
 
   buildModules: [
     '@nuxt/typescript-build',

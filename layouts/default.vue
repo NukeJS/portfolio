@@ -1,8 +1,8 @@
 <template>
   <RcApp class="bg-gray-50">
-    <AppBar />
+    <Navbar />
 
-    <AppNavigationDrawer />
+    <NavigationDrawer />
 
     <RcBtn
       @click="scrollToTop"
@@ -24,7 +24,7 @@
       <Nuxt />
     </RcMain>
 
-    <AppFooter />
+    <Footer />
   </RcApp>
 </template>
 
