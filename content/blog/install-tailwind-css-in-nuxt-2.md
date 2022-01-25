@@ -12,7 +12,11 @@ draft: false
 
 First, we need to generate a Nuxt.js project.
 
-*You can skip this part if you already generated a project.*
+<alert>
+
+You can skip this part if you already generated a project.
+
+</alert>
 
 ```bash [terminal]
 npx create-nuxt-app my-cool-app

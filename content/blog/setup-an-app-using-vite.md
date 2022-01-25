@@ -14,7 +14,7 @@ draft: false
 
 ## Getting Started
 
-<alert>
+<alert type="info">
 
 **Compatibility Note**
 
