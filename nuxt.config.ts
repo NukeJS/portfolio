@@ -68,6 +68,7 @@ export default {
   components: [
     '~/components',
     '~/components/atoms',
+    '~/components/atoms/icons',
     '~/components/molecules',
     '~/components/organisms',
   ],
