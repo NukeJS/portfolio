@@ -57,10 +57,13 @@ module.exports = {
               color: theme('colors.gray.800'),
             },
             code: {
-              padding: '3px 5px',
+              padding: '3px 7px',
               borderRadius: 5,
               color: theme('colors.gray.200'),
               background: theme('colors.gray.800'),
+              '&::before,&::after': {
+                display: 'none',
+              },
             },
             'pre > code': {
               background: 'none',
