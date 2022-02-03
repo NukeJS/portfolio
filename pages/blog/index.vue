@@ -40,7 +40,7 @@ export default Vue.extend({
     return meta({
       title: 'Blog',
       description: "A collection of articles I've written.",
-      path: '/blog/',
+      path: '/blog/'
     })
   },
 
@@ -55,18 +55,18 @@ export default Vue.extend({
         'date',
         'readingTime',
         'formattedDate',
-        'labels',
+        'labels'
       ])
       .sortBy('date', 'desc')
       .fetch()
 
     return {
-      articles,
+      articles
     }
   },
 
   data: () => ({
-    articles: null as IContentDocument[] | null,
-  }),
+    articles: null as IContentDocument[] | null
+  })
 })
 </script>
