@@ -1,5 +1,21 @@
 [
   {
+    "slug": "solidjs-hooks",
+    "name": "solidjs-hooks",
+    "hidden": false,
+    "image_url": "/images/projects/solidjs-hooks.png",
+    "description": "A collection of useful SolidJS hooks.",
+    "technologies": [
+      { "image": "vsc.svg", "name": "VS Code" },
+      { "image": "solid.svg", "name": "Solid.js" },
+      { "image": "javascript.svg", "name": "JavaScript" },
+      { "image": "typescript.svg", "name": "TypeScript" },
+      { "image": "git.svg", "name": "Git" }
+    ],
+    "github_slug": "solidjs-hooks",
+    "external_url": null
+  },
+  {
     "slug": "portfolio",
     "name": "Portfolio",
     "hidden": false,

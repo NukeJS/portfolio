@@ -52,6 +52,10 @@
     "name": "MongoDB"
   },
   {
+    "image": "solid.svg",
+    "name": "Solid.js"
+  },
+  {
     "image": "react.svg",
     "name": "React.js"
   },
