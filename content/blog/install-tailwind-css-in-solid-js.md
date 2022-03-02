@@ -1,7 +1,7 @@
 ---
 title: How to Install Tailwind CSS in SolidJS
 description: A quick guide on how to install Tailwind CSS in your SolidJS project.
-keywords: Tailwind, Solid, Solid.js, solid-js, Vite, Vite.js, JavaScript, How To
+keywords: Tailwind, Solid, Solid.js, solid-js, Vite, Vite.js, JavaScript, How To, Tailwind v3, CSS
 labels: Solid, Tailwind
 thumbnail: /blog/install-tailwind-css-in-solid-js/thumbnail.png
 date: 2021-08-18
@@ -36,7 +36,7 @@ npm install
 Next, we need to install Tailwind CSS, PostCSS & Autoprefixer.
 
 ```bash [terminal]
-npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+npm install -D tailwindcss postcss autoprefixer
 ```
 
 Next, generate your `tailwind.config.js` and `postcss.config.js` files.
@@ -49,12 +49,8 @@ Open your `tailwind.config.js` file and change the contents to the following:
 
 ```js [tailwind.config.js]
 module.exports = {
-  purge: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
-  },
-  variants: {
     extend: {},
   },
   plugins: [],
