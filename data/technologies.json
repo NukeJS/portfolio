@@ -1,74 +1,92 @@
 [
   {
     "image": "html.svg",
-    "name": "HTML"
+    "name": "HTML",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
   },
   {
     "image": "css.svg",
-    "name": "CSS"
+    "name": "CSS",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
   },
   {
     "image": "javascript.svg",
-    "name": "JavaScript"
+    "name": "JavaScript",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
   },
   {
     "image": "typescript.svg",
-    "name": "TypeScript"
+    "name": "TypeScript",
+    "url": "https://www.typescriptlang.org/"
   },
   {
     "image": "node.svg",
-    "name": "Node.js"
+    "name": "Node.js",
+    "url": "https://nodejs.org/en/"
   },
   {
     "image": "vue.svg",
-    "name": "Vue.js"
+    "name": "Vue.js",
+    "url": "https://vuejs.org/"
   },
   {
     "image": "nuxt.svg",
-    "name": "Nuxt.js"
+    "name": "Nuxt.js",
+    "url": "https://nuxtjs.org/"
   },
   {
     "image": "sass.svg",
-    "name": "SASS/SCSS"
+    "name": "SASS/SCSS",
+    "url": "https://sass-lang.com/"
   },
   {
     "image": "tailwindcss.svg",
-    "name": "Tailwind CSS"
+    "name": "Tailwind CSS",
+    "url": "https://tailwindcss.com/"
   },
   {
     "image": "express.svg",
-    "name": "Express.js"
+    "name": "Express.js",
+    "url": "https://expressjs.com/"
   },
   {
     "image": "vsc.svg",
-    "name": "VS Code"
+    "name": "VS Code",
+    "url": "https://code.visualstudio.com/"
   },
   {
     "image": "git.svg",
-    "name": "Git"
+    "name": "Git",
+    "url": "https://git-scm.com/"
   },
   {
     "image": "mongodb.svg",
-    "name": "MongoDB"
+    "name": "MongoDB",
+    "url": "https://www.mongodb.com/"
   },
   {
     "image": "solid.svg",
-    "name": "Solid.js"
+    "name": "Solid.js",
+    "url": "https://www.solidjs.com/"
   },
   {
     "image": "react.svg",
-    "name": "React.js"
+    "name": "React.js",
+    "url": "https://reactjs.org/"
   },
   {
     "image": "laravel.svg",
-    "name": "Laravel"
+    "name": "Laravel",
+    "url": "https://laravel.com/"
   },
   {
     "image": "mysql.svg",
-    "name": "MySQL"
+    "name": "MySQL",
+    "url": "https://www.mysql.com/"
   },
   {
     "image": "php.svg",
-    "name": "PHP"
+    "name": "PHP",
+    "url": "https://www.php.net/"
   }
 ]

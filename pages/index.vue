@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <section class="even:bg-indigo-600">
+    <header class="even:bg-indigo-600">
       <RcContainer class="w-full py-20 text-center sm:py-28 md:py-36 lg:py-48">
         <h1
           class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl md:text-6xl"
@@ -36,11 +36,12 @@
           </RcBtn>
         </div>
       </RcContainer>
-    </section>
-    <section class="even:bg-indigo-600">
+    </header>
+    <section aria-labelledby="about-me-title" class="even:bg-indigo-600">
       <RcContainer class="py-14 sm:py-20 md:py-28 lg:py-32">
         <div class="text-center">
           <h2
+            id="about-me-title"
             class="text-4xl font-semibold tracking-tight text-gray-50 md:text-5xl"
           >
             About Me.
@@ -133,10 +134,11 @@
         </div>
       </RcContainer>
     </section>
-    <section class="even:bg-indigo-600">
+    <section aria-labelledby="my-education-title" class="even:bg-indigo-600">
       <RcContainer class="py-14 sm:py-20 md:py-28 lg:py-32">
         <div class="text-center">
           <h2
+            id="my-education-title"
             class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
           >
             My Education.
@@ -158,10 +160,14 @@
         </div>
       </RcContainer>
     </section>
-    <section class="even:bg-indigo-600">
+    <section
+      aria-labelledby="my-working-experience-title"
+      class="even:bg-indigo-600"
+    >
       <RcContainer class="py-14 sm:py-20 md:py-28 lg:py-32">
         <div class="text-center">
           <h2
+            id="my-working-experience-title"
             class="text-4xl font-semibold tracking-tight text-gray-50 md:text-5xl"
           >
             My Working Experience.
@@ -179,10 +185,11 @@
         </div>
       </RcContainer>
     </section>
-    <section class="even:bg-indigo-600">
+    <section aria-labelledby="my-stack-title" class="even:bg-indigo-600">
       <RcContainer class="py-14 sm:py-20 md:py-28 lg:py-32">
         <div class="text-center">
           <h2
+            id="my-stack-title"
             class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
           >
             My Stack.
@@ -204,13 +211,14 @@
         </div>
       </RcContainer>
     </section>
-    <section class="even:bg-gray-600">
+    <section aria-labelledby="lets-talk-title" class="even:bg-gray-600">
       <RcContainer class="py-10 sm:py-16 md:py-20 lg:py-24">
         <div
           class="flex flex-col px-6 py-8 bg-white shadow-md lg:flex-row lg:items-center rounded-xl"
         >
           <div>
             <h2
+              id="lets-talk-title"
               class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
             >
               Let's Talk.
