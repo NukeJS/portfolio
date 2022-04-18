@@ -1,281 +1,146 @@
 <template>
-  <div class="w-full">
-    <header class="even:bg-indigo-600">
-      <RcContainer class="w-full py-20 text-center sm:py-28 md:py-36 lg:py-48">
-        <h1
-          class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl md:text-6xl"
+  <header>
+    <Container class="py-20 sm:py-28 md:py-36 lg:py-48">
+      <h1
+        class="text-white text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center font-bold"
+      >
+        Hey, I'm
+        <span
+          class="bg-clip-text bg-gradient-to-tr text-transparent from-pink-500 to-indigo-500"
+          >Nuke</span
+        >.
+        <br />
+        A
+        <span
+          class="bg-clip-text bg-gradient-to-tr text-transparent from-pink-500 to-indigo-500"
+          >Full-stack</span
         >
-          Hey, I'm <span class="text-indigo-600">Ronnie</span>.
-          <br />
-          A <span class="text-indigo-600">Full-stack</span> Developer.
-        </h1>
-        <p
-          class="max-w-xl mx-auto mt-6 text-lg text-gray-500 md:max-w-2xl md:text-xl lg:text-2xl sm:mt-10"
-        >
-          I'm currently based in the Netherlands, creating modern and functional
-          web applications.
+        Developer.
+      </h1>
+      <p
+        class="max-w-xl mx-auto mt-6 text-lg text-zinc-400 md:max-w-2xl md:text-xl lg:text-2xl sm:mt-10 text-center"
+      >
+        I'm currently based in the Netherlands, creating modern and functional
+        web applications.
+      </p>
+    </Container>
+  </header>
+  <hr class="my-4 sm:my-8 md:my-12 border-zinc-100/5" />
+  <section class="py-14 sm:py-20 md:py-28 lg:py-32">
+    <Container>
+      <h2 class="text-4xl font-bold tracking-tight text-zinc-50 md:text-5xl">
+        About Me.
+      </h2>
+      <p class="mt-4 text-zinc-400 max-w-2xl md:text-lg">
+        Let me introduce myself.
+      </p>
+      <div
+        class="mt-10 sm:mt-12 md:mt-16 text-lg md:text-xl text-zinc-300 space-y-6 max-w-4xl"
+      >
+        <p class="leading-relaxed">
+          Hey, I'm Ronnie. A <ClientOnly>{{ age }}</ClientOnly
+          >-year-old full-stack developer. Back in 2017-2018, I started to look
+          into web developement. I practiced the art of HTML, CSS, and
+          JavaScript.
         </p>
-        <div class="flex justify-center mt-8 space-x-6 sm:mt-12">
-          <RcBtn
-            nuxt
-            to="/projects/"
-            color="indigo"
-            ring
-            class="shadow-md hover:shadow-lg translate hover:-translate-y-1"
-          >
-            My Projects
-          </RcBtn>
-          <RcBtn
-            nuxt
-            to="/blog/"
-            color="pink"
-            ring
-            class="shadow-md hover:shadow-lg translate hover:-translate-y-1"
-          >
-            My Blog
-          </RcBtn>
-        </div>
-      </RcContainer>
-    </header>
-    <section aria-labelledby="about-me-title" class="even:bg-indigo-600">
-      <RcContainer class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="text-center">
-          <h2
-            id="about-me-title"
-            class="text-4xl font-semibold tracking-tight text-gray-50 md:text-5xl"
-          >
-            About Me.
-          </h2>
-          <p
-            class="max-w-2xl mx-auto mt-2 text-gray-200 md:text-lg sm:mt-3 md:mt-4"
-          >
-            Let me introduce myself.
-          </p>
-        </div>
-
-        <div
-          class="grid gap-6 mt-10 text-lg text-gray-100 md:text-xl sm:mt-12 md:mt-16 sm:grid-cols-2 md:grid-cols-3"
-        >
-          <div>
-            <p class="leading-relaxed">
-              Hey, I'm Ronnie. A
-              <client-only>{{
-                calcYears(new Date('November 6, 2001, 00:00:00'), new Date())
-              }}</client-only
-              >-year-old full-stack developer that is currently based in the
-              Netherlands. Back in 2017-2018, I started to look into web
-              development. I practiced the art of HTML, CSS & JavaScript.
-            </p>
-          </div>
-          <div>
-            <p class="leading-relaxed">
-              After learning the basics (HTML, CSS & JavaScript), I started to
-              look into front-end frameworks. This is where I found my love for
-              <a
-                href="https://vuejs.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white underline hover:text-gray-200"
-                >Vue.js</a
-              >. It was also at this point in time where I got my first look at
-              <a
-                href="https://tailwindcss.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white underline hover:text-gray-200"
-                >Tailwind CSS</a
-              >
-              &
-              <a
-                href="https://nuxtjs.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white underline hover:text-gray-200"
-                >Nuxt.js</a
-              >.
-            </p>
-          </div>
-          <div>
-            <p class="leading-relaxed">
-              I've also always wanted to do back-end development. And so, I gave
-              <a
-                href="https://tailwindcss.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white underline hover:text-gray-200"
-                >Node.js</a
-              >
-              a try... (I also picked up some
-              <a
-                href="https://typescriptlang.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white underline hover:text-gray-200"
-                >TypeScript</a
-              >
-              along the way...) After building many APIs using
-              <a
-                href="https://expressjs.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white underline hover:text-gray-200"
-                >Express.js</a
-              >
-              I moved onto learning
-              <a
-                href="https://laravel.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white underline hover:text-gray-200"
-                >Laravel</a
-              >.
-            </p>
-          </div>
-        </div>
-      </RcContainer>
-    </section>
-    <section aria-labelledby="my-education-title" class="even:bg-indigo-600">
-      <RcContainer class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="text-center">
-          <h2
-            id="my-education-title"
-            class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
-          >
-            My Education.
-          </h2>
-          <p
-            class="max-w-2xl mx-auto mt-2 text-gray-500 md:text-lg sm:mt-3 md:mt-4"
-          >
-            All the educations I've done.
-          </p>
-        </div>
-        <div
-          class="grid gap-6 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          <EducationCard
-            v-for="(education, idx) in educations"
-            :key="idx"
-            :education="education"
-          />
-        </div>
-      </RcContainer>
-    </section>
-    <section
-      aria-labelledby="my-working-experience-title"
-      class="even:bg-indigo-600"
-    >
-      <RcContainer class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="text-center">
-          <h2
-            id="my-working-experience-title"
-            class="text-4xl font-semibold tracking-tight text-gray-50 md:text-5xl"
-          >
-            My Working Experience.
-          </h2>
-          <p
-            class="max-w-2xl mx-auto mt-2 text-gray-200 md:text-lg sm:mt-3 md:mt-4"
-          >
-            All the places I've worked at.
-          </p>
-        </div>
-        <div
-          class="grid gap-6 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          <JobCard v-for="(job, idx) in jobs" :key="idx" :job="job" />
-        </div>
-      </RcContainer>
-    </section>
-    <section aria-labelledby="my-stack-title" class="even:bg-indigo-600">
-      <RcContainer class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="text-center">
-          <h2
-            id="my-stack-title"
-            class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
-          >
-            My Stack.
-          </h2>
-          <p
-            class="max-w-2xl mx-auto mt-2 text-gray-500 md:text-lg sm:mt-3 md:mt-4"
-          >
-            Technologies that I understand and use.
-          </p>
-        </div>
-        <div
-          class="grid grid-cols-2 gap-6 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
-        >
-          <TechnologyCard
-            v-for="(technology, idx) in technologies"
-            :key="idx"
-            :technology="technology"
-          />
-        </div>
-      </RcContainer>
-    </section>
-    <section aria-labelledby="lets-talk-title" class="even:bg-gray-600">
-      <RcContainer class="py-10 sm:py-16 md:py-20 lg:py-24">
-        <div
-          class="flex flex-col px-6 py-8 bg-white shadow-md lg:flex-row lg:items-center rounded-xl"
-        >
-          <div>
-            <h2
-              id="lets-talk-title"
-              class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
-            >
-              Let's Talk.
-            </h2>
-            <p class="max-w-2xl mt-2 text-gray-500 md:text-lg sm:mt-3 md:mt-4">
-              Want to get in touch? Feel free to send me an e-mail at
-              <Mailto
-                mail="info@ronniecodes.com"
-                class="text-indigo-600 underline"
-              >
-                info@ronniecodes.com
-              </Mailto>
-            </p>
-          </div>
-          <div class="mt-8 lg:ml-auto lg:mt-0">
-            <Mailto tabindex="-1" mail="info@ronniecodes.com">
-              <RcBtn
-                color="indigo"
-                class="shadow-md whitespace-nowrap hover:shadow-lg translate hover:-translate-y-1"
-              >
-                <IconMail class="w-6 h-6 mr-2" /> <span>Contact Me</span>
-              </RcBtn>
-            </Mailto>
-          </div>
-        </div>
-      </RcContainer>
-    </section>
-  </div>
+        <p class="leading-relaxed">
+          After learning the basics, I started to look into front-end
+          frameworks. First I tried out React.js, I didn't like the way it
+          worked so I took a look at Vue.js. Eventually, after using Vue.js for
+          a couple of days I fell in love with it. It was also at this point
+          that I got my first look at Tailwind CSS and Nuxt.js.
+        </p>
+        <p class="leading-relaxed">
+          I wanted to learn more about the backside of web applications so I
+          decided to give back-end development a try. The first library I used
+          for back-end development was Express.js. I also picked up some
+          TypeScript along the way. After building many APIs with Express.js I
+          took some time to look into Laravel.
+        </p>
+        <p>This is where I am now.</p>
+      </div>
+    </Container>
+  </section>
+  <hr class="my-4 sm:my-8 md:my-12 border-zinc-100/5" />
+  <section class="py-14 sm:py-20 md:py-28 lg:py-32">
+    <Container>
+      <h2 class="text-4xl font-bold tracking-tight text-zinc-50 md:text-5xl">
+        My Education.
+      </h2>
+      <p class="mt-4 text-zinc-400 max-w-2xl md:text-lg">
+        All the educations I've done.
+      </p>
+      <div
+        class="grid gap-6 md:gap-8 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2 lg:grid-cols-3"
+      >
+        <EducationCard
+          v-for="(education, index) in educations.data.value"
+          :key="index"
+          v-bind="{ education }"
+        />
+      </div>
+    </Container>
+  </section>
+  <hr class="my-4 sm:my-8 md:my-12 border-zinc-100/5" />
+  <section class="py-14 sm:py-20 md:py-28 lg:py-32">
+    <Container>
+      <h2 class="text-4xl font-bold tracking-tight text-zinc-50 md:text-5xl">
+        My Working Experience.
+      </h2>
+      <p class="mt-4 text-zinc-400 max-w-2xl md:text-lg">
+        All the places I've worked at.
+      </p>
+      <div
+        class="grid gap-6 md:gap-8 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2 xl:grid-cols-3"
+      >
+        <JobCard
+          v-for="(job, index) in jobs.data.value"
+          :key="index"
+          v-bind="{ job }"
+        />
+      </div>
+    </Container>
+  </section>
+  <hr class="my-4 sm:my-8 md:my-12 border-zinc-100/5" />
+  <section class="py-14 sm:py-20 md:py-28 lg:py-32">
+    <Container>
+      <h2
+        class="text-4xl font-bold tracking-tight text-zinc-50 md:text-5xl text-center"
+      >
+        My Stack.
+      </h2>
+      <p class="mt-4 text-zinc-400 max-w-2xl md:text-lg mx-auto text-center">
+        Technologies that I understand and use.
+      </p>
+      <div
+        class="grid gap-6 md:gap-8 mt-10 sm:mt-12 md:mt-16 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
+      >
+        <TechnologyCard
+          v-for="(technology, index) in technologies.data.value"
+          :key="index"
+          v-bind="{ technology }"
+        />
+      </div>
+    </Container>
+  </section>
+  <footer class="py-8 border-t border-zinc-100/5">
+    <Container>
+      <p class="text-center sm:text-left text-sm">&copy; 2022 &mdash; NukeJS</p>
+    </Container>
+  </footer>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script setup lang="ts">
+/* --------------------------------- Imports -------------------------------- */
+import { calcYears } from "~~/utils/helpers";
+/* -------------------------------------------------------------------------- */
 
-import educations from '~/data/educations.json'
-import jobs from '~/data/jobs.json'
-import technologies from '~/data/technologies.json'
-
-import { meta } from '~/utils/meta'
-import { calcYears } from '~/utils/helpers'
-
-import { description } from '~/meta.json'
-
-export default Vue.extend({
-  head() {
-    return meta({
-      description,
-    })
-  },
-
-  data: () => ({
-    educations,
-    jobs,
-    technologies,
-  }),
-
-  methods: {
-    calcYears,
-  },
-})
+/* --------------------------------- Globals -------------------------------- */
+const educations = useAsyncData("educations", () => $fetch("/api/educations"));
+const jobs = useAsyncData("jobs", () => $fetch("/api/jobs"));
+const technologies = useAsyncData("technologies", () =>
+  $fetch("/api/technologies")
+);
+const age = calcYears(new Date("November 6, 2001, 00:00:00"), new Date());
+/* -------------------------------------------------------------------------- */
 </script>

@@ -1,68 +1,15 @@
 <template>
-  <RcApp class="bg-gray-50">
-    <Navbar />
-
-    <NavigationDrawer />
-
-    <RcBtn
-      @click="scrollToTop"
-      :padding="false"
-      :ring="false"
-      border
-      rounded
-      aria-label="Scroll to top"
-      :class="{
-        'fixed z-20 p-1 bg-gray-900 border border-gray-600 shadow-lg bottom-4 right-4 hover:bg-gray-800 text-gray-200': true,
-        'translate-y-10 opacity-0 invisible': !showScrollButton,
-        'translate-y-0 opacity-100 visible': showScrollButton,
-      }"
+  <div class="antialiased text-zinc-400 bg-zinc-900 min-h-screen">
+    <div
+      class="fixed top-0 h-16 bg-zinc-900/80 backdrop-blur-md w-full border-b border-zinc-100/5"
     >
-      <IconChevronUp class="w-7 h-7" />
-    </RcBtn>
+      <Container class="flex items-center h-full">
+        <Logo class="h-10" />
+      </Container>
+    </div>
 
-    <RcMain class="pt-16">
-      <Nuxt />
-    </RcMain>
-
-    <Footer />
-  </RcApp>
+    <main class="pt-16">
+      <slot />
+    </main>
+  </div>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
-  data: () => ({
-    showScrollButton: false,
-  }),
-
-  methods: {
-    scrollToTop() {
-      scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      })
-    },
-
-    onScroll() {
-      const scrollTotal =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight
-
-      if (document.documentElement.scrollTop / scrollTotal > 0.2) {
-        this.showScrollButton = true
-      } else {
-        this.showScrollButton = false
-      }
-    },
-  },
-
-  mounted() {
-    this.onScroll()
-    document.addEventListener('scroll', this.onScroll)
-  },
-  beforeDestroy() {
-    document.removeEventListener('scroll', this.onScroll)
-  },
-})
-</script>
