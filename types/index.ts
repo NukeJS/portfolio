@@ -15,7 +15,9 @@ export interface Job {
 }
 
 export interface Technology {
-  name: string;
-  url: string;
-  image: string;
+  title: string;
+  items: {
+    name: string;
+    image: string;
+  }[];
 }

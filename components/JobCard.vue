@@ -10,7 +10,7 @@
     <h3 class="text-lg font-semibold dark:text-white text-gray-900 md:text-xl">
       {{ job.title }}
     </h3>
-    <ul class="md:text-lg space-y-1 ext-zinc-500 dark:text-zinc-400">
+    <ul class="md:text-lg space-y-1 text-zinc-500 dark:text-zinc-400">
       <li>
         <OfficeBuildingIcon
           class="w-5 h-5 mr-1 text-violet-600 dark:text-violet-500 inline -mt-1"

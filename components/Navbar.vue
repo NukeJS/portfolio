@@ -11,7 +11,7 @@
         <ClientOnly>
           <button
             @click="toggleTheme"
-            class="w-7 h-7 text-gray-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-300 transition-colors focus:outline-none"
+            class="w-6 h-6 text-gray-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-300 transition-colors focus:outline-none"
           >
             <MoonIcon v-if="$colorMode.value === 'dark'" />
             <SunIcon v-else-if="$colorMode.value === 'light'" />
@@ -24,7 +24,7 @@
 
 <script lang="ts" setup>
 /* --------------------------------- Imports -------------------------------- */
-import { MoonIcon, SunIcon, RefreshIcon } from "@heroicons/vue/solid";
+import { MoonIcon, SunIcon, RefreshIcon } from "@heroicons/vue/outline";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------------- Theme --------------------------------- */

@@ -27,28 +27,6 @@
   </header>
   <hr class="my-4 sm:my-8 md:my-12 border-zinc-200 dark:border-zinc-800" />
   <section
-    aria-labelledby="my-projects-title"
-    class="py-14 sm:py-20 md:py-28 lg:py-32"
-  >
-    <Container>
-      <h2
-        id="my-projects-title"
-        class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl"
-      >
-        My Projects.
-      </h2>
-      <p class="mt-4 text-zinc-500 dark:text-zinc-400 max-w-2xl md:text-lg">
-        A few things I've made.
-      </p>
-      <div
-        class="mt-10 sm:mt-12 md:mt-16 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 space-y-6 md:space-y-8 max-w-4xl"
-      >
-        <p class="leading-relaxed">Coming soon...</p>
-      </div>
-    </Container>
-  </section>
-  <hr class="my-4 sm:my-8 md:my-12 border-zinc-200 dark:border-zinc-800" />
-  <section
     aria-labelledby="about-me-title"
     class="py-14 sm:py-20 md:py-28 lg:py-32"
   >
@@ -147,21 +125,21 @@
   </section>
   <hr class="my-4 sm:my-8 md:my-12 border-zinc-200 dark:border-zinc-800" />
   <section
-    aria-labelledby="my-stack-title"
+    aria-labelledby="what-i-know-title"
     class="py-14 sm:py-20 md:py-28 lg:py-32"
   >
     <Container>
       <h2
-        id="my-stack-title"
+        id="what-i-know-title"
         class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl"
       >
-        My Stack.
+        What I Know.
       </h2>
       <p class="mt-4 text-zinc-500 dark:text-zinc-400 max-w-2xl md:text-lg">
-        Technologies that I understand and use.
+        The things I know and feel most comfortable with.
       </p>
       <div
-        class="grid gap-6 md:gap-8 mt-10 sm:mt-12 md:mt-16 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
+        class="grid gap-6 md:gap-8 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2 xl:grid-cols-3"
       >
         <TechnologyCard
           v-for="(technology, index) in technologies.data.value"
@@ -184,6 +162,7 @@ const jobs = useAsyncData("jobs", () => $fetch("/api/jobs"));
 const technologies = useAsyncData("technologies", () =>
   $fetch("/api/technologies")
 );
+
 const age = calcYears(new Date("November 6, 2001, 00:00:00"), new Date());
 /* -------------------------------------------------------------------------- */
 </script>
