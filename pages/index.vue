@@ -2,7 +2,7 @@
   <header>
     <Container class="py-20 sm:py-28 md:py-36 lg:py-48">
       <h1
-        class="text-white text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center font-bold"
+        class="dark:text-white text-zinc-900 text-4xl sm:text-5xl lg:text-6xl tracking-tight font-extrabold md:text-center"
       >
         Hey, I'm
         <span
@@ -18,24 +18,52 @@
         Developer.
       </h1>
       <p
-        class="max-w-xl mx-auto mt-6 text-lg text-zinc-400 md:max-w-2xl md:text-xl lg:text-2xl sm:mt-10 text-center"
+        class="max-w-xl mt-6 text-lg text-zinc-500 dark:text-zinc-400 md:max-w-2xl md:text-xl lg:text-2xl sm:mt-10 md:mx-auto md:text-center"
       >
         I'm currently based in the Netherlands, creating modern and functional
         web applications.
       </p>
     </Container>
   </header>
-  <hr class="my-4 sm:my-8 md:my-12 border-zinc-100/5" />
-  <section class="py-14 sm:py-20 md:py-28 lg:py-32">
+  <hr class="my-4 sm:my-8 md:my-12 border-zinc-200 dark:border-zinc-800" />
+  <section
+    aria-labelledby="my-projects-title"
+    class="py-14 sm:py-20 md:py-28 lg:py-32"
+  >
     <Container>
-      <h2 class="text-4xl font-bold tracking-tight text-zinc-50 md:text-5xl">
+      <h2
+        id="my-projects-title"
+        class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl"
+      >
+        My Projects.
+      </h2>
+      <p class="mt-4 text-zinc-500 dark:text-zinc-400 max-w-2xl md:text-lg">
+        A few things I've made.
+      </p>
+      <div
+        class="mt-10 sm:mt-12 md:mt-16 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 space-y-6 md:space-y-8 max-w-4xl"
+      >
+        <p class="leading-relaxed">Coming soon...</p>
+      </div>
+    </Container>
+  </section>
+  <hr class="my-4 sm:my-8 md:my-12 border-zinc-200 dark:border-zinc-800" />
+  <section
+    aria-labelledby="about-me-title"
+    class="py-14 sm:py-20 md:py-28 lg:py-32"
+  >
+    <Container>
+      <h2
+        id="about-me-title"
+        class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl"
+      >
         About Me.
       </h2>
-      <p class="mt-4 text-zinc-400 max-w-2xl md:text-lg">
+      <p class="mt-4 text-zinc-500 dark:text-zinc-400 max-w-2xl md:text-lg">
         Let me introduce myself.
       </p>
       <div
-        class="mt-10 sm:mt-12 md:mt-16 text-lg md:text-xl text-zinc-300 space-y-6 max-w-4xl"
+        class="mt-10 sm:mt-12 md:mt-16 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 space-y-6 md:space-y-8 max-w-4xl"
       >
         <p class="leading-relaxed">
           Hey, I'm Ronnie. A <ClientOnly>{{ age }}</ClientOnly
@@ -47,27 +75,37 @@
           After learning the basics, I started to look into front-end
           frameworks. First I tried out React.js, I didn't like the way it
           worked so I took a look at Vue.js. Eventually, after using Vue.js for
-          a couple of days I fell in love with it. It was also at this point
-          that I got my first look at Tailwind CSS and Nuxt.js.
+          a while I chose to stick with it. But, I noticed that since Vue.js is
+          a client-sided front-end framework, it wasn't the best for SEO, so I
+          found out about Nuxt.js. Now I wanted to look into a better CSS
+          framework/library instead of Bootstrap, this is how I found out about
+          Tailwind CSS.
         </p>
         <p class="leading-relaxed">
-          I wanted to learn more about the backside of web applications so I
-          decided to give back-end development a try. The first library I used
-          for back-end development was Express.js. I also picked up some
-          TypeScript along the way. After building many APIs with Express.js I
-          took some time to look into Laravel.
+          After learning a lot about front-end I wanted to learn more about the
+          backside of web applications so I decided to give back-end development
+          a try. The first library I used for back-end development was
+          Express.js. I also picked up some TypeScript along the way. After
+          building many APIs with Express.js I wanted to try the PHP framework,
+          Laravel.
         </p>
-        <p>This is where I am now.</p>
+        <p class="leading-relaxed">This is where I am now.</p>
       </div>
     </Container>
   </section>
-  <hr class="my-4 sm:my-8 md:my-12 border-zinc-100/5" />
-  <section class="py-14 sm:py-20 md:py-28 lg:py-32">
+  <hr class="my-4 sm:my-8 md:my-12 border-zinc-200 dark:border-zinc-800" />
+  <section
+    aria-labelledby="my-education-title"
+    class="py-14 sm:py-20 md:py-28 lg:py-32"
+  >
     <Container>
-      <h2 class="text-4xl font-bold tracking-tight text-zinc-50 md:text-5xl">
+      <h2
+        id="my-education-title"
+        class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl"
+      >
         My Education.
       </h2>
-      <p class="mt-4 text-zinc-400 max-w-2xl md:text-lg">
+      <p class="mt-4 text-zinc-500 dark:text-zinc-400 max-w-2xl md:text-lg">
         All the educations I've done.
       </p>
       <div
@@ -81,13 +119,19 @@
       </div>
     </Container>
   </section>
-  <hr class="my-4 sm:my-8 md:my-12 border-zinc-100/5" />
-  <section class="py-14 sm:py-20 md:py-28 lg:py-32">
+  <hr class="my-4 sm:my-8 md:my-12 border-zinc-200 dark:border-zinc-800" />
+  <section
+    aria-labelledby="my-working-experience-title"
+    class="py-14 sm:py-20 md:py-28 lg:py-32"
+  >
     <Container>
-      <h2 class="text-4xl font-bold tracking-tight text-zinc-50 md:text-5xl">
+      <h2
+        id="my-working-experience-title"
+        class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl"
+      >
         My Working Experience.
       </h2>
-      <p class="mt-4 text-zinc-400 max-w-2xl md:text-lg">
+      <p class="mt-4 text-zinc-500 dark:text-zinc-400 max-w-2xl md:text-lg">
         All the places I've worked at.
       </p>
       <div
@@ -101,15 +145,19 @@
       </div>
     </Container>
   </section>
-  <hr class="my-4 sm:my-8 md:my-12 border-zinc-100/5" />
-  <section class="py-14 sm:py-20 md:py-28 lg:py-32">
+  <hr class="my-4 sm:my-8 md:my-12 border-zinc-200 dark:border-zinc-800" />
+  <section
+    aria-labelledby="my-stack-title"
+    class="py-14 sm:py-20 md:py-28 lg:py-32"
+  >
     <Container>
       <h2
-        class="text-4xl font-bold tracking-tight text-zinc-50 md:text-5xl text-center"
+        id="my-stack-title"
+        class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl"
       >
         My Stack.
       </h2>
-      <p class="mt-4 text-zinc-400 max-w-2xl md:text-lg mx-auto text-center">
+      <p class="mt-4 text-zinc-500 dark:text-zinc-400 max-w-2xl md:text-lg">
         Technologies that I understand and use.
       </p>
       <div
@@ -123,11 +171,6 @@
       </div>
     </Container>
   </section>
-  <footer class="py-8 border-t border-zinc-100/5">
-    <Container>
-      <p class="text-center sm:text-left text-sm">&copy; 2022 &mdash; NukeJS</p>
-    </Container>
-  </footer>
 </template>
 
 <script setup lang="ts">

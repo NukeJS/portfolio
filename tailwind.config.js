@@ -7,11 +7,12 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.ts",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
         "dm-sans": ["DM Sans", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
     },
   },

@@ -3,20 +3,14 @@ export default defineEventHandler((event) => {
     {
       type: "internship",
       title: "Front-end Developer",
-      company: {
-        name: "Prophyta",
-        url: null,
-      },
+      company: "Prophyta",
       place: "Scheemda, The Netherlands",
       timespan: "Sep. 2020 - Feb. 2021",
     },
     {
       type: "internship",
       title: "Full-stack Developer",
-      company: {
-        name: "Script",
-        url: "https://www.linkedin.com/company/script-ict/",
-      },
+      company: "Script",
       place: "Groningen, The Netherlands",
       timespan: "Feb. 2022 - Jul. 2022",
     },

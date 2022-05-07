@@ -9,10 +9,7 @@ export interface Education {
 export interface Job {
   type: string;
   title: string;
-  company: {
-    name: string;
-    url: string | null;
-  };
+  company: string;
   place: string;
   timespan: string;
 }

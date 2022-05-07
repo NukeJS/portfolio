@@ -1,7 +1,9 @@
-import { defineNuxtConfig } from "nuxt3";
+import { defineNuxtConfig } from "nuxt";
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
+  ssr: true,
+
   typescript: {
     shim: false,
   },
@@ -57,13 +59,19 @@ export default defineNuxtConfig({
         },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap",
         },
       ],
     },
   },
 
   css: ["~/assets/css/tailwind.css"],
+
+  modules: ["@nuxtjs/color-mode"],
+
+  colorMode: {
+    classSuffix: "",
+  },
 
   build: {
     postcss: {

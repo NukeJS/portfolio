@@ -1,15 +1,11 @@
 <template>
-  <div class="antialiased text-zinc-400 bg-zinc-900 min-h-screen">
-    <div
-      class="fixed top-0 h-16 bg-zinc-900/80 backdrop-blur-md w-full border-b border-zinc-100/5"
-    >
-      <Container class="flex items-center h-full">
-        <Logo class="h-10" />
-      </Container>
-    </div>
+  <div class="antialiased bg-white dark:bg-zinc-900 min-h-screen">
+    <Navbar />
 
     <main class="pt-16">
       <slot />
     </main>
+
+    <Footer />
   </div>
 </template>

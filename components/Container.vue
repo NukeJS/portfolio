@@ -1,7 +1,7 @@
 <template>
   <div
     :class="[
-      'w-full mx-auto px-4',
+      'w-full mx-auto px-8',
       {
         'max-w-screen-lg xl:max-w-screen-xl': !fluid,
       },
