@@ -67,6 +67,13 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/tailwind.css"],
 
+  components: [
+    "~/components",
+    "~/components/common",
+    "~/components/layout",
+    "~/components/modals",
+  ],
+
   modules: ["@nuxtjs/color-mode"],
 
   colorMode: {

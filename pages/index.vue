@@ -41,7 +41,7 @@
         Let me introduce myself.
       </p>
       <div
-        class="mt-10 sm:mt-12 md:mt-16 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 space-y-6 md:space-y-8 max-w-4xl"
+        class="mt-10 sm:mt-12 md:mt-16 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 space-y-6 md:space-y-8 max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-3xl"
       >
         <p class="leading-relaxed">
           Hey, I'm Ronnie. A <ClientOnly>{{ age }}</ClientOnly
@@ -153,16 +153,22 @@
 
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
-import { calcYears } from "~~/utils/helpers";
+import { differenceInYears } from "date-fns";
+import type { Education, Job, Technology } from "~/types";
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------------- Globals -------------------------------- */
-const educations = useAsyncData("educations", () => $fetch("/api/educations"));
-const jobs = useAsyncData("jobs", () => $fetch("/api/jobs"));
-const technologies = useAsyncData("technologies", () =>
+const educations = useAsyncData<Education[]>("educations", () =>
+  $fetch("/api/educations")
+);
+const jobs = useAsyncData<Job[]>("jobs", () => $fetch("/api/jobs"));
+const technologies = useAsyncData<Technology[]>("technologies", () =>
   $fetch("/api/technologies")
 );
 
-const age = calcYears(new Date("November 6, 2001, 00:00:00"), new Date());
+const age = differenceInYears(
+  new Date(),
+  new Date("November 6, 2001, 00:00:00")
+);
 /* -------------------------------------------------------------------------- */
 </script>

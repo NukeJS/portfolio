@@ -21,11 +21,6 @@
 
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
-import {
-  OfficeBuildingIcon,
-  LocationMarkerIcon,
-  CalendarIcon,
-} from "@heroicons/vue/solid";
 import type { Technology } from "~/types";
 /* -------------------------------------------------------------------------- */
 

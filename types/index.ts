@@ -16,8 +16,11 @@ export interface Job {
 
 export interface Technology {
   title: string;
-  items: {
-    name: string;
-    image: string;
-  }[];
+  items: TechnologyItem[];
+}
+
+export interface TechnologyItem {
+  name: string;
+  image: string;
+  description: string;
 }
