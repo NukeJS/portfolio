@@ -41,7 +41,7 @@
         Let me introduce myself.
       </p>
       <div
-        class="mt-10 sm:mt-12 md:mt-16 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 space-y-6 md:space-y-8 max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-3xl"
+        class="mt-10 sm:mt-12 md:mt-16 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 space-y-6 md:space-y-8 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl"
       >
         <p class="leading-relaxed">
           Hey, I'm Ronnie. A <ClientOnly>{{ age }}</ClientOnly
@@ -168,7 +168,7 @@ const technologies = useAsyncData<Technology[]>("technologies", () =>
 
 const age = differenceInYears(
   new Date(),
-  new Date("November 6, 2001, 00:00:00")
+  new Date("November 6, 2001, GMT+0100")
 );
 /* -------------------------------------------------------------------------- */
 </script>
