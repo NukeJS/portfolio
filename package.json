@@ -7,11 +7,11 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "@nuxtjs/color-mode": "^3.0.2",
+    "@nuxtjs/color-mode": "^3.0.3",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "autoprefixer": "^10.4.4",
     "nuxt": "npm:nuxt3@latest",
-    "postcss": "^8.4.12",
+    "postcss": "^8.4.13",
     "tailwindcss": "^3.0.24"
   },
   "dependencies": {
