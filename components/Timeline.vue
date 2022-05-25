@@ -10,7 +10,7 @@
       </p>
     </div>
     <ul
-      class="relative before:content-[''] before:left-4 before:absolute before:bg-neutral-600 before:w-0.5 before:h-[calc(100%-8px)] before:bottom-0 before:top-2 space-y-2"
+      class="relative before:content-[''] before:left-2 before:absolute before:bg-neutral-300 dark:before:bg-neutral-600 before:w-0.5 before:h-[calc(100%-8px)] before:bottom-0 before:top-2 space-y-2"
     >
       <li
         v-for="(item, index) in timeline.items"
@@ -20,7 +20,7 @@
         <div class="py-2">
           <div
             :class="[
-              'rounded-full h-3 w-3 ml-[0.6875rem]',
+              'rounded-full h-3 w-3 ml-[0.2rem]',
               index % 2 ? 'bg-pink-500' : 'bg-indigo-500',
             ]"
           ></div>
@@ -31,7 +31,7 @@
           <div>
             <div
               v-if="item.label"
-              class="text-xs font-bold tracking-widest text-pink-600 dark:text-pink-500 uppercase mt-1"
+              class="text-xs font-bold tracking-widest text-pink-600 dark:text-pink-500 uppercase mt-1.5"
             >
               {{ item.label }}
             </div>
