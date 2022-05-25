@@ -1,9 +1,9 @@
 <template>
   <div
     :class="[
-      'w-full mx-auto px-8',
+      'w-full mx-auto px-6',
       {
-        'max-w-screen-lg xl:max-w-screen-xl': !fluid,
+        'max-w-screen-lg': !fluid,
       },
     ]"
   >

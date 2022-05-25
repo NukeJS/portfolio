@@ -1,9 +1,9 @@
 <template>
   <div
-    class="fixed top-0 h-16 bg-white/75 dark:bg-zinc-900/75 backdrop-blur-md w-full border-b border-zinc-200 dark:border-zinc-800"
+    class="fixed top-0 h-16 z-[9999] bg-white/75 dark:bg-neutral-900/75 backdrop-blur-md w-full border-b border-neutral-200 dark:border-neutral-800"
   >
     <Container class="flex items-center h-full">
-      <NuxtLink to="/">
+      <NuxtLink to="/" aria-label="Home">
         <Logo class="h-10" />
       </NuxtLink>
 
@@ -11,6 +11,7 @@
         <ClientOnly>
           <button
             @click="toggleTheme"
+            aria-label="Toggle Dark Theme"
             class="w-6 h-6 text-gray-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-300 transition-colors focus:outline-none"
           >
             <MoonIcon v-if="$colorMode.value === 'dark'" />

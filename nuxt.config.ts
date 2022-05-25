@@ -13,6 +13,11 @@ export default defineNuxtConfig({
       title: "NukeJS",
       meta: [
         {
+          name: "description",
+          content:
+            "A full-stack developer based in the Netherlands, that builds modern and functional web applications.",
+        },
+        {
           name: "msapplication-TileColor",
           content: "#ffffff",
         },
@@ -62,6 +67,9 @@ export default defineNuxtConfig({
           href: "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap",
         },
       ],
+      htmlAttrs: {
+        lang: "en",
+      },
     },
   },
 
@@ -74,7 +82,7 @@ export default defineNuxtConfig({
     "~/components/modals",
   ],
 
-  modules: ["@nuxtjs/color-mode"],
+  modules: ["@nuxtjs/color-mode", "@nuxt/content"],
 
   colorMode: {
     classSuffix: "",

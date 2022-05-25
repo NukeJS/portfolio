@@ -2,12 +2,12 @@
   <header>
     <Container class="py-20 sm:py-28 md:py-36 lg:py-48">
       <h1
-        class="dark:text-white text-zinc-900 text-4xl sm:text-5xl lg:text-6xl tracking-tight font-extrabold md:text-center"
+        class="dark:text-white text-neutral-900 text-4xl sm:text-5xl lg:text-6xl tracking-tight font-extrabold md:text-center"
       >
         Hey, I'm
         <span
           class="bg-clip-text bg-gradient-to-tr text-transparent from-pink-500 to-indigo-500"
-          >Nuke</span
+          >Ronnie</span
         >.
         <br />
         A
@@ -18,14 +18,16 @@
         Developer.
       </h1>
       <p
-        class="max-w-xl mt-6 text-lg text-zinc-500 dark:text-zinc-400 md:max-w-2xl md:text-xl lg:text-2xl sm:mt-10 md:mx-auto md:text-center"
+        class="max-w-xl mt-6 text-lg text-neutral-500 dark:text-neutral-400 md:max-w-2xl md:text-xl lg:text-2xl sm:mt-10 md:mx-auto md:text-center"
       >
         I'm currently based in the Netherlands, creating modern and functional
         web applications.
       </p>
     </Container>
   </header>
-  <hr class="my-4 sm:my-8 md:my-12 border-zinc-200 dark:border-zinc-800" />
+  <hr
+    class="my-4 sm:my-8 md:my-12 border-neutral-200 dark:border-neutral-800"
+  />
   <section
     aria-labelledby="about-me-title"
     class="py-14 sm:py-20 md:py-28 lg:py-32"
@@ -37,11 +39,13 @@
       >
         About Me.
       </h2>
-      <p class="mt-4 text-zinc-500 dark:text-zinc-400 max-w-2xl md:text-lg">
+      <p
+        class="mt-4 text-neutral-500 dark:text-neutral-400 max-w-2xl md:text-lg"
+      >
         Let me introduce myself.
       </p>
       <div
-        class="mt-10 sm:mt-12 md:mt-16 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 space-y-6 md:space-y-8 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl"
+        class="mt-10 sm:mt-12 md:mt-16 text-lg md:text-xl text-neutral-500 dark:text-neutral-400 space-y-6 md:space-y-8 max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl"
       >
         <p class="leading-relaxed">
           Hey, I'm Ronnie. A <ClientOnly>{{ age }}</ClientOnly
@@ -71,7 +75,9 @@
       </div>
     </Container>
   </section>
-  <hr class="my-4 sm:my-8 md:my-12 border-zinc-200 dark:border-zinc-800" />
+  <hr
+    class="my-4 sm:my-8 md:my-12 border-neutral-200 dark:border-neutral-800"
+  />
   <section
     aria-labelledby="my-education-title"
     class="py-14 sm:py-20 md:py-28 lg:py-32"
@@ -83,21 +89,25 @@
       >
         My Education.
       </h2>
-      <p class="mt-4 text-zinc-500 dark:text-zinc-400 max-w-2xl md:text-lg">
+      <p
+        class="mt-4 text-neutral-500 dark:text-neutral-400 max-w-2xl md:text-lg"
+      >
         All the educations I've done.
       </p>
-      <div
-        class="grid gap-6 md:gap-8 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2 lg:grid-cols-3"
-      >
-        <EducationCard
+      <div class="grid gap-6 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2">
+        <div
           v-for="(education, index) in educations.data.value"
           :key="index"
-          v-bind="{ education }"
-        />
+          class="px-6 py-6 shadow-md bg-white dark:bg-neutral-800 rounded-xl space-y-2"
+        >
+          <Timeline :timeline="education" />
+        </div>
       </div>
     </Container>
   </section>
-  <hr class="my-4 sm:my-8 md:my-12 border-zinc-200 dark:border-zinc-800" />
+  <hr
+    class="my-4 sm:my-8 md:my-12 border-neutral-200 dark:border-neutral-800"
+  />
   <section
     aria-labelledby="my-working-experience-title"
     class="py-14 sm:py-20 md:py-28 lg:py-32"
@@ -109,21 +119,25 @@
       >
         My Working Experience.
       </h2>
-      <p class="mt-4 text-zinc-500 dark:text-zinc-400 max-w-2xl md:text-lg">
+      <p
+        class="mt-4 text-neutral-500 dark:text-neutral-400 max-w-2xl md:text-lg"
+      >
         All the places I've worked at.
       </p>
-      <div
-        class="grid gap-6 md:gap-8 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2 xl:grid-cols-3"
-      >
-        <JobCard
+      <div class="grid gap-6 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2">
+        <div
           v-for="(job, index) in jobs.data.value"
           :key="index"
-          v-bind="{ job }"
-        />
+          class="px-6 py-6 shadow-md bg-white dark:bg-neutral-800 rounded-xl space-y-2"
+        >
+          <Timeline :timeline="job" />
+        </div>
       </div>
     </Container>
   </section>
-  <hr class="my-4 sm:my-8 md:my-12 border-zinc-200 dark:border-zinc-800" />
+  <hr
+    class="my-4 sm:my-8 md:my-12 border-neutral-200 dark:border-neutral-800"
+  />
   <section
     aria-labelledby="what-i-know-title"
     class="py-14 sm:py-20 md:py-28 lg:py-32"
@@ -135,12 +149,12 @@
       >
         What I Know.
       </h2>
-      <p class="mt-4 text-zinc-500 dark:text-zinc-400 max-w-2xl md:text-lg">
+      <p
+        class="mt-4 text-neutral-500 dark:text-neutral-400 max-w-2xl md:text-lg"
+      >
         The things I know and feel most comfortable with.
       </p>
-      <div
-        class="grid gap-6 md:gap-8 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2 xl:grid-cols-3"
-      >
+      <div class="grid gap-6 md:gap-8 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2">
         <TechnologyCard
           v-for="(technology, index) in technologies.data.value"
           :key="index"
@@ -154,14 +168,12 @@
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
 import { differenceInYears } from "date-fns";
-import type { Education, Job, Technology } from "~/types";
+import type { Job, Technology } from "~/types";
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------------- Globals -------------------------------- */
-const educations = useAsyncData<Education[]>("educations", () =>
-  $fetch("/api/educations")
-);
-const jobs = useAsyncData<Job[]>("jobs", () => $fetch("/api/jobs"));
+const educations = useAsyncData("educations", () => $fetch("/api/educations"));
+const jobs = useAsyncData("jobs", () => $fetch("/api/jobs"));
 const technologies = useAsyncData<Technology[]>("technologies", () =>
   $fetch("/api/technologies")
 );

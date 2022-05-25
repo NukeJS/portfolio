@@ -1,18 +1,29 @@
 export default defineEventHandler((event) => {
   return [
     {
-      name: "Collaborator IT Management",
-      info: "MBO, Level 3",
-      institution: "Alfa-college",
-      place: "Groningen, The Netherlands",
-      timespan: "2018 - 2019",
+      title: "Hanze University",
+      items: [
+        {
+          title: "Software Engineering",
+          timespan: "Aug. 2022 - present",
+          description: "HBO, Bachelor",
+        },
+      ],
     },
     {
-      name: "Application & Media Developer",
-      info: "MBO, Level 4",
-      institution: "Alfa-college",
-      place: "Groningen, The Netherlands",
-      timespan: "2019 - present",
+      title: "Alfa-college",
+      items: [
+        {
+          title: "Application & Media Developer",
+          timespan: "Aug. 2019 - Jul. 2022",
+          description: "MBO, Level 4",
+        },
+        {
+          title: "Collaborator IT Management",
+          timespan: "Aug. 2018 - Aug. 2019",
+          description: "MBO, Level 3",
+        },
+      ],
     },
   ];
 });

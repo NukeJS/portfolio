@@ -13,7 +13,7 @@
             leave-to="opacity-0"
           >
             <DialogOverlay
-              class="fixed inset-0 bg-black/40 dark:bg-zinc-700/40"
+              class="fixed inset-0 bg-black/40 dark:bg-neutral-700/40"
             />
           </TransitionChild>
 
@@ -32,7 +32,7 @@
           >
             <div
               :class="[
-                'my-8 inline-block w-full transform overflow-hidden rounded-2xl bg-white dark:bg-zinc-900 p-6 text-left align-middle shadow-xl transition-all',
+                'my-8 inline-block w-full transform overflow-hidden rounded-2xl bg-white dark:bg-neutral-900 p-6 text-left align-middle shadow-xl transition-all',
                 {
                   'max-w-xs': size === 'xs',
                   'max-w-sm': size === 'sm',
@@ -51,7 +51,7 @@
               <DialogTitle
                 v-if="title"
                 as="h3"
-                class="text-xl font-semibold leading-6 text-zinc-900 dark:text-white mb-3"
+                class="text-xl font-semibold leading-6 text-neutral-900 dark:text-white mb-3"
               >
                 {{ title }}
               </DialogTitle>

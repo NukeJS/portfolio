@@ -1,18 +1,13 @@
 export default defineEventHandler((event) => {
   return [
     {
-      title: "The Basics",
+      title: "Front-end",
       items: [
         { name: "HTML", image: "html" },
         { name: "CSS", image: "css" },
         { name: "SASS/SCSS", image: "sass" },
         { name: "TypeScript", image: "typescript" },
         { name: "JavaScript", image: "javascript" },
-      ],
-    },
-    {
-      title: "Front-end",
-      items: [
         { name: "Node.js", image: "node" },
         { name: "Tailwind CSS", image: "tailwindcss" },
         { name: "Vue.js", image: "vue" },
