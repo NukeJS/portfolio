@@ -79,36 +79,6 @@
     class="my-4 sm:my-8 md:my-12 border-neutral-200 dark:border-neutral-800"
   />
   <section
-    aria-labelledby="my-education-title"
-    class="py-14 sm:py-20 md:py-28 lg:py-32"
-  >
-    <Container>
-      <h2
-        id="my-education-title"
-        class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl"
-      >
-        My Education.
-      </h2>
-      <p
-        class="mt-4 text-neutral-500 dark:text-neutral-400 max-w-2xl md:text-lg"
-      >
-        All the educations I've done.
-      </p>
-      <div class="grid gap-6 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2">
-        <div
-          v-for="(education, index) in educations.data.value"
-          :key="index"
-          class="px-6 py-6 shadow-md bg-white dark:bg-neutral-800 rounded-xl space-y-2"
-        >
-          <Timeline :timeline="education" />
-        </div>
-      </div>
-    </Container>
-  </section>
-  <hr
-    class="my-4 sm:my-8 md:my-12 border-neutral-200 dark:border-neutral-800"
-  />
-  <section
     aria-labelledby="my-working-experience-title"
     class="py-14 sm:py-20 md:py-28 lg:py-32"
   >
@@ -124,14 +94,40 @@
       >
         All the places I've worked at.
       </p>
-      <div class="grid gap-6 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2">
-        <div
+      <div class="mt-10 sm:mt-12 md:mt-16 space-y-10">
+        <Timeline
           v-for="(job, index) in jobs.data.value"
           :key="index"
-          class="px-6 py-6 shadow-md bg-white dark:bg-neutral-800 rounded-xl space-y-2"
-        >
-          <Timeline :timeline="job" />
-        </div>
+          :timeline="job"
+        />
+      </div>
+    </Container>
+  </section>
+  <hr
+    class="my-4 sm:my-8 md:my-12 border-neutral-200 dark:border-neutral-800"
+  />
+  <section
+    aria-labelledby="my-education-title"
+    class="py-14 sm:py-20 md:py-28 lg:py-32"
+  >
+    <Container>
+      <h2
+        id="my-education-title"
+        class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl"
+      >
+        My Education.
+      </h2>
+      <p
+        class="mt-4 text-neutral-500 dark:text-neutral-400 max-w-2xl md:text-lg"
+      >
+        All the educations I've done.
+      </p>
+      <div class="mt-10 sm:mt-12 md:mt-16 space-y-10">
+        <Timeline
+          v-for="(education, index) in educations.data.value"
+          :key="index"
+          :timeline="education"
+        />
       </div>
     </Container>
   </section>
@@ -154,12 +150,20 @@
       >
         The things I know and feel most comfortable with.
       </p>
-      <div class="grid gap-6 md:gap-8 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2">
-        <TechnologyCard
-          v-for="(technology, index) in technologies.data.value"
+      <div
+        class="grid gap-6 md:gap-8 mt-10 sm:mt-12 md:mt-16 grid-cols-6 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-12"
+      >
+        <div
+          v-for="(item, index) in technologies.data.value"
           :key="index"
-          v-bind="{ technology }"
-        />
+          class="aspect-w-1 aspect-h-1"
+        >
+          <img
+            :src="`/images/technologies/${item.image}.svg`"
+            :alt="`${item.name} logo`"
+            :title="item.name"
+          />
+        </div>
       </div>
     </Container>
   </section>
@@ -168,13 +172,12 @@
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
 import { differenceInYears } from "date-fns";
-import type { Job, Technology } from "~/types";
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------------- Globals -------------------------------- */
 const educations = useAsyncData("educations", () => $fetch("/api/educations"));
 const jobs = useAsyncData("jobs", () => $fetch("/api/jobs"));
-const technologies = useAsyncData<Technology[]>("technologies", () =>
+const technologies = useAsyncData("technologies", () =>
   $fetch("/api/technologies")
 );
 

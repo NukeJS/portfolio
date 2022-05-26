@@ -25,7 +25,7 @@
 
 <script lang="ts" setup>
 /* --------------------------------- Imports -------------------------------- */
-import { MoonIcon, SunIcon, RefreshIcon } from "@heroicons/vue/outline";
+import { MoonIcon, SunIcon } from "@heroicons/vue/outline";
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------------- Theme --------------------------------- */

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="antialiased bg-neutral-50 dark:bg-neutral-900 min-h-screen flex flex-col"
+    class="antialiased bg-white dark:bg-neutral-900 min-h-screen flex flex-col"
   >
     <Navbar />
 
