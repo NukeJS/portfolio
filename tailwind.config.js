@@ -24,20 +24,20 @@ module.exports = {
               color: theme('colors.zinc.400')
             },
             a: {
-              color: theme('colors.indigo.400'),
+              color: theme('colors.pink.400'),
               '&:hover': {
-                color: theme('colors.indigo.300')
+                color: theme('colors.pink.300')
               },
-              code: { color: theme('colors.indigo.400') },
+              code: { color: theme('colors.pink.400') },
               '*': {
-                color: theme('colors.indigo.400'),
+                color: theme('colors.pink.400'),
                 '&:hover': {
-                  color: theme('colors.indigo.300')
+                  color: theme('colors.pink.300')
                 }
               }
             },
             'strong > a, a > strong': {
-              color: theme('colors.indigo.400')
+              color: theme('colors.pink.400')
             },
             blockquote: {
               borderLeftColor: theme('colors.zinc.700'),
