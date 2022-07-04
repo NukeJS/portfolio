@@ -1,100 +1,93 @@
-const colors = require('tailwindcss/colors')
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: 'jit',
-  purge: {
-    content: [
-      './components/**/*.{vue,js}',
-      './layouts/**/*.vue',
-      './pages/**/*.vue',
-      './plugins/**/*.{js,ts}',
-      './locales/**/*.{js,ts}',
-      './nuxt.config.{js,ts}',
-      './rc-ui/**/*.vue',
-    ],
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    'components/**/*.{js,ts,vue}',
+    'layouts/**/*.vue',
+    'pages/**/*.vue',
+    'composables/**/*.{js,ts}',
+    'plugins/**/*.{js,ts}',
+    'App.{js,ts,vue}',
+    'app.{js,ts,vue}'
+  ],
   theme: {
     extend: {
       fontFamily: {
-        'dm-sans': ['DM Sans', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        manrope: ['Manrope', 'sans-serif']
       },
 
-      colors: {
-        gray: colors.blueGray,
-        orange: colors.orange,
-      },
-
-      typography: (theme) => ({
-        DEFAULT: {
+      typography: ({ theme }) => ({
+        dark: {
           css: {
-            color: theme('colors.gray.600'),
+            color: theme('colors.zinc.400'),
             figcaption: {
-              color: theme('colors.gray.600'),
+              color: theme('colors.zinc.400')
             },
             a: {
-              color: theme('colors.indigo.600'),
+              color: theme('colors.indigo.400'),
               '&:hover': {
-                color: theme('colors.indigo.400'),
+                color: theme('colors.indigo.300')
               },
               code: { color: theme('colors.indigo.400') },
               '*': {
                 color: theme('colors.indigo.400'),
                 '&:hover': {
-                  color: theme('colors.indigo.300'),
-                },
-              },
+                  color: theme('colors.indigo.300')
+                }
+              }
             },
             'strong > a, a > strong': {
-              color: theme('colors.indigo.400'),
+              color: theme('colors.indigo.400')
             },
             blockquote: {
-              borderLeftColor: theme('colors.gray.700'),
-              color: theme('colors.gray.400'),
+              borderLeftColor: theme('colors.zinc.700'),
+              color: theme('colors.zinc.300')
             },
-            'h1,h2,h3,h4': {
-              color: theme('colors.gray.800'),
+            'h1,h2,h3,h4,h5,h6': {
+              color: theme('colors.white')
+            },
+            'h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a': {
+              color: theme('colors.white'),
+              textDecoration: 'none',
+              '&:hover': {
+                textDecoration: 'underline',
+                color: theme('colors.white')
+              }
             },
             code: {
-              padding: '3px 7px',
+              padding: '3px 5px',
               borderRadius: 5,
-              color: theme('colors.gray.200'),
-              background: theme('colors.gray.800'),
-              '&::before,&::after': {
-                display: 'none',
-              },
+              color: theme('colors.white'),
+              background: theme('colors.zinc.800')
+            },
+            pre: {
+              background: '#273338'
             },
             'pre > code': {
               background: 'none',
               padding: 0,
+              fontSize: '20px !important'
             },
-            hr: { borderColor: theme('colors.gray.200') },
-            strong: { color: theme('colors.gray.800') },
+            hr: { borderColor: theme('colors.zinc.700') },
+            strong: { color: theme('colors.white') },
             thead: {
-              color: theme('colors.gray.700'),
+              color: theme('colors.zinc.100')
             },
             tbody: {
               tr: {
-                borderBottomColor: theme('colors.gray.200'),
-              },
+                borderBottomColor: theme('colors.zinc.700')
+              }
             },
             mark: {
-              background: theme('colors.yellow.100'),
-            },
-          },
-        },
-      }),
-    },
-  },
-  variants: {
-    extend: {
-      typography: ['dark'],
-    },
+              background: theme('colors.yellow.100')
+            }
+          }
+        }
+      })
+    }
   },
   plugins: [
-    require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/forms'),
-  ],
+    require('@tailwindcss/typography')
+  ]
 }

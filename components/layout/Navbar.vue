@@ -1,0 +1,138 @@
+<template>
+  <div
+    class="pointer-events-none fixed z-[100] flex h-full max-h-screen w-full flex-col overflow-y-hidden"
+  >
+    <Disclosure
+      as="nav"
+      class="pointer-events-auto overflow-y-auto bg-zinc-900/80 backdrop-blur-md"
+    >
+      <Container class="border-b border-zinc-700 sm:border-b-0">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <DisclosureButton
+              class="inline-flex items-center justify-center rounded-full bg-zinc-900 p-2"
+              @click="toggleDisclosurePanel()"
+            >
+              <MenuIcon v-if="!isOpen" class="block h-6 w-6" />
+              <XIcon v-else class="block h-6 w-6" />
+            </DisclosureButton>
+          </div>
+          <div
+            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+          >
+            <div class="flex flex-shrink-0 items-center">
+              <NuxtLink to="/">
+                <Logo class="w-9" />
+              </NuxtLink>
+            </div>
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex font-medium sm:space-x-4 md:space-x-6">
+              <NuxtLink
+                v-for="(item, index) in navigation"
+                :key="index"
+                :to="item.to"
+                class="hover:underline"
+                v-bind="{
+                  [item.exact ? 'exact-active-class' : 'active-class']:
+                    'text-pink-500 hover:no-underline'
+                }"
+              >
+                {{ item.name }}
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </Container>
+
+      <DisclosurePanel
+        v-show="isOpen"
+        static
+        class="border-b border-zinc-700 sm:hidden"
+      >
+        <Container>
+          <div class="flex flex-col space-y-4 pt-4 pb-6 font-medium">
+            <DisclosureButton
+              v-for="(item, index) in navigation"
+              :key="index"
+              :as="NuxtLink"
+              :to="item.to"
+              class="hover:underline"
+              v-bind="{
+                [item.exact ? 'exact-active-class' : 'active-class']:
+                  'text-pink-500 hover:no-underline'
+              }"
+            >
+              {{ item.name }}
+            </DisclosureButton>
+          </div>
+        </Container>
+      </DisclosurePanel>
+    </Disclosure>
+
+    <div
+      v-if="isOpen"
+      class="pointer-events-auto flex-1 bg-black/90 backdrop-blur-md"
+      @click="toggleDisclosurePanel(false)"
+    />
+  </div>
+</template>
+
+<script setup lang="ts">
+/* --------------------------------- Imports -------------------------------- */
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
+import { MenuIcon, XIcon } from '@heroicons/vue/outline'
+import { NuxtLink } from '#components'
+/* -------------------------------------------------------------------------- */
+
+/* ------------------------------- Navigation ------------------------------- */
+const navigation = [
+  {
+    to: '/',
+    name: 'Home',
+    exact: true
+  },
+  {
+    to: '/about-me',
+    name: 'About Me'
+  },
+  {
+    to: '/blog',
+    name: 'My Blog'
+  }
+]
+/* -------------------------------------------------------------------------- */
+
+/* ------------------------------- Disclosure ------------------------------- */
+const isOpen = ref(false)
+
+const toggleDisclosurePanel = (value?: boolean) => {
+  isOpen.value = value ?? !isOpen.value
+
+  if (isOpen.value) {
+    document.body.style.overflowY = 'hidden'
+  } else {
+    document.body.style.overflowY = ''
+  }
+}
+
+watch(
+  () => useRoute().fullPath,
+  () => toggleDisclosurePanel(false)
+)
+
+const windowResizeListener = () => {
+  const disclosurePanelBreakpoint = 768
+  if (window.innerWidth >= disclosurePanelBreakpoint && isOpen.value) {
+    toggleDisclosurePanel(false)
+  }
+}
+
+onMounted(() => window.addEventListener('resize', windowResizeListener))
+onBeforeUnmount(() =>
+  window.removeEventListener('resize', windowResizeListener)
+)
+/* -------------------------------------------------------------------------- */
+</script>
+
+<style scoped></style>

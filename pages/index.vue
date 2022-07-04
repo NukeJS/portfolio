@@ -1,281 +1,61 @@
 <template>
-  <div class="w-full">
-    <header class="even:bg-indigo-600">
-      <RcContainer class="w-full py-20 text-center sm:py-28 md:py-36 lg:py-48">
+  <div>
+    <header class="py-12 sm:py-16 md:py-20 lg:py-24">
+      <Container>
         <h1
-          class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl md:text-6xl"
+          class="text-center text-4xl font-extrabold leading-tight text-white sm:text-left sm:text-5xl"
         >
-          Hey, I'm <span class="text-indigo-600">Ronnie</span>.
-          <br />
-          A <span class="text-indigo-600">Full-stack</span> Developer.
+          I'm <span class="text-pink-500">Ronnie</span>. A developer, blogger,
+          and software engineering student.
         </h1>
-        <p
-          class="max-w-xl mx-auto mt-6 text-lg text-gray-500 md:max-w-2xl md:text-xl lg:text-2xl sm:mt-10"
+        <div
+          class="mt-8 grid space-y-6 sm:mt-10 sm:block sm:space-y-0 sm:space-x-6"
         >
-          I'm currently based in the Netherlands, creating modern and functional
-          web applications.
-        </p>
-        <div class="flex justify-center mt-8 space-x-6 sm:mt-12">
-          <RcBtn
-            nuxt
-            to="/projects/"
-            color="indigo"
-            ring
-            class="shadow-md hover:shadow-lg translate hover:-translate-y-1"
-          >
-            My Projects
-          </RcBtn>
-          <RcBtn
-            nuxt
-            to="/blog/"
-            color="pink"
-            ring
-            class="shadow-md hover:shadow-lg translate hover:-translate-y-1"
-          >
-            My Blog
-          </RcBtn>
+          <Button to="/blog"> Read my blog </Button>
+          <Button to="/about-me" variant="secondary"> Get to know me </Button>
         </div>
-      </RcContainer>
+      </Container>
     </header>
-    <section aria-labelledby="about-me-title" class="even:bg-indigo-600">
-      <RcContainer class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="text-center">
-          <h2
-            id="about-me-title"
-            class="text-4xl font-semibold tracking-tight text-gray-50 md:text-5xl"
-          >
-            About Me.
-          </h2>
-          <p
-            class="max-w-2xl mx-auto mt-2 text-gray-200 md:text-lg sm:mt-3 md:mt-4"
-          >
-            Let me introduce myself.
-          </p>
-        </div>
-
-        <div
-          class="grid gap-6 mt-10 text-lg text-gray-100 md:text-xl sm:mt-12 md:mt-16 sm:grid-cols-2 md:grid-cols-3"
-        >
-          <div>
-            <p class="leading-relaxed">
-              Hey, I'm Ronnie. A
-              <client-only>{{
-                calcYears(new Date('November 6, 2001, 00:00:00'), new Date())
-              }}</client-only
-              >-year-old full-stack developer that is currently based in the
-              Netherlands. Back in 2017-2018, I started to look into web
-              development. I practiced the art of HTML, CSS & JavaScript.
-            </p>
-          </div>
-          <div>
-            <p class="leading-relaxed">
-              After learning the basics (HTML, CSS & JavaScript), I started to
-              look into front-end frameworks. This is where I found my love for
-              <a
-                href="https://vuejs.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white underline hover:text-gray-200"
-                >Vue.js</a
-              >. It was also at this point in time where I got my first look at
-              <a
-                href="https://tailwindcss.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white underline hover:text-gray-200"
-                >Tailwind CSS</a
-              >
-              &
-              <a
-                href="https://nuxtjs.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white underline hover:text-gray-200"
-                >Nuxt.js</a
-              >.
-            </p>
-          </div>
-          <div>
-            <p class="leading-relaxed">
-              I've also always wanted to do back-end development. And so, I gave
-              <a
-                href="https://tailwindcss.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white underline hover:text-gray-200"
-                >Node.js</a
-              >
-              a try... (I also picked up some
-              <a
-                href="https://typescriptlang.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white underline hover:text-gray-200"
-                >TypeScript</a
-              >
-              along the way...) After building many APIs using
-              <a
-                href="https://expressjs.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white underline hover:text-gray-200"
-                >Express.js</a
-              >
-              I moved onto learning
-              <a
-                href="https://laravel.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white underline hover:text-gray-200"
-                >Laravel</a
-              >.
-            </p>
-          </div>
-        </div>
-      </RcContainer>
-    </section>
-    <section aria-labelledby="my-education-title" class="even:bg-indigo-600">
-      <RcContainer class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="text-center">
-          <h2
-            id="my-education-title"
-            class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
-          >
-            My Education.
-          </h2>
-          <p
-            class="max-w-2xl mx-auto mt-2 text-gray-500 md:text-lg sm:mt-3 md:mt-4"
-          >
-            All the educations I've done.
-          </p>
-        </div>
-        <div
-          class="grid gap-6 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          <EducationCard
-            v-for="(education, idx) in educations"
-            :key="idx"
-            :education="education"
+    <section class="py-8 sm:py-12 md:py-16 lg:py-20">
+      <Container>
+        <h2 class="text-3xl font-bold text-white">
+          Things I share through writing.
+        </h2>
+        <div class="mt-8 grid gap-8 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3">
+          <ArticleCard
+            v-for="article in data"
+            :key="article._id"
+            :article="article"
           />
         </div>
-      </RcContainer>
-    </section>
-    <section
-      aria-labelledby="my-working-experience-title"
-      class="even:bg-indigo-600"
-    >
-      <RcContainer class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="text-center">
-          <h2
-            id="my-working-experience-title"
-            class="text-4xl font-semibold tracking-tight text-gray-50 md:text-5xl"
-          >
-            My Working Experience.
-          </h2>
-          <p
-            class="max-w-2xl mx-auto mt-2 text-gray-200 md:text-lg sm:mt-3 md:mt-4"
-          >
-            All the places I've worked at.
-          </p>
+        <div class="mt-12 sm:mt-16">
+          <Button to="/blog" variant="secondary">Read more articles</Button>
         </div>
-        <div
-          class="grid gap-6 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          <JobCard v-for="(job, idx) in jobs" :key="idx" :job="job" />
-        </div>
-      </RcContainer>
-    </section>
-    <section aria-labelledby="my-stack-title" class="even:bg-indigo-600">
-      <RcContainer class="py-14 sm:py-20 md:py-28 lg:py-32">
-        <div class="text-center">
-          <h2
-            id="my-stack-title"
-            class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
-          >
-            My Stack.
-          </h2>
-          <p
-            class="max-w-2xl mx-auto mt-2 text-gray-500 md:text-lg sm:mt-3 md:mt-4"
-          >
-            Technologies that I understand and use.
-          </p>
-        </div>
-        <div
-          class="grid grid-cols-2 gap-6 mt-10 sm:mt-12 md:mt-16 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
-        >
-          <TechnologyCard
-            v-for="(technology, idx) in technologies"
-            :key="idx"
-            :technology="technology"
-          />
-        </div>
-      </RcContainer>
-    </section>
-    <section aria-labelledby="lets-talk-title" class="even:bg-gray-600">
-      <RcContainer class="py-10 sm:py-16 md:py-20 lg:py-24">
-        <div
-          class="flex flex-col px-6 py-8 bg-white shadow-md lg:flex-row lg:items-center rounded-xl"
-        >
-          <div>
-            <h2
-              id="lets-talk-title"
-              class="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl"
-            >
-              Let's Talk.
-            </h2>
-            <p class="max-w-2xl mt-2 text-gray-500 md:text-lg sm:mt-3 md:mt-4">
-              Want to get in touch? Feel free to send me an e-mail at
-              <Mailto
-                mail="info@ronniecodes.com"
-                class="text-indigo-600 underline"
-              >
-                info@ronniecodes.com
-              </Mailto>
-            </p>
-          </div>
-          <div class="mt-8 lg:ml-auto lg:mt-0">
-            <Mailto tabindex="-1" mail="info@ronniecodes.com">
-              <RcBtn
-                color="indigo"
-                class="shadow-md whitespace-nowrap hover:shadow-lg translate hover:-translate-y-1"
-              >
-                <IconMail class="w-6 h-6 mr-2" /> <span>Contact Me</span>
-              </RcBtn>
-            </Mailto>
-          </div>
-        </div>
-      </RcContainer>
+      </Container>
     </section>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script setup lang="ts">
+/* --------------------------------- Imports -------------------------------- */
+import type { Article } from '~~/types/articles'
+/* -------------------------------------------------------------------------- */
 
-import educations from '~/data/educations.json'
-import jobs from '~/data/jobs.json'
-import technologies from '~/data/technologies.json'
-
-import { meta } from '~/utils/meta'
-import { calcYears } from '~/utils/helpers'
-
-import { description } from '~/meta.json'
-
-export default Vue.extend({
-  head() {
-    return meta({
-      description,
-    })
-  },
-
-  data: () => ({
-    educations,
-    jobs,
-    technologies,
-  }),
-
-  methods: {
-    calcYears,
-  },
+/* ---------------------------- Page Information ---------------------------- */
+useHead({
+  title: 'Home'
 })
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------- Articles -------------------------------- */
+const { data } = await useAsyncData('articles', () =>
+  queryContent<Article>('/blog')
+    .where({ _draft: false })
+    .only(['_path', 'title', 'description', 'thumbnail'])
+    .limit(6)
+    .find()
+)
+/* -------------------------------------------------------------------------- */
 </script>
+
+<style scoped></style>
