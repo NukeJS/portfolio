@@ -1,101 +1,92 @@
-import { defineNuxtConfig } from "nuxt";
+import { defineNuxtConfig } from 'nuxt'
+import eslintPlugin from 'vite-plugin-eslint'
 
-// https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
+// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  ssr: false,
-
-  typescript: {
-    shim: false,
-  },
-
   app: {
     head: {
-      title: "NukeJS",
+      title: 'NukeJS',
+      titleTemplate: '%s - NukeJS',
       meta: [
         {
-          name: "description",
+          name: 'msapplication-TileColor',
+          content: '#ffffff'
+        },
+        {
+          name: 'theme-color',
+          contnet: '#ffffff'
+        },
+
+        {
+          name: 'description',
           content:
-            "A full-stack developer based in the Netherlands, that builds modern and functional web applications.",
-        },
-        {
-          name: "msapplication-TileColor",
-          content: "#ffffff",
-        },
-        {
-          name: "theme-color",
-          contnet: "#ffffff",
-        },
+            'A full-stack developer based in the Netherlands, that builds modern and functional web applications.'
+        }
       ],
       link: [
         {
-          rel: "apple-touch-icon",
-          sizes: "180x180",
-          href: "/apple-touch-icon.png",
+          rel: 'apple-touch-icon',
+          sizes: '180x180',
+          href: '/apple-touch-icon.png'
         },
         {
-          rel: "icon",
-          type: "image/png",
-          sizes: "32x32",
-          href: "/favicon-32x32.png",
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '32x32',
+          href: '/favicon-32x32.png'
         },
         {
-          rel: "icon",
-          type: "image/png",
-          sizes: "16x16",
-          href: "/favicon-16x16.png",
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '16x16',
+          href: '/favicon-16x16.png'
         },
         {
-          rel: "manifest",
-          href: "/site.webmanifest",
+          rel: 'manifest',
+          href: '/site.webmanifest'
         },
         {
-          rel: "mask-icon",
-          color: "#8b5cf6",
-          href: "/safari-pinned-tab.svg",
+          rel: 'mask-icon',
+          color: '#8b5cf6',
+          href: '/safari-pinned-tab.svg'
         },
 
         {
-          rel: "preconnect",
-          href: "https://fonts.googleapis.com",
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com'
         },
         {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap",
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossorigin: true
         },
         {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap",
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap'
         },
-      ],
-      htmlAttrs: {
-        lang: "en",
-      },
-    },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'
+        }
+      ]
+    }
   },
 
-  css: ["~/assets/css/tailwind.css"],
+  components: ['~/components', '~/components/common', '~/components/layout'],
 
-  components: [
-    "~/components",
-    "~/components/common",
-    "~/components/layout",
-    "~/components/modals",
-  ],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
 
-  modules: ["@nuxtjs/color-mode", "@nuxt/content"],
-
-  colorMode: {
-    classSuffix: "",
+  content: {
+    highlight: {
+      theme: 'material-darker'
+    }
   },
 
-  build: {
-    postcss: {
-      postcssOptions: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-        },
-      },
-    },
+  typescript: {
+    shim: false
   },
-});
+
+  vite: {
+    plugins: [eslintPlugin()]
+  }
+})

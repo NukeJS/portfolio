@@ -1,10 +1,10 @@
 <template>
   <div
     :class="[
-      'w-full mx-auto px-6',
+      'mx-auto w-full px-6',
       {
-        'max-w-screen-lg': !fluid,
-      },
+        'max-w-screen-lg': !fluid
+      }
     ]"
   >
     <slot />
@@ -14,7 +14,7 @@
 <script setup lang="ts">
 /* --------------------------------- Globals -------------------------------- */
 defineProps<{
-  fluid?: boolean;
-}>();
+  fluid?: boolean
+}>()
 /* -------------------------------------------------------------------------- */
 </script>

@@ -1,13 +1,13 @@
 <template>
-  <div
-    class="antialiased bg-white dark:bg-neutral-900 min-h-screen flex flex-col"
-  >
+  <div class="flex min-h-screen flex-col bg-zinc-900 text-zinc-400 antialiased">
     <Navbar />
 
-    <main class="pt-16 flex-1">
+    <main class="flex-1 pt-16">
       <slot />
     </main>
 
     <Footer />
   </div>
 </template>
+
+<script setup lang="ts"></script>

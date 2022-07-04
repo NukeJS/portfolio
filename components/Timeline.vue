@@ -1,72 +1,48 @@
 <template>
-  <div class="relative space-y-4">
-    <div>
-      <h3 class="text-xl font-semibold">{{ timeline.title }}</h3>
-      <p
-        v-if="timeline.description"
-        class="text-neutral-500 dark:text-neutral-400"
-      >
-        {{ timeline.description }}
-      </p>
-    </div>
-    <ul
-      class="relative before:content-[''] before:left-2 before:absolute before:bg-neutral-300 dark:before:bg-neutral-600 before:w-0.5 before:h-[calc(100%-8px)] before:bottom-0 before:top-2 space-y-2"
-    >
-      <li
-        v-for="(item, index) in timeline.items"
-        :key="index"
-        class="flex items-start relative"
-      >
-        <div class="py-2">
-          <div
-            :class="[
-              'rounded-full h-3 w-3 ml-[0.2rem]',
-              index % 2 ? 'bg-pink-500' : 'bg-indigo-500',
-            ]"
-          ></div>
-        </div>
+  <ol class="relative space-y-10 border-l border-zinc-700">
+    <li v-for="(item, index) in items" :key="index" class="ml-4">
+      <div
+        class="absolute -left-1.5 mt-2.5 h-3 w-3 rounded-full border border-zinc-900 bg-zinc-600"
+      />
+      <div>
+        <time class="text-sm leading-none sm:text-base">
+          {{ item.timespan }}
+        </time>
         <div
-          class="flex-1 ml-4 text-neutral-500 dark:text-neutral-400 space-y-2 pb-3"
+          v-if="item.label"
+          class="text-xs font-bold uppercase tracking-widest text-pink-500 sm:text-sm"
         >
-          <div>
-            <div
-              v-if="item.label"
-              class="text-xs font-bold tracking-widest text-pink-600 dark:text-pink-500 uppercase mt-1.5"
-            >
-              {{ item.label }}
-            </div>
-            <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
-              {{ item.title }}
-            </h4>
-            <p>{{ item.timespan }}</p>
-          </div>
-          <p v-if="item.description" class="mb-4">{{ item.description }}</p>
+          {{ item.label }}
         </div>
-      </li>
-    </ul>
-  </div>
+        <h3 class="text-xl font-semibold text-zinc-100 sm:text-2xl">
+          {{ item.title }}
+        </h3>
+        <p v-if="item.subtitle" class="text-base sm:text-lg">
+          {{ item.subtitle }}
+        </p>
+      </div>
+      <p v-if="item.description" class="mt-4 mb-4 text-lg sm:text-xl">
+        {{ item.description }}
+      </p>
+    </li>
+  </ol>
 </template>
 
 <script setup lang="ts">
 /* ---------------------------------- Types --------------------------------- */
-interface Timeline {
-  title: string;
-  description?: string;
-  items: TimelineItem[];
-}
-
 interface TimelineItem {
-  label?: string;
-  title: string;
-  timespan: string;
-  description?: string;
+  label?: string
+  title: string
+  subtitle?: string
+  timespan: string
+  description?: string
 }
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------------- Globals -------------------------------- */
 defineProps<{
-  timeline: Timeline;
-}>();
+  items: TimelineItem[]
+}>()
 /* -------------------------------------------------------------------------- */
 </script>
 

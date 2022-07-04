@@ -1,29 +1,23 @@
-export default defineEventHandler((event) => {
+export default defineEventHandler(_event => {
   return [
     {
-      title: "Hanze University",
-      items: [
-        {
-          label: "HBO, Bachelor",
-          title: "Software Engineering",
-          timespan: "Aug. 2022 - present",
-        },
-      ],
+      timespan: 'Aug. 2022 - present',
+      label: 'HBO, Bachelor',
+      title: 'Software Engineering',
+      subtitle:
+        'Hanze University of Applied Sciences - Groningen, The Netherlands'
     },
     {
-      title: "Alfa-college",
-      items: [
-        {
-          label: "MBO, Level 4",
-          title: "Application & Media Developer",
-          timespan: "Aug. 2019 - Jul. 2022",
-        },
-        {
-          label: "MBO, Level 3",
-          title: "Collaborator IT Management",
-          timespan: "Aug. 2018 - Aug. 2019",
-        },
-      ],
+      timespan: 'Aug. 2019 - Jul. 2022',
+      label: 'MBO, Level 4',
+      title: 'Application & Media Developer',
+      subtitle: 'Alfa-college - Groningen, The Netherlands'
     },
-  ];
-});
+    {
+      timespan: 'Aug. 2018 - Jul. 2019',
+      label: 'MBO, Level 3',
+      title: 'Collaborator IT Management',
+      subtitle: 'Alfa-college - Groningen, The Netherlands'
+    }
+  ]
+})

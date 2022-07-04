@@ -1,36 +1,26 @@
-export default defineEventHandler((event) => {
+export default defineEventHandler(_event => {
   return [
     {
-      title: "Script",
-      description: "Groningen, The Netherlands",
-      items: [
-        {
-          label: "Full-time",
-          title: "Full-stack Developer",
-          timespan: "Jun. 2022 - present",
-          description: "During my time at Script I worked on several projects.",
-        },
-        {
-          label: "Internship",
-          title: "Full-stack Developer",
-          timespan: "Feb. 2022 - Jun. 2022",
-          description:
-            "During my internship at Script I worked on a narrowcasting system using Vue 3 and Laravel.",
-        },
-      ],
+      timespan: 'Jul. 2022 - present',
+      label: 'Holiday Job',
+      title: 'Full-stack Developer',
+      subtitle: 'Script - Groningen, The Netherlands'
     },
     {
-      title: "Prophyta",
-      description: "Scheemda, The Netherlands",
-      items: [
-        {
-          label: "Internship",
-          title: "Front-end Developer",
-          timespan: "Sep. 2020 - Feb. 2021",
-          description:
-            "During my internship at Prophyta I worked on an e-commerce system using Nuxt 2 and Vuetify.",
-        },
-      ],
+      timespan: 'Feb. 2022 - Jul. 2022',
+      label: 'Internship',
+      title: 'Full-stack Developer',
+      subtitle: 'Script - Groningen, The Netherlands',
+      description:
+        'During my internship at Script I worked on a narrowcasting system using Vue 3 and Laravel.'
     },
-  ];
-});
+    {
+      timespan: 'Sep. 2020 - Feb. 2021',
+      label: 'Internship',
+      title: 'Front-end Developer',
+      subtitle: 'Prophyta - Scheemda, The Netherlands',
+      description:
+        'During my internship at Prophyta I worked on an e-commerce system using Nuxt 2 and Vuetify.'
+    }
+  ]
+})
