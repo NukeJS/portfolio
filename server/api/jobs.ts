@@ -2,7 +2,7 @@ export default defineEventHandler(_event => {
   return [
     {
       timespan: 'Jul. 2022 - present',
-      label: 'Holiday Job',
+      label: 'Contract',
       title: 'Full-stack Developer',
       subtitle: 'Script - Groningen, The Netherlands'
     },
