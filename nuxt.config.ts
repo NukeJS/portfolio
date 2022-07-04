@@ -88,5 +88,9 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [eslintPlugin()]
+  },
+
+  build: {
+    transpile: ['@heroicons/vue']
   }
 })
