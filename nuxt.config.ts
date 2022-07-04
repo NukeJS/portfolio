@@ -14,13 +14,13 @@ export default defineNuxtConfig({
         },
         {
           name: 'theme-color',
-          contnet: '#ffffff'
+          contnet: '#ec4899'
         },
 
         {
           name: 'description',
           content:
-            'A full-stack developer based in the Netherlands, that builds modern and functional web applications.'
+            "I'm Ronnie. A developer, blogger, and software engineering student."
         }
       ],
       link: [
