@@ -27,7 +27,7 @@
         </span>
         <div class="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
           <NuxtLink
-            to="https://twitter.com/NukeJS"
+            to="https://twitter.com/nuke_js"
             target="_blank"
             class="hover:text-white"
           >
