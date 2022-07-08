@@ -1,16 +1,19 @@
 <template>
   <div
-    class="pointer-events-none fixed z-[100] flex h-full max-h-screen w-full flex-col overflow-y-hidden"
+    :class="[
+      'pointer-events-none fixed z-[100] flex max-h-screen w-full flex-col overflow-y-hidden backdrop-blur-md',
+      isOpen ? 'h-full' : 'h-fit'
+    ]"
   >
     <Disclosure
       as="nav"
-      class="pointer-events-auto overflow-y-auto bg-zinc-900/80 backdrop-blur-md"
+      class="pointer-events-auto overflow-y-auto bg-zinc-900/80"
     >
       <Container class="border-b border-zinc-700 sm:border-b-0">
         <div class="relative flex h-16 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <DisclosureButton
-              class="inline-flex items-center justify-center rounded-full bg-black/50 p-2"
+              class="inline-flex items-center justify-center rounded-full bg-zinc-900 p-2"
               @click="toggleDisclosurePanel()"
             >
               <MenuIcon v-if="!isOpen" class="block h-6 w-6" />
@@ -72,7 +75,7 @@
 
     <div
       v-if="isOpen"
-      class="pointer-events-auto flex-1 bg-black/60 backdrop-blur-md"
+      class="pointer-events-auto flex-1 bg-black/60"
       @click="toggleDisclosurePanel(false)"
     />
   </div>

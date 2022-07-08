@@ -1,8 +1,9 @@
 ---
-title: 'How to Install Node.js'
-description: 'A quick guide on how to install Node.js.'
+title: 'How to install Node.js'
 thumbnail: 'install-node.png'
 ---
+
+A quick guide on how to install Node.js.
 
 ## Installing Node.js
 

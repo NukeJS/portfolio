@@ -61,7 +61,7 @@ module.exports = {
               background: theme('colors.zinc.800')
             },
             pre: {
-              background: '#273338'
+              background: '#263238'
             },
             'pre > code': {
               background: 'none',
