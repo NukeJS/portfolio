@@ -3,9 +3,11 @@
     <div
       class="aspect-w-16 aspect-h-9 mb-3 rounded-xl shadow-md transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-xl"
     >
-      <img
+      <NuxtImg
         :src="`/blog/${article.thumbnail}`"
         class="absolute rounded-xl object-cover"
+        format="webp"
+        quality="60"
       />
     </div>
     <h3 class="text-xl font-semibold text-white group-hover:underline">

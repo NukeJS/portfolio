@@ -1,0 +1,69 @@
+import { MetaObject } from '#app'
+
+import DEFAULT_META from '~/meta.json'
+
+type Meta = {
+  title?: string
+  description?: string
+  keywords?: string | string[]
+  image?: string
+  path?: string
+  type?: string
+}
+
+export const headHelper = (metaObject?: Meta): Partial<MetaObject> => {
+  // eslint-disable-next-line prefer-const
+  let { title, description, keywords = [], image, path, type } = metaObject
+
+  const url = `${DEFAULT_META.url}${path === '/' ? '' : path}`
+
+  title = title ? `${title} - ${DEFAULT_META.title}` : DEFAULT_META.title
+
+  if (keywords && Array.isArray(keywords)) {
+    keywords = [...DEFAULT_META.keywords, ...keywords].join(', ')
+  }
+
+  const metaData: Record<string, any> = {
+    title,
+    meta: [
+      { hid: 'og:title', property: 'og:title', content: title },
+      { hid: 'og:type', property: 'og:type', content: type },
+      { hid: 'og:url', property: 'og:url', content: url },
+      { hid: 'twitter:title', name: 'twitter:title', content: title },
+      { hid: 'twitter:url', name: 'twitter:url', content: url }
+    ]
+  }
+
+  if (description) {
+    metaData.meta.push(
+      {
+        hid: 'description',
+        name: 'description',
+        content: description
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: description
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: description
+      }
+    )
+  }
+
+  if (keywords) {
+    metaData.meta.push({ hid: 'keywords', name: 'keywords', content: keywords })
+  }
+
+  if (image) {
+    metaData.meta.push(
+      { hid: 'og:image', property: 'og:image', content: image },
+      { hid: 'twitter:image', name: 'twitter:image', content: image }
+    )
+  }
+
+  return metaData
+}

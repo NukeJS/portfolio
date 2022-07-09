@@ -1,29 +1,53 @@
 import { defineNuxtConfig } from 'nuxt'
 import eslintPlugin from 'vite-plugin-eslint'
 
+import meta from './meta.json'
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'NukeJS',
-      titleTemplate: '%s - NukeJS',
+      title: meta.title,
+      titleTemplate: `%s - ${meta.title}`,
       meta: [
+        // Favicon stuff
+        { name: 'msapplication-TileColor', content: '#ffffff' },
+        { name: 'theme-color', content: '#ec4899' },
+
+        // Basic meta
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: meta.description },
+        { hid: 'keywords', name: 'keywords', content: meta.keywords },
+
+        // Open Graph meta
+        { hid: 'og:url', name: 'og:url', content: meta.url },
         {
-          name: 'msapplication-TileColor',
-          content: '#ffffff'
-        },
-        {
-          name: 'theme-color',
-          contnet: '#ec4899'
+          hid: 'og:description',
+          name: 'og:description',
+          content: meta.description
         },
 
+        // Twitter meta
         {
-          name: 'description',
-          content:
-            "I'm Ronnie. A developer, blogger, and software engineering student."
+          hid: 'twitter:site',
+          name: 'twitter:site',
+          content: meta.twitter.site
+        },
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: meta.twitter.card
+        },
+        { hid: 'twitter:url', name: 'twitter:url', content: meta.url },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: meta.description
         }
       ],
       link: [
+        // Favicons
         {
           rel: 'apple-touch-icon',
           sizes: '180x180',
@@ -51,6 +75,7 @@ export default defineNuxtConfig({
           href: '/safari-pinned-tab.svg'
         },
 
+        // Fonts
         {
           rel: 'preconnect',
           href: 'https://fonts.googleapis.com'
@@ -74,7 +99,7 @@ export default defineNuxtConfig({
 
   components: ['~/components', '~/components/common', '~/components/layout'],
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/image-edge'],
 
   content: {
     highlight: {

@@ -15,7 +15,9 @@ I'm creating my store in `stores/error.ts`. I'm using `.ts` since I will make us
 import { reactive } from 'vue';
 import axios from 'axios';
 
-const errors = reactive<Record<string, string | string[]>>()
+type Errors = Record<string, string | string[]>;
+
+const errors = reactive<Errors>();
 ```
 
 `errors` will be the reactive object containing all the errors, the key being the name that we get from the Laravel error object.

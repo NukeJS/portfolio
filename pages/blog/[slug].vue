@@ -7,10 +7,12 @@
       <div
         class="not-prose aspect-w-16 aspect-h-9 relative mb-3 rounded-xl shadow-md"
       >
-        <img
+        <NuxtImg
           v-if="data?.thumbnail"
           :src="`/blog/${data.thumbnail}`"
           class="absolute rounded-xl object-cover"
+          format="webp"
+          quality="60"
         />
         <div v-else class="rounded-xl bg-zinc-800" />
       </div>
@@ -22,18 +24,30 @@
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
 import { Article } from '~~/types/articles'
+import { headHelper } from '~~/utils/meta'
+/* -------------------------------------------------------------------------- */
+
+/* --------------------------------- Globals -------------------------------- */
+const route = useRoute()
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------------- Article -------------------------------- */
 const { data } = await useAsyncData('article', () =>
-  queryContent<Article>(useRoute().path).findOne()
+  queryContent<Article>(route.path).findOne()
 )
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Page Information ---------------------------- */
-useHead({
-  title: data.value.title
-})
+useHead(
+  headHelper({
+    title: data.value.title,
+    description: data.value.description,
+    keywords: data.value.keywords,
+    image: data.value.thumbnail,
+    path: route.path,
+    type: 'article'
+  })
+)
 /* -------------------------------------------------------------------------- */
 </script>
 

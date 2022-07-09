@@ -25,12 +25,17 @@
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
 import type { Article } from '~~/types/articles'
+import { headHelper } from '~~/utils/meta'
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Page Information ---------------------------- */
-useHead({
-  title: 'Blog'
-})
+useHead(
+  headHelper({
+    title: 'Blog',
+    description: 'Insightful and helpful content.',
+    path: useRoute().path
+  })
+)
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------- Articles -------------------------------- */
