@@ -39,6 +39,7 @@
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
 import type { Article } from '~~/types/articles'
+import DEFAULT_META from '~~/meta.json'
 import { headHelper } from '~~/utils/meta'
 
 /* -------------------------------------------------------------------------- */
@@ -46,6 +47,7 @@ import { headHelper } from '~~/utils/meta'
 /* ---------------------------- Page Information ---------------------------- */
 useHead(
   headHelper({
+    description: DEFAULT_META.description,
     path: useRoute().path
   })
 )

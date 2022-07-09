@@ -15,35 +15,7 @@ export default defineNuxtConfig({
 
         // Basic meta
         { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: meta.description },
-        { hid: 'keywords', name: 'keywords', content: meta.keywords },
-
-        // Open Graph meta
-        { hid: 'og:url', name: 'og:url', content: meta.url },
-        {
-          hid: 'og:description',
-          name: 'og:description',
-          content: meta.description
-        },
-
-        // Twitter meta
-        {
-          hid: 'twitter:site',
-          name: 'twitter:site',
-          content: meta.twitter.site
-        },
-        {
-          hid: 'twitter:card',
-          name: 'twitter:card',
-          content: meta.twitter.card
-        },
-        { hid: 'twitter:url', name: 'twitter:url', content: meta.url },
-        {
-          hid: 'twitter:description',
-          name: 'twitter:description',
-          content: meta.description
-        }
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' }
       ],
       link: [
         // Favicons
