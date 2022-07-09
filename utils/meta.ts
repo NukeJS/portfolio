@@ -13,14 +13,16 @@ type Meta = {
 
 export const headHelper = (metaObject?: Meta): Partial<MetaObject> => {
   // eslint-disable-next-line prefer-const
-  let { title, description, keywords = [], image, path, type } = metaObject
+  let { title, description, keywords, image, path, type } = metaObject
 
   const url = `${DEFAULT_META.url}${path === '/' ? '' : path}`
 
   title = title ? `${title} - ${DEFAULT_META.title}` : DEFAULT_META.title
 
   if (keywords && Array.isArray(keywords)) {
-    keywords = [...DEFAULT_META.keywords, ...keywords].join(', ')
+    keywords = `${DEFAULT_META.keywords}, ${keywords.join(', ')}`
+  } else if (keywords) {
+    keywords = `${DEFAULT_META.keywords}, ${keywords}`
   }
 
   const metaData: Record<string, any> = {

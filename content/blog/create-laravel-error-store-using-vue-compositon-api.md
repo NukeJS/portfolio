@@ -1,6 +1,7 @@
 ---
-title: 'Create a Laravel error store using the Vue 3 Composition API'
-thumbnail: 'create-laravel-error-store-using-vue-compositon-api.png'
+title: Create a Laravel error store using the Vue 3 Composition API
+keywords: ['laravel', 'vue', 'composition api', 'axios']
+thumbnail: create-laravel-error-store-using-vue-compositon-api.png
 ---
 
 With Vue 3 you can easily store and display all Laravel based errors using the [Composition API](https://vuejs.org/guide/extras/composition-api-faq.html).
