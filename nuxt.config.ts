@@ -8,7 +8,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: meta.title,
-      titleTemplate: `%s - ${meta.title}`,
       meta: [
         // Favicon stuff
         { name: 'msapplication-TileColor', content: '#ffffff' },
