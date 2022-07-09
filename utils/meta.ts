@@ -11,10 +11,14 @@ type Meta = {
   type?: string
 }
 
-export const headHelper = (metaObject?: Meta): Partial<MetaObject> => {
-  // eslint-disable-next-line prefer-const
-  let { title, description, keywords, image, path, type } = metaObject
-
+export const headHelper = ({
+  title,
+  description,
+  keywords,
+  image,
+  path = '/',
+  type = 'website'
+}: Meta): Partial<MetaObject> => {
   const url = `${DEFAULT_META.url}${path === '/' ? '' : path}`
 
   title = title ? `${title} - ${DEFAULT_META.title}` : DEFAULT_META.title
