@@ -43,7 +43,7 @@ useHead(
     title: data.value.title,
     description: data.value.description,
     keywords: data.value.keywords,
-    image: data.value.thumbnail,
+    image: `/blog/${data.value.thumbnail}`,
     path: route.path,
     type: 'article'
   })
