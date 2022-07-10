@@ -27,7 +27,7 @@ export const useHeadHelper = ({
   const url = `${DEFAULT_META.url}${useRoute().path}`
 
   useHead({
-    title: title,
+    title,
     meta: [
       /* ------------------------------- Open Graph ------------------------------- */
       { hid: 'og:type', property: 'og:type', content: type },
