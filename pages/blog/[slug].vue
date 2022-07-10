@@ -44,7 +44,6 @@ useHead(
     description: data.value.description,
     keywords: data.value.keywords,
     image: `/blog/${data.value.thumbnail}`,
-    path: route.path,
     type: 'article'
   })
 )

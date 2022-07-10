@@ -47,8 +47,7 @@ import { headHelper } from '~~/utils/meta'
 /* ---------------------------- Page Information ---------------------------- */
 useHead(
   headHelper({
-    description: DEFAULT_META.description,
-    path: useRoute().path
+    description: DEFAULT_META.description
   })
 )
 /* -------------------------------------------------------------------------- */

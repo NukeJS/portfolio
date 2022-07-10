@@ -60,8 +60,7 @@ import { headHelper } from '~~/utils/meta'
 /* ---------------------------- Page Information ---------------------------- */
 useHead(
   headHelper({
-    title: 'About Me',
-    path: useRoute().path
+    title: 'About Me'
   })
 )
 /* -------------------------------------------------------------------------- */

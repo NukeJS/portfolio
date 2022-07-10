@@ -32,8 +32,7 @@ import { headHelper } from '~~/utils/meta'
 useHead(
   headHelper({
     title: 'Blog',
-    description: 'Insightful and helpful content.',
-    path: useRoute().path
+    description: 'Insightful and helpful content.'
   })
 )
 /* -------------------------------------------------------------------------- */
