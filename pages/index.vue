@@ -40,16 +40,14 @@
 /* --------------------------------- Imports -------------------------------- */
 import type { Article } from '~~/types/articles'
 import DEFAULT_META from '~~/meta.json'
-import { headHelper } from '~~/utils/meta'
+import { useHeadHelper } from '~~/utils/meta'
 
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Page Information ---------------------------- */
-useHead(
-  headHelper({
-    description: DEFAULT_META.description
-  })
-)
+useHeadHelper({
+  description: DEFAULT_META.description
+})
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------- Articles -------------------------------- */

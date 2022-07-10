@@ -24,7 +24,7 @@
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
 import { Article } from '~~/types/articles'
-import { headHelper } from '~~/utils/meta'
+import { useHeadHelper } from '~~/utils/meta'
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------------- Globals -------------------------------- */
@@ -38,15 +38,13 @@ const { data } = await useAsyncData(`article-${route.path}`, () =>
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Page Information ---------------------------- */
-useHead(
-  headHelper({
-    title: data.value.title,
-    description: data.value.description,
-    keywords: data.value.keywords,
-    image: `/blog/${data.value.thumbnail}`,
-    type: 'article'
-  })
-)
+useHeadHelper({
+  title: data.value.title,
+  description: data.value.description,
+  keywords: data.value.keywords,
+  image: `/blog/${data.value.thumbnail}`,
+  type: 'article'
+})
 /* -------------------------------------------------------------------------- */
 </script>
 

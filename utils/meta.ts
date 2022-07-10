@@ -1,5 +1,3 @@
-import { MetaObject } from '#app'
-
 import DEFAULT_META from '~/meta.json'
 
 interface Meta {
@@ -10,22 +8,17 @@ interface Meta {
   type?: string
 }
 
-interface MetaData {
-  title: string
-  meta: Record<string, any>[]
-}
-
-export const headHelper = ({
+export const useHeadHelper = ({
   title,
   description,
   keywords,
   image,
   type = 'website'
-}: Meta = {}): Partial<MetaObject> => {
+}: Meta = {}) => {
   title = title ? `${title} - ${DEFAULT_META.title}` : DEFAULT_META.title
   const url = `${DEFAULT_META.url}${useRoute().path}`
 
-  return <MetaData>{
+  useHead({
     title,
     meta: [
       /* ------------------------------- Open Graph ------------------------------- */
@@ -92,5 +85,5 @@ export const headHelper = ({
       }
       /* -------------------------------------------------------------------------- */
     ]
-  }
+  })
 }

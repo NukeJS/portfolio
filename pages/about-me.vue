@@ -54,15 +54,13 @@
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
 import { differenceInYears } from 'date-fns'
-import { headHelper } from '~~/utils/meta'
+import { useHeadHelper } from '~~/utils/meta'
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Page Information ---------------------------- */
-useHead(
-  headHelper({
-    title: 'About Me'
-  })
-)
+useHeadHelper({
+  title: 'About Me'
+})
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------------- Globals -------------------------------- */
