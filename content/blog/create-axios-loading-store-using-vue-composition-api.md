@@ -2,6 +2,7 @@
 title: Create an Axios loading store using the Vue 3 Composition API
 keywords: ['vue', 'composition api', 'axios', 'loading']
 thumbnail: create-axios-loading-store-using-vue-composition-api.png
+published_at: 6-10-2022
 ---
 
 With Vue 3 you can easily store if the application is currently loading something with Axios using the [Composition API](https://vuejs.org/guide/extras/composition-api-faq.html).

@@ -1,6 +1,7 @@
 ---
 title: 'How to install Node.js'
 thumbnail: 'install-node.png'
+published_at: 5-10-2022
 ---
 
 A quick guide on how to install Node.js.

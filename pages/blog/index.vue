@@ -36,10 +36,11 @@ useHeadHelper({
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------- Articles -------------------------------- */
-const { data } = await useAsyncData('articles', () =>
+const { data } = await useAsyncData('blog-articles', () =>
   queryContent<Article>('/blog')
     .where({ _draft: false })
     .only(['_path', 'title', 'description', 'thumbnail'])
+    .sort({ published_at: -1 })
     .find()
 )
 /* -------------------------------------------------------------------------- */

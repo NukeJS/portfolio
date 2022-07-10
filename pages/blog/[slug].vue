@@ -32,9 +32,13 @@ const route = useRoute()
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------------- Article -------------------------------- */
-const { data } = await useAsyncData(`article-${route.path}`, () =>
-  queryContent<Article>(route.path).findOne()
-)
+const { data } = await useAsyncData(`article-${route.path}`, () => {
+  try {
+    return queryContent<Article>(route.path).findOne()
+  } catch {
+    throwError('Article not found')
+  }
+})
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Page Information ---------------------------- */
