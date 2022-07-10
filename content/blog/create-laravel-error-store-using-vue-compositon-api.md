@@ -18,7 +18,7 @@ import axios from 'axios';
 
 type Errors = Record<string, string | string[]>;
 
-const errors = reactive<Errors>();
+const errors = reactive<Errors>({});
 ```
 
 `errors` will be the reactive object containing all the errors, the key being the name that we get from the Laravel error object.
@@ -101,7 +101,7 @@ Note that this will be different based on the HTTP client that you are using.
 When making a request we want to clear the error store.
 
 ```ts
-axios.interceptor.request.use((config) => {
+axios.interceptors.request.use((config) => {
   clearErrors();
   return config;
 });
@@ -113,25 +113,38 @@ When getting a successfull response we want to just clear the error store. But, 
 
 ```ts
 axios.interceptors.response.use(
-    (response) => {
-        clearErrors();
-        return response;
-    },
-    (error) => {
-        if (!axios.isAxiosError(error)) throw error;
-        if (!error.response?.data.errors) {
-            setError(
-                'message',
-                error.response?.data.message || 'Something went wrong.'
-            );
-            return;
-        }
-        for (const property in error.response?.data.errors) {
-          errors[property] = error.response?.data.errors[property]
-        }
-        throw error;
+  (response) => {
+    clearErrors();
+    return response;
+  },
+  (error) => {
+    if (!axios.isAxiosError(error)) throw error;
+    if (!(error.response as any)?.data.errors) {
+      setError(
+        'message',
+        (error.response as any)?.data.message || 'Something went wrong.'
+      );
+      return;
     }
+    for (const property in (error.response as any)?.data.errors) {
+      errors[property] = (error.response as any)?.data.errors[property];
+    }
+    throw error;
+  }
 );
+```
+
+## Making use of the interceptors
+
+To register the the Axios interceptors we need to import it in `main.ts`.
+
+```ts
+import { createApp } from 'vue'
+import App from './App.vue'
+
+import './stores/error'
+
+createApp(App).mount('#app')
 ```
 
 ## Clearing the error store on route change
@@ -149,6 +162,88 @@ import { reactive } from 'vue';
 import axios from 'axios';
 
 import router from '../router';
+```
+
+## How do I use this store?
+
+Here's an example on how to use it.
+
+```html
+<template>
+  <form @submit.prevent="onSubmit">
+    <div>
+      <input v-model="user.username" />
+      <p v-if="hasError('username')">
+        {{ getFirstError('username') }}
+      </p>
+    </div>
+    <div>
+      <input v-model="user.password" />
+      <p v-if="hasError('password')">
+        {{ getFirstError('password') }}
+      </p>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+</template>
+
+<script setup lang="ts">
+import axios from 'axios';
+import { reactive } from 'vue';
+
+import { hasError, getFirstError } from './stores/error';
+
+const user = reactive({
+  username: '',
+  password: '',
+});
+
+const onSubmit = async () => {
+  axios.post('/some-api-endpoint', user);
+};
+</script>
+```
+
+As you can see, to display the error we use 2 functions repetitively, `hasError` and `getFirstError`.
+
+We can improve this by just making an `ErrorField` component that requires a name prop.
+
+```html
+<!-- components/ErrorField.vue -->
+
+<template>
+  <div v-if="hasError(name)">
+    <p>
+      {{ getFirstError(name) }}
+    </p>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { hasError, getFirstError } from '../stores/error';
+
+defineProps<{
+  name: string;
+}>();
+</script>
+```
+
+Which we can then use as this.
+
+```html
+<template>
+  <form @submit.prevent="onSubmit">
+    <div>
+      <input v-model="user.username" />
+      <ErrorField name="username" />
+    </div>
+    <div>
+      <input v-model="user.password" />
+      <ErrorField name="username" />
+    </div>
+    <button type="submit">Register</button>
+  </form>
+</template>
 ```
 
 ## Conclusion
