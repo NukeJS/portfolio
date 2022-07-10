@@ -9,9 +9,9 @@
       as="nav"
       class="pointer-events-auto overflow-y-auto bg-zinc-900/80"
     >
-      <Container class="border-b border-zinc-700 sm:border-b-0">
+      <Container class="border-b border-zinc-700 md:border-b-0">
         <div class="relative flex h-16 items-center justify-between">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
             <DisclosureButton
               class="inline-flex items-center justify-center rounded-full bg-zinc-900 p-2"
               @click="toggleDisclosurePanel()"
@@ -21,7 +21,7 @@
             </DisclosureButton>
           </div>
           <div
-            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+            class="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
           >
             <div class="flex flex-shrink-0 items-center">
               <NuxtLink to="/">
@@ -29,8 +29,8 @@
               </NuxtLink>
             </div>
           </div>
-          <div class="hidden sm:ml-6 sm:block">
-            <div class="flex font-medium sm:space-x-4 md:space-x-6">
+          <div class="hidden md:ml-6 md:block">
+            <div class="flex font-medium md:space-x-6">
               <NuxtLink
                 v-for="(item, index) in navigation"
                 :key="index"
@@ -51,7 +51,7 @@
       <DisclosurePanel
         v-show="isOpen"
         static
-        class="border-b border-zinc-700 sm:hidden"
+        class="border-b border-zinc-700 md:hidden"
       >
         <Container>
           <div class="flex flex-col space-y-4 pt-4 pb-6 font-medium">
@@ -98,6 +98,10 @@ const navigation = [
   {
     to: '/about-me',
     name: 'About Me'
+  },
+  {
+    to: '/projects',
+    name: 'My Projects'
   },
   {
     to: '/blog',

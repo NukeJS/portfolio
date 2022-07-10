@@ -22,7 +22,7 @@ import { useHeadHelper } from '~~/utils/meta'
 
 /* ---------------------------- Page Information ---------------------------- */
 useHeadHelper({
-  title: 'My Projects',
+  title: 'Projects',
   description: "Things I've made."
 })
 /* -------------------------------------------------------------------------- */
