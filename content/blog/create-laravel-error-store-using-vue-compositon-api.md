@@ -239,7 +239,7 @@ Which we can then use as this.
     </div>
     <div>
       <input v-model="user.password" />
-      <ErrorField name="username" />
+      <ErrorField name="password" />
     </div>
     <button type="submit">Register</button>
   </form>
