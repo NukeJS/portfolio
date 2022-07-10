@@ -30,11 +30,13 @@ export const useHeadHelper = ({
     title,
     meta: [
       /* ------------------------------- Open Graph ------------------------------- */
+      { hid: 'og:title', property: 'og:title', content: title },
       { hid: 'og:type', property: 'og:type', content: type },
       { hid: 'og:url', property: 'og:url', content: url },
       /* -------------------------------------------------------------------------- */
 
       /* --------------------------------- Twitter -------------------------------- */
+      { hid: 'twitter:title', name: 'twitter:title', content: title },
       { hid: 'twitter:url', name: 'twitter:url', content: url },
       {
         hid: 'twitter:creator',
