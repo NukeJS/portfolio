@@ -22,12 +22,12 @@ export const useHeadHelper = ({
   script,
   style,
   viewport
-}: Meta & MetaObject = {}) => {
+}: Meta & Omit<MetaObject, 'titleTemplate'> = {}) => {
+  title = title ? `${title} - ${DEFAULT_META.title}` : DEFAULT_META.title
   const url = `${DEFAULT_META.url}${useRoute().path}`
 
   useHead({
-    title: title || DEFAULT_META.title,
-    titleTemplate: () => title && `${title} - ${DEFAULT_META.title}`,
+    title: title,
     meta: [
       /* ------------------------------- Open Graph ------------------------------- */
       { hid: 'og:type', property: 'og:type', content: type },
