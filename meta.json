@@ -3,8 +3,5 @@
   "url": "https://nukejs.dev",
   "description": "I'm Ronnie. A developer, blogger, and software engineering student.",
   "keywords": "fullstack, ronnie, web developer, nodejs, vuejs, nuxtjs, blog",
-  "twitter": {
-    "site": "@nuke_js",
-    "card": "summary_large_image"
-  }
+  "twitter": "@nuke_js"
 }

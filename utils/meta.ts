@@ -36,7 +36,12 @@ export const headHelper = ({
       { hid: 'og:type', property: 'og:type', content: type },
       { hid: 'og:url', property: 'og:url', content: url },
       { hid: 'twitter:title', name: 'twitter:title', content: title },
-      { hid: 'twitter:url', name: 'twitter:url', content: url }
+      { hid: 'twitter:url', name: 'twitter:url', content: url },
+      {
+        hid: 'twitter:creator',
+        name: 'twitter:creator',
+        content: DEFAULT_META.twitter
+      }
     ]
   }
 
@@ -67,7 +72,12 @@ export const headHelper = ({
   if (image) {
     metaData.meta.push(
       { hid: 'og:image', property: 'og:image', content: image },
-      { hid: 'twitter:image', name: 'twitter:image', content: image }
+      { hid: 'twitter:image', name: 'twitter:image', content: image },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      }
     )
   }
 
