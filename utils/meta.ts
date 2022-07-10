@@ -1,3 +1,4 @@
+import { MetaObject } from '#app'
 import DEFAULT_META from '~/meta.json'
 
 interface Meta {
@@ -13,13 +14,20 @@ export const useHeadHelper = ({
   description,
   keywords,
   image,
-  type = 'website'
-}: Meta = {}) => {
-  title = title ? `${title} - ${DEFAULT_META.title}` : DEFAULT_META.title
+  type = 'website',
+  bodyAttrs,
+  charset,
+  htmlAttrs,
+  link,
+  script,
+  style,
+  viewport
+}: Meta & MetaObject = {}) => {
   const url = `${DEFAULT_META.url}${useRoute().path}`
 
   useHead({
     title,
+    titleTemplate: () => title && `${title} - ${DEFAULT_META.title}`,
     meta: [
       /* ------------------------------- Open Graph ------------------------------- */
       { hid: 'og:title', property: 'og:title', content: title },
@@ -84,6 +92,14 @@ export const useHeadHelper = ({
           : DEFAULT_META.keywords
       }
       /* -------------------------------------------------------------------------- */
-    ]
+    ],
+
+    bodyAttrs,
+    charset,
+    htmlAttrs,
+    link,
+    script,
+    style,
+    viewport
   })
 }
