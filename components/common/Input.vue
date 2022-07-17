@@ -5,33 +5,47 @@
       class="mb-1 block text-sm font-medium text-zinc-300"
       v-text="label"
     />
-    <div
-      class="flex w-full cursor-text items-center rounded-md border border-zinc-600 bg-zinc-800 px-3 py-2 shadow-sm focus-within:border-pink-500 focus-within:outline-none focus-within:ring focus-within:ring-pink-400/50"
-      @click.self="focusInputElement"
-    >
-      <div v-if="slots['prepend-inner']" class="pointer-events-none">
-        <slot name="prepend-inner" />
+    <div class="flex w-full items-center">
+      <div v-if="slots.prepend">
+        <slot name="prepend" />
       </div>
-      <input
-        ref="inputElement"
-        v-bind="{
-          value: modelValue,
-          type,
-          required,
-          placeholder,
-          disabled
-        }"
+      <div
         :class="[
-          'flex-1 bg-transparent text-zinc-200 placeholder:text-zinc-500 focus:outline-none',
+          'flex flex-1 cursor-text items-center rounded-md border border-zinc-600 bg-zinc-800 px-3 py-2 shadow-sm focus-within:border-pink-500 focus-within:outline-none focus-within:ring focus-within:ring-pink-400/50',
           {
-            'pl-2': !!slots['prepend-inner'],
-            'pr-2': !!slots['append-inner']
+            'ml-3': !!slots.prepend,
+            'mr-3': !!slots.append
           }
         ]"
-        @input="onInput"
-      />
-      <div v-if="slots['append-inner']" class="pointer-events-none">
-        <slot name="append-inner" />
+        @click.self="focusInputElement"
+      >
+        <div v-if="slots['prepend-inner']" class="pointer-events-none">
+          <slot name="prepend-inner" />
+        </div>
+        <input
+          ref="inputElement"
+          v-bind="{
+            value: modelValue,
+            type,
+            required,
+            placeholder,
+            disabled
+          }"
+          :class="[
+            'flex-1 bg-transparent text-zinc-200 placeholder:text-zinc-500 focus:outline-none',
+            {
+              'pl-2': !!slots['prepend-inner'],
+              'pr-2': !!slots['append-inner']
+            }
+          ]"
+          @input="onInput"
+        />
+        <div v-if="slots['append-inner']" class="pointer-events-none">
+          <slot name="append-inner" />
+        </div>
+      </div>
+      <div v-if="slots.append">
+        <slot name="append" />
       </div>
     </div>
   </div>
