@@ -33,6 +33,7 @@
       }
     ],
 
-    "arrow-parens": ["error", "as-needed"]
+    "arrow-parens": ["error", "as-needed"],
+    "func-call-spacing": "off"
   }
 }

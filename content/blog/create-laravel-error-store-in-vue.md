@@ -1,7 +1,8 @@
 ---
-title: Create a Laravel error store using the Vue 3 Composition API
-keywords: ['laravel', 'vue', 'composition api', 'axios']
-thumbnail: create-laravel-error-store-using-vue-compositon-api.png
+title: Create a Laravel error store in Vue
+labels: [Laravel, Vue, Composition API]
+keywords: [laravel, vue, vue 3, composition api, axios]
+thumbnail: create-laravel-error-store-in-vue.png
 published_at: 7-10-2022
 ---
 

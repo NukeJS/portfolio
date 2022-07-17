@@ -54,11 +54,9 @@ useHeadHelper({
 const { data } = await useAsyncData('home-articles', () =>
   queryContent<Article>('/blog')
     .where({ _draft: false })
-    .limit(6)
+    .limit(3)
     .sort({ published_at: -1 })
     .find()
 )
 /* -------------------------------------------------------------------------- */
 </script>
-
-<style scoped></style>
