@@ -23,13 +23,28 @@
         </h2>
         <div class="mt-8 grid gap-8 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3">
           <ArticleCard
-            v-for="article in data"
+            v-for="article in articles"
             :key="article._id"
-            :article="article"
+            v-bind="{ article }"
           />
         </div>
         <div class="mt-12 sm:mt-16">
           <Button to="/blog" variant="secondary">Read more articles</Button>
+        </div>
+      </Container>
+    </section>
+    <section class="py-8 sm:py-12 md:py-16 lg:py-20">
+      <Container>
+        <h2 class="text-3xl font-bold text-white">Things I made.</h2>
+        <div class="mt-8 grid gap-8 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3">
+          <ProjectCard
+            v-for="(project, index) in projects"
+            :key="index"
+            v-bind="{ project }"
+          />
+        </div>
+        <div class="mt-12 sm:mt-16">
+          <Button to="/projects" variant="secondary"> View my work </Button>
         </div>
       </Container>
     </section>
@@ -40,6 +55,7 @@
 /* --------------------------------- Imports -------------------------------- */
 import type { Article } from '~~/types/articles'
 import DEFAULT_META from '~~/meta.json'
+import { getMultipleRandomItems } from '~~/utils/array'
 import { useHeadHelper } from '~~/utils/meta'
 
 /* -------------------------------------------------------------------------- */
@@ -51,12 +67,19 @@ useHeadHelper({
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------- Articles -------------------------------- */
-const { data } = await useAsyncData('home-articles', () =>
+const { data: articles } = await useAsyncData('home-articles', () =>
   queryContent<Article>('/blog')
     .where({ _draft: false })
     .limit(3)
     .sort({ published_at: -1 })
     .find()
 )
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------- Projects -------------------------------- */
+const { data: projects } = await useAsyncData('home-projects', async () => {
+  const data = await $fetch('/api/projects')
+  return getMultipleRandomItems(data, 3)
+})
 /* -------------------------------------------------------------------------- */
 </script>

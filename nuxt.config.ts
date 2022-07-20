@@ -68,7 +68,12 @@ export default defineNuxtConfig({
     }
   },
 
-  components: ['~/components', '~/components/common', '~/components/layout'],
+  components: [
+    '~/components',
+    '~/components/common',
+    '~/components/icons',
+    '~/components/layout'
+  ],
 
   modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/image-edge'],
 

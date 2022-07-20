@@ -26,7 +26,7 @@
             <ArticleCard
               v-for="article in filteredArticles"
               :key="article._id"
-              :article="article"
+              v-bind="{ article }"
             />
           </div>
 
@@ -57,7 +57,7 @@ useHeadHelper({
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------- Articles -------------------------------- */
-const { data } = await useAsyncData('blog-articles', () =>
+const { data: articles } = await useAsyncData('blog-articles', () =>
   queryContent<Article>('/blog')
     .where({ _draft: false })
     .only(['_path', 'title', 'description', 'thumbnail', 'keywords'])
@@ -68,7 +68,7 @@ const { data } = await useAsyncData('blog-articles', () =>
 const searchQuery = ref('')
 
 const filteredArticles = computed(() =>
-  data.value.filter(article => {
+  articles.value.filter(article => {
     const matchesTitle = article.title
       .toLowerCase()
       .includes(searchQuery.value.toLowerCase())
