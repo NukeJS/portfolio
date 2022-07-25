@@ -67,13 +67,10 @@ useHeadHelper({
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------- Articles -------------------------------- */
-const { data: articles } = await useAsyncData('home-articles', () =>
-  queryContent<Article>('/blog')
-    .where({ _draft: false })
-    .limit(3)
-    .sort({ published_at: -1 })
-    .find()
-)
+const { data: articles } = await useAsyncData('home-articles', async () => {
+  const data = await queryContent<Article>('/blog').where({ _draft: false }).find()
+  return getMultipleRandomItems(data, 3)
+})
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------- Projects -------------------------------- */
