@@ -5,7 +5,7 @@
         {{ data.title }}
       </h1>
       <div
-        class="not-prose aspect-w-16 aspect-h-9 relative mb-3 rounded-xl shadow-md"
+        class="not-prose aspect-w-16 aspect-h-9 relative mb-3 rounded-xl bg-zinc-800 shadow-md"
       >
         <NuxtImg
           v-if="data?.thumbnail"

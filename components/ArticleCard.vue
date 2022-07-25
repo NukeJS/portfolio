@@ -1,7 +1,7 @@
 <template>
   <NuxtLink :to="article._path" class="group">
     <div
-      class="aspect-w-16 aspect-h-9 mb-3 rounded-xl shadow-md transition-transform duration-300"
+      class="aspect-w-16 aspect-h-9 mb-3 rounded-xl bg-zinc-800 shadow-md transition-transform duration-300"
     >
       <NuxtImg
         :src="`/blog/${article.thumbnail}`"
