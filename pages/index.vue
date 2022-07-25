@@ -35,7 +35,7 @@
     </section>
     <section class="py-8 sm:py-12 md:py-16 lg:py-20">
       <Container>
-        <h2 class="text-3xl font-bold text-white">Things I made.</h2>
+        <h2 class="text-3xl font-bold text-white">Things I worked on.</h2>
         <div class="mt-8 grid gap-8 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3">
           <ProjectCard
             v-for="(project, index) in projects"
@@ -68,7 +68,9 @@ useHeadHelper({
 
 /* -------------------------------- Articles -------------------------------- */
 const { data: articles } = await useAsyncData('home-articles', async () => {
-  const data = await queryContent<Article>('/blog').where({ _draft: false }).find()
+  const data = await queryContent<Article>('/blog')
+    .where({ _draft: false })
+    .find()
   return getMultipleRandomItems(data, 3)
 })
 /* -------------------------------------------------------------------------- */

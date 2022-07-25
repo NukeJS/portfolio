@@ -101,7 +101,7 @@ const navigation = [
   },
   {
     to: '/projects',
-    name: 'My Projects'
+    name: 'My Work'
   },
   {
     to: '/blog',

@@ -5,7 +5,7 @@
         <div
           class="mb-2 text-center font-semibold uppercase tracking-wider text-pink-500"
         >
-          My Projects
+          My Work
         </div>
         <h1 class="text-center text-4xl font-bold text-white sm:text-5xl">
           Things I've made.
@@ -31,8 +31,8 @@ import { useHeadHelper } from '~~/utils/meta'
 
 /* ---------------------------- Page Information ---------------------------- */
 useHeadHelper({
-  title: 'Projects',
-  description: "Things I've made."
+  title: 'Work',
+  description: "Things I've worked on."
 })
 /* -------------------------------------------------------------------------- */
 

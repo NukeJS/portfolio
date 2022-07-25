@@ -8,7 +8,7 @@
           My Blog
         </div>
         <h1 class="text-center text-4xl font-bold text-white sm:text-5xl">
-          Insightful and helpful content.
+          Things I share through writing.
         </h1>
 
         <div class="mt-10 sm:mt-16">
@@ -52,7 +52,7 @@ import { useHeadHelper } from '~~/utils/meta'
 /* ---------------------------- Page Information ---------------------------- */
 useHeadHelper({
   title: 'Blog',
-  description: 'Insightful and helpful content.'
+  description: 'Things I share through writing.'
 })
 /* -------------------------------------------------------------------------- */
 
