@@ -13,6 +13,9 @@
           class="absolute rounded-xl object-cover"
           format="webp"
           quality="60"
+          alt="Article thumbnail"
+          width="812"
+          height="457"
         />
         <div v-else class="rounded-xl bg-zinc-800" />
       </div>

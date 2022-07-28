@@ -30,6 +30,7 @@
             to="https://twitter.com/nuke_js"
             target="_blank"
             class="hover:text-white"
+            aria-label="Open Twitter profile"
           >
             <TwitterIcon class="h-6 w-6" />
           </NuxtLink>
@@ -37,6 +38,7 @@
             to="https://github.com/NukeJS"
             target="_blank"
             class="hover:text-white"
+            aria-label="Open GitHub profile"
           >
             <GithubIcon class="h-6 w-6" />
           </NuxtLink>

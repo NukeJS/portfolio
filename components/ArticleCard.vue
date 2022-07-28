@@ -8,6 +8,9 @@
         class="absolute rounded-xl object-cover"
         format="webp"
         quality="60"
+        alt="Article thumbnail"
+        width="304"
+        height="171"
       />
     </div>
     <h3 class="text-xl font-semibold text-white group-hover:underline">

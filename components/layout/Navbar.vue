@@ -14,6 +14,7 @@
           <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
             <DisclosureButton
               class="inline-flex items-center justify-center rounded-full bg-zinc-900 p-2"
+              aria-label="Toggle navigation"
               @click="toggleDisclosurePanel()"
             >
               <MenuIcon v-if="!isOpen" class="block h-6 w-6" />
@@ -24,7 +25,7 @@
             class="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
           >
             <div class="flex flex-shrink-0 items-center">
-              <NuxtLink to="/">
+              <NuxtLink to="/" aria-label="Logo">
                 <Logo class="w-9" />
               </NuxtLink>
             </div>

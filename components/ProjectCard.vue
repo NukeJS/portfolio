@@ -9,6 +9,7 @@
         :to="`https://github.com/NukeJS/${project.github_slug}`"
         target="_blank"
         class="hover:text-white"
+        aria-label="Open GitHub repository"
       >
         <GithubIcon class="h-6 w-6" />
       </NuxtLink>
@@ -17,6 +18,7 @@
         :to="`/blog/${project.blog_slug}`"
         target="_blank"
         class="hover:text-white"
+        aria-label="Open blog article"
       >
         <RssIcon class="h-6 w-6" />
       </NuxtLink>
@@ -25,6 +27,7 @@
         :to="project.website_url"
         target="_blank"
         class="hover:text-white"
+        aria-label="Open website"
       >
         <GlobeAltIcon class="h-6 w-6" />
       </NuxtLink>

@@ -11,7 +11,7 @@ interface Meta {
 
 export const useHeadHelper = ({
   title,
-  description,
+  description = DEFAULT_META.description,
   keywords,
   image,
   type = 'website',

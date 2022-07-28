@@ -7,6 +7,9 @@ import meta from './meta.json'
 export default defineNuxtConfig({
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en'
+      },
       title: meta.title,
       meta: [
         // Favicon stuff

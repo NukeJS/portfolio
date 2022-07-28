@@ -17,8 +17,8 @@
       },
       {
         ...(variant === 'primary' && {
-          'bg-pink-500 text-white': true,
-          'hover:bg-pink-600 focus:ring-pink-500 active:bg-pink-700': !disabled
+          'bg-pink-600 text-white': true,
+          'hover:bg-pink-700 focus:ring-pink-600 active:bg-pink-800': !disabled
         }),
         ...(variant === 'secondary' && {
           'bg-white text-zinc-900': true,
