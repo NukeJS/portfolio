@@ -52,3 +52,7 @@ yarn preview
 # npm
 npm run preview
 ```
+
+---
+
+© 2022 | MIT License
