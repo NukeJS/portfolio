@@ -1,6 +1,11 @@
-# Nuxt 3 Minimal Starter
+# Portfolio
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+This is the repository for my personal portfolio website.
+
+## Tech Stack
+
+- Nuxt.js
+- Tailwind CSS
 
 ## Setup
 
@@ -12,31 +17,38 @@ yarn install
 
 # npm
 npm install
-
-# pnpm
-pnpm install --shamefully-hoist
 ```
 
-## Development Server
+# Development
 
 Start the development server on http://localhost:3000
 
 ```bash
+# yarn
+yarn dev
+
+# npm
 npm run dev
 ```
 
-## Production
+# Production
 
 Build the application for production:
 
 ```bash
+# yarn
+yarn build
+
+# npm
 npm run build
 ```
 
-Locally preview production build:
+Locally preview the production build:
 
 ```bash
+# yarn
+yarn preview
+
+# npm
 npm run preview
 ```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
