@@ -86,10 +86,6 @@ export default defineNuxtConfig({
     }
   },
 
-  image: {
-    provider: 'static'
-  },
-
   typescript: {
     shim: false
   },
