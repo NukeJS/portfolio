@@ -1,5 +1,8 @@
 {
   "private": true,
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "build": "nuxt build NITRO_PRESET=vercel-edge",
     "dev": "nuxt dev",
