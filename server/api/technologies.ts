@@ -41,6 +41,10 @@ export default defineEventHandler(_event => {
       image_name: 'mysql'
     },
     {
+      name: 'WordPress',
+      image_name: 'wordpress'
+    },
+    {
       name: 'Laravel',
       image_name: 'laravel'
     },
