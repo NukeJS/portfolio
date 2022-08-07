@@ -1,6 +1,8 @@
 <template>
-  <div class="flex items-center rounded-xl bg-zinc-800 p-4">
-    <div class="mr-3 h-8 w-8 flex-none">
+  <div
+    class="flex flex-col items-center space-y-2 rounded-xl bg-zinc-800 p-4 sm:flex-row sm:space-y-0 sm:space-x-3"
+  >
+    <div class="h-8 w-8 flex-none">
       <div class="aspect-w-1 aspect-h-1">
         <NuxtImg
           :src="`/technologies/${technology.image_name}.svg`"
