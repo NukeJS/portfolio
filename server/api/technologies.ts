@@ -21,7 +21,7 @@ export default defineEventHandler(_event => {
       image_name: 'sass'
     },
     {
-      name: 'Tailwind',
+      name: 'Tailwind CSS',
       image_name: 'tailwindcss'
     },
     {
