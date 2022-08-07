@@ -26,8 +26,8 @@
 
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
-import { Article } from '~~/types/articles'
-import { useHeadHelper } from '~~/utils/meta'
+import { Article } from '~/types/articles'
+import { useHeadHelper } from '~/utils/meta'
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------------- Globals -------------------------------- */

@@ -33,7 +33,7 @@
           <div class="hidden md:ml-6 md:block">
             <div class="flex font-medium md:space-x-6">
               <NuxtLink
-                v-for="(item, index) in navigation"
+                v-for="(item, index) in NAVIGATION"
                 :key="index"
                 :to="item.to"
                 class="hover:underline"
@@ -57,7 +57,7 @@
         <Container>
           <div class="flex flex-col space-y-4 pt-4 pb-6 font-medium">
             <DisclosureButton
-              v-for="(item, index) in navigation"
+              v-for="(item, index) in NAVIGATION"
               :key="index"
               :as="NuxtLink"
               :to="item.to"
@@ -87,28 +87,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 import { NuxtLink } from '#components'
-/* -------------------------------------------------------------------------- */
-
-/* ------------------------------- Navigation ------------------------------- */
-const navigation = [
-  {
-    to: '/',
-    name: 'Home',
-    exact: true
-  },
-  {
-    to: '/about-me',
-    name: 'About Me'
-  },
-  {
-    to: '/projects',
-    name: 'My Work'
-  },
-  {
-    to: '/blog',
-    name: 'My Blog'
-  }
-]
+import { NAVIGATION } from '~/constants'
 /* -------------------------------------------------------------------------- */
 
 /* ------------------------------- Disclosure ------------------------------- */

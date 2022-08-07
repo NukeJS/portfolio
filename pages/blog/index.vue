@@ -44,8 +44,8 @@
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
 import { SearchIcon } from '@heroicons/vue/outline'
-import type { Article } from '~~/types/articles'
-import { useHeadHelper } from '~~/utils/meta'
+import type { Article } from '~/types/articles'
+import { useHeadHelper } from '~/utils/meta'
 
 /* -------------------------------------------------------------------------- */
 

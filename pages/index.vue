@@ -53,10 +53,10 @@
 
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
-import type { Article } from '~~/types/articles'
-import DEFAULT_META from '~~/meta.json'
-import { getMultipleRandomItems } from '~~/utils/array'
-import { useHeadHelper } from '~~/utils/meta'
+import type { Article } from '~/types/articles'
+import DEFAULT_META from '~/meta.json'
+import { getMultipleRandomItems } from '~/utils/array'
+import { useHeadHelper } from '~/utils/meta'
 
 /* -------------------------------------------------------------------------- */
 

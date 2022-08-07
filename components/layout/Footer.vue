@@ -5,16 +5,10 @@
         <ul
           class="mb-6 flex flex-wrap items-center space-x-4 sm:mb-0 md:space-x-6"
         >
-          <li>
-            <NuxtLink to="/" class="hover:underline"> Home </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/about-me" class="hover:underline">
-              About Me
+          <li v-for="(item, index) in NAVIGATION" :key="index">
+            <NuxtLink :to="item.to" class="hover:underline">
+              {{ item.name }}
             </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/blog" class="hover:underline"> My Blog </NuxtLink>
           </li>
         </ul>
       </div>
@@ -47,3 +41,9 @@
     </Container>
   </footer>
 </template>
+
+<script setup lang="ts">
+/* --------------------------------- Imports -------------------------------- */
+import { NAVIGATION } from '~/constants'
+/* -------------------------------------------------------------------------- */
+</script>

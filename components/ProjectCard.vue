@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-3">
+  <div class="space-y-3 rounded-xl bg-zinc-800 p-4">
     <h3 class="text-xl font-semibold text-white group-hover:underline">
       {{ project.name }}
     </h3>
@@ -41,8 +41,7 @@
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
 import { GlobeAltIcon, RssIcon } from '@heroicons/vue/outline'
-import type { Project } from '~~/types/projects'
-
+import type { Project } from '~/types/projects'
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------------- Globals -------------------------------- */

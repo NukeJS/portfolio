@@ -25,10 +25,24 @@
           </p>
           <p>
             Before working at Script, I improved my development skills by
-            learning them myself. So far, I understand and make use of
-            JavaScript, TypeScript, Node.js, Vue.js, Nuxt.js, SASS/SCSS,
-            Tailwind CSS, Git, MongoDB, Laravel, and PHP.
+            self-learning.
           </p>
+        </div>
+      </Container>
+    </section>
+    <section class="py-8 sm:py-12 md:py-16 lg:py-20">
+      <Container>
+        <h2 class="text-3xl font-bold text-white">
+          Technologies I make use of.
+        </h2>
+        <div
+          class="mt-8 grid grid-cols-2 gap-4 text-lg sm:mt-10 sm:grid-cols-3 sm:text-xl md:grid-cols-4 lg:grid-cols-4"
+        >
+          <TechnologyCard
+            v-for="(technology, index) in technologies.data.value"
+            :key="index"
+            v-bind="{ technology }"
+          />
         </div>
       </Container>
     </section>
@@ -54,7 +68,7 @@
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
 import { differenceInYears } from 'date-fns'
-import { useHeadHelper } from '~~/utils/meta'
+import { useHeadHelper } from '~/utils/meta'
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Page Information ---------------------------- */
@@ -64,6 +78,9 @@ useHeadHelper({
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------------- Globals -------------------------------- */
+const technologies = useAsyncData('technologies', () =>
+  $fetch('/api/technologies')
+)
 const jobs = useAsyncData('jobs', () => $fetch('/api/jobs'))
 const educations = useAsyncData('educations', () => $fetch('/api/educations'))
 
