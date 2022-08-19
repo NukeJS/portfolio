@@ -31,6 +31,11 @@ export default defineEventHandler(_event => {
         'A Vue 3 Axios loading store made using the Composition API.',
       github_slug: 'axios-loading-store-composition-api',
       blog_slug: 'create-an-axios-loading-store-in-vue'
+    },
+    {
+      name: 'modmail-bot',
+      description: 'A Discord modmail bot made with Discord.js',
+      github_slug: 'modmail-bot'
     }
   ]
 })
