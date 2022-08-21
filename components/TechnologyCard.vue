@@ -4,7 +4,7 @@
   >
     <div class="h-12 w-12 flex-none lg:h-8 lg:w-8">
       <div class="aspect-w-1 aspect-h-1">
-        <NuxtImg
+        <img
           :src="`/technologies/${technology.image_name}.svg`"
           quality="60"
           :alt="`${technology.name} logo`"

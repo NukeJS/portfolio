@@ -7,7 +7,7 @@
       <div
         class="not-prose aspect-w-16 aspect-h-9 relative mb-3 rounded-xl bg-zinc-800 shadow-md"
       >
-        <NuxtImg
+        <img
           v-if="data?.thumbnail"
           :src="`/blog/${data.thumbnail}`"
           class="absolute rounded-xl object-cover"

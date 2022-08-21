@@ -3,7 +3,7 @@
     <div
       class="aspect-w-16 aspect-h-9 mb-3 rounded-xl bg-zinc-800 shadow-md transition-transform duration-300"
     >
-      <NuxtImg
+      <img
         :src="`/blog/${article.thumbnail}`"
         class="absolute rounded-xl object-cover"
         format="webp"
