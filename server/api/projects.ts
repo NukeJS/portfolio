@@ -36,6 +36,26 @@ export default defineEventHandler(_event => {
       name: 'modmail-bot',
       description: 'A Discord modmail bot made with Discord.js',
       github_slug: 'modmail-bot'
+    },
+    {
+      name: 'laravel-vite-vue-spa-template',
+      description: 'A Laravel 9, Vite, Vue 3 SPA (w/ Vue Router), Tailwind CSS (w/ Forms Plugin & Aspect Ratio Plugin), Axios, Headless UI, Heroicons & TypeScript starter template.',
+      github_slug: 'laravel-vite-vue-spa-template'
+    },
+    {
+      name: 'laravel-vite-svelte-spa-template',
+      description: 'A Laravel 9, Vite, Svelte SPA, Tailwind CSS (w/ Forms Plugin & Aspect Ratio Plugin), Axios & TypeScript starter template.',
+      github_slug: 'laravel-vite-svelte-spa-template'
+    },
+    {
+      name: 'laravel-vite-react-spa-template',
+      description: 'A Laravel 9, Vite, React SPA, Tailwind CSS (w/ Forums Plugin & Aspect Ratio Plugin), Axios & TypeScript starter template.',
+      github_slug: 'laravel-vite-react-spa-template'
+    },
+    {
+      name: 'laravel-vite-solid-spa-template',
+      description: 'A Laravel 9, Vite, Solid SPA, Tailwind CSS (w/ Forms Plugin & Aspect Ratio Plugin), Axios & TypeScript starter template.',
+      github_slug: 'laravel-vite-solid-spa-template'
     }
   ]
 })
