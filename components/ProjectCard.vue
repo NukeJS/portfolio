@@ -32,7 +32,7 @@
         <GlobeAltIcon class="h-6 w-6" />
       </NuxtLink>
     </div>
-    <p>
+    <p v-if="project.description">
       {{ project.description }}
     </p>
   </div>
