@@ -21,6 +21,13 @@
         </span>
         <div class="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
           <NuxtLink
+            to="mailto:me@nukejs.dev"
+            class="hover:text-white"
+            aria-label="Send me an email"
+          >
+            <MailIcon class="h-6 w-6" />
+          </NuxtLink>
+          <NuxtLink
             to="https://twitter.com/nuke_js"
             target="_blank"
             class="hover:text-white"
@@ -44,6 +51,7 @@
 
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
+import { MailIcon } from '@heroicons/vue/solid'
 import { NAVIGATION } from '~/constants'
 /* -------------------------------------------------------------------------- */
 </script>
