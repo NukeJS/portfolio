@@ -17,8 +17,8 @@
               aria-label="Toggle navigation"
               @click="toggleDisclosurePanel()"
             >
-              <MenuIcon v-if="!isOpen" class="block h-6 w-6" />
-              <XIcon v-else class="block h-6 w-6" />
+              <Bars3Icon v-if="!isOpen" class="block h-6 w-6" />
+              <XMarkIcon v-else class="block h-6 w-6" />
             </DisclosureButton>
           </div>
           <div
@@ -85,7 +85,7 @@
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
-import { MenuIcon, XIcon } from '@heroicons/vue/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid'
 import { NuxtLink } from '#components'
 import { NAVIGATION } from '~/constants'
 /* -------------------------------------------------------------------------- */

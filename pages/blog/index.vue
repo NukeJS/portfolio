@@ -14,7 +14,7 @@
         <div class="mt-10 sm:mt-16">
           <Input v-model="searchQuery" placeholder="Enter a search term">
             <template #prepend-inner>
-              <SearchIcon class="h-5 w-5" />
+              <MagnifyingGlassIcon class="h-5 w-5" />
             </template>
           </Input>
         </div>
@@ -43,7 +43,7 @@
 
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
-import { SearchIcon } from '@heroicons/vue/outline'
+import { MagnifyingGlassIcon } from '@heroicons/vue/24/solid'
 import type { Article } from '~/types/articles'
 import { useHeadHelper } from '~/utils/meta'
 

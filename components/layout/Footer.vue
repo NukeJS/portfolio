@@ -25,7 +25,7 @@
             class="hover:text-white"
             aria-label="Send me an email"
           >
-            <MailIcon class="h-6 w-6" />
+            <EnvelopeIcon class="h-6 w-6" />
           </NuxtLink>
           <NuxtLink
             to="https://twitter.com/nuke_js"
@@ -59,7 +59,7 @@
 
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
-import { MailIcon } from '@heroicons/vue/solid'
+import { EnvelopeIcon } from '@heroicons/vue/24/solid'
 import { NAVIGATION } from '~/constants'
 /* -------------------------------------------------------------------------- */
 </script>

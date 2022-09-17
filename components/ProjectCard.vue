@@ -40,7 +40,7 @@
 
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
-import { GlobeAltIcon, RssIcon } from '@heroicons/vue/outline'
+import { GlobeAltIcon, RssIcon } from '@heroicons/vue/24/solid'
 import type { Project } from '~/types/projects'
 /* -------------------------------------------------------------------------- */
 
