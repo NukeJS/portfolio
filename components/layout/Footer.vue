@@ -36,6 +36,14 @@
             <TwitterIcon class="h-6 w-6" />
           </NuxtLink>
           <NuxtLink
+            to="https://discord.com/users/237878725130059777"
+            target="_blank"
+            class="hover:text-white"
+            aria-label="Open Discord profile"
+          >
+            <DiscordIcon class="h-6 w-6" />
+          </NuxtLink>
+          <NuxtLink
             to="https://github.com/NukeJS"
             target="_blank"
             class="hover:text-white"
