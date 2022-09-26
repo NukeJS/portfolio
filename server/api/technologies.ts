@@ -59,6 +59,10 @@ export default defineEventHandler(_event => {
     {
       name: 'Git',
       image_name: 'git'
+    },
+    {
+      name: 'Python',
+      image_name: 'python'
     }
   ]
 })
