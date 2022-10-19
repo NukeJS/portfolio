@@ -15,7 +15,7 @@
         >
           <p>
             I'm Ronnie, a <ClientOnly>{{ age }}</ClientOnly
-            >-year-old developer, blogger, and software engineering student who
+            >-year-old full-stack developer, and blogger who
             specializes in full-stack development. My mission is to create
             functional web applications that help improve the web experience.
           </p>
