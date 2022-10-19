@@ -5,8 +5,8 @@
         <h1
           class="text-center text-4xl font-extrabold leading-tight text-white sm:text-left sm:text-5xl"
         >
-          I'm <span class="text-pink-500">Ronnie</span>. A developer, blogger,
-          and software engineering student.
+          I'm <span class="text-pink-500">Ronnie</span>. A full-stack developer
+          and blogger.
         </h1>
         <div
           class="mt-8 grid space-y-6 sm:mt-10 sm:block sm:space-y-0 sm:space-x-6"

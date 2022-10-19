@@ -1,13 +1,6 @@
 export default defineEventHandler(_event => {
   return [
     {
-      timespan: 'Aug. 2022 - present',
-      label: 'HBO, Bachelor',
-      title: 'Software Engineering',
-      subtitle:
-        'Hanze University of Applied Sciences - Groningen, The Netherlands'
-    },
-    {
       timespan: 'Aug. 2019 - Jul. 2022',
       label: 'MBO, Level 4',
       title: 'Application & Media Developer',
