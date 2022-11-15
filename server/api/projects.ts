@@ -8,6 +8,10 @@ export default defineEventHandler(_event => {
       website_url: 'https://nukejs.dev'
     },
     {
+      name: 'meerstaete',
+      website_url: 'https://vergaderlocatiemeerstaete.nl/'
+    },
+    {
       name: 'solidjs-hooks',
       description: 'A collection of useful SolidJS hooks.',
       github_slug: 'solidjs-hooks'
