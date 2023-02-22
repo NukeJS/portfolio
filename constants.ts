@@ -2,18 +2,14 @@ export const NAVIGATION = [
   {
     to: '/',
     name: 'Home',
-    exact: true
+    exact: true,
   },
   {
     to: '/about-me',
-    name: 'About Me'
+    name: 'About Me',
   },
   {
     to: '/projects',
-    name: 'My Work'
+    name: 'My Work',
   },
-  {
-    to: '/blog',
-    name: 'My Blog'
-  }
-]
+];

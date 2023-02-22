@@ -21,9 +21,11 @@
           {{ item.subtitle }}
         </p>
       </div>
-      <p v-if="item.description" class="mt-4 mb-4 text-lg sm:text-xl">
-        {{ item.description }}
-      </p>
+      <p
+        v-if="item.description"
+        class="mt-4 mb-4 text-lg sm:text-xl"
+        v-html="item.description"
+      ></p>
     </li>
   </ol>
 </template>
@@ -31,18 +33,18 @@
 <script setup lang="ts">
 /* ---------------------------------- Types --------------------------------- */
 interface TimelineItem {
-  label?: string
-  title: string
-  subtitle?: string
-  timespan: string
-  description?: string
+  label?: string;
+  title: string;
+  subtitle?: string;
+  timespan: string;
+  description?: string;
 }
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------------- Globals -------------------------------- */
 defineProps<{
-  items: TimelineItem[]
-}>()
+  items: TimelineItem[];
+}>();
 /* -------------------------------------------------------------------------- */
 </script>
 

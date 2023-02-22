@@ -1,5 +1,5 @@
 <template>
-  <div class="flex min-h-screen flex-col bg-zinc-900 text-zinc-400 antialiased">
+  <div class="flex min-h-screen flex-col">
     <Navbar />
 
     <main class="h-full flex-1 pt-16">
@@ -9,8 +9,6 @@
     <Footer />
   </div>
 </template>
-
-<script setup lang="ts"></script>
 
 <style>
 :root {

@@ -1,5 +1,5 @@
-export const getMultipleRandomItems = <T>(arr: T[], num) => {
-  const shuffled = [...arr].sort(() => 0.5 - Math.random())
+export const getMultipleRandomItems = <T>(arr: T[], num: number) => {
+  const shuffled = [...arr].sort(() => 0.5 - Math.random());
 
-  return shuffled.slice(0, num)
-}
+  return shuffled.slice(0, num);
+};

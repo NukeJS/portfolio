@@ -1,12 +1,12 @@
-import { MetaObject } from '#app'
-import DEFAULT_META from '~/meta.json'
+import { MetaObject } from '#app';
+import * as DEFAULT_META from '~/data/meta';
 
 interface Meta {
-  title?: string
-  description?: string
-  keywords?: string | string[]
-  image?: string
-  type?: string
+  title?: string;
+  description?: string;
+  keywords?: string | string[];
+  image?: string;
+  type?: string;
 }
 
 export const useHeadHelper = ({
@@ -15,16 +15,23 @@ export const useHeadHelper = ({
   keywords,
   image,
   type = 'website',
+  /* @ts-ignore */
   bodyAttrs,
+  /* @ts-ignore */
   charset,
+  /* @ts-ignore */
   htmlAttrs,
+  /* @ts-ignore */
   link,
+  /* @ts-ignore */
   script,
+  /* @ts-ignore */
   style,
-  viewport
+  /* @ts-ignore */
+  viewport,
 }: Meta & Omit<MetaObject, 'titleTemplate'> = {}) => {
-  title = title ? `${title} - ${DEFAULT_META.title}` : DEFAULT_META.title
-  const url = `${DEFAULT_META.url}${useRoute().path}`
+  title = title ? `${title} - ${DEFAULT_META.title}` : DEFAULT_META.title;
+  const url = `${DEFAULT_META.url}${useRoute().path}`;
 
   useHead({
     title,
@@ -41,7 +48,7 @@ export const useHeadHelper = ({
       {
         hid: 'twitter:creator',
         name: 'twitter:creator',
-        content: DEFAULT_META.twitter
+        content: DEFAULT_META.twitter,
       },
       /* -------------------------------------------------------------------------- */
 
@@ -51,18 +58,18 @@ export const useHeadHelper = ({
             {
               hid: 'description',
               name: 'description',
-              content: description
+              content: description,
             },
             {
               hid: 'og:description',
               property: 'og:description',
-              content: description
+              content: description,
             },
             {
               hid: 'twitter:description',
               name: 'twitter:description',
-              content: description
-            }
+              content: description,
+            },
           ]
         : []),
       /* -------------------------------------------------------------------------- */
@@ -75,8 +82,8 @@ export const useHeadHelper = ({
             {
               hid: 'twitter:card',
               name: 'twitter:card',
-              content: 'summary_large_image'
-            }
+              content: 'summary_large_image',
+            },
           ]
         : []),
       /* -------------------------------------------------------------------------- */
@@ -89,17 +96,18 @@ export const useHeadHelper = ({
           ? `${DEFAULT_META.keywords}, ${
               Array.isArray(keywords) ? keywords.join(', ') : keywords
             }`
-          : DEFAULT_META.keywords
-      }
+          : DEFAULT_META.keywords,
+      },
       /* -------------------------------------------------------------------------- */
     ],
 
     bodyAttrs,
+    /* @ts-ignore */
     charset,
     htmlAttrs,
     link,
     script,
     style,
-    viewport
-  })
-}
+    viewport,
+  });
+};

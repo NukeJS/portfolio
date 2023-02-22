@@ -1,17 +1,21 @@
 <template>
-  <NuxtLayout name="default" class="font-inter">
+  <NuxtLayout name="default">
     <NuxtPage />
   </NuxtLayout>
 </template>
 
 <style>
+body {
+  @apply font-poppins bg-zinc-900 text-zinc-400 antialiased;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  @apply font-manrope;
+  @apply font-montserrat;
 }
 
 .page-enter-active,

@@ -3,13 +3,14 @@
     class="flex flex-col items-center space-y-3 rounded-xl bg-zinc-800 p-4 lg:flex-row lg:space-y-0 lg:space-x-3"
   >
     <div class="h-12 w-12 flex-none lg:h-8 lg:w-8">
-      <div class="aspect-w-1 aspect-h-1">
+      <div class="aspect-square">
         <img
-          :src="`/technologies/${technology.image_name}.svg`"
+          :src="`/images/technologies/${technology.image_name}.svg`"
           quality="60"
           :alt="`${technology.name} logo`"
           width="32"
           height="32"
+          class="h-full w-full object-contain"
         />
       </div>
     </div>
@@ -21,13 +22,13 @@
 
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
-import type { Technology } from '~/types/technologies'
+import type { TechnologyInfo } from '~/data/technologies';
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------------- Globals -------------------------------- */
 defineProps<{
-  technology: Technology
-}>()
+  technology: TechnologyInfo;
+}>();
 /* -------------------------------------------------------------------------- */
 </script>
 

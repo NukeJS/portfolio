@@ -1,53 +1,54 @@
 <template>
-  <div class="space-y-3 rounded-xl bg-zinc-800 p-4">
-    <h3 class="text-xl font-semibold text-white group-hover:underline">
-      {{ project.name }}
-    </h3>
-    <div class="flex space-x-2">
-      <NuxtLink
-        v-if="project.github_slug"
-        :to="`https://github.com/NukeJS/${project.github_slug}`"
-        target="_blank"
-        class="hover:text-white"
-        aria-label="Open GitHub repository"
-      >
-        <GithubIcon class="h-6 w-6" />
-      </NuxtLink>
-      <NuxtLink
-        v-if="project.blog_slug"
-        :to="`/blog/${project.blog_slug}`"
-        target="_blank"
-        class="hover:text-white"
-        aria-label="Open blog article"
-      >
-        <RssIcon class="h-6 w-6" />
-      </NuxtLink>
-      <NuxtLink
-        v-if="project.website_url"
-        :to="project.website_url"
-        target="_blank"
-        class="hover:text-white"
-        aria-label="Open website"
-      >
-        <GlobeAltIcon class="h-6 w-6" />
-      </NuxtLink>
+  <component
+    :is="Object.keys(project.links).length ? NuxtLink : 'div'"
+    :to="project.links.external ?? project.links.github ?? ''"
+    class="group"
+  >
+    <NuxtImg
+      :src="`/images/projects/${project.image_name}.png`"
+      :alt="`${project.name}`"
+      class="aspect-video w-full rounded-md"
+    />
+    <div class="mt-4">
+      <div>
+        <h4 class="text-2xl font-semibold text-white">
+          {{ project.name }}
+        </h4>
+        <p class="text-lg">{{ project.description }}</p>
+      </div>
+      <div class="mt-4">
+        <h5 class="text-sm font-semibold uppercase text-zinc-200">
+          Techs Used
+        </h5>
+        <div class="mt-2 flex items-center gap-2">
+          <div v-for="technology in project.technologies" :key="technology">
+            <NuxtImg
+              class="object-centertransition-[filter] aspect-square object-contain grayscale duration-300 group-hover:grayscale-0"
+              width="25px"
+              :src="`/images/technologies/${
+                technologies.get(technology)?.image_name
+              }.svg`"
+              :alt="`${technologies.get(technology)?.name} logo`"
+              :title="technologies.get(technology)?.name"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-    <p v-if="project.description">
-      {{ project.description }}
-    </p>
-  </div>
+  </component>
 </template>
 
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
-import { GlobeAltIcon, RssIcon } from '@heroicons/vue/24/solid'
-import type { Project } from '~/types/projects'
+import { NuxtLink } from '#components';
+import type { Project } from '~/data/projects';
+import { technologies } from '~~/data/technologies';
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------------- Globals -------------------------------- */
 defineProps<{
-  project: Project
-}>()
+  project: Project;
+}>();
 /* -------------------------------------------------------------------------- */
 </script>
 

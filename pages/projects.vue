@@ -11,7 +11,10 @@
           Things I've made.
         </h1>
         <div class="mt-10 sm:mt-16">
-          <div v-if="projects" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div
+            v-if="projects"
+            class="grid gap-x-9 gap-y-12 sm:grid-cols-2 lg:grid-cols-3"
+          >
             <ProjectCard
               v-for="(project, index) in projects"
               :key="index"
@@ -26,19 +29,14 @@
 
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
-import { useHeadHelper } from '~/utils/meta'
+import projects from '~~/data/projects';
+import { useHeadHelper } from '~/utils/meta';
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------- Page Information ---------------------------- */
 useHeadHelper({
   title: 'Work',
-  description: "Things I've worked on."
-})
-/* -------------------------------------------------------------------------- */
-
-/* -------------------------------- Projects -------------------------------- */
-const { data: projects } = await useAsyncData('projects', () =>
-  $fetch('/api/projects')
-)
+  description: "Things I've worked on.",
+});
 /* -------------------------------------------------------------------------- */
 </script>

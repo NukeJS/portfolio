@@ -59,7 +59,7 @@
 
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
-import { EnvelopeIcon } from '@heroicons/vue/24/solid'
-import { NAVIGATION } from '~/constants'
+import { EnvelopeIcon } from '@heroicons/vue/24/solid';
+import { NAVIGATION } from '~/constants';
 /* -------------------------------------------------------------------------- */
 </script>
