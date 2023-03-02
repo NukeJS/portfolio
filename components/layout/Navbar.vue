@@ -50,7 +50,7 @@
       </Container>
 
       <DisclosurePanel
-        v-show="isOpen"
+        v-if="isOpen"
         static
         class="border-b border-zinc-700 md:hidden"
       >

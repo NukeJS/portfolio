@@ -70,13 +70,13 @@ export default defineNuxtConfig({
     ],
   ],
 
-  build: {
-    transpile: ['@heroicons/vue', '@headlessui/vue'],
-  },
+  // build: {
+  //   transpile: ['@heroicons/vue', '@headlessui/vue'],
+  // },
 
-  vite: {
-    optimizeDeps: {
-      exclude: ['@heroicons/vue', '@headlessui/vue'],
-    },
-  },
+  // vite: {
+  //   optimizeDeps: {
+  //     exclude: ['@heroicons/vue', '@headlessui/vue'],
+  //   },
+  // },
 });
