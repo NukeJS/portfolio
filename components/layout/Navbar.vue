@@ -15,7 +15,7 @@
             <DisclosureButton
               class="inline-flex items-center justify-center rounded-full bg-zinc-900 p-2"
               aria-label="Toggle navigation"
-              @click="() => toggleDisclosurePanel"
+              @click="toggleDisclosurePanel()"
             >
               <Bars3Icon v-if="!isOpen" class="block h-6 w-6" />
               <XMarkIcon v-else class="block h-6 w-6" />
@@ -50,7 +50,7 @@
       </Container>
 
       <DisclosurePanel
-        v-if="isOpen"
+        v-show="isOpen"
         static
         class="border-b border-zinc-700 md:hidden"
       >
