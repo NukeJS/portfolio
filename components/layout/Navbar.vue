@@ -2,7 +2,7 @@
   <div
     :class="[
       'pointer-events-none fixed z-[100] flex max-h-screen w-full flex-col overflow-y-hidden backdrop-blur-md',
-      isOpen ? 'h-full' : 'h-fit'
+      isOpen ? 'h-full' : 'h-fit',
     ]"
   >
     <Disclosure
@@ -39,7 +39,7 @@
                 class="hover:underline"
                 v-bind="{
                   [item.exact ? 'exact-active-class' : 'active-class']:
-                    'text-pink-500 hover:no-underline'
+                    'text-pink-500 hover:no-underline',
                 }"
               >
                 {{ item.name }}
@@ -64,7 +64,7 @@
               class="hover:underline"
               v-bind="{
                 [item.exact ? 'exact-active-class' : 'active-class']:
-                  'text-pink-500 hover:no-underline'
+                  'text-pink-500 hover:no-underline',
               }"
             >
               {{ item.name }}
@@ -84,41 +84,41 @@
 
 <script setup lang="ts">
 /* --------------------------------- Imports -------------------------------- */
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
-import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid'
-import { NuxtLink } from '#components'
-import { NAVIGATION } from '~/constants'
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid';
+import { NuxtLink } from '#components';
+import { NAVIGATION } from '~/constants';
 /* -------------------------------------------------------------------------- */
 
 /* ------------------------------- Disclosure ------------------------------- */
-const isOpen = ref(false)
+const isOpen = ref(false);
 
 const toggleDisclosurePanel = (value?: boolean) => {
-  isOpen.value = value ?? !isOpen.value
+  isOpen.value = value ?? !isOpen.value;
 
   if (isOpen.value) {
-    document.body.style.overflowY = 'hidden'
+    document.body.style.overflowY = 'hidden';
   } else {
-    document.body.style.overflowY = ''
+    document.body.style.overflowY = '';
   }
-}
+};
 
 watch(
   () => useRoute().fullPath,
   () => toggleDisclosurePanel(false)
-)
+);
 
 const windowResizeListener = () => {
-  const disclosurePanelBreakpoint = 768
+  const disclosurePanelBreakpoint = 768;
   if (window.innerWidth >= disclosurePanelBreakpoint && isOpen.value) {
-    toggleDisclosurePanel(false)
+    toggleDisclosurePanel(false);
   }
-}
+};
 
-onMounted(() => window.addEventListener('resize', windowResizeListener))
+onMounted(() => window.addEventListener('resize', windowResizeListener));
 onBeforeUnmount(() =>
   window.removeEventListener('resize', windowResizeListener)
-)
+);
 /* -------------------------------------------------------------------------- */
 </script>
 
