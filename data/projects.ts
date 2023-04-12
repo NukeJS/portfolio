@@ -104,4 +104,40 @@ export default <Project[]>[
       Technology.WORDPRESS,
     ],
   },
+  {
+    name: 'Naarsing Letselschade',
+    image_name: 'naarsing-letselschade',
+    slug: 'naarsing-letselschade',
+    description: 'A WordPress website.',
+    links: {
+      external: 'https://naarsingletselschade.nl/',
+    },
+    technologies: [
+      Technology.HTML,
+      Technology.CSS,
+      Technology.POSTCSS,
+      Technology.TAILWIND_CSS,
+      Technology.TYPESCRIPT,
+      Technology.PHP,
+      Technology.WORDPRESS,
+    ],
+  },
+  {
+    name: 'Mondriaanfondsen',
+    image_name: 'mondriaanfondsen',
+    slug: 'mondriaanfondsen',
+    description: 'A WordPress website.',
+    links: {
+      external: 'https://mondriaanfondsen.nl/',
+    },
+    technologies: [
+      Technology.HTML,
+      Technology.CSS,
+      Technology.POSTCSS,
+      Technology.TAILWIND_CSS,
+      Technology.TYPESCRIPT,
+      Technology.PHP,
+      Technology.WORDPRESS,
+    ],
+  },
 ];
