@@ -14,12 +14,12 @@ export interface Project {
 
 export default <Project[]>[
   {
-    name: 'Naarsing Letselschade',
-    image_name: 'naarsing-letselschade',
-    slug: 'naarsing-letselschade',
+    name: 'Jil Potma',
+    image_name: 'jil-potma',
+    slug: 'jil-potma',
     description: 'A WordPress website.',
     links: {
-      external: 'https://naarsingletselschade.nl/',
+      external: 'https://jilpotma.nl/',
     },
     technologies: [
       Technology.HTML,
@@ -32,12 +32,12 @@ export default <Project[]>[
     ],
   },
   {
-    name: 'Publiek',
-    image_name: 'publiek',
-    slug: 'publiek',
+    name: 'Naarsing Letselschade',
+    image_name: 'naarsing-letselschade',
+    slug: 'naarsing-letselschade',
     description: 'A WordPress website.',
     links: {
-      external: 'https://publiek.com/',
+      external: 'https://naarsingletselschade.nl/',
     },
     technologies: [
       Technology.HTML,
@@ -66,6 +66,24 @@ export default <Project[]>[
       Technology.PHP,
       Technology.WORDPRESS,
       Technology.WOOCOMMERCE,
+    ],
+  },
+  {
+    name: 'Publiek',
+    image_name: 'publiek',
+    slug: 'publiek',
+    description: 'A WordPress website.',
+    links: {
+      external: 'https://publiek.com/',
+    },
+    technologies: [
+      Technology.HTML,
+      Technology.CSS,
+      Technology.POSTCSS,
+      Technology.TAILWIND_CSS,
+      Technology.TYPESCRIPT,
+      Technology.PHP,
+      Technology.WORDPRESS,
     ],
   },
   {
