@@ -49,6 +49,8 @@ useHeadHelper({
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------- Projects -------------------------------- */
-const featuredProjects = getMultipleRandomItems(projects, 3);
+const { data: featuredProjects } = useAsyncData(async () =>
+  getMultipleRandomItems(projects, 3)
+);
 /* -------------------------------------------------------------------------- */
 </script>
