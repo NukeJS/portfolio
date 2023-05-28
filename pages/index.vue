@@ -9,7 +9,7 @@
           with a passion for developing robust and scalable web applications.
         </h1>
         <div
-          class="mt-8 grid space-y-6 sm:mt-10 sm:block sm:space-y-0 sm:space-x-6"
+          class="mt-8 grid space-y-6 sm:mt-10 sm:block sm:space-x-6 sm:space-y-0"
         >
           <Button to="/about-me"> Get to know me </Button>
         </div>
