@@ -14,6 +14,43 @@ export interface Project {
 
 export default <Project[]>[
   {
+    name: 'PPPO',
+    image_name: 'pppo',
+    slug: 'pppo',
+    description: 'A WordPress website.',
+    links: {
+      external: 'https://pppo.org/',
+    },
+    technologies: [
+      Technology.HTML,
+      Technology.CSS,
+      Technology.POSTCSS,
+      Technology.TAILWIND_CSS,
+      Technology.TYPESCRIPT,
+      Technology.PHP,
+      Technology.WORDPRESS,
+    ],
+  },
+  {
+    name: 'From the North',
+    image_name: 'from-the-north',
+    slug: 'from-the-north',
+    description: 'A WooCommerce webshop.',
+    links: {
+      external: 'https://fromthenorthbrewing.com/',
+    },
+    technologies: [
+      Technology.HTML,
+      Technology.CSS,
+      Technology.POSTCSS,
+      Technology.TAILWIND_CSS,
+      Technology.TYPESCRIPT,
+      Technology.PHP,
+      Technology.WORDPRESS,
+      Technology.WOOCOMMERCE,
+    ],
+  },
+  {
     name: 'Jil Potma',
     image_name: 'jil-potma',
     slug: 'jil-potma',
