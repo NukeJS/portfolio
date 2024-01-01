@@ -1,20 +1,6 @@
 <template>
-  <footer class="mt-6 py-4 shadow md:py-8">
-    <Container>
-      <div class="sm:flex sm:items-center sm:justify-between">
-        <ul
-          class="mb-6 flex flex-wrap items-center space-x-4 sm:mb-0 md:space-x-6"
-        >
-          <li v-for="(item, index) in NAVIGATION" :key="index">
-            <NuxtLink :to="item.to" class="hover:underline">
-              {{ item.name }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
-
-      <hr class="my-6 border-zinc-700 sm:mx-auto lg:my-8" />
-
+  <footer class="mt-14 md:mt-20 pb-4 md:pb-8">
+    <Container class="border-t border-zinc-700 pt-6 lg:pt-8">
       <div class="sm:flex sm:items-center sm:justify-between">
         <span class="sm:text-center">
           © 2022 NukeJS. All Rights Reserved.
@@ -58,8 +44,6 @@
 </template>
 
 <script setup lang="ts">
-/* --------------------------------- Imports -------------------------------- */
 import { EnvelopeIcon } from '@heroicons/vue/24/solid';
 import { NAVIGATION } from '~/constants';
-/* -------------------------------------------------------------------------- */
 </script>

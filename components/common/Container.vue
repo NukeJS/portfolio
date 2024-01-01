@@ -1,20 +1,17 @@
 <template>
-  <div
-    :class="[
-      'mx-auto w-full px-6',
-      {
-        'max-w-screen-lg': !fluid,
-      },
-    ]"
-  >
-    <slot />
-  </div>
+  <component :is="as" class="px-6">
+    <div class="max-w-screen-lg mx-auto">
+      <slot />
+    </div>
+  </component>
 </template>
 
 <script setup lang="ts">
-/* --------------------------------- Globals -------------------------------- */
-defineProps<{
-  fluid?: boolean;
-}>();
-/* -------------------------------------------------------------------------- */
+withDefaults(
+  defineProps<{
+    fluid?: boolean;
+    as?: keyof HTMLElementTagNameMap;
+  }>(),
+  { as: 'div' }
+);
 </script>

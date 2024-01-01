@@ -49,6 +49,8 @@ export default defineNuxtConfig({
     },
   },
 
+  css: ['~/assets/css/index.css'],
+
   components: [
     '~/components',
     '~/components/common',
@@ -58,25 +60,15 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxt/image-edge',
+    '@nuxt/image',
     [
       '@nuxtjs/google-fonts',
       {
         families: {
-          Poppins: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+          'Work+Sans': [100, 200, 300, 400, 500, 600, 700, 800, 900],
           Montserrat: [100, 200, 300, 400, 500, 600, 700, 800, 900],
         },
       },
     ],
   ],
-
-  // build: {
-  //   transpile: ['@heroicons/vue', '@headlessui/vue'],
-  // },
-
-  // vite: {
-  //   optimizeDeps: {
-  //     exclude: ['@heroicons/vue', '@headlessui/vue'],
-  //   },
-  // },
 });

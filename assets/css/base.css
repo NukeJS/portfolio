@@ -1,0 +1,5 @@
+@layer base {
+  body {
+    @apply text-body font-work-sans bg-zinc-900 text-zinc-400 antialiased;
+  }
+}

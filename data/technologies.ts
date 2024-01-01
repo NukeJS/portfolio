@@ -9,7 +9,6 @@ export enum Technology {
   NGINX,
   NUXT,
   PHP,
-  PYTHON,
   SCSS,
   TAILWIND_CSS,
   TYPESCRIPT,
@@ -18,7 +17,6 @@ export enum Technology {
   WOOCOMMERCE,
   BOOTSTRAP,
   POSTCSS,
-  GULP,
   JQUERY,
 }
 
@@ -99,13 +97,6 @@ export const technologies = new Map<Technology, TechnologyInfo>([
     },
   ],
   [
-    Technology.PYTHON,
-    {
-      name: 'Python',
-      image_name: 'python',
-    },
-  ],
-  [
     Technology.SCSS,
     {
       name: 'SCSS',
@@ -159,13 +150,6 @@ export const technologies = new Map<Technology, TechnologyInfo>([
     {
       name: 'PostCSS',
       image_name: 'postcss',
-    },
-  ],
-  [
-    Technology.GULP,
-    {
-      name: 'Gulp',
-      image_name: 'gulp',
     },
   ],
   [

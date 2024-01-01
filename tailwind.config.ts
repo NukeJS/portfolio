@@ -14,7 +14,7 @@ export default <Config>{
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
+        'work-sans': ["'Work Sans'", 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
       },
     },

@@ -1,4 +1,4 @@
-import { MetaObject } from '#app';
+import type { MetaObject } from '#app';
 import * as DEFAULT_META from '~/data/meta';
 
 interface Meta {

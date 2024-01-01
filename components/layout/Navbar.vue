@@ -9,7 +9,7 @@
       as="nav"
       class="pointer-events-auto overflow-y-auto bg-zinc-900/80"
     >
-      <Container class="border-b border-zinc-700 md:border-b-0">
+      <Container class="border-b border-zinc-700">
         <div class="relative flex h-16 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
             <DisclosureButton
@@ -55,7 +55,7 @@
         class="border-b border-zinc-700 md:hidden"
       >
         <Container>
-          <div class="flex flex-col space-y-4 pt-4 pb-6 font-medium">
+          <div class="flex flex-col space-y-4 pb-6 pt-4 font-medium">
             <DisclosureButton
               v-for="(item, index) in NAVIGATION"
               :key="index"
@@ -83,14 +83,11 @@
 </template>
 
 <script setup lang="ts">
-/* --------------------------------- Imports -------------------------------- */
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid';
 import { NuxtLink } from '#components';
 import { NAVIGATION } from '~/constants';
-/* -------------------------------------------------------------------------- */
 
-/* ------------------------------- Disclosure ------------------------------- */
 const isOpen = ref(false);
 
 const toggleDisclosurePanel = (value?: boolean) => {
@@ -119,7 +116,4 @@ onMounted(() => window.addEventListener('resize', windowResizeListener));
 onBeforeUnmount(() =>
   window.removeEventListener('resize', windowResizeListener)
 );
-/* -------------------------------------------------------------------------- */
 </script>
-
-<style scoped></style>

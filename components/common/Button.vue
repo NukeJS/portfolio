@@ -50,12 +50,9 @@
 </template>
 
 <script setup lang="ts">
-/* --------------------------------- Imports -------------------------------- */
 import type { RouteLocationRaw } from 'vue-router';
 import { NuxtLink } from '#components';
-/* -------------------------------------------------------------------------- */
 
-/* --------------------------------- Globals -------------------------------- */
 withDefaults(
   defineProps<{
     to?: RouteLocationRaw;
@@ -81,5 +78,4 @@ withDefaults(
     size: 'md',
   }
 );
-/* -------------------------------------------------------------------------- */
 </script>

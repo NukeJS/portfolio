@@ -26,7 +26,7 @@ defineProps<{
   error: Record<string, any>;
 }>();
 
-const goHome = () => clearError({ redirect: '/' });
+const goHome = () => clearError({ redirect: "/" });
 </script>
 
 <style>
