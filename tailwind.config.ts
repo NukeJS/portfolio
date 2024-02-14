@@ -13,6 +13,9 @@ export default <Config>{
   ],
   theme: {
     extend: {
+      screens: {
+        '-md': { raw: '(width < 768px)' },
+      },
       fontFamily: {
         'work-sans': ["'Work Sans'", 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],

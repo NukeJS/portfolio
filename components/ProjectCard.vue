@@ -5,11 +5,18 @@
     :target="hasLinks ? '_blank' : ''"
     class="group"
   >
-    <NuxtImg
-      :src="`/images/projects/${project.image_name}.png`"
-      :alt="`${project.name}`"
-      class="aspect-video w-full rounded-lg object-cover"
-    />
+    <div
+      class="aspect-video rounded-xl flex items-center justify-center bg-[var(--background-color,white)]"
+      :style="{ '--background-color': project.color }"
+    >
+      <NuxtImg
+        :src="`/images/projects/${project.image.name}${
+          project.image.extension ?? '.svg'
+        }`"
+        :alt="`${project.name}`"
+        class="h-1/2 w-auto max-w-[60%] object-contain"
+      />
+    </div>
     <h3 class="text-h4 text-white mt-4">
       {{ project.name }}
     </h3>
