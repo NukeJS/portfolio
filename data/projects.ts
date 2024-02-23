@@ -18,6 +18,26 @@ export interface Project {
 
 export default <Project[]>[
   {
+    name: 'Groninger Kracht',
+    image: {
+      name: 'groninger-kracht',
+    },
+    slug: 'groninger-kracht',
+    description: 'A WordPress website.',
+    links: {
+      external: 'https://groningerkracht.nl/',
+    },
+    technologies: [
+      Technology.HTML,
+      Technology.CSS,
+      Technology.POSTCSS,
+      Technology.TAILWIND_CSS,
+      Technology.TYPESCRIPT,
+      Technology.PHP,
+      Technology.WORDPRESS,
+    ],
+  },
+  {
     name: 'Sciva',
     image: {
       name: 'sciva',
