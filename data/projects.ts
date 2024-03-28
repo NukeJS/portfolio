@@ -18,6 +18,47 @@ export interface Project {
 
 export default <Project[]>[
   {
+    name: 'Back to code',
+    image: {
+      name: 'back-to-code',
+    },
+    color: '#1e1e21',
+    slug: 'back-to-code',
+    description: 'A WordPress website.',
+    links: {
+      external: 'https://backtocode.nl/',
+    },
+    technologies: [
+      Technology.HTML,
+      Technology.CSS,
+      Technology.POSTCSS,
+      Technology.TAILWIND_CSS,
+      Technology.TYPESCRIPT,
+      Technology.PHP,
+      Technology.WORDPRESS,
+    ],
+  },
+  {
+    name: 'Kupers Bedrijfsjurist',
+    image: {
+      name: 'kupers-bedrijfsjurist',
+    },
+    slug: 'kupers-bedrijfsjurist',
+    description: 'A WordPress website.',
+    links: {
+      external: 'https://kupers-bedrijfsjurist.nl/',
+    },
+    technologies: [
+      Technology.HTML,
+      Technology.CSS,
+      Technology.POSTCSS,
+      Technology.TAILWIND_CSS,
+      Technology.TYPESCRIPT,
+      Technology.PHP,
+      Technology.WORDPRESS,
+    ],
+  },
+  {
     name: 'Groninger Kracht',
     image: {
       name: 'groninger-kracht',
