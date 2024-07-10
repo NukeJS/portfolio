@@ -18,6 +18,108 @@ export interface Project {
 
 export default <Project[]>[
   {
+    name: 'Marenland',
+    image: {
+      name: 'marenland',
+    },
+    color: '#609b89',
+    slug: 'marenland',
+    description: 'A WordPress website.',
+    links: {
+      external: 'https://marenland.nl/',
+    },
+    technologies: [
+      Technology.HTML,
+      Technology.CSS,
+      Technology.POSTCSS,
+      Technology.TAILWIND_CSS,
+      Technology.TYPESCRIPT,
+      Technology.PHP,
+      Technology.WORDPRESS,
+    ],
+  },
+  {
+    name: 'Netwerk Wijkzorg Noord',
+    image: {
+      name: 'netwerk-wijkzorg-noord',
+    },
+    slug: 'netwerk-wijkzorg-noord',
+    description: 'A WordPress website.',
+    links: {
+      external: 'https://netwerkwijkzorgnoord.nl/',
+    },
+    technologies: [
+      Technology.HTML,
+      Technology.CSS,
+      Technology.POSTCSS,
+      Technology.TAILWIND_CSS,
+      Technology.TYPESCRIPT,
+      Technology.PHP,
+      Technology.WORDPRESS,
+    ],
+  },
+  {
+    name: 'EnergieLive',
+    image: {
+      name: 'energielive',
+    },
+    slug: 'energielive',
+    description: 'A WordPress website.',
+    links: {
+      external: 'https://energielive.nl/',
+    },
+    technologies: [
+      Technology.HTML,
+      Technology.CSS,
+      Technology.POSTCSS,
+      Technology.TAILWIND_CSS,
+      Technology.TYPESCRIPT,
+      Technology.PHP,
+      Technology.WORDPRESS,
+    ],
+  },
+  {
+    name: 'Ooggetuigen van de Gaswinning',
+    image: {
+      name: 'ooggetuigen-gaswinning',
+    },
+    slug: 'ooggetuigen-gaswinning',
+    description: 'A WordPress website.',
+    links: {
+      external: 'https://ooggetuigengaswinning.nl/',
+    },
+    technologies: [
+      Technology.HTML,
+      Technology.CSS,
+      Technology.POSTCSS,
+      Technology.TAILWIND_CSS,
+      Technology.TYPESCRIPT,
+      Technology.PHP,
+      Technology.WORDPRESS,
+    ],
+  },
+  {
+    name: 'De Questcoach',
+    image: {
+      name: 'de-questcoach',
+    },
+    color: '#de9d2d',
+    slug: 'de-questcoach',
+    description: 'A WordPress website.',
+    links: {
+      external: 'https://de-questcoach.nl/',
+    },
+    technologies: [
+      Technology.HTML,
+      Technology.CSS,
+      Technology.POSTCSS,
+      Technology.TAILWIND_CSS,
+      Technology.TYPESCRIPT,
+      Technology.PHP,
+      Technology.WORDPRESS,
+    ],
+  },
+  {
     name: 'Back to code',
     image: {
       name: 'back-to-code',
