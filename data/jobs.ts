@@ -1,8 +1,24 @@
 export default [
   {
-    timespan: 'Nov. 2022 - present',
+    timespan: 'Nov. 2024 - present',
     label: 'Full-time',
-    title: 'WordPress Developer',
+    title: 'Full-stack Developer',
+    subtitle: 'Kyano Digital B.V. - Groningen, The Netherlands',
+    description: [
+      'ClickUp',
+      'WordPress',
+      'Scrum',
+      'CSS',
+      'HTML',
+      'JavaScript',
+      'SASS/SCSS',
+      'PHP',
+    ].join(', '),
+  },
+  {
+    timespan: 'Nov. 2022 - Oct.',
+    label: 'Full-time',
+    title: 'Full-stack Developer',
     subtitle: 'Script - Groningen, The Netherlands',
     description: [
       'Vite',
